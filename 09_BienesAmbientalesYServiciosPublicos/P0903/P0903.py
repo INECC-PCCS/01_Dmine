@@ -20,22 +20,22 @@ from ParametroEstandar.ParametroEstandar import ParametroEstandar # Disponible e
 # Descripciones del Parametro
 DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS01'
 DirDestino = r'D:\PCCS\01_Dmine\09_BienesAmbientalesYServiciosPublicos'
-ClaveParametro = 'P0902'
-NombreParametro = 'Árboles Plantados'
+ClaveParametro = 'P0903'
+NombreParametro = 'Superficie Reforestada (ha)'
 
 # Dataset Inicial
 dataset = pd.read_excel(DirFuente + r'\BS01.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
 dataset.set_index('CVE_MUN', inplace = True)
 
 # Seleccionar Columnas de Denuncias
-Columnas_raw = [x for x in list(dataset) if 'rboles plant' in x]
+Columnas_raw = [x for x in list(dataset) if 'Superficie reforestada' in x]
 
 # renombrar columnas al año que corresponden
 anios = list(range(1994, 2015))
 registros = []
 
 for i in anios:
-    registros.append('ARB_PLANT_{}'.format(i))
+    registros.append('SF_REFORST_{}'.format(i))
 
 dataset_b = dataset[Columnas_raw]
 dataset_b.columns = registros
@@ -43,18 +43,18 @@ dataset_b.columns = registros
 # Total de denuncias por municipios y Variable de Integridad.
 
 faltantes = dataset_b.isnull().sum(axis = 1)
-dataset_b['ARB_PLANT'] = dataset_b.sum(axis=1)
+dataset_b['SF_REFORST'] = dataset_b.sum(axis=1)
 
 dataset_b['NUM_ANIOS_FALTANTES'] = faltantes
 dataset_b['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: (21 - x) / 21)
-var_denuncias = list(dataset_b)
+variables_dataset = list(dataset_b)
 
 # Consolidar datos por ciudad
 dataset_b['CVE_MUN'] = dataset_b.index
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN', 'NOM_ENT']
 
 DatosLimpios = asignar_sun(dataset_b, vars = variables_SUN)
-OrdenColumnas = (variables_SUN + var_denuncias)[:30]
+OrdenColumnas = (variables_SUN + variables_dataset)[:30]
 DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
 
 # Revision de integridad
@@ -66,7 +66,7 @@ info_incomple = 135 - info_completa - info_sin_info                 # Para gener
 # Construccion del Parametro
 param_dataset = DatosLimpios.set_index('CVE_SUN')
 param_dataset['CVE_SUN'] = param_dataset.index
-param = param_dataset.groupby(by='CVE_SUN').agg('sum')['ARB_PLANT']     # Total de denuncias
+param = param_dataset.groupby(by='CVE_SUN').agg('sum')['SF_REFORST']     # Total de denuncias
 intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']     # Total de denuncias
 std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
 std_nomsun.drop_duplicates(keep='first', inplace = True)
@@ -89,7 +89,7 @@ d_hojas = {
     'HOJAS INCLUIDAS EN EL LIBRO' : np.nan,
     'METADATOS' : 'Descripciones y notas relativas al Dataset',
     'PARAMETRO' : 'Dataset resultado de la minería, agregado por clave del Sistema Urbano Nacional, para utilizarse en la construcción de Indicadores',
-    'DATOS' : 'Numero de arboles plantados, por municipio, de 1994 a 2014',
+    'DATOS' : 'Numero de hectareas reforestadas, de 1994 a 2014',
     'INTEGRIDAD' : 'Revision de integridad de la información POR CLAVE DEL SUN. Promedio de VAR_INTEGRIDAD de los municipios que componen una ciudad. Si no se tiene información para el municipio, VAR_INTEGRIDAD es igual a cero',
     'EXISTENCIA' : 'Revision de integridad de la información POR MUNICIPIO.'
 }
