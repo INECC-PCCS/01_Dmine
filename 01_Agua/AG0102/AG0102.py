@@ -19,8 +19,8 @@ module_path = r'D:\PCCS\01_Dmine\00_Parametros'
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from SUN.asignar_sun import asignar_sun                     # Disponible en https://github.com/Caranarq/SUN
-from SUN_integridad.SUN_integridad import SUN_integridad    # Disponible en https://github.com/Caranarq/SUN_integridad
+from SUN.asignar_sun import asignar_sun                     # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
+from SUN_integridad.SUN_integridad import SUN_integridad    # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
 
 # Importar datos
 data = pd.read_csv("test.csv")

@@ -12,7 +12,7 @@ para cada ciudad en el dataset, verifica que existan registros para todos los mu
 
 El algoritmo espera las siguientes entradas:
 dataframe_sun:  dataframe con claves sun y claves mun, creado con 
-                la funcion "asignar_sun" disponible en https://github.com/Caranarq/SUN
+                la funcion "asignar_sun" disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
 
 '''
 

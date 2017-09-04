@@ -19,10 +19,10 @@ module_path = r'D:\PCCS\01_Dmine\00_Parametros'
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from SUN.asignar_sun import asignar_sun                     # Disponible en https://github.com/INECC-PCCS/SUN
-from SUN_integridad.SUN_integridad import SUN_integridad    # Disponible en https://github.com/INECC-PCCS/SUN_integridad
-from PCCS_variables.PCCS_variables import variables         # Disponible en https://github.com/INECC-PCCS/PCCS_variables
-from ParametroEstandar.ParametroEstandar import ParametroEstandar # Disponible en https://github.com/INECC-PCCS/PCCS_variables
+from SUN.asignar_sun import asignar_sun                     # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
+from SUN_integridad.SUN_integridad import SUN_integridad    # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
+from PCCS_variables.PCCS_variables import variables         # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
+from ParametroEstandar.ParametroEstandar import ParametroEstandar # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
 
 # Descripciones del Parametro
 DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS01'
@@ -108,8 +108,8 @@ d_mineria = {
     'Descripcion del dataset' : 'Numero de denuncias recibidas en materia ambiental, por municipio, de 1994 a 2014',
     'Fuente'    : 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)',
     'URL_Fuente': 'http://sc.inegi.org.mx/cobdem/',
-    'Dataset base' : '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/BS01' ,
-    'Repositorio de mineria' : 'https://github.com/INECC-PCCS/P0901',
+    'Dataset base' : '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS01' ,
+    'Repositorio de mineria' : 'https://github.com/INECC-PCCS/01_Dmine/tree/master/09_BienesAmbientalesYServiciosPublicos/P0901',
     'Notas' : 'Sin Notas',
     'VAR_INTEGRIDAD' : 'La variable de integridad para esta Dataset es el porcentaje de años que cuentan con informacion, por municipio',
     ' ' : np.nan,
