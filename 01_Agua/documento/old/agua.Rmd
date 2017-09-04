@@ -1,0 +1,124 @@
+---
+title: "Diseño de parámetros para la dimensión de agua"
+author: "Coordinación General de Crecimiento Verde"
+mainfont: Soberana Sans
+output: pdf_document
+---
+# Indicadores
+Los indicadores que se enlistan a continuación cumplen, en la mayoría de los casos, con las escalas espaciales y temporales necesarias para el diseño de parámetros que permitirán evaluar la sustentabilidad para la dimensión de agua. En otras palabras, existe información para gran parte de los municipios de la república mexicana durante el mismo periodo de tiempo; el periodo más reciente para el cual se pueden hacer estimaciones es el año 2015.
+
+Estos indicadores serán el insumo principal para el diseño y estimación de parámetros, e incluso algunos pueden utilizarse ya como parámetros por sí mismos. Posteriormente, los parámetros permitirán calcular la calificación final de la dimensión de agua para cada una de las ciudades del Sistema Urbano Nacional.
+
+Actualmente se cuenta con dos fuentes de información para obtener indicadores, éstas son los anuarios estadísticos del INEGI y el Programa de Indicadores de Gestión de Organismos Operadores de CONAGUA.
+
+## Anuarios estadísticos del INEGI
+
+### Tratamiento
+* Número de plantas de tratamiento públicas en operación (primario, secundario y terciario)
+* Número de plantas de tratamiento privadas en operación (primario, secundario y terciario)
+* Capacidad instalada de las plantas de tratamiento públicas en litros por segundo (primario, secundario y terciario)
+* Capacidad instalada de las plantas de tratamiento privadas en litros por segundo (primario, secundario y terciario)
+* Volumen tratado en millones de metros cúbicos de las plantas de tratamiento públicas (primario, secundario y terciario)
+* Volumen tratado en millones de metros cúbicos de las plantas de tratamiento privadas (primario, secundario y terciario)
+
+### Acceso al agua
+* Total de viviendas particulares habitadas
+* Porcentaje total de viviendas con agua entubada
+* Porcentaje de viviendas particulares habitadas con agua entubada dentro de la vivienda
+* Porcentaje de viviendas particulares habitadas con agua entubada fuera de la vivienda pero dentro del terreno
+* Porcentaje total de viviendas con agua por acarreo
+* Porcentaje de viviendas con agua por acarreo de la llave comunitaria
+* Porcentaje de viviendas con agua por acarreo de otra vivienda
+* Porcentaje de viviendas con agua por acarreo de una pipa
+* Porcentaje de viviendas con agua por acarreo de un pozo
+* Porcentaje de viviendas con agua por acarreo de un río, arroyo o lago
+* Porcentaje de viviendas con agua por acarreo de la recolección de la lluvia
+* Porcentaje de viviendas con agua por acarreo no especificado
+
+### Disponibilidad de drenaje
+* Porcentaje total de viviendas que disponen de drenaje
+* Porcentaje de viviendas con drenaje a la red pública
+* Porcentaje de viviendas con drenaje a fosa séptica o tanque séptico (biodigestor)
+* Porcentaje de viviendas con drenaje a barranca o grieta
+* Porcentaje de viviendas con drenaje a río, lago o mar
+* Porcentaje de viviendas que no disponen de drenaje
+* Porcentaje de viviendas cuya disponibilidad de drenaje no está especificada (si tienen o no)
+
+### Almacenamiento
+* Número de presas
+* Capacidad total de almacenamiento en millones de metros cúbicos
+* Capacidad útil de almacenamiento en millones de metros cúbicos
+* Volumen anual utilizado total en millones de metros cúbicos
+* Volumen anual utilizado para riego en millones de metros cúbicos
+* Volumen anual para uso público urbano en millones de metros cúbicos
+* Volumen anual utilizado para otros fines en millones de metros cúbicos (conservación ecológica, doméstico, pecuario, abrevadero, acuacultura y servicios)
+
+### Fuentes de abastecimiento según principales tipos de fuente
+* Número total de fuentes de abastecimiento
+* Número de pozos profundos (que sirven de fuentes de abastecimiento)
+* Número de manantiales (que sirven de fuentes de abastecimiento)
+* Número de ríos (que sirven de fuentes de abastecimiento)
+* Volumen promedio diario de extracción total en miles de metros cúbicos
+* Volumen promedio diario de extracción de pozos profundos en miles de metros cúbicos
+* Volumen promedio diario de extracción de manantiales en miles de metros cúbicos
+* Volumen promedio diario de extracción de ríos
+* Volumen promedio diario de extracción de otras fuentes (esteros, lagunas y arroyos intermitentes)
+
+### Plantas potabilizadoras en operación
+* Número de plantas potabilizadoras en operación
+* Capacidad instalada en litros por segundo
+* Volumen suministrado anual de agua potable en millones de metros cúbicos
+
+### Sistemas y tomas domiciliarias instaladas
+* Número de sistemas
+* Número total de tomas domiciliarias instaladas
+* Número de tomas domiciliarias domésticas
+* Número de tomas domiciliarias comerciales
+* Número de tomas domiciliarias industriales
+* Número de tomas domiciliarias públicas
+* Número de localidades con red de distribución
+
+### Sistemas de drenaje y alcantarillado
+* Número de sistemas de drenaje y alcantarillado
+* Número de localidades con el servicio
+
+## Programa de Indicadores de Gestión de Organismos Operadores de CONAGUA
+### Cobertura
+* Cobertura de agua potable reportada (%)
+* Cobertura de alcantarillado reportada (%)
+* Tomas con servicio continuo (%)
+* Usuarios abastecidos con pipas (%)
+* Padrón de usuarios (%)
+* Redes e instalaciones (%)
+
+### Consumo, dotación y tratamiento
+* Consumo (litros/habitante/día)
+* Dotación (litros/habitante/día)
+* Volumen tratado (%)
+
+### Eficiencia
+* Eficiencia comercial (%)
+* Eficiencia de cobro (%)
+* Eficiencia física 1 (%)
+* Eficiencia física 2 (%)
+* Eficiencia global (%)
+* Empleados dedicados al control de fugas (Trabajadores/fuga)
+* Empleados por cada mil tomas (Núm)
+* Horas con servicio en zonas de tandeo
+* Macromedición (%)
+* Micromedición (%)
+
+### Pérdidas
+* Pérdidas por longitud de red (m\textsuperscript{3}/km)
+* Pérdidas por toma (m\textsuperscript{3}/toma)
+* Reclamaciones por cada mil tomas (Núm)
+* Rehabilitación de tomas domiciliarias (%)
+* Rehabilitación de tubería (%)
+
+### Aspectos financieros
+* Relación costo - tarifa
+* Relación de trabajo (%)
+* Relación inversión-PIB (%)
+* Usuarios con pago a tiempo (%)
+* Costos entre volumen producido (\$/m\textsuperscript{3})
+
