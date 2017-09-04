@@ -1,0 +1,446 @@
+﻿CVE_SUN,CVE_ENT,CVE_MUN,CVE_SUNMUN,NOM_ENT,NOM_MUN,NOM_SUN,TIPO_SUN
+001,01,01001,00101001,Aguascalientes,Aguascalientes,Aguascalientes,1
+001,01,01005,00101005,Aguascalientes,Jesús María,Aguascalientes,1
+001,01,01011,00101011,Aguascalientes,San Francisco de los Romo,Aguascalientes,1
+002,02,02003,00202003,Baja California,Tecate,Tijuana,1
+002,02,02004,00202004,Baja California,Tijuana,Tijuana,1
+002,02,02005,00202005,Baja California,Playas de Rosarito,Tijuana,1
+003,02,02002,00302002,Baja California,Mexicali,Mexicali,1
+004,05,05017,00405017,Coahuila de Zaragoza,Matamoros,La Laguna,1
+004,05,05035,00405035,Coahuila de Zaragoza,Torreón,La Laguna,1
+004,10,10007,00410007,Durango,Gómez Palacio,La Laguna,1
+004,10,10012,00410012,Durango,Lerdo,La Laguna,1
+005,05,05004,00505004,Coahuila de Zaragoza,Arteaga,Saltillo,1
+005,05,05027,00505027,Coahuila de Zaragoza,Ramos Arizpe,Saltillo,1
+005,05,05030,00505030,Coahuila de Zaragoza,Saltillo,Saltillo,1
+006,05,05006,00605006,Coahuila de Zaragoza,Castaños,Monclova-Frontera,1
+006,05,05010,00605010,Coahuila de Zaragoza,Frontera,Monclova-Frontera,1
+006,05,05018,00605018,Coahuila de Zaragoza,Monclova,Monclova-Frontera,1
+007,05,05022,00705022,Coahuila de Zaragoza,Nava,Piedras Negras,1
+007,05,05025,00705025,Coahuila de Zaragoza,Piedras Negras,Piedras Negras,1
+008,06,06002,00806002,Colima,Colima,Colima-Villa de Álvarez,1
+008,06,06003,00806003,Colima,Comala,Colima-Villa de Álvarez,1
+008,06,06004,00806004,Colima,Coquimatlán,Colima-Villa de Álvarez,1
+008,06,06005,00806005,Colima,Cuauhtémoc,Colima-Villa de Álvarez,1
+008,06,06010,00806010,Colima,Villa de Álvarez,Colima-Villa de Álvarez,1
+009,06,06001,00906001,Colima,Armería,Tecomán,1
+009,06,06009,00906009,Colima,Tecomán,Tecomán,1
+010,07,07012,01007012,Chiapas,Berriozábal,Tuxtla Gutiérrez,1
+010,07,07027,01007027,Chiapas,Chiapa de Corzo,Tuxtla Gutiérrez,1
+010,07,07101,01007101,Chiapas,Tuxtla Gutiérrez,Tuxtla Gutiérrez,1
+011,08,08037,01108037,Chihuahua,Juárez,Juárez,1
+012,08,08002,01208002,Chihuahua,Aldama,Chihuahua,1
+012,08,08004,01208004,Chihuahua,Aquiles Serdán,Chihuahua,1
+012,08,08019,01208019,Chihuahua,Chihuahua,Chihuahua,1
+013,09,09002,01309002,Ciudad de México,Azcapotzalco,Valle de México,1
+013,09,09003,01309003,Ciudad de México,Coyoacán,Valle de México,1
+013,09,09004,01309004,Ciudad de México,Cuajimalpa de Morelos,Valle de México,1
+013,09,09005,01309005,Ciudad de México,Gustavo A. Madero,Valle de México,1
+013,09,09006,01309006,Ciudad de México,Iztacalco,Valle de México,1
+013,09,09007,01309007,Ciudad de México,Iztapalapa,Valle de México,1
+013,09,09008,01309008,Ciudad de México,La Magdalena Contreras,Valle de México,1
+013,09,09009,01309009,Ciudad de México,Milpa Alta,Valle de México,1
+013,09,09010,01309010,Ciudad de México,Álvaro Obregón,Valle de México,1
+013,09,09011,01309011,Ciudad de México,Tláhuac,Valle de México,1
+013,09,09012,01309012,Ciudad de México,Tlalpan,Valle de México,1
+013,09,09013,01309013,Ciudad de México,Xochimilco,Valle de México,1
+013,09,09014,01309014,Ciudad de México,Benito Juárez,Valle de México,1
+013,09,09015,01309015,Ciudad de México,Cuauhtémoc,Valle de México,1
+013,09,09016,01309016,Ciudad de México,Miguel Hidalgo,Valle de México,1
+013,09,09017,01309017,Ciudad de México,Venustiano Carranza,Valle de México,1
+013,13,13069,01313069,Hidalgo,Tizayuca,Valle de México,1
+013,15,15002,01315002,México,Acolman,Valle de México,1
+013,15,15009,01315009,México,Amecameca,Valle de México,1
+013,15,15010,01315010,México,Apaxco,Valle de México,1
+013,15,15011,01315011,México,Atenco,Valle de México,1
+013,15,15013,01315013,México,Atizapán de Zaragoza,Valle de México,1
+013,15,15015,01315015,México,Atlautla,Valle de México,1
+013,15,15016,01315016,México,Axapusco,Valle de México,1
+013,15,15017,01315017,México,Ayapango,Valle de México,1
+013,15,15020,01315020,México,Coacalco de Berriozábal,Valle de México,1
+013,15,15022,01315022,México,Cocotitlán,Valle de México,1
+013,15,15023,01315023,México,Coyotepec,Valle de México,1
+013,15,15024,01315024,México,Cuautitlán,Valle de México,1
+013,15,15025,01315025,México,Chalco,Valle de México,1
+013,15,15028,01315028,México,Chiautla,Valle de México,1
+013,15,15029,01315029,México,Chicoloapan,Valle de México,1
+013,15,15030,01315030,México,Chiconcuac,Valle de México,1
+013,15,15031,01315031,México,Chimalhuacán,Valle de México,1
+013,15,15033,01315033,México,Ecatepec de Morelos,Valle de México,1
+013,15,15034,01315034,México,Ecatzingo,Valle de México,1
+013,15,15035,01315035,México,Huehuetoca,Valle de México,1
+013,15,15036,01315036,México,Hueypoxtla,Valle de México,1
+013,15,15037,01315037,México,Huixquilucan,Valle de México,1
+013,15,15038,01315038,México,Isidro Fabela,Valle de México,1
+013,15,15039,01315039,México,Ixtapaluca,Valle de México,1
+013,15,15044,01315044,México,Jaltenco,Valle de México,1
+013,15,15046,01315046,México,Jilotzingo,Valle de México,1
+013,15,15050,01315050,México,Juchitepec,Valle de México,1
+013,15,15053,01315053,México,Melchor Ocampo,Valle de México,1
+013,15,15057,01315057,México,Naucalpan de Juárez,Valle de México,1
+013,15,15058,01315058,México,Nezahualcóyotl,Valle de México,1
+013,15,15059,01315059,México,Nextlalpan,Valle de México,1
+013,15,15060,01315060,México,Nicolás Romero,Valle de México,1
+013,15,15061,01315061,México,Nopaltepec,Valle de México,1
+013,15,15065,01315065,México,Otumba,Valle de México,1
+013,15,15068,01315068,México,Ozumba,Valle de México,1
+013,15,15069,01315069,México,Papalotla,Valle de México,1
+013,15,15070,01315070,México,La Paz,Valle de México,1
+013,15,15075,01315075,México,San Martín de las Pirámides,Valle de México,1
+013,15,15081,01315081,México,Tecámac,Valle de México,1
+013,15,15083,01315083,México,Temamatla,Valle de México,1
+013,15,15084,01315084,México,Temascalapa,Valle de México,1
+013,15,15089,01315089,México,Tenango del Aire,Valle de México,1
+013,15,15091,01315091,México,Teoloyucan,Valle de México,1
+013,15,15092,01315092,México,Teotihuacán,Valle de México,1
+013,15,15093,01315093,México,Tepetlaoxtoc,Valle de México,1
+013,15,15094,01315094,México,Tepetlixpa,Valle de México,1
+013,15,15095,01315095,México,Tepotzotlán,Valle de México,1
+013,15,15096,01315096,México,Tequixquiac,Valle de México,1
+013,15,15099,01315099,México,Texcoco,Valle de México,1
+013,15,15100,01315100,México,Tezoyuca,Valle de México,1
+013,15,15103,01315103,México,Tlalmanalco,Valle de México,1
+013,15,15104,01315104,México,Tlalnepantla de Baz,Valle de México,1
+013,15,15108,01315108,México,Tultepec,Valle de México,1
+013,15,15109,01315109,México,Tultitlán,Valle de México,1
+013,15,15112,01315112,México,Villa del Carbón,Valle de México,1
+013,15,15120,01315120,México,Zumpango,Valle de México,1
+013,15,15121,01315121,México,Cuautitlán Izcalli,Valle de México,1
+013,15,15122,01315122,México,Valle de Chalco Solidaridad,Valle de México,1
+013,15,15125,01315125,México,Tonanitla,Valle de México,1
+014,11,11020,01411020,Guanajuato,León,León,1
+014,11,11037,01411037,Guanajuato,Silao de la Victoria,León,1
+015,11,11025,01511025,Guanajuato,Purísima del Rincón,San Francisco del Rincón,1
+015,11,11031,01511031,Guanajuato,San Francisco del Rincón,San Francisco del Rincón,1
+016,11,11021,01611021,Guanajuato,Moroleón,Moroleón-Uriangato,1
+016,11,11041,01611041,Guanajuato,Uriangato,Moroleón-Uriangato,1
+017,12,12001,01712001,Guerrero,Acapulco de Juárez,Acapulco,1
+017,12,12021,01712021,Guerrero,Coyuca de Benítez,Acapulco,1
+018,13,13022,01813022,Hidalgo,Epazoyucan,Pachuca,1
+018,13,13039,01813039,Hidalgo,Mineral del Monte,Pachuca,1
+018,13,13048,01813048,Hidalgo,Pachuca de Soto,Pachuca,1
+018,13,13051,01813051,Hidalgo,Mineral de la Reforma,Pachuca,1
+018,13,13052,01813052,Hidalgo,San Agustín Tlaxiaca,Pachuca,1
+018,13,13082,01813082,Hidalgo,Zapotlán de Juárez,Pachuca,1
+018,13,13083,01813083,Hidalgo,Zempoala,Pachuca,1
+019,13,13016,01913016,Hidalgo,Cuautepec de Hinojosa,Tulancingo,1
+019,13,13056,01913056,Hidalgo,Santiago Tulantepec de Lugo Guerrero,Tulancingo,1
+019,13,13077,01913077,Hidalgo,Tulancingo de Bravo,Tulancingo,1
+020,13,13010,02013010,Hidalgo,Atitalaquia,Tula,1
+020,13,13013,02013013,Hidalgo,Atotonilco de Tula,Tula,1
+020,13,13070,02013070,Hidalgo,Tlahuelilpan,Tula,1
+020,13,13074,02013074,Hidalgo,Tlaxcoapan,Tula,1
+020,13,13076,02013076,Hidalgo,Tula de Allende,Tula,1
+021,14,14039,02114039,Jalisco,Guadalajara,Guadalajara,1
+021,14,14044,02114044,Jalisco,Ixtlahuacán de los Membrillos,Guadalajara,1
+021,14,14051,02114051,Jalisco,Juanacatlán,Guadalajara,1
+021,14,14070,02114070,Jalisco,El Salto,Guadalajara,1
+021,14,14097,02114097,Jalisco,Tlajomulco de Zúñiga,Guadalajara,1
+021,14,14098,02114098,Jalisco,San Pedro Tlaquepaque,Guadalajara,1
+021,14,14101,02114101,Jalisco,Tonalá,Guadalajara,1
+021,14,14120,02114120,Jalisco,Zapopan,Guadalajara,1
+022,14,14067,02214067,Jalisco,Puerto Vallarta,Puerto Vallarta,1
+022,18,18020,02218020,Nayarit,Bahía de Banderas,Puerto Vallarta,1
+023,14,14063,02314063,Jalisco,Ocotlán,Ocotlán,1
+023,14,14066,02314066,Jalisco,Poncitlán,Ocotlán,1
+024,15,15005,02415005,México,Almoloya de Juárez,Toluca,1
+024,15,15018,02415018,México,Calimaya,Toluca,1
+024,15,15027,02415027,México,Chapultepec,Toluca,1
+024,15,15051,02415051,México,Lerma,Toluca,1
+024,15,15054,02415054,México,Metepec,Toluca,1
+024,15,15055,02415055,México,Mexicaltzingo,Toluca,1
+024,15,15062,02415062,México,Ocoyoacac,Toluca,1
+024,15,15067,02415067,México,Otzolotepec,Toluca,1
+024,15,15072,02415072,México,Rayón,Toluca,1
+024,15,15073,02415073,México,San Antonio la Isla,Toluca,1
+024,15,15076,02415076,México,San Mateo Atenco,Toluca,1
+024,15,15087,02415087,México,Temoaya,Toluca,1
+024,15,15106,02415106,México,Toluca,Toluca,1
+024,15,15115,02415115,México,Xonacatlán,Toluca,1
+024,15,15118,02415118,México,Zinacantepec,Toluca,1
+025,16,16022,02516022,Michoacán de Ocampo,Charo,Morelia,1
+025,16,16053,02516053,Michoacán de Ocampo,Morelia,Morelia,1
+025,16,16088,02516088,Michoacán de Ocampo,Tarímbaro,Morelia,1
+026,16,16043,02616043,Michoacán de Ocampo,Jacona,Zamora-Jacona,1
+026,16,16108,02616108,Michoacán de Ocampo,Zamora,Zamora-Jacona,1
+027,11,11023,02711023,Guanajuato,Pénjamo,La Piedad-Pénjamo,1
+027,16,16069,02716069,Michoacán de Ocampo,La Piedad,La Piedad-Pénjamo,1
+028,17,17007,02817007,Morelos,Cuernavaca,Cuernavaca,1
+028,17,17008,02817008,Morelos,Emiliano Zapata,Cuernavaca,1
+028,17,17009,02817009,Morelos,Huitzilac,Cuernavaca,1
+028,17,17011,02817011,Morelos,Jiutepec,Cuernavaca,1
+028,17,17018,02817018,Morelos,Temixco,Cuernavaca,1
+028,17,17020,02817020,Morelos,Tepoztlán,Cuernavaca,1
+028,17,17024,02817024,Morelos,Tlaltizapán de Zapata,Cuernavaca,1
+028,17,17028,02817028,Morelos,Xochitepec,Cuernavaca,1
+029,17,17002,02917002,Morelos,Atlatlahucan,Cuautla,1
+029,17,17004,02917004,Morelos,Ayala,Cuautla,1
+029,17,17006,02917006,Morelos,Cuautla,Cuautla,1
+029,17,17026,02917026,Morelos,Tlayacapan,Cuautla,1
+029,17,17029,02917029,Morelos,Yautepec,Cuautla,1
+029,17,17030,02917030,Morelos,Yecapixtla,Cuautla,1
+030,18,18008,03018008,Nayarit,Xalisco,Tepic,1
+030,18,18017,03018017,Nayarit,Tepic,Tepic,1
+031,19,19006,03119006,Nuevo León,Apodaca,Monterrey,1
+031,19,19009,03119009,Nuevo León,Cadereyta Jiménez,Monterrey,1
+031,19,19010,03119010,Nuevo León,El Carmen,Monterrey,1
+031,19,19018,03119018,Nuevo León,García,Monterrey,1
+031,19,19019,03119019,Nuevo León,San Pedro Garza García,Monterrey,1
+031,19,19021,03119021,Nuevo León,General Escobedo,Monterrey,1
+031,19,19026,03119026,Nuevo León,Guadalupe,Monterrey,1
+031,19,19031,03119031,Nuevo León,Juárez,Monterrey,1
+031,19,19039,03119039,Nuevo León,Monterrey,Monterrey,1
+031,19,19045,03119045,Nuevo León,Salinas Victoria,Monterrey,1
+031,19,19046,03119046,Nuevo León,San Nicolás de los Garza,Monterrey,1
+031,19,19048,03119048,Nuevo León,Santa Catarina,Monterrey,1
+031,19,19049,03119049,Nuevo León,Santiago,Monterrey,1
+032,20,20067,03220067,Oaxaca,Oaxaca de Juárez,Oaxaca,1
+032,20,20083,03220083,Oaxaca,San Agustín de las Juntas,Oaxaca,1
+032,20,20087,03220087,Oaxaca,San Agustín Yatareni,Oaxaca,1
+032,20,20091,03220091,Oaxaca,San Andrés Huayápam,Oaxaca,1
+032,20,20107,03220107,Oaxaca,San Antonio de la Cal,Oaxaca,1
+032,20,20115,03220115,Oaxaca,San Bartolo Coyotepec,Oaxaca,1
+032,20,20157,03220157,Oaxaca,San Jacinto Amilpas,Oaxaca,1
+032,20,20174,03220174,Oaxaca,Ánimas Trujano,Oaxaca,1
+032,20,20227,03220227,Oaxaca,San Lorenzo Cacaotepec,Oaxaca,1
+032,20,20293,03220293,Oaxaca,San Pablo Etla,Oaxaca,1
+032,20,20338,03220338,Oaxaca,Villa de Etla,Oaxaca,1
+032,20,20350,03220350,Oaxaca,San Sebastián Tutla,Oaxaca,1
+032,20,20375,03220375,Oaxaca,Santa Cruz Amilpas,Oaxaca,1
+032,20,20385,03220385,Oaxaca,Santa Cruz Xoxocotlán,Oaxaca,1
+032,20,20390,03220390,Oaxaca,Santa Lucía del Camino,Oaxaca,1
+032,20,20399,03220399,Oaxaca,Santa María Atzompa,Oaxaca,1
+032,20,20403,03220403,Oaxaca,Santa María Coyotepec,Oaxaca,1
+032,20,20409,03220409,Oaxaca,Santa María del Tule,Oaxaca,1
+032,20,20519,03220519,Oaxaca,Santo Domingo Tomaltepec,Oaxaca,1
+032,20,20539,03220539,Oaxaca,Soledad Etla,Oaxaca,1
+032,20,20553,03220553,Oaxaca,Tlalixtac de Cabrera,Oaxaca,1
+032,20,20565,03220565,Oaxaca,Villa de Zaachila,Oaxaca,1
+033,20,20079,03320079,Oaxaca,Salina Cruz,Tehuantepec,1
+033,20,20124,03320124,Oaxaca,San Blas Atempa,Tehuantepec,1
+033,20,20515,03320515,Oaxaca,Santo Domingo Tehuantepec,Tehuantepec,1
+034,21,21001,03421001,Puebla,Acajete,Puebla-Tlaxcala,1
+034,21,21015,03421015,Puebla,Amozoc,Puebla-Tlaxcala,1
+034,21,21034,03421034,Puebla,Coronango,Puebla-Tlaxcala,1
+034,21,21041,03421041,Puebla,Cuautlancingo,Puebla-Tlaxcala,1
+034,21,21048,03421048,Puebla,Chiautzingo,Puebla-Tlaxcala,1
+034,21,21060,03421060,Puebla,Domingo Arenas,Puebla-Tlaxcala,1
+034,21,21074,03421074,Puebla,Huejotzingo,Puebla-Tlaxcala,1
+034,21,21090,03421090,Puebla,Juan C. Bonilla,Puebla-Tlaxcala,1
+034,21,21106,03421106,Puebla,Ocoyucan,Puebla-Tlaxcala,1
+034,21,21114,03421114,Puebla,Puebla,Puebla-Tlaxcala,1
+034,21,21119,03421119,Puebla,San Andrés Cholula,Puebla-Tlaxcala,1
+034,21,21122,03421122,Puebla,San Felipe Teotlalcingo,Puebla-Tlaxcala,1
+034,21,21125,03421125,Puebla,San Gregorio Atzompa,Puebla-Tlaxcala,1
+034,21,21132,03421132,Puebla,San Martín Texmelucan,Puebla-Tlaxcala,1
+034,21,21136,03421136,Puebla,San Miguel Xoxtla,Puebla-Tlaxcala,1
+034,21,21140,03421140,Puebla,San Pedro Cholula,Puebla-Tlaxcala,1
+034,21,21143,03421143,Puebla,San Salvador el Verde,Puebla-Tlaxcala,1
+034,21,21163,03421163,Puebla,Tepatlaxco de Hidalgo,Puebla-Tlaxcala,1
+034,21,21181,03421181,Puebla,Tlaltenango,Puebla-Tlaxcala,1
+034,29,29015,03429015,Tlaxcala,Ixtacuixtla de Mariano Matamoros,Puebla-Tlaxcala,1
+034,29,29017,03429017,Tlaxcala,Mazatecochco de José María Morelos,Puebla-Tlaxcala,1
+034,29,29019,03429019,Tlaxcala,Tepetitla de Lardizábal,Puebla-Tlaxcala,1
+034,29,29022,03429022,Tlaxcala,Acuamanala de Miguel Hidalgo,Puebla-Tlaxcala,1
+034,29,29023,03429023,Tlaxcala,Natívitas,Puebla-Tlaxcala,1
+034,29,29025,03429025,Tlaxcala,San Pablo del Monte,Puebla-Tlaxcala,1
+034,29,29027,03429027,Tlaxcala,Tenancingo,Puebla-Tlaxcala,1
+034,29,29028,03429028,Tlaxcala,Teolocholco,Puebla-Tlaxcala,1
+034,29,29029,03429029,Tlaxcala,Tepeyanco,Puebla-Tlaxcala,1
+034,29,29032,03429032,Tlaxcala,Tetlatlahuca,Puebla-Tlaxcala,1
+034,29,29041,03429041,Tlaxcala,Papalotla de Xicohténcatl,Puebla-Tlaxcala,1
+034,29,29042,03429042,Tlaxcala,Xicohtzinco,Puebla-Tlaxcala,1
+034,29,29044,03429044,Tlaxcala,Zacatelco,Puebla-Tlaxcala,1
+034,29,29051,03429051,Tlaxcala,San Jerónimo Zacualpan,Puebla-Tlaxcala,1
+034,29,29053,03429053,Tlaxcala,San Juan Huactzinco,Puebla-Tlaxcala,1
+034,29,29054,03429054,Tlaxcala,San Lorenzo Axocomanitla,Puebla-Tlaxcala,1
+034,29,29056,03429056,Tlaxcala,Santa Ana Nopalucan,Puebla-Tlaxcala,1
+034,29,29057,03429057,Tlaxcala,Santa Apolonia Teacalco,Puebla-Tlaxcala,1
+034,29,29058,03429058,Tlaxcala,Santa Catarina Ayometla,Puebla-Tlaxcala,1
+034,29,29059,03429059,Tlaxcala,Santa Cruz Quilehtla,Puebla-Tlaxcala,1
+035,21,21149,03521149,Puebla,Santiago Miahuatlán,Tehuacán,1
+035,21,21156,03521156,Puebla,Tehuacán,Tehuacán,1
+036,22,22006,03622006,Querétaro,Corregidora,Querétaro,1
+036,22,22008,03622008,Querétaro,Huimilpan,Querétaro,1
+036,22,22011,03622011,Querétaro,El Marqués,Querétaro,1
+036,22,22014,03622014,Querétaro,Querétaro,Querétaro,1
+037,23,23003,03723003,Quintana Roo,Isla Mujeres,Cancún,1
+037,23,23005,03723005,Quintana Roo,Benito Juárez,Cancún,1
+038,24,24028,03824028,San Luis Potosí,San Luis Potosí,San Luis Potosí-Soledad de Graciano Sánchez,1
+038,24,24035,03824035,San Luis Potosí,Soledad de Graciano Sánchez,San Luis Potosí-Soledad de Graciano Sánchez,1
+039,24,24011,03924011,San Luis Potosí,Ciudad Fernández,Río Verde-Cd. Fernández,1
+039,24,24024,03924024,San Luis Potosí,Rioverde,Río Verde-Cd. Fernández,1
+040,26,26025,04026025,Sonora,Empalme,Guaymas,1
+040,26,26029,04026029,Sonora,Guaymas,Guaymas,1
+041,27,27004,04127004,Tabasco,Centro,Villahermosa,1
+041,27,27013,04127013,Tabasco,Nacajuca,Villahermosa,1
+042,28,28003,04228003,Tamaulipas,Altamira,Tampico,1
+042,28,28009,04228009,Tamaulipas,Ciudad Madero,Tampico,1
+042,28,28038,04228038,Tamaulipas,Tampico,Tampico,1
+042,30,30123,04230123,Veracruz de Ignacio de la Llave,Pánuco,Tampico,1
+042,30,30133,04230133,Veracruz de Ignacio de la Llave,Pueblo Viejo,Tampico,1
+043,28,28032,04328032,Tamaulipas,Reynosa,Reynosa-Río Bravo,1
+043,28,28033,04328033,Tamaulipas,Río Bravo,Reynosa-Río Bravo,1
+044,28,28022,04428022,Tamaulipas,Matamoros,Matamoros,1
+045,28,28027,04528027,Tamaulipas,Nuevo Laredo,Nuevo Laredo,1
+046,29,29001,04629001,Tlaxcala,Amaxac de Guerrero,Tlaxcala-Apizaco,1
+046,29,29002,04629002,Tlaxcala,Apetatitlán de Antonio Carvajal,Tlaxcala-Apizaco,1
+046,29,29005,04629005,Tlaxcala,Apizaco,Tlaxcala-Apizaco,1
+046,29,29009,04629009,Tlaxcala,Cuaxomulco,Tlaxcala-Apizaco,1
+046,29,29010,04629010,Tlaxcala,Chiautempan,Tlaxcala-Apizaco,1
+046,29,29018,04629018,Tlaxcala,Contla de Juan Cuamatzi,Tlaxcala-Apizaco,1
+046,29,29024,04629024,Tlaxcala,Panotla,Tlaxcala-Apizaco,1
+046,29,29026,04629026,Tlaxcala,Santa Cruz Tlaxcala,Tlaxcala-Apizaco,1
+046,29,29031,04629031,Tlaxcala,Tetla de la Solidaridad,Tlaxcala-Apizaco,1
+046,29,29033,04629033,Tlaxcala,Tlaxcala,Tlaxcala-Apizaco,1
+046,29,29035,04629035,Tlaxcala,Tocatlán,Tlaxcala-Apizaco,1
+046,29,29036,04629036,Tlaxcala,Totolac,Tlaxcala-Apizaco,1
+046,29,29038,04629038,Tlaxcala,Tzompantepec,Tlaxcala-Apizaco,1
+046,29,29039,04629039,Tlaxcala,Xaloztoc,Tlaxcala-Apizaco,1
+046,29,29043,04629043,Tlaxcala,Yauhquemehcan,Tlaxcala-Apizaco,1
+046,29,29048,04629048,Tlaxcala,La Magdalena Tlaltelulco,Tlaxcala-Apizaco,1
+046,29,29049,04629049,Tlaxcala,San Damián Texóloc,Tlaxcala-Apizaco,1
+046,29,29050,04629050,Tlaxcala,San Francisco Tetlanohcan,Tlaxcala-Apizaco,1
+046,29,29060,04629060,Tlaxcala,Santa Isabel Xiloxoxtla,Tlaxcala-Apizaco,1
+047,30,30011,04730011,Veracruz de Ignacio de la Llave,Alvarado,Veracruz,1
+047,30,30028,04730028,Veracruz de Ignacio de la Llave,Boca del Río,Veracruz,1
+047,30,30090,04730090,Veracruz de Ignacio de la Llave,Jamapa,Veracruz,1
+047,30,30105,04730105,Veracruz de Ignacio de la Llave,Medellín de Bravo,Veracruz,1
+047,30,30193,04730193,Veracruz de Ignacio de la Llave,Veracruz,Veracruz,1
+048,30,30026,04830026,Veracruz de Ignacio de la Llave,Banderilla,Xalapa,1
+048,30,30038,04830038,Veracruz de Ignacio de la Llave,Coatepec,Xalapa,1
+048,30,30065,04830065,Veracruz de Ignacio de la Llave,Emiliano Zapata,Xalapa,1
+048,30,30087,04830087,Veracruz de Ignacio de la Llave,Xalapa,Xalapa,1
+048,30,30093,04830093,Veracruz de Ignacio de la Llave,Jilotepec,Xalapa,1
+048,30,30136,04830136,Veracruz de Ignacio de la Llave,Rafael Lucio,Xalapa,1
+048,30,30182,04830182,Veracruz de Ignacio de la Llave,Tlalnelhuayocan,Xalapa,1
+049,30,30033,04930033,Veracruz de Ignacio de la Llave,Cazones de Herrera,Poza Rica,1
+049,30,30040,04930040,Veracruz de Ignacio de la Llave,Coatzintla,Poza Rica,1
+049,30,30124,04930124,Veracruz de Ignacio de la Llave,Papantla,Poza Rica,1
+049,30,30131,04930131,Veracruz de Ignacio de la Llave,Poza Rica de Hidalgo,Poza Rica,1
+049,30,30175,04930175,Veracruz de Ignacio de la Llave,Tihuatlán,Poza Rica,1
+050,30,30022,05030022,Veracruz de Ignacio de la Llave,Atzacan,Orizaba,1
+050,30,30030,05030030,Veracruz de Ignacio de la Llave,Camerino Z. Mendoza,Orizaba,1
+050,30,30074,05030074,Veracruz de Ignacio de la Llave,Huiloapan de Cuauhtémoc,Orizaba,1
+050,30,30081,05030081,Veracruz de Ignacio de la Llave,Ixhuatlancillo,Orizaba,1
+050,30,30085,05030085,Veracruz de Ignacio de la Llave,Ixtaczoquitlán,Orizaba,1
+050,30,30099,05030099,Veracruz de Ignacio de la Llave,Maltrata,Orizaba,1
+050,30,30101,05030101,Veracruz de Ignacio de la Llave,Mariano Escobedo,Orizaba,1
+050,30,30115,05030115,Veracruz de Ignacio de la Llave,Nogales,Orizaba,1
+050,30,30118,05030118,Veracruz de Ignacio de la Llave,Orizaba,Orizaba,1
+050,30,30135,05030135,Veracruz de Ignacio de la Llave,Rafael Delgado,Orizaba,1
+050,30,30138,05030138,Veracruz de Ignacio de la Llave,Río Blanco,Orizaba,1
+050,30,30185,05030185,Veracruz de Ignacio de la Llave,Tlilapan,Orizaba,1
+051,30,30048,05130048,Veracruz de Ignacio de la Llave,Cosoleacaque,Minatitlán,1
+051,30,30059,05130059,Veracruz de Ignacio de la Llave,Chinameca,Minatitlán,1
+051,30,30089,05130089,Veracruz de Ignacio de la Llave,Jáltipan,Minatitlán,1
+051,30,30108,05130108,Veracruz de Ignacio de la Llave,Minatitlán,Minatitlán,1
+051,30,30120,05130120,Veracruz de Ignacio de la Llave,Oteapan,Minatitlán,1
+051,30,30199,05130199,Veracruz de Ignacio de la Llave,Zaragoza,Minatitlán,1
+052,30,30039,05230039,Veracruz de Ignacio de la Llave,Coatzacoalcos,Coatzacoalcos,1
+052,30,30082,05230082,Veracruz de Ignacio de la Llave,Ixhuatlán del Sureste,Coatzacoalcos,1
+052,30,30206,05230206,Veracruz de Ignacio de la Llave,Nanchital de Lázaro Cárdenas del Río,Coatzacoalcos,1
+053,30,30014,05330014,Veracruz de Ignacio de la Llave,Amatlán de los Reyes,Córdoba,1
+053,30,30044,05330044,Veracruz de Ignacio de la Llave,Córdoba,Córdoba,1
+053,30,30068,05330068,Veracruz de Ignacio de la Llave,Fortín,Córdoba,1
+053,30,30196,05330196,Veracruz de Ignacio de la Llave,Yanga,Córdoba,1
+054,30,30003,05430003,Veracruz de Ignacio de la Llave,Acayucan,Acayucan,1
+054,30,30116,05430116,Veracruz de Ignacio de la Llave,Oluta,Acayucan,1
+054,30,30145,05430145,Veracruz de Ignacio de la Llave,Soconusco,Acayucan,1
+055,31,31013,05531013,Yucatán,Conkal,Mérida,1
+055,31,31041,05531041,Yucatán,Kanasín,Mérida,1
+055,31,31050,05531050,Yucatán,Mérida,Mérida,1
+055,31,31100,05531100,Yucatán,Ucú,Mérida,1
+055,31,31101,05531101,Yucatán,Umán,Mérida,1
+056,32,32017,05632017,Zacatecas,Guadalupe,Zacatecas-Guadalupe,1
+056,32,32032,05632032,Zacatecas,Morelos,Zacatecas-Guadalupe,1
+056,32,32056,05632056,Zacatecas,Zacatecas,Zacatecas-Guadalupe,1
+057,11,11007,05711007,Guanajuato,Celaya,Celaya,1
+057,11,11009,05711009,Guanajuato,Comonfort,Celaya,1
+057,11,11044,05711044,Guanajuato,Villagrán,Celaya,1
+058,15,15006,05815006,México,Almoloya del Río,Tianguistenco,1
+058,15,15012,05815012,México,Atizapán,Tianguistenco,1
+058,15,15019,05815019,México,Capulhuac,Tianguistenco,1
+058,15,15043,05815043,México,Xalatlaco,Tianguistenco,1
+058,15,15098,05815098,México,Texcalyacac,Tianguistenco,1
+058,15,15101,05815101,México,Tianguistenco,Tianguistenco,1
+059,21,21054,05921054,Puebla,Chignautla,Teziutlán,1
+059,21,21174,05921174,Puebla,Teziutlán,Teziutlán,1
+060,02,02001,06002001,Baja California,Ensenada,Ensenada,2
+062,03,03008,06203008,Baja California Sur,Los Cabos,Cabo San Lucas,2
+063,04,04002,06304002,Campeche,Campeche,Campeche,2
+065,06,06007,06506007,Colima,Manzanillo,Manzanillo,2
+066,07,07089,06607089,Chiapas,Tapachula,Tapachula de Cordova y Ordoñez,2
+068,11,11015,06811015,Guanajuato,Guanajuato,Guanajuato,2
+069,11,11017,06911017,Guanajuato,Irapuato,Irapuato,2
+071,11,11033,07111033,Guanajuato,San Luis de la Paz,San Luis de la Paz,2
+073,12,12029,07312029,Guerrero,Chilpancingo de los Bravo,Chilpancingo de los Bravo,2
+094,16,16052,09416052,Michoacán de Ocampo,Lázaro Cárdenas,Ciudad Lázaro Cárdenas,2
+095,16,16102,09516102,Michoacán de Ocampo,Uruapan,Uruapan,2
+098,16,16112,09816112,Michoacán de Ocampo,Zitácuaro,Zitácuaro,2
+104,20,20184,10420184,Oaxaca,San Juan Bautista Tuxtepec,San Juan Bautista Tuxtepec,2
+106,21,21004,10621004,Puebla,Acatzingo,Acatzingo de Hidalgo,2
+106,21,21038,10621038,Puebla,Cuapiaxtla de Madero,Acatzingo de Hidalgo,2
+106,21,21118,10621118,Puebla,Los Reyes de Juárez,Acatzingo de Hidalgo,2
+111,21,21071,11121071,Puebla,Huauchinango,Huauchinango,2
+119,23,23004,11923004,Quintana Roo,Othón P. Blanco,Chetumal,2
+121,26,26018,12126018,Sonora,Cajeme,Ciudad Obregón,2
+123,27,27002,12327002,Tabasco,Cárdenas,Cárdenas,2
+127,29,29013,12729013,Tlaxcala,Huamantla,Huamantla,2
+132,30,30023,13230023,Veracruz de Ignacio de la Llave,Atzalan,Martínez de la Torre,2
+132,30,30102,13230102,Veracruz de Ignacio de la Llave,Martínez de la Torre,Martínez de la Torre,2
+134,30,30189,13430189,Veracruz de Ignacio de la Llave,Tuxpan,Túxpam de Rodríguez Cano,2
+137,32,32010,13732010,Zacatecas,Fresnillo,Fresnillo,2
+144,03,03003,14403003,Baja California Sur,La Paz,La Paz,3
+145,04,04003,14504003,Campeche,Carmen,Ciudad del Carmen,3
+148,05,05002,14805002,Coahuila de Zaragoza,Acuña,Ciudad Acuña,3
+154,05,05028,15405028,Coahuila de Zaragoza,Sabinas,Sabinas,3
+160,07,07019,16007019,Chiapas,Comitán de Domínguez,Comitán de Domínguez,3
+172,07,07078,17207078,Chiapas,San Cristóbal de las Casas,San Cristóbal de las Casas,3
+180,08,08017,18008017,Chihuahua,Cuauhtémoc,Cuauhtémoc,3
+181,08,08021,18108021,Chihuahua,Delicias,Delicias,3
+182,08,08032,18208032,Chihuahua,Hidalgo del Parral,Hidalgo del Parral,3
+186,08,08050,18608050,Chihuahua,Nuevo Casas Grandes,Nuevo Casas Grandes,3
+188,10,10005,18810005,Durango,Durango,Victoria de Durango,3
+194,11,11002,19411002,Guanajuato,Acámbaro,Acámbaro,3
+195,11,11003,19511003,Guanajuato,San Miguel de Allende,San Miguel de Allende,3
+197,11,11011,19711011,Guanajuato,Cortazar,Cortazar,3
+198,11,11014,19811014,Guanajuato,Dolores Hidalgo Cuna de la Independencia Nacional,Dolores Hidalgo Cuna de la Independencia,3
+201,11,11027,20111027,Guanajuato,Salamanca,Salamanca,3
+205,11,11042,20511042,Guanajuato,Valle de Santiago,Valle de Santiago,3
+211,12,12035,21112035,Guerrero,Iguala de la Independencia,Iguala de la Independencia,3
+212,12,12038,21212038,Guerrero,Zihuatanejo de Azueta,Zihuatanejo,3
+215,12,12055,21512055,Guerrero,Taxco de Alarcón,Taxco de Alarcón,3
+224,14,14008,22414008,Jalisco,Arandas,Arandas,3
+228,14,14023,22814023,Jalisco,Zapotlán el Grande,Ciudad Guzmán,3
+234,14,14053,23414053,Jalisco,Lagos de Moreno,Lagos de Moreno,3
+242,14,14093,24214093,Jalisco,Tepatitlán de Morelos,Tepatitlán de Morelos,3
+252,16,16006,25216006,Michoacán de Ocampo,Apatzingán,Apatzingán de la Constitución,3
+254,16,16034,25416034,Michoacán de Ocampo,Hidalgo,Ciudad Hidalgo,3
+260,16,16066,26016066,Michoacán de Ocampo,Pátzcuaro,Pátzcuaro,3
+264,16,16076,26416076,Michoacán de Ocampo,Sahuayo,Sahuayo de Morelos,3
+268,16,16107,26816107,Michoacán de Ocampo,Zacapu,Zacapu,3
+281,19,19033,28119033,Nuevo León,Linares,Linares,3
+286,20,20039,28620039,Oaxaca,Heroica Ciudad de Huajuapan de León,Heroica Ciudad de Huajuapan de León,3
+287,20,20043,28720043,Oaxaca,Heroica Ciudad de Juchitán de Zaragoza,Heroica Ciudad de Juchitán de Zaragoza,3
+294,21,21019,29421019,Puebla,Atlixco,Atlixco,3
+301,22,22016,30122016,Querétaro,San Juan del Río,San Juan del Río,3
+303,23,23001,30323001,Quintana Roo,Cozumel,Cozumel,3
+305,23,23008,30523008,Quintana Roo,Solidaridad,Playa del Carmen,3
+308,24,24013,30824013,San Luis Potosí,Ciudad Valles,Ciudad Valles,3
+310,24,24020,31024020,San Luis Potosí,Matehuala,Matehuala,3
+314,25,25001,31425001,Sinaloa,Ahome,Los Mochis,3
+315,25,25006,31525006,Sinaloa,Culiacán,Culiacán Rosales,3
+319,25,25011,31925011,Sinaloa,Guasave,Guasave,3
+321,25,25012,32125012,Sinaloa,Mazatlán,Mazatlán,3
+323,25,25015,32325015,Sinaloa,Salvador Alvarado,Guamúchil,3
+326,26,26002,32626002,Sonora,Agua Prieta,Agua Prieta,3
+327,26,26017,32726017,Sonora,Caborca,Heroica Caborca,3
+329,26,26030,32926030,Sonora,Hermosillo,Hermosillo,3
+333,26,26042,33326042,Sonora,Navojoa,Navojoa,3
+334,26,26043,33426043,Sonora,Nogales,Heroica Nogales,3
+335,26,26048,33526048,Sonora,Puerto Peñasco,Puerto Peñasco,3
+336,26,26055,33626055,Sonora,San Luis Río Colorado,San Luis Río Colorado,3
+344,28,28021,34428021,Tamaulipas,El Mante,Ciudad Mante,3
+348,28,28041,34828041,Tamaulipas,Victoria,Ciudad Victoria,3
+361,30,30141,36130141,Veracruz de Ignacio de la Llave,San Andrés Tuxtla,San Andrés Tuxtla,3

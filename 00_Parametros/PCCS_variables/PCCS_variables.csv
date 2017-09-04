@@ -1,0 +1,81 @@
+CVE_SUN,"Clave de 3 digitos de la Ciudad, de acuerdo con el Catálogo Sistema Urbano Nacional 2012"
+,
+CVE_ENT,"Clave geoestadística de 2 digitos a nivel entidad, de acuerdo con el Catálogo Único de Claves de Áreas Geoestadísticas Estatales, Municipales y Localidades de INEGI"
+NOM_ENT,"Nombre de la entidad, de acuerdo con el Catálogo Único de Claves de Áreas Geoestadísticas Estatales, Municipales y Localidades de INEGI"
+CVE_MUN,"Clave geoestadística de 5 digitos a nivel municipal, de acuerdo con el Catálogo Único de Claves de Áreas Geoestadísticas Estatales, Municipales y Localidades de INEGI"
+NOM_MUN,"Nombre del municipio, de acuerdo con el Catálogo Único de Claves de Áreas Geoestadísticas Estatales, Municipales y Localidades de INEGI"
+NOM_SUN,"Nombre de la Ciudad, de acuerdo con el Catálogo Sistema Urbano Nacional 2012"
+TIPO_SUN,"Tipo de Ciudad, de acuerdo con el Catálogo Sistema Urbano Nacional 2012.
+1 = Zona Metropolitana
+2 = Conurbación
+3 = Centro Urbano"
+SUBSISTEMA,"Subsistema en el cual esta clasificada la ciudad de acuerdo a su población:
+1 = Subsistema Principal, ciudades de 50mil o más habitantes
+2 = Subsistema Complementario, ciudades de entre 15mil y menos de 50mil habitantes."
+CANTMUN,Cantidad de municipios que conforman una ciudad de acuerdo con el Catálogo Sistema Urbano Nacional 2012
+CANTDF,Cantidad de municipios dentro de cada ciudad que cuentan con información en el dataset analizado.
+Calidad_info,"Indica qué tan completa se encuentra la informacion para una ciudad. CANTMUN / CANTDF
+1 = Información completa.
+<1 = Información incompleta. Un valor más cercano a cero indica mayor falta de información
+0 = Información inexistente"
+Existe_info,"Revisión de existencia de la información en el Dataset disponible
+TRUE = El Municipio cuenta con información en el dataset
+FALSE = El Municipio no cuenta con información en el dataset"
+entubada_total,Porcentaje de viviendas con agua entubada dentro de la vivienda o predio. Fuente: Encuesta intercensal 2015
+AG0102,Datos del Indicador. Entubada_total / 10. Para la construccion del indicador se obtiene el promedio de los municipios que componen cada ciudad
+CIS,"Indica si una ciudad tiene información Completa, Incompleta o Sin información"
+CHECK,Indica si el municipio se encontró en el Dataset durante el análisis de integridad.\nTRUE: El municipio existe en el Dataset\nFALSE: El municipio no existe en el Dataset
+DENUNCIAS_AMB,Total de Denuncias recibidas en materia ambiental de 1994 a 2014
+DENUNCIAS_AMB_1994,Total de Denuncias recibidas en materia ambiental en 1994
+DENUNCIAS_AMB_1995,Total de Denuncias recibidas en materia ambiental en 1995
+DENUNCIAS_AMB_1996,Total de Denuncias recibidas en materia ambiental en 1996
+DENUNCIAS_AMB_1997,Total de Denuncias recibidas en materia ambiental en 1997
+DENUNCIAS_AMB_1998,Total de Denuncias recibidas en materia ambiental en 1998
+DENUNCIAS_AMB_1999,Total de Denuncias recibidas en materia ambiental en 1999
+DENUNCIAS_AMB_2000,Total de Denuncias recibidas en materia ambiental en 2000
+DENUNCIAS_AMB_2001,Total de Denuncias recibidas en materia ambiental en 2001
+DENUNCIAS_AMB_2002,Total de Denuncias recibidas en materia ambiental en 2002
+DENUNCIAS_AMB_2003,Total de Denuncias recibidas en materia ambiental en 2003
+DENUNCIAS_AMB_2004,Total de Denuncias recibidas en materia ambiental en 2004
+DENUNCIAS_AMB_2005,Total de Denuncias recibidas en materia ambiental en 2005
+DENUNCIAS_AMB_2006,Total de Denuncias recibidas en materia ambiental en 2006
+DENUNCIAS_AMB_2007,Total de Denuncias recibidas en materia ambiental en 2007
+DENUNCIAS_AMB_2008,Total de Denuncias recibidas en materia ambiental en 2008
+DENUNCIAS_AMB_2009,Total de Denuncias recibidas en materia ambiental en 2009
+DENUNCIAS_AMB_2010,Total de Denuncias recibidas en materia ambiental en 2010
+DENUNCIAS_AMB_2011,Total de Denuncias recibidas en materia ambiental en 2011
+DENUNCIAS_AMB_2012,Total de Denuncias recibidas en materia ambiental en 2012
+DENUNCIAS_AMB_2013,Total de Denuncias recibidas en materia ambiental en 2013
+DENUNCIAS_AMB_2014,Total de Denuncias recibidas en materia ambiental en 2014
+INTEGRIDAD,"Indica qué tan completa se encuentra la información.
+1 = Información completa
+<1 = Información Incompleta
+0 = Informacion Inexistente"
+NUM_ANIOS_FALTANTES,Indica el número de años en los que un municipio no tiene información
+SUBSIS_PPAL,"Indica si el municipio forma parte del Subsistema Principal, de acuerdo con la clasificación del SUN. 
+1 = Pertenece al Subsistema Principal
+0 = No pertenece al Subsistema Principal."
+VAR_INTEGRIDAD,"Calculo de integridad independiente para cada Dataset de la PCCS (Ver metadatos del Dataset), multiplicador para el calculo de integridad de informacion por Ciudad."
+CIUDAD,Clave y nombre de la Ciudad de acuerdo con el Sistema Urbano Nacional
+ARB_PLANT,Total de árboles plantados de 1994 a 2004
+ARB_PLANT_1994,Total de Arboles Plantados en 1994
+ARB_PLANT_1995,Total de Arboles Plantados en 1995
+ARB_PLANT_1996,Total de Arboles Plantados en 1996
+ARB_PLANT_1997,Total de Arboles Plantados en 1997
+ARB_PLANT_1998,Total de Arboles Plantados en 1998
+ARB_PLANT_1999,Total de Arboles Plantados en 1999
+ARB_PLANT_2000,Total de Arboles Plantados en 2000
+ARB_PLANT_2001,Total de Arboles Plantados en 2001
+ARB_PLANT_2002,Total de Arboles Plantados en 2002
+ARB_PLANT_2003,Total de Arboles Plantados en 2003
+ARB_PLANT_2004,Total de Arboles Plantados en 2004
+ARB_PLANT_2005,Total de Arboles Plantados en 2005
+ARB_PLANT_2006,Total de Arboles Plantados en 2006
+ARB_PLANT_2007,Total de Arboles Plantados en 2007
+ARB_PLANT_2008,Total de Arboles Plantados en 2008
+ARB_PLANT_2009,Total de Arboles Plantados en 2009
+ARB_PLANT_2010,Total de Arboles Plantados en 2010
+ARB_PLANT_2011,Total de Arboles Plantados en 2011
+ARB_PLANT_2012,Total de Arboles Plantados en 2012
+ARB_PLANT_2013,Total de Arboles Plantados en 2013
+ARB_PLANT_2014,Total de Arboles Plantados en 2014
