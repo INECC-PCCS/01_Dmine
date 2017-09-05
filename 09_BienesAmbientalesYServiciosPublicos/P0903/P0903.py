@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Aug 24 16:00:05 2017
+Started on Mon Sep  4 12:39:42 2017
 
 @author: carlos.arana
 """
 
 '''
-Descripcion:
-Creacion de dataset P0901 "Denuncias recibidas en materia ambiental"
+Descripcion: Creación de dataset para el parámetro P0903 "Superfice Reforestada (Hectareas)"
+Informacion disponible de 1994 a 2014
 '''
 
 # Librerias Utilizadas
@@ -27,41 +27,41 @@ from ParametroEstandar.ParametroEstandar import ParametroEstandar # Disponible e
 # Descripciones del Parametro
 DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS01'
 DirDestino = r'D:\PCCS\01_Dmine\09_BienesAmbientalesYServiciosPublicos'
-ClaveParametro = 'P0901'
-NombreParametro = 'Denuncias Recibidas en Materia Ambiental'
+ClaveParametro = 'P0903'
+NombreParametro = 'Superficie Reforestada (ha)'
 
 # Dataset Inicial
 dataset = pd.read_excel(DirFuente + r'\BS01.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
 dataset.set_index('CVE_MUN', inplace = True)
 
-# Seleccionar Columnas de Denuncias
-Denuncias = [x for x in list(dataset) if 'Denuncias recibidas en materia amb' in x]
+# Seleccionar Columnas de Superfice reforestada
+Columnas_raw = [x for x in list(dataset) if 'Superficie reforestada' in x]
 
 # renombrar columnas al año que corresponden
 anios = list(range(1994, 2015))
 registros = []
 
 for i in anios:
-    registros.append('DENUNCIAS_AMB_{}'.format(i))
+    registros.append('SF_REFORST_{}'.format(i))
 
-denuncias_ma = dataset[Denuncias]
-denuncias_ma.columns = registros
+dataset_b = dataset[Columnas_raw]
+dataset_b.columns = registros
 
 # Total de denuncias por municipios y Variable de Integridad.
 
-faltantes = denuncias_ma.isnull().sum(axis = 1)
-denuncias_ma['DENUNCIAS_AMB'] = denuncias_ma.sum(axis=1)
+faltantes = dataset_b.isnull().sum(axis = 1)
+dataset_b['SF_REFORST'] = dataset_b.sum(axis=1)
 
-denuncias_ma['NUM_ANIOS_FALTANTES'] = faltantes
-denuncias_ma['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: (21-x)/21)
-var_denuncias = list(denuncias_ma)
+dataset_b['NUM_ANIOS_FALTANTES'] = faltantes
+dataset_b['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: (21 - x) / 21)
+variables_dataset = list(dataset_b)
 
 # Consolidar datos por ciudad
-denuncias_ma['CVE_MUN'] = denuncias_ma.index
+dataset_b['CVE_MUN'] = dataset_b.index
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN', 'NOM_ENT']
 
-DatosLimpios = asignar_sun(denuncias_ma, vars = variables_SUN)
-OrdenColumnas = (variables_SUN + var_denuncias)[:30]
+DatosLimpios = asignar_sun(dataset_b, vars = variables_SUN)
+OrdenColumnas = (variables_SUN + variables_dataset)[:30]
 DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
 
 # Revision de integridad
@@ -73,13 +73,13 @@ info_incomple = 135 - info_completa - info_sin_info                 # Para gener
 # Construccion del Parametro
 param_dataset = DatosLimpios.set_index('CVE_SUN')
 param_dataset['CVE_SUN'] = param_dataset.index
-param = param_dataset.groupby(by='CVE_SUN').agg('sum')['DENUNCIAS_AMB']     # Total de denuncias
+param = param_dataset.groupby(by='CVE_SUN').agg('sum')['SF_REFORST']     # Total de Area Reforestada por Ciudad
 intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']     # Total de denuncias
 std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
 std_nomsun.drop_duplicates(keep='first', inplace = True)
 Parametro = pd.DataFrame()
 Parametro['CIUDAD'] = std_nomsun
-Parametro['DENUNCIAS_AMB'] = param
+Parametro['ARB_PLANT'] = param
 Parametro['INTEGRIDAD'] = intparam
 Parametro = Parametro.sort_index()
 
@@ -96,7 +96,7 @@ d_hojas = {
     'HOJAS INCLUIDAS EN EL LIBRO' : np.nan,
     'METADATOS' : 'Descripciones y notas relativas al Dataset',
     'PARAMETRO' : 'Dataset resultado de la minería, agregado por clave del Sistema Urbano Nacional, para utilizarse en la construcción de Indicadores',
-    'DATOS' : 'Numero de denuncias recibidas en materia ambiental, por municipio, de 1994 a 2014',
+    'DATOS' : 'Numero de hectareas reforestadas, de 1994 a 2014',
     'INTEGRIDAD' : 'Revision de integridad de la información POR CLAVE DEL SUN. Promedio de VAR_INTEGRIDAD de los municipios que componen una ciudad. Si no se tiene información para el municipio, VAR_INTEGRIDAD es igual a cero',
     'EXISTENCIA' : 'Revision de integridad de la información POR MUNICIPIO.'
 }
@@ -105,11 +105,11 @@ d_mineria = {
     '  ': np.nan,
     'DESCRIPCION DEL PROCESO DE MINERIA:' : np.nan,
     'Nombre del Dataset' : NombreParametro,
-    'Descripcion del dataset' : 'Numero de denuncias recibidas en materia ambiental, por municipio, de 1994 a 2014',
+    'Descripcion del dataset' : 'Arboles Plantados, por municipio, de 1994 a 2014',
     'Fuente'    : 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)',
     'URL_Fuente': 'http://sc.inegi.org.mx/cobdem/',
     'Dataset base' : '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS01' ,
-    'Repositorio de mineria' : 'https://github.com/INECC-PCCS/01_Dmine/tree/master/09_BienesAmbientalesYServiciosPublicos/P0901',
+    'Repositorio de mineria' : 'https://github.com/INECC-PCCS/01_Dmine/tree/master/09_BienesAmbientalesYServiciosPublicos/P0903',
     'Notas' : 'Sin Notas',
     'VAR_INTEGRIDAD' : 'La variable de integridad para esta Dataset es el porcentaje de años que cuentan con informacion, por municipio',
     ' ' : np.nan,
@@ -133,4 +133,3 @@ DescParametro = {
 
 # Crear archivo de Excel
 ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, integridad_parametro)
-
