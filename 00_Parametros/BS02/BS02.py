@@ -18,12 +18,12 @@ import datetime
 import numpy as np
 
 # Ubicacion y descripcion de la fuente
-fuente = r'http://sc.inegi.org.mx/cobdem/descargaformatosservlet?tipo=1&archivo=SIMBAD_42677_20170824043758489.xlsx'
+fuente = r'El dataset se genera por medio de interaccion humana con el SIMBAD. No tiene API para interfaz con sistemas'
 describe_fuente = 'Informacion encontrada en http://sc.inegi.org.mx/cobdem/ ' \
                   '\n > Ruta: ' \
                   '\n > Proyecto e indice de contenidos ' \
                   '\n > Integracion de destadisticas - Medio Ambiente ' \
-                  '\n > Acciones seleccionadas en materia ambiental [Seleccionar todas]' \
+                  '\n > Uso de Suelo y Vegetacion' \
                   '\n > Pestaña 2. Años a consultar [Seleccionar Todos]' \
                   '\n > Pestaña 3. Área geográfica [Ver Municipios]' \
                   '\n > [Actualizar Consulta]' \
@@ -36,10 +36,7 @@ fecha_mineria = datetime.datetime.now()
 print(fecha_mineria.strftime('%c'))
 
 # Rutas de archivo
-archivo_raw = r'D:\PCCS\00_RawData\01_CSV\BS01.xlsx'
-
-if not os.path.isfile(archivo_raw):
-    urllib.request.urlretrieve(fuente, archivo_raw)
+archivo_raw = r'D:\PCCS\00_RawData\01_CSV\BS02.xlsx'
 
 dataset = pandas.read_excel(archivo_raw, skiprows = 2, header=1)
 dataset.head()
@@ -49,6 +46,8 @@ dataset.head()
 res_est = dataset['Clave'].str.len() != 2
 # Eliminar renglones vacios y guardar nuevo dataset
 dataset_b = dataset[res_est].dropna()
+
+dataset_b.head()
 
 # Estandarizar nombre de columna de clave municipal
 dataset_b.rename(columns = {'Clave':'CVE_MUN'}, inplace = True)
@@ -60,15 +59,17 @@ dataset_b.replace('NS', np.nan, inplace = True) # "NS" = No Significativo
 
 # Descripcion del dataset
 descripcion = {
-    'Nombre del Dataset'   : 'Acciones seleccionadas en materia ambiental',
-    'Descripcion del dataset' : ', '.join(list(dataset_b)[2:7]),
+    'Nombre del Dataset'   : 'Uso de Suelo y Vegetacion',
+    'Descripcion del dataset' : 'Superficie continental, superficie de suelo utilizado para agricultura, '
+                                'Superficie de Pastizal, Superficie de bosque, Superficie de selva. '
+                                'Superficies en  Kilómetros cuadrados',
     'Fuente'    : 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)',
     'URL_Fuente': 'http://sc.inegi.org.mx/cobdem/',
     'Obtencion de dataset' : describe_fuente,
     'Desagregacion' : 'Municipal',
-    'Disponibilidad temporal' : '1994 a 2013',
+    'Disponibilidad temporal' : '2015',
     'Repositorio de mineria' : 'https://github.com/INECC-PCCS/BS01',
-    'Notas' : 'Para las columnas con nombres repetidos, la primer aparicion corresponde a 1994'
+    'Notas' : ''
 }
 
 # Armar pestaña de metadatos
@@ -76,16 +77,7 @@ metadatos = pandas.DataFrame.from_dict(descripcion, orient='index')
 metadatos = metadatos.rename(columns = {0:'Descripcion'})
 
 # Exportar a excel
-writer = pandas.ExcelWriter(r'D:\PCCS\01_Dmine\00_Parametros\BS01\BS01.xlsx')
+writer = pandas.ExcelWriter(r'D:\PCCS\01_Dmine\00_Parametros\BS02\BS02.xlsx')
 dataset_b.to_excel(writer, sheet_name = 'DATOS')
 metadatos.to_excel(writer, sheet_name = 'Metadatos')
 writer.close()
-
-'''
-df = pandas.DataFrame(np.random.randn(10, 4), columns=[1994, 1995, 1996, 1997])
-df['states'] = ['State1', 'State2', 'State3', 'State4', 'State5',
-                'State6', 'State7', 'State8', 'State9', 'State10']
-df.set_index('states', inplace=True)
-
-pandas.melt(df, id_vars='states',var_name='Year')'''
-

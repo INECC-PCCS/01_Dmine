@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Started on Mon Sep  4 12:39:42 2017
+Created on Mon Sep  4 12:55:22 2017
 
 @author: carlos.arana
 """
 
 '''
-Descripcion: Creación de dataset para el parámetro P0602 "Árboles Plantados"
+Descripcion: Creación de dataset para el parámetro P0904 ""
 Informacion disponible de 1994 a 2014
 '''
 
@@ -25,10 +25,12 @@ from PCCS_variables.PCCS_variables import variables         # Disponible en http
 from ParametroEstandar.ParametroEstandar import ParametroEstandar # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
 
 # Descripciones del Parametro
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS01'
+DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
 DirDestino = r'D:\PCCS\01_Dmine\09_BienesAmbientalesYServiciosPublicos'
-ClaveParametro = 'P0903'
+ClaveParametro = 'P0904'
 NombreParametro = 'Superficie Reforestada (ha)'
+ContenidoDatos = 'Numero de hectareas reforestadas, de 1994 a 2014'     # Contenido de la hoja 'Datos'
+
 
 # Dataset Inicial
 dataset = pd.read_excel(DirFuente + r'\BS01.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
@@ -96,7 +98,7 @@ d_hojas = {
     'HOJAS INCLUIDAS EN EL LIBRO' : np.nan,
     'METADATOS' : 'Descripciones y notas relativas al Dataset',
     'PARAMETRO' : 'Dataset resultado de la minería, agregado por clave del Sistema Urbano Nacional, para utilizarse en la construcción de Indicadores',
-    'DATOS' : 'Numero de hectareas reforestadas, de 1994 a 2014',
+    'DATOS' : ContenidoDatos,
     'INTEGRIDAD' : 'Revision de integridad de la información POR CLAVE DEL SUN. Promedio de VAR_INTEGRIDAD de los municipios que componen una ciudad. Si no se tiene información para el municipio, VAR_INTEGRIDAD es igual a cero',
     'EXISTENCIA' : 'Revision de integridad de la información POR MUNICIPIO.'
 }
