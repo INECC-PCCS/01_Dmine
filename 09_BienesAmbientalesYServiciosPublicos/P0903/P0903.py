@@ -6,7 +6,7 @@ Started on Mon Sep  4 12:39:42 2017
 """
 
 '''
-Descripcion: Creación de dataset para el parámetro P0602 "Árboles Plantados"
+Descripcion: Creación de dataset para el parámetro P0903 "Superfice Reforestada (Hectareas)"
 Informacion disponible de 1994 a 2014
 '''
 
@@ -34,7 +34,7 @@ NombreParametro = 'Superficie Reforestada (ha)'
 dataset = pd.read_excel(DirFuente + r'\BS01.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
 dataset.set_index('CVE_MUN', inplace = True)
 
-# Seleccionar Columnas de Denuncias
+# Seleccionar Columnas de Superfice reforestada
 Columnas_raw = [x for x in list(dataset) if 'Superficie reforestada' in x]
 
 # renombrar columnas al año que corresponden
@@ -73,7 +73,7 @@ info_incomple = 135 - info_completa - info_sin_info                 # Para gener
 # Construccion del Parametro
 param_dataset = DatosLimpios.set_index('CVE_SUN')
 param_dataset['CVE_SUN'] = param_dataset.index
-param = param_dataset.groupby(by='CVE_SUN').agg('sum')['SF_REFORST']     # Total de denuncias
+param = param_dataset.groupby(by='CVE_SUN').agg('sum')['SF_REFORST']     # Total de Area Reforestada por Ciudad
 intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']     # Total de denuncias
 std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
 std_nomsun.drop_duplicates(keep='first', inplace = True)

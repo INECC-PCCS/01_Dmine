@@ -1,5 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Aug 30 17:28:37 2017
+
+@author: carlos.arana
+"""
+
 '''
-Descripcion: Creación de dataset para el parámetro P0602 "Árboles Plantados"
+Descripcion: Creación de dataset para el parámetro P0902 "Árboles Plantados"
 Informacion disponible de 1994 a 2014
 '''
 
@@ -27,7 +34,7 @@ NombreParametro = 'Árboles Plantados'
 dataset = pd.read_excel(DirFuente + r'\BS01.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
 dataset.set_index('CVE_MUN', inplace = True)
 
-# Seleccionar Columnas de Denuncias
+# Seleccionar Columnas de Arboles Plantados
 Columnas_raw = [x for x in list(dataset) if 'rboles plant' in x]
 
 # renombrar columnas al año que corresponden
@@ -66,8 +73,8 @@ info_incomple = 135 - info_completa - info_sin_info                 # Para gener
 # Construccion del Parametro
 param_dataset = DatosLimpios.set_index('CVE_SUN')
 param_dataset['CVE_SUN'] = param_dataset.index
-param = param_dataset.groupby(by='CVE_SUN').agg('sum')['ARB_PLANT']     # Total de denuncias
-intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']     # Total de denuncias
+param = param_dataset.groupby(by='CVE_SUN').agg('sum')['ARB_PLANT']     # Total de Arboles plantados
+intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']     # Integridad por ciudad
 std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
 std_nomsun.drop_duplicates(keep='first', inplace = True)
 Parametro = pd.DataFrame()

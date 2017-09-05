@@ -101,3 +101,15 @@ SF_REFORST_2011,Superficie reforestada (hectáreas) en 2011
 SF_REFORST_2012,Superficie reforestada (hectáreas) en 2012
 SF_REFORST_2013,Superficie reforestada (hectáreas) en 2013
 SF_REFORST_2014,Superficie reforestada (hectáreas) en 2014
+AREA_URB,Area Urbana (Kilómetros Cudrados)
+AREA_VERDE,"Area Verde (Kilometros Cuadrados). Se consideran areas verdes a las areas clasificadas como: Agricultura, Pastizal, Bosque, Selva, Matorral Xerófilo, Otros tipos de Vegetación, Vegetacion Secundaria."
+Agricultura,Suelo dedicado a agricultura (Kilómetros Cuadrados)
+Bosque,"Area de bosque (Kilómetros Cuadrados). Vegetación arbórea, principalmente de zonas templadas y semifrías, en climas subhúmedos a muy húmedos."
+Matorral xerófilo,"Area de Matorral Xerófilo (Kilómetros Cuadrados). El Matorral Xerófilo es un ecosistema conformado por matorrales en zonas de escasas precipitaciones, por lo que predomina la vegetación xerófila (plantas adaptadas a la escasez de agua)"
+Otros tipos de vegetación,"Comunidades vegetales con características ecológicas especiales: fisonomía, origen (suelos, fuego, agua, etc.) que los diferencian de las formaciones vegetales típicas como bosque, selva, pastizal (Kilómetros cuadrados)"
+Pastizal,"Area de Pastizal (Kilómetros cuadrados). Comunidades vegetales caracterizadas por la dominancia de gramíneas (pastos o zacates) o graminoides. Aquí se incluyen pastizales determinados tanto por condiciones naturales de clima y suelo, como aquéllos establecidos por influencia humana."
+Selva,Area de Selva (Kilómetros cuadrados). Vegetación arbórea en climas cálido - húmedos a cálidos semisecos. Se caracteriza por tener generalmente una gran variedad de especies de origen tropical.
+Superficie continental (Kilómetros cuadrados),La parte del territorio nacional que está articulada con el Continente Americano.
+Vegetación secundaria a/,Estado sucesional de la vegetación. Se indica alguna fase de vegetación secundaria cuando hay algún tipo de indicio de que la vegetación original fue eliminada o perturbada a un grado en el que ha sido modificada profundamente.(Kilómetros Cuadrados)
+Áreas urbanas,Area acondicionada para el uso por el ser humano como sociedad (Kilómetros cuadrados).
+AREA_CONTINENTAL,Superficie continental (Kilómetros cuadrados)
