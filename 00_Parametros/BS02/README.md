@@ -1,6 +1,6 @@
-# BS01
+# BS02
 
-Script para descargar y hacer una limpieza basica a los datos de Árboles plantados, Superficie reforestada (hectáreas), Volumen de basura recolectada (miles de toneladas), Denuncias recibidas en materia ambiental, Licencias Ambientales Únicas vigentes, desde el Sistema Estatal y Municipal de Bases de Datos (Simbad) del INEGI.
+Script para descargar y hacer una limpieza basica a los datos de Medio ambiente - Uso de Suelo y Vegetacion, desde el Sistema Estatal y Municipal de Bases de Datos (Simbad) del INEGI.
 
 
 ----------

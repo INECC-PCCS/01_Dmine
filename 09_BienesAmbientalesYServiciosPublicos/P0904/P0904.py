@@ -28,37 +28,39 @@ from ParametroEstandar.ParametroEstandar import ParametroEstandar # Disponible e
 DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
 DirDestino = r'D:\PCCS\01_Dmine\09_BienesAmbientalesYServiciosPublicos'
 ClaveParametro = 'P0904'
-NombreParametro = 'Uso de Suelo y Vegetacion'
-ContenidoDatos = 'Area verde y urbana por clave SUN'     # Contenido de la hoja 'Datos'
+NombreParametro = 'Area Verde'
+ContenidoDatos = 'Superficie de Area verde por clave SUN'     # Contenido de la hoja 'Datos'
 Notas = 'Las areas verdes de un municipio son todas aquellas que en el dataset original aparecen como Agricultura, ' \
         'Pastizal, Bosque, Selva, Matorral Xerófilo, Otros Tipos de Vegetacion, Vegetación Secundaria\n Las Areas ' \
-        'Urbanas son aquellas especificamente etiquetadas de este modo. Los Cuerpos de Agua y Areas sin vegetación ' \
-        'no se toman en consideracion para el análisis'
+        'Urbanas son aquellas especificamente etiquetadas de este modo. Los Cuerpos de Agua se separan para el ' \
+        'parametro P0907, y las Areas sin vegetación no se toman en consideracion para construir parámetros'
 RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/09_BienesAmbientalesYServiciosPublicos/P0904'
 DescVarIntegridad = 'La variable de integridad para esta Dataset es el porcentaje variables que cuentan con informacion' \
                     'para cada municipio'
+DescDataset = 'Uso de suelo por municipio'
+DSBase = '"BS02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
+NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
+UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
 
 # Dataset Inicial
 dataset = pd.read_excel(DirFuente + r'\BS02.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
 dataset.set_index('CVE_MUN', inplace = True)
 
-# Escluir columnas que no se utilizarán
+# Escluir columnas que no corresponden a este parámetro
 del dataset['Áreas sin vegetación']
 del dataset['Cuerpos de agua']
 del dataset['Nombre']
-
-Columnas_verde = list(dataset)[2:9]
-dataset_v = dataset[Columnas_verde]
+del dataset['Superficie continental (Kilómetros cuadrados)']
+del dataset['Áreas urbanas']
 
 # Total de area verde por municipios y Variable de Integridad.
 faltantes = dataset.isnull().sum(axis = 1)
-dataset['AREA_VERDE'] = dataset_v.sum(axis=1)
-
-dataset.head()
+dataset['AREA_VERDE'] = dataset.sum(axis=1)
 
 # Calculo de Variable de Integridad.
+y = len(list(dataset))      # y representa el numero de variables que se utilizan para construir el parámetro
 dataset['NUM_ANIOS_FALTANTES'] = faltantes
-dataset['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: (11 - x) / 11)
+dataset['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: (y - x) / y)
 variables_dataset = list(dataset)
 
 # Consolidar datos por ciudad
@@ -79,19 +81,15 @@ info_incomple = 135 - info_completa - info_sin_info                 # Para gener
 param_dataset = DatosLimpios.set_index('CVE_SUN')
 param_dataset['CVE_SUN'] = param_dataset.index
 param = param_dataset.groupby(by='CVE_SUN').agg('sum')['AREA_VERDE']     # Total de Area Verde por Ciudad
-param2 = param_dataset.groupby(by='CVE_SUN').agg('sum')['Áreas urbanas']    # Total de Area Urbana por Ciudad
-param3 = param_dataset.groupby(by='CVE_SUN').agg('sum')['Superficie continental (Kilómetros cuadrados)']    # Total de Superficie Continental
 intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']     # Integridad por ciudad
 std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
 std_nomsun.drop_duplicates(keep='first', inplace = True)
 Parametro = pd.DataFrame()
 Parametro['CIUDAD'] = std_nomsun
-Parametro['AREA_CONTINENTAL'] = param3
 Parametro['AREA_VERDE'] = param
-Parametro['AREA_URB'] = param2
 Parametro['INTEGRIDAD'] = intparam
 Parametro = Parametro.sort_index()
-list(Parametro)
+
 # Lista de Variables
 variables_locales = sorted(list(set(list(DatosLimpios) +
                                     list(integridad_parametro['INTEGRIDAD']) +
@@ -114,10 +112,10 @@ d_mineria = {
     '  ': np.nan,
     'DESCRIPCION DEL PROCESO DE MINERIA:' : np.nan,
     'Nombre del Dataset' : NombreParametro,
-    'Descripcion del dataset' : 'Arboles Plantados, por municipio, de 1994 a 2014',
-    'Fuente'    : 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)',
-    'URL_Fuente': 'http://sc.inegi.org.mx/cobdem/',
-    'Dataset base' : '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS01' ,
+    'Descripcion del dataset' : DescDataset,
+    'Fuente'    : NomFuente,
+    'URL_Fuente': UrlFuente,
+    'Dataset base' : DSBase,
     'Repositorio de mineria' : RepoMina,
     'Notas' : Notas,
     'VAR_INTEGRIDAD' : DescVarIntegridad,
