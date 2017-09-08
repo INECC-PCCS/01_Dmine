@@ -113,3 +113,7 @@ Superficie continental (Kilómetros cuadrados),La parte del territorio nacional q
 Vegetación secundaria a/,Estado sucesional de la vegetación. Se indica alguna fase de vegetación secundaria cuando hay algún tipo de indicio de que la vegetación original fue eliminada o perturbada a un grado en el que ha sido modificada profundamente.(Kilómetros Cuadrados)
 Áreas urbanas,Area acondicionada para el uso por el ser humano como sociedad (Kilómetros cuadrados).
 AREA_CONTINENTAL,Superficie continental (Kilómetros cuadrados)
+P0901,"Numero de denuncias recibidas en materia ambiental, en el periodo de 1994 a 2014"
+P0902,"Numero de Arboles Plantados, en el periodo de 1994 a 2014"
+P0903,Hectareas de Superficie Reforestada
+P0904,Parámetro de Area verde (Kilometros Cuadrados)

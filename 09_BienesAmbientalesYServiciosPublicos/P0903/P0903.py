@@ -79,7 +79,7 @@ std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   
 std_nomsun.drop_duplicates(keep='first', inplace = True)
 Parametro = pd.DataFrame()
 Parametro['CIUDAD'] = std_nomsun
-Parametro['ARB_PLANT'] = param
+Parametro[ClaveParametro] = param
 Parametro['INTEGRIDAD'] = intparam
 Parametro = Parametro.sort_index()
 

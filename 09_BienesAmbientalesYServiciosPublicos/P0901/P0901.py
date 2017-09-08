@@ -79,7 +79,7 @@ std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   
 std_nomsun.drop_duplicates(keep='first', inplace = True)
 Parametro = pd.DataFrame()
 Parametro['CIUDAD'] = std_nomsun
-Parametro['DENUNCIAS_AMB'] = param
+Parametro['P0901'] = param
 Parametro['INTEGRIDAD'] = intparam
 Parametro = Parametro.sort_index()
 
@@ -133,4 +133,3 @@ DescParametro = {
 
 # Crear archivo de Excel
 ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, integridad_parametro)
-
