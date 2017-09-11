@@ -1,4 +1,4 @@
-#[PROXY] P0804 - Conflictos relacionados por ruido
+# [PROXY] P0804 - Conflictos relacionados por ruido
 
 (Mineria de datos de parametro pendiente)
 

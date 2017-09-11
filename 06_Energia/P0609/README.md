@@ -1,4 +1,4 @@
-#[PROXY] P0609 - Usuarios eléctricos
+# [PROXY] P0609 - Usuarios eléctricos
 
 (Mineria de datos de parametro pendiente)
 

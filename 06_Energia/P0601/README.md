@@ -1,4 +1,4 @@
-#[PROXY] P0601 - Viviendas particulares habitadas con electricidad
+# [PROXY] P0601 - Viviendas particulares habitadas con electricidad
 
 (Mineria de datos de parametro pendiente)
 

@@ -1,4 +1,4 @@
-#[PROXY] P0202 - Programa de verificación vehicular
+# [PROXY] P0202 - Programa de verificación vehicular
 
 (Mineria de datos de parametro pendiente)
 

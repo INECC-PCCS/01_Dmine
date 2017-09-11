@@ -1,4 +1,4 @@
-#[PROXY] P0614 - Producto Interno Bruto
+# [PROXY] P0614 - Producto Interno Bruto
 
 (Mineria de datos de parametro pendiente)
 

@@ -1,4 +1,4 @@
-#[PROXY] P0602 - Viviendas particulares habitadas con focos ahorradores
+# [PROXY] P0602 - Viviendas particulares habitadas con focos ahorradores
 
 (Mineria de datos de parametro pendiente)
 

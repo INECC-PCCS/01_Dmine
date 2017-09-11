@@ -1,4 +1,4 @@
-#[PROXY] P0106 - Demanda Bioquímica de Oxigeno a 5 días.
+# [PROXY] P0106 - Demanda Bioquímica de Oxigeno a 5 días.
 
 (Mineria de datos de parametro pendiente)
 

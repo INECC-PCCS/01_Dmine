@@ -1,4 +1,4 @@
-#[PROXY] P0605 - Viviendas particulares habitadas con panel fotovoltaico
+# [PROXY] P0605 - Viviendas particulares habitadas con panel fotovoltaico
 
 (Mineria de datos de parametro pendiente)
 

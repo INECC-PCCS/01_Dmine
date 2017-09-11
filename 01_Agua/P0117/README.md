@@ -1,4 +1,4 @@
-#[PROXY] P0117 - Rehabilitación de tomas domiciliarias (%)
+# [PROXY] P0117 - Rehabilitación de tomas domiciliarias (%)
 
 (Mineria de datos de parametro pendiente)
 

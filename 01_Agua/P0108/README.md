@@ -1,4 +1,4 @@
-#[PROXY] P0108 - Sólidos Suspendidos Totales
+# [PROXY] P0108 - Sólidos Suspendidos Totales
 
 (Mineria de datos de parametro pendiente)
 

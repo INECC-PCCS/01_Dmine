@@ -1,4 +1,4 @@
-#[PROXY] P0203 - Sistema de Monitoreo de la Calidad del Aire
+# [PROXY] P0203 - Sistema de Monitoreo de la Calidad del Aire
 
 (Mineria de datos de parametro pendiente)
 

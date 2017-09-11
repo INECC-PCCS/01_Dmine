@@ -1,4 +1,4 @@
-#[PROXY] P0209 - Concentración de dióxido de nitrógeno (NO2)
+# [PROXY] P0209 - Concentración de dióxido de nitrógeno (NO2)
 
 (Mineria de datos de parametro pendiente)
 

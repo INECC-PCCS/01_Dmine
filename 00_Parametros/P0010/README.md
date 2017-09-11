@@ -1,4 +1,4 @@
-#[PROXY] P0010 - Potencial de aprovechamiento energía eólica
+# [PROXY] P0010 - Potencial de aprovechamiento energía eólica
 
 (Mineria de datos de parametro pendiente)
 

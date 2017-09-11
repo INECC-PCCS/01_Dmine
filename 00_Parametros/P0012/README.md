@@ -1,4 +1,4 @@
-#[PROXY] P0012 - Potencial de aprovechamiento energía de biomasa
+# [PROXY] P0012 - Potencial de aprovechamiento energía de biomasa
 
 (Mineria de datos de parametro pendiente)
 

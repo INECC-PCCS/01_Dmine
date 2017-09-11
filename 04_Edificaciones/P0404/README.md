@@ -1,4 +1,4 @@
-#[PROXY] P0404 - Viviendas con piso de tierra
+# [PROXY] P0404 - Viviendas con piso de tierra
 
 (Mineria de datos de parametro pendiente)
 
