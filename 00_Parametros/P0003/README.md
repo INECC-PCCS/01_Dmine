@@ -1,4 +1,4 @@
-#[PROXY] P0003 - Tipo por rango de población
+# [PROXY] P0003 - Tipo por rango de población
 
 (Mineria de datos de parametro pendiente)
 

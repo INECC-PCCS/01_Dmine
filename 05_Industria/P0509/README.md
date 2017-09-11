@@ -1,4 +1,4 @@
-#[PROXY] P0509 - Consumo de materiales
+# [PROXY] P0509 - Consumo de materiales
 
 (Mineria de datos de parametro pendiente)
 

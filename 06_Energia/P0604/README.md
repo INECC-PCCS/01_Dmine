@@ -1,4 +1,4 @@
-#[PROXY] P0604 - Viviendas particulares habitadas con calentador solar
+# [PROXY] P0604 - Viviendas particulares habitadas con calentador solar
 
 (Mineria de datos de parametro pendiente)
 

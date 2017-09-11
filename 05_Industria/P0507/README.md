@@ -1,4 +1,4 @@
-#[PROXY] P0507 - Residuos peligrosos
+# [PROXY] P0507 - Residuos peligrosos
 
 (Mineria de datos de parametro pendiente)
 

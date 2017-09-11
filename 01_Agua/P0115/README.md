@@ -1,4 +1,4 @@
-#[PROXY] P0115 - Pérdidas por longitud de red
+# [PROXY] P0115 - Pérdidas por longitud de red
 
 (Mineria de datos de parametro pendiente)
 

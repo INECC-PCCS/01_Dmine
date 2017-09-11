@@ -1,4 +1,4 @@
-#[PROXY] P0006 - Temperatura
+# [PROXY] P0006 - Temperatura
 
 (Mineria de datos de parametro pendiente)
 

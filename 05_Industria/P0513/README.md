@@ -1,4 +1,4 @@
-#[PROXY] P0513 - Productos, Subproductos y productos intermedios
+# [PROXY] P0513 - Productos, Subproductos y productos intermedios
 
 (Mineria de datos de parametro pendiente)
 

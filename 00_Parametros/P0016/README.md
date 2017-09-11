@@ -1,4 +1,4 @@
-#[PROXY] P0016 - Integridad de la información por indicador
+# [PROXY] P0016 - Integridad de la información por indicador
 
 (Mineria de datos de parametro pendiente)
 

@@ -1,4 +1,4 @@
-#[PROXY] P0511 -   Número de empleos industriales formales creados
+# [PROXY] P0511 -   Número de empleos industriales formales creados
 
 (Mineria de datos de parametro pendiente)
 

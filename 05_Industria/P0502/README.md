@@ -1,4 +1,4 @@
-#[PROXY] P0502 - Número de empresas con certificado de “Industria Limpia”
+# [PROXY] P0502 - Número de empresas con certificado de “Industria Limpia”
 
 (Mineria de datos de parametro pendiente)
 

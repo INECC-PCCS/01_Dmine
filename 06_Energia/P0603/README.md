@@ -1,4 +1,4 @@
-#[PROXY] P0603 - Viviendas particulares habitadas con calentador de agua (boiler)
+# [PROXY] P0603 - Viviendas particulares habitadas con calentador de agua (boiler)
 
 (Mineria de datos de parametro pendiente)
 

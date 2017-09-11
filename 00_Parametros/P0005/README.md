@@ -1,4 +1,4 @@
-#[PROXY] P0005 - Precipitación
+# [PROXY] P0005 - Precipitación
 
 (Mineria de datos de parametro pendiente)
 

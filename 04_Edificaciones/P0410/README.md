@@ -1,4 +1,4 @@
-#[PROXY] P0410 - Viviendas que disponen de agua entubada
+# [PROXY] P0410 - Viviendas que disponen de agua entubada
 
 (Mineria de datos de parametro pendiente)
 

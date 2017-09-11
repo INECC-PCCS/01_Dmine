@@ -1,4 +1,4 @@
-#[PROXY] P0210 - Concentración de monóxido de carbono (CO)
+# [PROXY] P0210 - Concentración de monóxido de carbono (CO)
 
 (Mineria de datos de parametro pendiente)
 

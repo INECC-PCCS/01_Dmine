@@ -1,4 +1,4 @@
-#[PROXY] P0508 - Consumo energético
+# [PROXY] P0508 - Consumo energético
 
 (Mineria de datos de parametro pendiente)
 

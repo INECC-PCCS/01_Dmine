@@ -56,7 +56,7 @@ for indecs, row in lista.iterrows():
     if not os.path.isdir(DirDestino):       # Crea un Directorio si es que no existe
         os.makedirs(DirDestino)
         readmefile = '{}\README.md'.format(DirDestino)
-        Glosa = '#[PROXY] {} - {}\n\n{}'.format(indecs, row['Nombre Parametro'],EsProxy)
+        Glosa = '# [PROXY] {} - {}\n\n{}'.format(indecs, row['Nombre Parametro'],EsProxy)
         with open(readmefile, 'w') as README:
             README.write(Glosa)
 

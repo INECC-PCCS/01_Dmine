@@ -1,4 +1,4 @@
-#[PROXY] P0906 - Regiones Terrestres prioritarias
+# [PROXY] P0906 - Regiones Terrestres prioritarias
 
 (Mineria de datos de parametro pendiente)
 

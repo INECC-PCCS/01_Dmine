@@ -1,4 +1,4 @@
-#[PROXY] P0607 - Potencial de fuentes renovables de energía
+# [PROXY] P0607 - Potencial de fuentes renovables de energía
 
 (Mineria de datos de parametro pendiente)
 

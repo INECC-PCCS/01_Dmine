@@ -1,4 +1,4 @@
-#[PROXY] P0104 - Capacidad de Tratamiento de Aguas Residuales
+# [PROXY] P0104 - Capacidad de Tratamiento de Aguas Residuales
 
 (Mineria de datos de parametro pendiente)
 

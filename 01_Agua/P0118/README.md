@@ -1,4 +1,4 @@
-#[PROXY] P0118 - Cobertura de agua potable reportada (%)
+# [PROXY] P0118 - Cobertura de agua potable reportada (%)
 
 (Mineria de datos de parametro pendiente)
 

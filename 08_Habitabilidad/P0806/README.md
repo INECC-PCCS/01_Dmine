@@ -1,4 +1,4 @@
-#[PROXY] P0806 - Condición del lugar de atención médica
+# [PROXY] P0806 - Condición del lugar de atención médica
 
 (Mineria de datos de parametro pendiente)
 

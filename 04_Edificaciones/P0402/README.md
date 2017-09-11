@@ -1,4 +1,4 @@
-#[PROXY] P0402 - Viviendas que aprovechan energía solar
+# [PROXY] P0402 - Viviendas que aprovechan energía solar
 
 (Mineria de datos de parametro pendiente)
 

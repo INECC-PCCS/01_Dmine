@@ -1,4 +1,4 @@
-#[PROXY] P0007 - Grado de marginación urbana
+# [PROXY] P0007 - Grado de marginación urbana
 
 (Mineria de datos de parametro pendiente)
 

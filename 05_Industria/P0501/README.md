@@ -1,4 +1,4 @@
-#[PROXY] P0501 - Número de empresas industriales en la municipio
+# [PROXY] P0501 - Número de empresas industriales en la municipio
 
 (Mineria de datos de parametro pendiente)
 
