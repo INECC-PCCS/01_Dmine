@@ -29,6 +29,10 @@ DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS01'
 DirDestino = r'D:\PCCS\01_Dmine\09_BienesAmbientalesYServiciosPublicos'
 ClaveParametro = 'P0902'
 NombreParametro = 'Árboles Plantados'
+ClaveDimension = ClaveParametro[1:3]
+NomDimension = AsignarDimension(ClaveDimension)['nombre']
+TituloParametro = ClaveParametro
+ActDatos = '2014'
 
 # Dataset Inicial
 dataset = pd.read_excel(DirFuente + r'\BS01.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
@@ -129,7 +133,12 @@ DescParametro = {
     'info_sin_info' : info_sin_info,
     'info_incomple' : info_incomple,
     'RutaSalida' : DirDestino,
+    'Clave de Dimension' : ClaveDimension,
+    'Nombre de Dimension' : NomDimension,
+    'Titulo de Columna' : TituloParametro,
+    'Actualizacion de datos' : ActDatos
 }
 
 # Crear archivo de Excel
 ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, integridad_parametro)
+DocumentarParametro(DescParametro, MetaParametro, Parametro)
