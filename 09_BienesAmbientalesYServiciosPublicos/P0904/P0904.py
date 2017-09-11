@@ -43,6 +43,7 @@ DescParam = 'Area verde (Kilometros Cuadrados)'
 DSBase = '"BS02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
 NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
 UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
+ActDatos = '2005'
 ClaveDimension = ClaveParametro[1:3]
 NomDimension = AsignarDimension(ClaveDimension)['nombre']
 DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio'])
@@ -143,9 +144,11 @@ DescParametro = {
     'RutaSalida' : DirDestino,
     'Clave de Dimension' : ClaveDimension,
     'Nombre de Dimension' : NomDimension,
-    'Titulo de Columna' : TituloParametro
+    'Titulo de Columna' : TituloParametro,
+    'Actualizacion de datos' : ActDatos
 }
 
-# Crear archivo de Excel
+# Crear archivo de Excel y documentar parametro
 ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, integridad_parametro)
 DocumentarParametro(DescParametro, MetaParametro, Parametro)
+
