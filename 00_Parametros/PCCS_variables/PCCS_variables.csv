@@ -117,3 +117,7 @@ P0901,"Numero de denuncias recibidas en materia ambiental, en el periodo de 1994
 P0902,"Numero de Arboles Plantados, en el periodo de 1994 a 2014"
 P0903,Hectareas de Superficie Reforestada
 P0904,Parámetro de Area verde (Kilometros Cuadrados)
+Cuerpos de agua,Cuerpos de agua (Kilómetros Cuadrados)
+FALTANTES,Municipios en donde la información no se encuentra disponible
+P0907,Superficie Acuifera (Kilómetros Cuadrados)
+SF_ACUICOLA,Superficie Acuifera (Kilómetros Cuadrados)

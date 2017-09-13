@@ -25,3 +25,4 @@ def AsignarDimension(ClaveDimension):
         '10': {'directorio': 'ResiduosSolidosUrbanos', 'nombre': 'Residuos Sólidos Urbanos'},
     }
     return dimension[ClaveDimension]
+
