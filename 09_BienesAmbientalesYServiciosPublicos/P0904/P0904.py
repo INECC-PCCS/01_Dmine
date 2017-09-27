@@ -23,8 +23,8 @@ from SUN.asignar_sun import asignar_sun                     # Disponible en http
 from SUN_integridad.SUN_integridad import SUN_integridad    # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
 from PCCS_variables.PCCS_variables import variables         # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
 from ParametroEstandar.ParametroEstandar import ParametroEstandar # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
-from AsignarDimension.AsignarDimension import AsignarDimension
-from DocumentarParametro.DocumentarParametro import DocumentarParametro
+from AsignarDimension.AsignarDimension import AsignarDimension  # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/AsignarDimension
+from DocumentarParametro.DocumentarParametro import DocumentarParametro # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/DocumentarParametro
 
 # Descripciones del Parametro
 ClaveParametro = 'P0904'
@@ -119,11 +119,11 @@ d_mineria = {
     'DESCRIPCION DEL PROCESO DE MINERIA:' : np.nan,
     'Nombre del Dataset' : NombreParametro,
     'Descripcion del dataset' : DescParam,
+    'Notas' : Notas,
     'Fuente'    : NomFuente,
     'URL_Fuente': UrlFuente,
     'Dataset base' : DSBase,
     'Repositorio de mineria' : RepoMina,
-    'Notas' : Notas,
     'VAR_INTEGRIDAD' : DescVarIntegridad,
     ' ' : np.nan,
     'DESCRIPCION DE VARIABLES' : np.nan

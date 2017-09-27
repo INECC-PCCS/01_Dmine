@@ -27,43 +27,48 @@ from AsignarDimension.AsignarDimension import AsignarDimension
 from DocumentarParametro.DocumentarParametro import DocumentarParametro
 
 # Descripciones del Parametro
-ClaveParametro = 'P0907'
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
-NombreParametro = 'Aguas Superficiales'
-TituloParametro = 'AGUAS_SUPERFICIALES'          # Para nombrar la columna del parametro
-ContenidoHojaDatos = 'Datos de Aguas superficiales etiquetados con clave SUN'   # Contenido de la hoja 'Datos'
-Notas = 'Aguas superficiales. Son las aguas continentales que se encuentran en la superficie de la Tierra ' \
-        'formando ríos, lagos, lagunas, pantanos, charcas, humedales, y otros similares'
-RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/09_BienesAmbientalesYServiciosPublicos/P0907'
+ClaveParametro = 'P0709'
+DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\MV01'
+NombreParametro = 'Vehiculos de Pasajeros'
+TituloParametro = 'VEHICULOS_PASAJEROS'          # Para nombrar la columna del parametro
+ContenidoHojaDatos = 'Numero de Camiones de pasajeros por municipio de 1980 a 2016'   # Contenido de la hoja 'Datos'
+Notas = 'Se utiliza únicamente el dato más reciente para construir el parámetro'
 DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
                     '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
-DescParam = 'Aguas Superficiales (Kilometros Cuadrados)'
-DSBase = '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
+DescParam = 'Vehiculos de pasajeros registrados (2016)'
+DSBase = '"MV01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/MV01'
 NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
 UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
-ActDatos = '2005'
+ActDatos = '2016'
 ClaveDimension = ClaveParametro[1:3]
 NomDimension = AsignarDimension(ClaveDimension)['nombre']
+DirDimension = ClaveDimension + "_" + AsignarDimension(ClaveDimension)['directorio']
+RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/{}/{}'.format(DirDimension, ClaveParametro)
 DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio'])
 
 # Dataset Inicial
-dataset = pd.read_excel(DirFuente + r'\BS02.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
+dataset = pd.read_excel(DirFuente + r'\MV01.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
 dataset.set_index('CVE_MUN', inplace = True)
 
-# Elegir columna de Cuerpos de Agua y reconvertir a dataset
-dataset = dataset['Cuerpos de agua']
-proxy = pd.DataFrame()
-proxy['Cuerpos de agua'] = dataset
-dataset = proxy
+# Elegir columnas de vehiculos de pasajeros
+Columnas_raw = [x for x in list(dataset) if 'pasaje' in x]
 
-# Total de area verde por municipios y Variable de Integridad.
-faltantes = dataset.isnull()
-dataset[TituloParametro] = dataset.sum(axis=1)
+# Separar datos de camiones de pasajeros y renombrar columnas al año que corresponden
+anios = list(range(1980, 2017))
+registros = []
+for i in anios:
+    registros.append('CAM_PASAJEROS_{}'.format(i))
+
+dataset = dataset[Columnas_raw]
+dataset.columns = registros
+
+# Vehiculos de pasajeros y Variable de Integridad.
+dataset[TituloParametro] = dataset['CAM_PASAJEROS_2016']
+faltantes = dataset[TituloParametro].isnull()
 
 # Calculo de Variable de Integridad.
-y = len(list(dataset))-1      # y representa el numero de variables que se utilizan para construir el parámetro
 dataset['FALTANTES'] = faltantes
-dataset['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: (y - x) / y)
+dataset['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: int(not x))
 variables_dataset = list(dataset)
 
 # Consolidar datos por ciudad

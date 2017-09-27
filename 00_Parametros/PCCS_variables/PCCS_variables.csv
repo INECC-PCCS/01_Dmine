@@ -79,28 +79,28 @@ ARB_PLANT_2011,Total de Arboles Plantados en 2011
 ARB_PLANT_2012,Total de Arboles Plantados en 2012
 ARB_PLANT_2013,Total de Arboles Plantados en 2013
 ARB_PLANT_2014,Total de Arboles Plantados en 2014
-SF_REFORST,Superficie reforestada (hectáreas) en el periodo de 1994 a 2014
-SF_REFORST_1994,Superficie reforestada (hectáreas) en 1994
-SF_REFORST_1995,Superficie reforestada (hectáreas) en 1995
-SF_REFORST_1996,Superficie reforestada (hectáreas) en 1996
-SF_REFORST_1997,Superficie reforestada (hectáreas) en 1997
-SF_REFORST_1998,Superficie reforestada (hectáreas) en 1998
-SF_REFORST_1999,Superficie reforestada (hectáreas) en 1999
-SF_REFORST_2000,Superficie reforestada (hectáreas) en 2000
-SF_REFORST_2001,Superficie reforestada (hectáreas) en 2001
-SF_REFORST_2002,Superficie reforestada (hectáreas) en 2002
-SF_REFORST_2003,Superficie reforestada (hectáreas) en 2003
-SF_REFORST_2004,Superficie reforestada (hectáreas) en 2004
-SF_REFORST_2005,Superficie reforestada (hectáreas) en 2005
-SF_REFORST_2006,Superficie reforestada (hectáreas) en 2006
-SF_REFORST_2007,Superficie reforestada (hectáreas) en 2007
-SF_REFORST_2008,Superficie reforestada (hectáreas) en 2008
-SF_REFORST_2009,Superficie reforestada (hectáreas) en 2009
-SF_REFORST_2010,Superficie reforestada (hectáreas) en 2010
-SF_REFORST_2011,Superficie reforestada (hectáreas) en 2011
-SF_REFORST_2012,Superficie reforestada (hectáreas) en 2012
-SF_REFORST_2013,Superficie reforestada (hectáreas) en 2013
-SF_REFORST_2014,Superficie reforestada (hectáreas) en 2014
+SF_REFORST,Superficie reforestada (Kilómetros cuadrados) en el periodo de 1994 a 2014
+SF_REFORST_1994,Superficie reforestada (Kilómetros cuadrados) en 1994
+SF_REFORST_1995,Superficie reforestada (Kilómetros cuadrados) en 1995
+SF_REFORST_1996,Superficie reforestada (Kilómetros cuadrados) en 1996
+SF_REFORST_1997,Superficie reforestada (Kilómetros cuadrados) en 1997
+SF_REFORST_1998,Superficie reforestada (Kilómetros cuadrados) en 1998
+SF_REFORST_1999,Superficie reforestada (Kilómetros cuadrados) en 1999
+SF_REFORST_2000,Superficie reforestada (Kilómetros cuadrados) en 2000
+SF_REFORST_2001,Superficie reforestada (Kilómetros cuadrados) en 2001
+SF_REFORST_2002,Superficie reforestada (Kilómetros cuadrados) en 2002
+SF_REFORST_2003,Superficie reforestada (Kilómetros cuadrados) en 2003
+SF_REFORST_2004,Superficie reforestada (Kilómetros cuadrados) en 2004
+SF_REFORST_2005,Superficie reforestada (Kilómetros cuadrados) en 2005
+SF_REFORST_2006,Superficie reforestada (Kilómetros cuadrados) en 2006
+SF_REFORST_2007,Superficie reforestada (Kilómetros cuadrados) en 2007
+SF_REFORST_2008,Superficie reforestada (Kilómetros cuadrados) en 2008
+SF_REFORST_2009,Superficie reforestada (Kilómetros cuadrados) en 2009
+SF_REFORST_2010,Superficie reforestada (Kilómetros cuadrados) en 2010
+SF_REFORST_2011,Superficie reforestada (Kilómetros cuadrados) en 2011
+SF_REFORST_2012,Superficie reforestada (Kilómetros cuadrados) en 2012
+SF_REFORST_2013,Superficie reforestada (Kilómetros cuadrados) en 2013
+SF_REFORST_2014,Superficie reforestada (Kilómetros cuadrados) en 2014
 AREA_URB,Area Urbana (Kilómetros Cudrados)
 AREA_VERDE,"Area Verde (Kilometros Cuadrados). Se consideran areas verdes a las areas clasificadas como: Agricultura, Pastizal, Bosque, Selva, Matorral Xerófilo, Otros tipos de Vegetación, Vegetacion Secundaria."
 Agricultura,Suelo dedicado a agricultura (Kilómetros Cuadrados)
@@ -119,5 +119,44 @@ P0903,Hectareas de Superficie Reforestada
 P0904,Parámetro de Area verde (Kilometros Cuadrados)
 Cuerpos de agua,Cuerpos de agua (Kilómetros Cuadrados)
 FALTANTES,Municipios en donde la información no se encuentra disponible
-P0907,Superficie Acuifera (Kilómetros Cuadrados)
-SF_ACUICOLA,Superficie Acuifera (Kilómetros Cuadrados)
+P0907,Aguas Superficiales (Kilómetros Cuadrados)
+AGUAS_SUPERFICIALES,Aguas continentales que se encuentran en la superficie de la Tierra (Kilometros Cuadrados).
+CAM_PASAJEROS_1980,Numero de Camiones de pasajeros registrados en el municipio (1980)
+CAM_PASAJEROS_1981,Numero de Camiones de pasajeros registrados en el municipio (1981)
+CAM_PASAJEROS_1982,Numero de Camiones de pasajeros registrados en el municipio (1982)
+CAM_PASAJEROS_1983,Numero de Camiones de pasajeros registrados en el municipio (1983)
+CAM_PASAJEROS_1984,Numero de Camiones de pasajeros registrados en el municipio (1984)
+CAM_PASAJEROS_1985,Numero de Camiones de pasajeros registrados en el municipio (1985)
+CAM_PASAJEROS_1986,Numero de Camiones de pasajeros registrados en el municipio (1986)
+CAM_PASAJEROS_1987,Numero de Camiones de pasajeros registrados en el municipio (1987)
+CAM_PASAJEROS_1988,Numero de Camiones de pasajeros registrados en el municipio (1988)
+CAM_PASAJEROS_1989,Numero de Camiones de pasajeros registrados en el municipio (1989)
+CAM_PASAJEROS_1990,Numero de Camiones de pasajeros registrados en el municipio (1990)
+CAM_PASAJEROS_1991,Numero de Camiones de pasajeros registrados en el municipio (1991)
+CAM_PASAJEROS_1992,Numero de Camiones de pasajeros registrados en el municipio (1992)
+CAM_PASAJEROS_1993,Numero de Camiones de pasajeros registrados en el municipio (1993)
+CAM_PASAJEROS_1994,Numero de Camiones de pasajeros registrados en el municipio (1994)
+CAM_PASAJEROS_1995,Numero de Camiones de pasajeros registrados en el municipio (1995)
+CAM_PASAJEROS_1996,Numero de Camiones de pasajeros registrados en el municipio (1996)
+CAM_PASAJEROS_1997,Numero de Camiones de pasajeros registrados en el municipio (1997)
+CAM_PASAJEROS_1998,Numero de Camiones de pasajeros registrados en el municipio (1998)
+CAM_PASAJEROS_1999,Numero de Camiones de pasajeros registrados en el municipio (1999)
+CAM_PASAJEROS_2000,Numero de Camiones de pasajeros registrados en el municipio (2000)
+CAM_PASAJEROS_2001,Numero de Camiones de pasajeros registrados en el municipio (2001)
+CAM_PASAJEROS_2002,Numero de Camiones de pasajeros registrados en el municipio (2002)
+CAM_PASAJEROS_2003,Numero de Camiones de pasajeros registrados en el municipio (2003)
+CAM_PASAJEROS_2004,Numero de Camiones de pasajeros registrados en el municipio (2004)
+CAM_PASAJEROS_2005,Numero de Camiones de pasajeros registrados en el municipio (2005)
+CAM_PASAJEROS_2006,Numero de Camiones de pasajeros registrados en el municipio (2006)
+CAM_PASAJEROS_2007,Numero de Camiones de pasajeros registrados en el municipio (2007)
+CAM_PASAJEROS_2008,Numero de Camiones de pasajeros registrados en el municipio (2008)
+CAM_PASAJEROS_2009,Numero de Camiones de pasajeros registrados en el municipio (2009)
+CAM_PASAJEROS_2010,Numero de Camiones de pasajeros registrados en el municipio (2010)
+CAM_PASAJEROS_2011,Numero de Camiones de pasajeros registrados en el municipio (2011)
+CAM_PASAJEROS_2012,Numero de Camiones de pasajeros registrados en el municipio (2012)
+CAM_PASAJEROS_2013,Numero de Camiones de pasajeros registrados en el municipio (2013)
+CAM_PASAJEROS_2014,Numero de Camiones de pasajeros registrados en el municipio (2014)
+CAM_PASAJEROS_2015,Numero de Camiones de pasajeros registrados en el municipio (2015)
+CAM_PASAJEROS_2016,Numero de Camiones de pasajeros registrados en el municipio (2016)
+P0709,Vehiculos de pasajeros registrados
+VEHICULOS_PASAJEROS,Vehiculos de pasajeros registrados

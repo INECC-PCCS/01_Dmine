@@ -17,18 +17,12 @@ dataframe_sun:  dataframe con claves sun y claves mun, creado con
 '''
 
 import pandas as pd
-module_path = r'D:\PCCS\01_Dmine\00_Parametros\SUN'
-import sys
-if module_path not in sys.path:
-    sys.path.append(module_path)
-
-from asignar_sun import asignar_sun
 
 def SUN_integridad(dataframe_sun):
     # Importar dataset SUN
     sun = pd.read_csv(r'D:\PCCS\01_Dmine\00_Parametros\sun.csv',
                       dtype={'CVE_SUN':str, 'CVE_ENT': str, 'CVE_MUN': str, 'CVE_LOC': str},
-                      encoding='UTF-8',
+                      encoding='UTF-8',      # Si mbcs falla entonces utiliza UTF-8
                       )
 
     # Asegurar longitudesd e caracteres para claves SUN
@@ -68,6 +62,7 @@ def SUN_integridad(dataframe_sun):
                       'EXISTENCIA' : existencia}
 
     return rev_integridad
+
 
 
 '''

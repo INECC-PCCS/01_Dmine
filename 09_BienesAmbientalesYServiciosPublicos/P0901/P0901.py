@@ -23,6 +23,8 @@ from SUN.asignar_sun import asignar_sun                     # Disponible en http
 from SUN_integridad.SUN_integridad import SUN_integridad    # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
 from PCCS_variables.PCCS_variables import variables         # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
 from ParametroEstandar.ParametroEstandar import ParametroEstandar # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
+from AsignarDimension.AsignarDimension import AsignarDimension  # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/AsignarDimension
+from DocumentarParametro.DocumentarParametro import DocumentarParametro # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/DocumentarParametro
 
 # Descripciones del Parametro
 DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS01'
@@ -52,10 +54,8 @@ denuncias_ma = dataset[Denuncias]
 denuncias_ma.columns = registros
 
 # Total de denuncias por municipios y Variable de Integridad.
-
 faltantes = denuncias_ma.isnull().sum(axis = 1)
 denuncias_ma['DENUNCIAS_AMB'] = denuncias_ma.sum(axis=1)
-
 denuncias_ma['NUM_ANIOS_FALTANTES'] = faltantes
 denuncias_ma['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: (21-x)/21)
 var_denuncias = list(denuncias_ma)

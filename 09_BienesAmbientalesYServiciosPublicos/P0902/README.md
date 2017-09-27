@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0902 - Árboles Plantados
 
 **Dataset Base**: "BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS01
 
-**Ultima revision del parametro**: 2017/09/11 
+**Ultima revision del parametro**: 2017/09/14 
 
 **Ultima Actualizacion de los datos**: 2014
 
