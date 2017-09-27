@@ -27,10 +27,10 @@ from AsignarDimension.AsignarDimension import AsignarDimension
 from DocumentarParametro.DocumentarParametro import DocumentarParametro
 
 # Descripciones del Parametro
-ClaveParametro = 'P0907'
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
-NombreParametro = 'Aguas Superficiales'
-TituloParametro = 'AGUAS_SUPERFICIALES'          # Para nombrar la columna del parametro
+ClaveParametro = 'P0712'
+DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\MV01'
+NombreParametro = 'Accidentes Viales'
+TituloParametro = 'ACCIDENTES_VIALES'          # Para nombrar la columna del parametro
 ContenidoHojaDatos = 'Datos de Aguas superficiales etiquetados con clave SUN'   # Contenido de la hoja 'Datos'
 Notas = 'Aguas superficiales. Son las aguas continentales que se encuentran en la superficie de la Tierra ' \
         'formando ríos, lagos, lagunas, pantanos, charcas, humedales, y otros similares'

@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0904 - Area Verde
 
 **Dataset Base**: "BS02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02
 
-**Ultima revision del parametro**: 2017/09/11 
+**Ultima revision del parametro**: 2017/09/14 
 
 **Ultima Actualizacion de los datos**: 2005
 
