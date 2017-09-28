@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Sep  4 12:55:22 2017
+Started on Wed Sep 13 15:55:22 2017
 
 @author: carlos.arana
 """
 
 '''
-Descripcion: Creación de dataset para el parámetro P0904 "Uso de Suelo y Vegetacions"
+Descripcion: Creación de dataset para el parámetro 0311  "Superficie Agricola"
 Informacion disponible para 2015
 '''
 
@@ -23,20 +23,19 @@ from SUN.asignar_sun import asignar_sun                     # Disponible en http
 from SUN_integridad.SUN_integridad import SUN_integridad    # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
 from PCCS_variables.PCCS_variables import variables         # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
 from ParametroEstandar.ParametroEstandar import ParametroEstandar # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
-from AsignarDimension.AsignarDimension import AsignarDimension  # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/AsignarDimension
-from DocumentarParametro.DocumentarParametro import DocumentarParametro # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/DocumentarParametro
+from AsignarDimension.AsignarDimension import AsignarDimension
+from DocumentarParametro.DocumentarParametro import DocumentarParametro
 
 # Descripciones del Parametro
-ClaveParametro = 'P0904'
+ClaveParametro = 'P0311'
 DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
-NombreParametro = 'Area Verde'
-TituloParametro = 'AREA_VERDE'          # Para nombrar la columna del parametro
-ContenidoDatos = 'Superficie de Area verde por clave SUN'   # Contenido de la hoja 'Datos'
-Notas = 'Las areas verdes de un municipio son todas aquellas que en el dataset original aparecen como Agricultura, ' \
-        'Pastizal, Bosque, Selva, Matorral Xerófilo, Otros Tipos de Vegetacion, Vegetación Secundaria'
-DescVarIntegridad = 'La variable de integridad para esta Dataset es el porcentaje variables que cuentan con informacion' \
-                    'para cada municipio'
-DescParam = 'Area verde (Kilometros Cuadrados)'
+NombreParametro = 'Superficie Agrícola'
+TituloParametro = 'SF_AGRICOLA'          # Para nombrar la columna del parametro
+ContenidoHojaDatos = 'Datos de Superficie Agricola de municipios, etiquetados con clave SUN'   # Contenido de la hoja 'Datos'
+Notas = ''
+DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
+                    '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
+DescParam = 'Superficie Agricola (Kilometros Cuadrados)'
 DSBase = '"BS02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
 NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
 UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
@@ -51,30 +50,23 @@ DirDestino = r'D:\PCCS\01_Dmine\{}'.format(NomDirectorio)
 dataset = pd.read_excel(DirFuente + r'\BS02.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
 dataset.set_index('CVE_MUN', inplace = True)
 
-# Escluir columnas que no corresponden a este parámetro
-del dataset['Áreas sin vegetación']
-del dataset['Cuerpos de agua']
-del dataset['Nombre']
-del dataset['Superficie continental (Kilómetros cuadrados)']
-del dataset['Áreas urbanas']
-del dataset['Agricultura']
-
-# Total de area verde por municipios y Variable de Integridad.
-faltantes = dataset.isnull().sum(axis = 1)
-dataset[TituloParametro] = dataset.sum(axis=1)
+# Elegir columna de Parametro y reconvertir a dataset
+dataset = dataset['Agricultura']
+proxy = pd.DataFrame()
+proxy[TituloParametro] = dataset
+dataset = proxy
 
 # Calculo de Variable de Integridad.
-y = len(list(dataset))      # y representa el numero de variables que se utilizan para construir el parámetro
-dataset['NUM_ANIOS_FALTANTES'] = faltantes
-dataset['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: (y - x) / y)
+faltantes = dataset[TituloParametro].isnull()
+dataset['FALTANTES'] = faltantes
+dataset['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: int(not x))
 variables_dataset = list(dataset)
 
 # Consolidar datos por ciudad
 dataset['CVE_MUN'] = dataset.index
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN', 'NOM_ENT']
-
 DatosLimpios = asignar_sun(dataset, vars = variables_SUN)
-OrdenColumnas = (variables_SUN + variables_dataset)[:19]
+OrdenColumnas = (variables_SUN + variables_dataset)
 DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
 
 # Revision de integridad
@@ -109,7 +101,7 @@ d_hojas = {
     'HOJAS INCLUIDAS EN EL LIBRO' : np.nan,
     'METADATOS' : 'Descripciones y notas relativas al Dataset',
     'PARAMETRO' : 'Dataset resultado de la minería, agregado por clave del Sistema Urbano Nacional, para utilizarse en la construcción de Indicadores',
-    'DATOS' : ContenidoDatos,
+    'DATOS' : ContenidoHojaDatos,
     'INTEGRIDAD' : 'Revision de integridad de la información POR CLAVE DEL SUN. Promedio de VAR_INTEGRIDAD de los municipios que componen una ciudad. Si no se tiene información para el municipio, VAR_INTEGRIDAD es igual a cero',
     'EXISTENCIA' : 'Revision de integridad de la información POR MUNICIPIO.'
 }

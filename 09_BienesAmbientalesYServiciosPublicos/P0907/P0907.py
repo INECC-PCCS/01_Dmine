@@ -34,7 +34,6 @@ TituloParametro = 'AGUAS_SUPERFICIALES'          # Para nombrar la columna del p
 ContenidoHojaDatos = 'Datos de Aguas superficiales etiquetados con clave SUN'   # Contenido de la hoja 'Datos'
 Notas = 'Aguas superficiales. Son las aguas continentales que se encuentran en la superficie de la Tierra ' \
         'formando ríos, lagos, lagunas, pantanos, charcas, humedales, y otros similares'
-RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/09_BienesAmbientalesYServiciosPublicos/P0907'
 DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
                     '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
 DescParam = 'Aguas Superficiales (Kilometros Cuadrados)'
@@ -44,7 +43,9 @@ UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
 ActDatos = '2005'
 ClaveDimension = ClaveParametro[1:3]
 NomDimension = AsignarDimension(ClaveDimension)['nombre']
-DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio'])
+NomDirectorio = ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio']
+RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/{}/{}'.format(NomDirectorio, ClaveParametro)
+DirDestino = r'D:\PCCS\01_Dmine\{}'.format(NomDirectorio)
 
 # Dataset Inicial
 dataset = pd.read_excel(DirFuente + r'\BS02.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
