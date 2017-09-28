@@ -20,7 +20,7 @@ import pandas as pd
 
 def SUN_integridad(dataframe_sun):
     # Importar dataset SUN
-    sun = pd.read_csv(r'D:\PCCS\01_Dmine\00_Parametros\sun.csv',
+    sun = pd.read_csv(r'D:\PCCS\01_Dmine\00_Parametros\sun_main.csv',
                       dtype={'CVE_SUN':str, 'CVE_ENT': str, 'CVE_MUN': str, 'CVE_LOC': str},
                       encoding='UTF-8',      # Si mbcs falla entonces utiliza UTF-8
                       )
@@ -38,9 +38,9 @@ def SUN_integridad(dataframe_sun):
     sun['CHECK'] = sun['CVE_MUN'].isin(unicos_df)
     sun = pd.merge(sun, dataframe_sun[['VAR_INTEGRIDAD', 'CVE_MUN']], on='CVE_MUN')
     sun['VAR_INTEGRIDAD'] = sun['VAR_INTEGRIDAD'].fillna(0)
-    cantmun = sun.groupby(by = 'CVE_SUN').agg('count')['CVE_MUN']           # Total en el SUN
-    cantdf = sun.groupby(by = 'CVE_SUN').agg('sum')['CHECK']                # Total en el dataframe
-    varint = sun.groupby(by = 'CVE_SUN').agg('mean')['VAR_INTEGRIDAD']      # Promedio de la Variable de Integridad
+    cantmun = sun.groupby(by='CVE_SUN').agg('count')['CVE_MUN']           # Total en el SUN
+    cantdf = sun.groupby(by='CVE_SUN').agg('sum')['CHECK']                # Total en el dataframe
+    varint = sun.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']      # Promedio de la Variable de Integridad
 
     # Armar dataframe de integridad
     sun_index = sun.set_index('CVE_SUN')
@@ -58,125 +58,7 @@ def SUN_integridad(dataframe_sun):
     existencia = ['CVE_SUN', 'CVE_ENT', 'CVE_MUN', 'NOM_MUN', 'SUBSIS_PPAL', 'CHECK', 'VAR_INTEGRIDAD']
     existencia = sun[existencia]
     existencia = existencia.set_index(['CVE_SUN'])
-    rev_integridad = {'INTEGRIDAD' : integridad,
-                      'EXISTENCIA' : existencia}
+    rev_integridad = {'INTEGRIDAD': integridad,
+                      'EXISTENCIA': existencia}
 
     return rev_integridad
-
-
-
-'''
-dataframe_sun = denuncias_std
-
-    pd.merge(integridad, sun['CVE_SUN'])
-
-    sun['CVE_MUN'].isin(munendf)
-
-    sun[sun['CVE_SUN'] == '061']['CVE_SUN'] = '062'
-
-sum(sun['check'])
-len(sun['CVE_MUN'])
-
-dataframe_sun = test2
-
-munendf = test2.groupby(by = 'CVE_SUN').agg('count')['CVE_MUN'] # Total en el dataframe
-
-sun.head()
-test2 = asignar_sun(test)
-list(sun)
-test2.head()
-
-test2[test2['']]
-len(test)
-len(test2['CVE_SUN'] )
-
-test2['CVE_SUN'].isnull()
-
-
-df = pd.DataFrame({'Col1': ['Bob', 'Joe', 'Bill', 'Mary', 'Joe'],
-                   'Col2': ['Joe', 'Steve', 'Bob', 'Bob', 'Steve'],
-                   'Col3': np.random.random(5)})
-
-df2 = pd.DataFrame({'Col1': ['Bob', 'Joe', 'Bill', 'Joe'],
-                   'Col2': ['Joe', 'Steve', 'Bob', 'Steve'],
-                   'Col3': np.random.random(4)})
-
-muns_in_sun = list(sun['CVE_MUN'])
-muns_in_ds = dataframe_sun['CVE_MUN'].unique()
-
-x = 0
-unique = []
-Repeat = []
-for i in muns_in_sun:
-    if i in unique:
-        Repeat.append(i)
-    else:
-        unique.append(i)
-    print('{} - {}'.format(x, i))
-    x += 1
-
-
-test.head()
-
-repeats = sun[sun['CVE_MUN'].isin(Repeat)]
-
-len(muns_in_sun)
-len(set(muns_in_sun))
-
-list(muns_in_ds)
-
-len(sun['CVE_MUN'].unique())
-pd.merge(df, df2 on = )
-
-sum(sun['CVE_MUN'].isin(x))
-
-len(sun['CVE_MUN'].unique())
-
-df.head()
-
-sun.head()
-
-list(cantmun)
-np.unique(dataframe_sun[['CVE_SUN', 'CVE_MUN']])
-
-cantmun
-    return df
-sun.head(1)
-
-type(sun['CVE_SUN'])
-
-cantmun
-##########################
-np.unique()
-
-cantmun.head()
-list(munendf)
-
-test = pd.read_csv(r'D:\PCCS\01_Analysis\01_DataAnalysis\00_Parametros\flota_vehicular_municipal.csv',
-                      dtype={'CVE_SUN':str, 'CVE_ENT': str, 'CVE_MUN': str, 'CVE_LOC': str},
-                      encoding='mbcs',
-                      )
-test = test.drop('NOM_SUN', axis = 1)
-test = test.drop('CVE_SUN', axis = 1)
-test = test.drop('Unnamed: 0', axis = 1)
-
-
-test.head()
-dataframe_sun = test
-
-list(test)
-
-cols = ['CVE_MUN', 'NOM_MUN']
-
-test[cols].head()
-
-x = test['CVE_MUN'].unique()
-np.shape(x)
-
-repes = pd.DataFrame(Repeat, columns = ['CVE_MUN'])
-repes.to_csv('SUN_Repeats.csv')
-
-import os; os.getcwd()
-'''
-
-

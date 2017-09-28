@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0907 - Aguas Superficiales
 
 **Dataset Base**: "BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02
 
-**Ultima revision del parametro**: 2017/09/14 
+**Ultima revision del parametro**: 2017/09/28 
 
 **Ultima Actualizacion de los datos**: 2005
 

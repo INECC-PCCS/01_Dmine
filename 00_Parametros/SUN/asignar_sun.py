@@ -17,16 +17,6 @@ CVE_SUN: Clave de 3 digitos del SUN
 NOM_MUN: Nombre de la ciudad a la que pertenece el municipio, de acuerdo con el SUN
 TIPO_SUN: Tipo de ciudad, de acuerdo con la clasificacion definida en el SUN
 
-NOTA ACLARATORIA:
-Las ciudades 'San Jose del Cabo' y 'Cabo San Lucas' forman parte del subsistema principal y se encuentran dentro
-de un mismo municipio. Para poder analizarlas de manera separada, sería necesario contar con un nivel de desagregación 
-por localidad. Para la mayoría de los datasets, el nivel máximo de desagregación es municipal, por lo que para este 
-análisis, se han considerado como una misma ciudad:
-
-CVE_SUN     CVE_MUN     NOM_SUN             CVE_SUN(Norm)   NOM_SUN(Normalizado)
-061         03008       San José del Cabo   062             Cabo San Lucas
-062         03008       Cabo San Lucas      062             Cabo San Lucas
-
 '''
 
 
@@ -34,6 +24,7 @@ from pandas import read_csv as rcsv
 import pandas as pd
 
 def asignar_sun(dataframe, CVE_MUN = 'CVE_MUN', vars = ['CVE_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN']):
+    # Cargar archivo del Subsistema Principal del SUN
     sun = rcsv(r'D:\PCCS\01_Dmine\00_Parametros\sun_main.csv',
                       dtype={'CVE_SUN': str,
                              'CVE_ENT': str,
@@ -46,8 +37,8 @@ def asignar_sun(dataframe, CVE_MUN = 'CVE_MUN', vars = ['CVE_MUN', 'CVE_SUN', 'N
     sun['CVE_ENT'] = sun['CVE_ENT'].apply('{:0>2}'.format)
     sun['CVE_MUN'] = sun['CVE_MUN'].apply('{:0>5}'.format)
 
-    print('Catalogo de variables. Default vars = {}'.format(vars))
-    print(list(sun))
+#    print('Catalogo de variables. Default vars = {}'.format(vars))
+#    print(list(sun))
     if 'CVE_MUN' not in vars: vars.append('CVE_MUN')
 
     dataframe.rename(columns={CVE_MUN : 'CVE_MUN'}, inplace = True) # Estandariza el nombre de la columna de clave geoestadistica
@@ -55,6 +46,7 @@ def asignar_sun(dataframe, CVE_MUN = 'CVE_MUN', vars = ['CVE_MUN', 'CVE_SUN', 'N
     sun = sun[vars]
     dataframe = pd.merge(dataframe, sun, on='CVE_MUN')
 
+    # Eliminar registros que no formen parte del Subsistema Principal
     return dataframe
 
 '''

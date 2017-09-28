@@ -19,7 +19,7 @@ import urllib
 import zipfile
 
 # Ubicacion y descripcion de la fuente
-fuente = r'El dataset se genera por medio de interaccion humana con el SIMBAD. No tiene API para interfaz con sistemas'
+fuente = r'http://www.beta.inegi.org.mx/proyectos/registros/economicas/accidentes/'
 describe_fuente = 'Informacion disponible en http://sc.inegi.org.mx/cobdem/ ' \
                   '\n > Ruta: ' \
                   '\n > Proyecto e indice de contenidos ' \
@@ -75,6 +75,22 @@ for k, v in archivos.items():
     print('Se descomprimio {}'.format(v))
 
 # Convertir archivos .dbf a dataframe
+x = 0
+dbfs = {}
+for k, v in unzipdirs.items():
+    for file in os.listdir(v):
+        if file.endswith('.dbf') or file.endswith('.DBF'):
+            path_to_dbf = r'{}\{}'.format(v,file)
+            dbf_to_py = Dbf5(path_to_dbf, codec='mbcs')
+            ds_from_dbf = dbf_to_py.to_dataframe()
+            dbfs[k] = ds_from_dbf
+            print('Done: {}.{} --- {} --- {}'.format(x, k, v, file))
+    x +=1
+
+
+for k, v in dbfs.items():
+    print('***\n{}\n{}\n{}'.format(k, list(v), len(v)))
+
 
 
 # Descripcion del dataset

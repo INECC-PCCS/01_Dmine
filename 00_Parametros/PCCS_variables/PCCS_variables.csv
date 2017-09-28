@@ -160,3 +160,7 @@ CAM_PASAJEROS_2015,Numero de Camiones de pasajeros registrados en el municipio (
 CAM_PASAJEROS_2016,Numero de Camiones de pasajeros registrados en el municipio (2016)
 P0709,Vehiculos de pasajeros registrados
 VEHICULOS_PASAJEROS,Vehiculos de pasajeros registrados
+P0017,Superficie Continental (kilómetros cuadrados) que ocupan los municipios de una ciudad excluyendo el territorio insular.
+SF_CONTINENTAL,Superficie Continental (Kilómetros Cuadrados) por municipio
+P0311,Superficie Agricola (Kilómetros Cuadrados)
+SF_AGRICOLA,Superficie Agricola (Kilómetros Cuadrados)

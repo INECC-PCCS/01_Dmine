@@ -1,8 +1,8 @@
-# Parametro P0904 - Area Verde
+# Parametro P0017 - Superficie Continental
 
-Archivo de mineria de datos. Parametro: P0904 - Area Verde
+Archivo de mineria de datos. Parametro: P0017 - Superficie Continental
 
-**Contenido**: Area verde (Kilometros Cuadrados)
+**Contenido**: Superficie Continental (Kilometros Cuadrados)
 
 **FUENTE**: SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)
 
