@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Aug 30 17:28:37 2017
+Started on Thu Oct  5 12:21:53 2017
 
 @author: carlos.arana
 
-Descripcion: Creación de dataset para el parámetro P0902 "Arbolado Urbano"
+Descripcion: Creación de dataset para el parámetro P0908 "Árboles Plantados"
 Informacion disponible de 1994 a 2014
 
 """
@@ -35,26 +35,27 @@ variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Para
 ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/ParametroEstandar
 AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/AsignarDimension
 DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/DocumentarParametro
+
 """
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
-ClaveParametro = 'P0902'
-DescParam = 'Arboles Plantados, por municipio, de 1994 a 2014'
-UnidadesParam = 'unidad'
+ClaveParametro = 'P0908'
+DescParam = 'Numero de arboles plantados en 2014'
+UnidadesParam = 'pieza'
 NombreParametro = 'Arboles Plantados'
-TituloParametro = 'ARBOLES_PLANTADOS'          # Para nombrar la columna del parametro
+TituloParametro = 'Arboles_Plantados'          # Para nombrar la columna del parametro
 
-#Descripciones del proceso de Minería
+# Descripciones del proceso de Minería
 DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS01'
 DSBase = '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS01'
 NomDataset = r'Acciones seleccionadas en materia ambiental'
-DescDataset = r'Datos de Árboles plantados, Superficie reforestada, Volumen de basura recolectada, ' \
+DescDataset = r'datos de Árboles plantados, Superficie reforestada, Volumen de basura recolectada, ' \
               r'Denuncias recibidas en materia ambiental y Licencias Ambientales Únicas vigentes'
-ContenidoHojaDatos = 'Numero de arboles plantados, por municipio, de 1994 a 2014'   # Contenido de la hoja 'Datos'
-Notas = 'Sin notas'
-DescVarIntegridad = 'La variable de integridad para esta Dataset es el porcentaje de años ' \
-                    'que cuentan con informacion, por municipio'
+ContenidoHojaDatos = 'Arboles Plantados, por municipio, de 1994 a 2014'   # Contenido de la hoja 'Datos'
+Notas = 'Se utiliza únicamente el dato más reciente (2014) para construir el parámetro'
+DescVarIntegridad = 'La variable de integridad municipal para este Parámetro es binaria: \n' \
+                    '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
 NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
 UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
 ActDatos = '2014'
@@ -68,8 +69,8 @@ DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(C
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Dataset Inicial
-dataset = pd.read_excel(DirFuente + r'\BS01.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
-dataset.set_index('CVE_MUN', inplace = True)
+dataset = pd.read_excel(DirFuente + r'\BS01.xlsx', sheetname="DATOS", dtype={'CVE_MUN': str})
+dataset.set_index('CVE_MUN', inplace=True)
 
 # Seleccionar Columnas de Arboles Plantados
 Columnas_raw = [x for x in list(dataset) if 'rboles plant' in x]
@@ -81,42 +82,42 @@ registros = []
 for i in anios:
     registros.append('ARB_PLANT_{}'.format(i))
 
-dataset_b = dataset[Columnas_raw]
-dataset_b.columns = registros
+dataset = dataset[Columnas_raw]
+dataset.columns = registros
 
-# Total de Arboles plantados por municipios y Variable de Integridad.
+# Total de Arboles Plantados en 2014 y Variable de Integridad.
+dataset[TituloParametro] = dataset['ARB_PLANT_2014']
+faltantes = dataset[TituloParametro].isnull()
 
-faltantes = dataset_b.isnull().sum(axis = 1)
-dataset_b['ARB_PLANT'] = dataset_b.sum(axis=1)
-
-dataset_b['NUM_ANIOS_FALTANTES'] = faltantes
-dataset_b['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: (21 - x) / 21)
-var_denuncias = list(dataset_b)
+# Calculo de Variable de Integridad.
+dataset['FALTANTES'] = faltantes
+dataset['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: int(not x))
+variables_dataset = list(dataset)
 
 # Consolidar datos por ciudad
-dataset_b['CVE_MUN'] = dataset_b.index
+dataset['CVE_MUN'] = dataset.index
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN', 'NOM_ENT']
 
-DatosLimpios = asignar_sun(dataset_b, vars = variables_SUN)
-OrdenColumnas = (variables_SUN + var_denuncias)[:30]
+DatosLimpios = asignar_sun(dataset, vars=variables_SUN)
+OrdenColumnas = (variables_SUN + variables_dataset)
 DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
 
 # Revision de integridad
 integridad_parametro = SUN_integridad(DatosLimpios)
-info_completa = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 1) # Para generar grafico de integridad
-info_sin_info = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 0) # Para generar grafico de integridad
+info_completa = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD']==1) # Para generar grafico de integridad
+info_sin_info = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD']==0) # Para generar grafico de integridad
 info_incomple = 135 - info_completa - info_sin_info                 # Para generar grafico de integridad
 
 # Construccion del Parametro
 param_dataset = DatosLimpios.set_index('CVE_SUN')
 param_dataset['CVE_SUN'] = param_dataset.index
-param = param_dataset.groupby(by='CVE_SUN').agg('sum')['ARB_PLANT']             # Total de Arboles plantados
+param = param_dataset.groupby(by='CVE_SUN').agg('sum')[TituloParametro]         # Calculo de parámetro por Ciudad
 intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']    # Integridad por ciudad
 std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
-std_nomsun.drop_duplicates(keep='first', inplace = True)
+std_nomsun.drop_duplicates(keep='first', inplace=True)
 Parametro = pd.DataFrame()
 Parametro['CIUDAD'] = std_nomsun
-Parametro['P0902'] = param
+Parametro[ClaveParametro] = param
 Parametro['INTEGRIDAD'] = intparam
 Parametro = Parametro.sort_index()
 

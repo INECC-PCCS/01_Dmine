@@ -36,26 +36,35 @@ DocumentarParametro 1 https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Para
 
 """
 
+# Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 ClaveParametro = 'P0017'
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
+DescParam = 'Superficie Continental: La parte del territorio nacional que está articulada con el Continente Americano'
+UnidadesParam = 'Kilómetros Cuadrados'
 NombreParametro = 'Superficie Continental'
 TituloParametro = 'SF_CONTINENTAL'          # Para nombrar la columna del parametro
-ContenidoHojaDatos = 'Datos de Superficie continental de municipios, etiquetados con clave SUN'
+
+# Descripciones del proceso de Minería
+DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
+DSBase = '"BS02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
+NomDataset = r'Uso de Suelo y Vegetacion'
+DescDataset = r'Datos por municipio de Superficie continental, vegetal, acuifera y urbana'
+ContenidoHojaDatos = 'Superficie continental de municipios, etiquetados con clave SUN'   # Contenido de la hoja 'Datos'
 Notas = ''
 DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
                     '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
-DescParam = 'Superficie Continental (Kilometros Cuadrados)'
-DSBase = '"BS02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
 NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
 UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
 ActDatos = '2005'
+
+# Descripciones generadas desde la clave del parámetro
 ClaveDimension = ClaveParametro[1:3]
 NomDimension = AsignarDimension(ClaveDimension)['nombre']
-NomDirectorio = ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio']
-RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/{}/{}'.format(NomDirectorio, ClaveParametro)
-DirDestino = r'D:\PCCS\01_Dmine\{}'.format(NomDirectorio)
+DirDimension = ClaveDimension + "_" + AsignarDimension(ClaveDimension)['directorio']
+RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/{}/{}'.format(DirDimension, ClaveParametro)
+DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio'])
 
+# Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Dataset Inicial
 dataset = pd.read_excel(DirFuente + r'\BS02.xlsx', sheetname="DATOS", dtype={'CVE_MUN': str})
 dataset.set_index('CVE_MUN', inplace=True)
@@ -77,19 +86,19 @@ dataset['CVE_MUN'] = dataset.index
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN', 'NOM_ENT']
 DatosLimpios = asignar_sun(dataset, vars=variables_SUN)
 OrdenColumnas = (variables_SUN + variables_dataset)
-DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
+DatosLimpios = DatosLimpios[OrdenColumnas]      # Reordenar las columnas
 
 # Revision de integridad por clave SNU
 integridad_parametro = SUN_integridad(DatosLimpios)
-info_completa = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 1) # Para generar grafico de integridad
-info_sin_info = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 0) # Para generar grafico de integridad
-info_incomple = 135 - info_completa - info_sin_info                 # Para generar grafico de integridad
+info_completa = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 1)  # Para generar grafico de integridad
+info_sin_info = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 0)  # Para generar grafico de integridad
+info_incomple = 135 - info_completa - info_sin_info                         # Para generar grafico de integridad
 
 # Construccion del Parametro
 param_dataset = DatosLimpios.set_index('CVE_SUN')
 param_dataset['CVE_SUN'] = param_dataset.index
-param = param_dataset.groupby(by='CVE_SUN').agg('sum')[TituloParametro]     # Total de Area Verde por Ciudad
-intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']     # Integridad por ciudad
+param = param_dataset.groupby(by='CVE_SUN').agg('sum')[TituloParametro]         # Calculo de parámetro por Ciudad
+intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']    # Integridad por ciudad
 std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
 std_nomsun.drop_duplicates(keep='first', inplace=True)
 Parametro = pd.DataFrame()
@@ -98,6 +107,7 @@ Parametro[ClaveParametro] = param
 Parametro['INTEGRIDAD'] = intparam
 Parametro = Parametro.sort_index()
 
+# Creacion de documentos de memoria del Parametro --------------------------------------------------------------------
 # Lista de Variables
 variables_locales = sorted(list(set(list(DatosLimpios) +
                                     list(integridad_parametro['INTEGRIDAD']) +
@@ -107,23 +117,32 @@ variables_locales = sorted(list(set(list(DatosLimpios) +
 metavariables = variables(variables_locales)
 
 # Metadatos
+d_parametro = {
+    'DESCRIPCION DEL PARAMETRO': np.nan,
+    'Clave': ClaveParametro,
+    'Nombre del Parametro': NombreParametro,
+    'Descripcion del Parametro': DescParam,
+    'Unidades': UnidadesParam
+}
+
 d_hojas = {
-    'HOJAS INCLUIDAS EN EL LIBRO': np.nan,
     'METADATOS': 'Descripciones y notas relativas al Dataset',
     'PARAMETRO': 'Dataset resultado de la minería, agregado por clave del Sistema Urbano Nacional, '
                  'para utilizarse en la construcción de Indicadores',
     'DATOS': ContenidoHojaDatos,
-    'INTEGRIDAD': 'Revision de integridad de la información POR CLAVE DEL SUN. '
+    'INTEGRIDAD': 'Revision de integridad de la información POR CLAVE DEL SUN. ' 
                   'Promedio de VAR_INTEGRIDAD de los municipios que componen una ciudad. '
                   'Si no se tiene información para el municipio, VAR_INTEGRIDAD es igual a cero',
-    'EXISTENCIA': 'Revision de integridad de la información POR MUNICIPIO.'
+    'EXISTENCIA': 'Revision de integridad de la información POR MUNICIPIO.',
+    '     ': np.nan,
+    'DESCRIPCION DE VARIABLES': np.nan
 }
 
 d_mineria = {
     '  ': np.nan,
     'DESCRIPCION DEL PROCESO DE MINERIA:': np.nan,
-    'Nombre del Dataset': NombreParametro,
-    'Descripcion del dataset': DescParam,
+    'Nombre del Dataset': NomDataset,
+    'Descripcion del dataset': DescDataset,
     'Notas': Notas,
     'Fuente': NomFuente,
     'URL_Fuente': UrlFuente,
@@ -131,13 +150,13 @@ d_mineria = {
     'Repositorio de mineria': RepoMina,
     'VAR_INTEGRIDAD': DescVarIntegridad,
     ' ': np.nan,
-    'DESCRIPCION DE VARIABLES': np.nan
+    'HOJAS INCLUIDAS EN EL LIBRO': np.nan
 }
 
-descripcion_hojas = pd.DataFrame.from_dict(d_hojas, orient='index').rename(columns={0: 'DESCRIPCION'})
+descripcion_parametro = pd.DataFrame.from_dict(d_parametro, orient='index').rename(columns={0: 'DESCRIPCION'})
 descripcion_mineria = pd.DataFrame.from_dict(d_mineria, orient='index').rename(columns={0: 'DESCRIPCION'})
-
-MetaParametro = descripcion_hojas.append(descripcion_mineria).append(metavariables)
+descripcion_hojas = pd.DataFrame.from_dict(d_hojas, orient='index').rename(columns={0: 'DESCRIPCION'})
+MetaParametro = descripcion_parametro.append(descripcion_mineria).append(descripcion_hojas).append(metavariables)
 
 # Diccionario de Descripciones
 DescParametro = {

@@ -18,7 +18,7 @@ from simpledbf import Dbf5
 
 # Ubicacion y descripcion de la fuente
 fuente = r'http://www.beta.inegi.org.mx/proyectos/registros/economicas/accidentes/'
-describe_fuente = ''
+describe_fuente = 'Descarga automatizada desde la URL_fuente'
 fecha_mineria = datetime.datetime.now()
 
 # Descargar bases de datos de accidentes
@@ -42,7 +42,7 @@ for i in URLS:
     destino = dir_local_base+dir_local_sub+'\\'+localfile
     URL = URLBASE+i
     print('Descargando {} ... ... ... ... ... '.format(localfile))
-    urllib.request.urlretrieve(URL, destino)
+    # urllib.request.urlretrieve(URL, destino) #
     archivos[anio]= destino
     print('se descargó {}'.format(localfile))
 
@@ -52,9 +52,9 @@ for k, v in archivos.items():
     targetdir = dir_local_base+'\\'+k
     if not os.path.isdir(targetdir):
         os.makedirs(targetdir)
-    zip_ref = zipfile.ZipFile(v, 'r')
-    zip_ref.extractall(targetdir)
-    zip_ref.close()
+    #zip_ref = zipfile.ZipFile(v, 'r') #
+    #zip_ref.extractall(targetdir) #
+    #zip_ref.close() #
     unzipdirs[k] = targetdir
     print('Se descomprimio {}'.format(v))
 
@@ -72,6 +72,7 @@ for k, v in unzipdirs.items():
     x +=1
 
 DataSet = pd.concat(dbfs.values(), keys=dbfs.keys())
+del(dbfs) #Liberamos la memoria ocupada por dbfs
 
 # Asignar clave geoestadistica municipal estandar de 5 digitos
 Estado = DataSet['EDO'].apply(lambda x: str(x).zfill(2)).map(str)
@@ -81,10 +82,13 @@ DataSet['CVE_MUN'] = Estado + Municipio
 # Consolidar numero de accidentes por municipio y por año
 DataSet.set_index('CVE_MUN', append=True, inplace=True)
 DataSet.reset_index(level=1, inplace=True)
-DataSet_b = DataSet['MPIO'].groupby(level=[0,1]).count()
+Accidentes_Urbana = DataSet['URBANA'].loc[DataSet['URBANA'] != 0].groupby(level=[0,1]).count()
+Accidentes_Suburbana = DataSet['SUBURBANA'].loc[DataSet['SUBURBANA'] != 0].groupby(level=[0,1]).count()
+del(DataSet) #Liberamos la memoria ocupada por DataSet
 
-# Hacer columnas para cada año
-Dataset_c = DataSet_b.unstack(level=0)
+# Hacer columnas para cada año y consolidar dataset de accidentes
+Accidentes_Urbana = Accidentes_Urbana.unstack(level=0)
+Accidentes_Suburbana = Accidentes_Suburbana.unstack(level=0)
 
 # Descripcion del dataset
 descripcion = {
@@ -100,12 +104,12 @@ descripcion = {
 }
 
 # Armar pestaña de metadatos
-metadatos = pandas.DataFrame.from_dict(descripcion, orient='index')
+metadatos = pd.DataFrame.from_dict(descripcion, orient='index')
 metadatos = metadatos.rename(columns = {0:'Descripcion'})
 
 # Exportar a excel
-writer = pandas.ExcelWriter(r'D:\PCCS\01_Dmine\00_Parametros\{}\{}.xlsx'.format(dataset_destino, dataset_destino))
-Dataset_c.to_excel(writer, sheet_name = 'DATOS')
+writer = pd.ExcelWriter(r'D:\PCCS\01_Dmine\00_Parametros\{}\{}.xlsx'.format(dataset_destino, dataset_destino))
+Accidentes_Urbana.to_excel(writer, sheet_name = 'ACCIDENTES_URBANA')
+Accidentes_Suburbana.to_excel(writer, sheet_name = 'ACCIDENTES_SUBURBANA')
 metadatos.to_excel(writer, sheet_name = 'Metadatos')
 writer.close()
-

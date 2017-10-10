@@ -19,34 +19,56 @@ module_path = r'D:\PCCS\01_Dmine\00_Parametros'
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from SUN.asignar_sun import asignar_sun                     # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
-from SUN_integridad.SUN_integridad import SUN_integridad    # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
-from PCCS_variables.PCCS_variables import variables         # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
-from ParametroEstandar.ParametroEstandar import ParametroEstandar # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
+from SUN.asignar_sun import asignar_sun
+from SUN_integridad.SUN_integridad import SUN_integridad
+from PCCS_variables.PCCS_variables import variables
+from ParametroEstandar.ParametroEstandar import ParametroEstandar
 from AsignarDimension.AsignarDimension import AsignarDimension
 from DocumentarParametro.DocumentarParametro import DocumentarParametro
 
+"""
+Las librerias locales utilizadas renglones arriba se encuentran disponibles en las siguientes direcciones:
+SCRIPT:             | DISPONIBLE EN:
+------              | ------
+asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
+SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
+variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
+ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/ParametroEstandar
+AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/AsignarDimension
+DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/DocumentarParametro
+
+"""
+
+# Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 ClaveParametro = 'P0907'
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
+DescParam = 'Aguas Superficiales: Aguas continentales que se encuentran en la superficie de la Tierra'
+UnidadesParam = 'Kilómetros Cuadrados'
 NombreParametro = 'Aguas Superficiales'
 TituloParametro = 'AGUAS_SUPERFICIALES'          # Para nombrar la columna del parametro
+
+#Descripciones del proceso de Minería
+DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
+DSBase = '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
+NomDataset = r'Uso de Suelo y Vegetacion'
+DescDataset = r'Datos por municipio de Superficie continental, vegetal, acuifera y urbana'
 ContenidoHojaDatos = 'Datos de Aguas superficiales etiquetados con clave SUN'   # Contenido de la hoja 'Datos'
 Notas = 'Aguas superficiales. Son las aguas continentales que se encuentran en la superficie de la Tierra ' \
         'formando ríos, lagos, lagunas, pantanos, charcas, humedales, y otros similares'
 DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
                     '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
-DescParam = 'Aguas Superficiales (Kilometros Cuadrados)'
-DSBase = '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
 NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
 UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
 ActDatos = '2005'
+
+# Descripciones generadas desde la clave del parámetro
 ClaveDimension = ClaveParametro[1:3]
 NomDimension = AsignarDimension(ClaveDimension)['nombre']
-NomDirectorio = ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio']
-RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/{}/{}'.format(NomDirectorio, ClaveParametro)
-DirDestino = r'D:\PCCS\01_Dmine\{}'.format(NomDirectorio)
+DirDimension = ClaveDimension + "_" + AsignarDimension(ClaveDimension)['directorio']
+RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/{}/{}'.format(DirDimension, ClaveParametro)
+DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio'])
 
+# Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Dataset Inicial
 dataset = pd.read_excel(DirFuente + r'\BS02.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
 dataset.set_index('CVE_MUN', inplace = True)
@@ -94,6 +116,7 @@ Parametro[ClaveParametro] = param
 Parametro['INTEGRIDAD'] = intparam
 Parametro = Parametro.sort_index()
 
+# Creacion de documentos de memoria del Parametro --------------------------------------------------------------------
 # Lista de Variables
 variables_locales = sorted(list(set(list(DatosLimpios) +
                                     list(integridad_parametro['INTEGRIDAD']) +
@@ -103,50 +126,61 @@ variables_locales = sorted(list(set(list(DatosLimpios) +
 metavariables = variables(variables_locales)
 
 # Metadatos
+d_parametro = {
+    'DESCRIPCION DEL PARAMETRO': np.nan,
+    'Clave': ClaveParametro,
+    'Nombre del Parametro': NombreParametro,
+    'Descripcion del Parametro': DescParam,
+    'Unidades': UnidadesParam
+}
+
 d_hojas = {
-    'HOJAS INCLUIDAS EN EL LIBRO' : np.nan,
-    'METADATOS' : 'Descripciones y notas relativas al Dataset',
-    'PARAMETRO' : 'Dataset resultado de la minería, agregado por clave del Sistema Urbano Nacional, para utilizarse en la construcción de Indicadores',
-    'DATOS' : ContenidoHojaDatos,
-    'INTEGRIDAD' : 'Revision de integridad de la información POR CLAVE DEL SUN. Promedio de VAR_INTEGRIDAD de los municipios que componen una ciudad. Si no se tiene información para el municipio, VAR_INTEGRIDAD es igual a cero',
-    'EXISTENCIA' : 'Revision de integridad de la información POR MUNICIPIO.'
+    'METADATOS': 'Descripciones y notas relativas al Dataset',
+    'PARAMETRO': 'Dataset resultado de la minería, agregado por clave del Sistema Urbano Nacional, '
+                 'para utilizarse en la construcción de Indicadores',
+    'DATOS': ContenidoHojaDatos,
+    'INTEGRIDAD': 'Revision de integridad de la información POR CLAVE DEL SUN. ' 
+                  'Promedio de VAR_INTEGRIDAD de los municipios que componen una ciudad. '
+                  'Si no se tiene información para el municipio, VAR_INTEGRIDAD es igual a cero',
+    'EXISTENCIA': 'Revision de integridad de la información POR MUNICIPIO.',
+    '     ': np.nan,
+    'DESCRIPCION DE VARIABLES': np.nan
 }
 
 d_mineria = {
     '  ': np.nan,
-    'DESCRIPCION DEL PROCESO DE MINERIA:' : np.nan,
-    'Nombre del Dataset' : NombreParametro,
-    'Descripcion del dataset' : DescParam,
-    'Notas' : Notas,
-    'Fuente'    : NomFuente,
+    'DESCRIPCION DEL PROCESO DE MINERIA:': np.nan,
+    'Nombre del Dataset': NomDataset,
+    'Descripcion del dataset': DescDataset,
+    'Notas': Notas,
+    'Fuente': NomFuente,
     'URL_Fuente': UrlFuente,
-    'Dataset base' : DSBase,
-    'Repositorio de mineria' : RepoMina,
-    'VAR_INTEGRIDAD' : DescVarIntegridad,
-    ' ' : np.nan,
-    'DESCRIPCION DE VARIABLES' : np.nan
+    'Dataset base': DSBase,
+    'Repositorio de mineria': RepoMina,
+    'VAR_INTEGRIDAD': DescVarIntegridad,
+    ' ': np.nan,
+    'HOJAS INCLUIDAS EN EL LIBRO': np.nan
 }
 
-descripcion_hojas = pd.DataFrame.from_dict(d_hojas, orient='index').rename(columns={0:'DESCRIPCION'})
-descripcion_mineria = pd.DataFrame.from_dict(d_mineria, orient='index').rename(columns={0:'DESCRIPCION'})
-
-MetaParametro = descripcion_hojas.append(descripcion_mineria).append(metavariables)
+descripcion_parametro = pd.DataFrame.from_dict(d_parametro, orient='index').rename(columns={0: 'DESCRIPCION'})
+descripcion_mineria = pd.DataFrame.from_dict(d_mineria, orient='index').rename(columns={0: 'DESCRIPCION'})
+descripcion_hojas = pd.DataFrame.from_dict(d_hojas, orient='index').rename(columns={0: 'DESCRIPCION'})
+MetaParametro = descripcion_parametro.append(descripcion_mineria).append(descripcion_hojas).append(metavariables)
 
 # Diccionario de Descripciones
 DescParametro = {
-    'ClaveParametro' : ClaveParametro,
-    'NombreParametro' : NombreParametro,
-    'info_completa' : info_completa,
-    'info_sin_info' : info_sin_info,
-    'info_incomple' : info_incomple,
-    'RutaSalida' : DirDestino,
-    'Clave de Dimension' : ClaveDimension,
-    'Nombre de Dimension' : NomDimension,
-    'Titulo de Columna' : TituloParametro,
-    'Actualizacion de datos' : ActDatos
+    'ClaveParametro': ClaveParametro,
+    'NombreParametro': NombreParametro,
+    'info_completa': info_completa,
+    'info_sin_info': info_sin_info,
+    'info_incomple': info_incomple,
+    'RutaSalida': DirDestino,
+    'Clave de Dimension': ClaveDimension,
+    'Nombre de Dimension': NomDimension,
+    'Titulo de Columna': TituloParametro,
+    'Actualizacion de datos': ActDatos
 }
 
 # Crear archivo de Excel y documentar parametro
 ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, integridad_parametro)
 DocumentarParametro(DescParametro, MetaParametro, Parametro)
-
