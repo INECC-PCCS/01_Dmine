@@ -1,6 +1,6 @@
-# MV01
+# MV02
 
-Script para descargar y hacer una limpieza basica a los datos de Estadisticas de Transporte, desde el Sistema Estatal y Municipal de Bases de Datos (Simbad) del INEGI.
+Script para descarga y agregacion a nivel municipal de datos de accidentes vehiculares desde la [plataforma de microdatos](http://www.beta.inegi.org.mx/proyectos/registros/economicas/accidentes/) del INEGI.
 
 
 ----------
@@ -11,5 +11,5 @@ Script para descargar y hacer una limpieza basica a los datos de Estadisticas de
 
 Plataforma de Conocimiento de Ciudades Sustentables
 
-25 de Septiembre de 2017
+04 de octubre de 2017
 

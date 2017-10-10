@@ -1,4 +1,4 @@
-# BS01
+# BS01: Acciones seleccionadas en materia ambiental
 
 Script para descargar y hacer una limpieza basica a los datos de Árboles plantados, Superficie reforestada (hectáreas), Volumen de basura recolectada (miles de toneladas), Denuncias recibidas en materia ambiental, Licencias Ambientales Únicas vigentes, desde el Sistema Estatal y Municipal de Bases de Datos (Simbad) del INEGI.
 

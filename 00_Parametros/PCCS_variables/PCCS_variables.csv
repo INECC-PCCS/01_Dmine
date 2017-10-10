@@ -24,7 +24,9 @@ FALSE = El Municipio no cuenta con información en el dataset"
 entubada_total,Porcentaje de viviendas con agua entubada dentro de la vivienda o predio. Fuente: Encuesta intercensal 2015
 AG0102,Datos del Indicador. Entubada_total / 10. Para la construccion del indicador se obtiene el promedio de los municipios que componen cada ciudad
 CIS,"Indica si una ciudad tiene información Completa, Incompleta o Sin información"
-CHECK,Indica si el municipio se encontró en el Dataset durante el análisis de integridad.\nTRUE: El municipio existe en el Dataset\nFALSE: El municipio no existe en el Dataset
+CHECK,"Indica si el municipio se encontró en el Dataset durante el análisis de integridad.
+TRUE: El municipio existe en el Dataset
+FALSE: El municipio no existe en el Dataset"
 DENUNCIAS_AMB,Total de Denuncias recibidas en materia ambiental de 1994 a 2014
 DENUNCIAS_AMB_1994,Total de Denuncias recibidas en materia ambiental en 1994
 DENUNCIAS_AMB_1995,Total de Denuncias recibidas en materia ambiental en 1995
@@ -164,3 +166,5 @@ P0017,Superficie Continental (kilómetros cuadrados) que ocupan los municipios de
 SF_CONTINENTAL,Superficie Continental (Kilómetros Cuadrados) por municipio
 P0311,Superficie Agricola (Kilómetros Cuadrados)
 SF_AGRICOLA,Superficie Agricola (Kilómetros Cuadrados)
+Arboles_Plantados,"Numero de arboles plantados, tomando en cuenta unicamente las unidades del periodo mas reciente"
+P0908,"Numero de arboles plantados, tomando en cuenta unicamente las unidades del periodo mas reciente"
