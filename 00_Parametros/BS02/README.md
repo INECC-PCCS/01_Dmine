@@ -1,4 +1,4 @@
-# BS02
+# BS02 - Uso de Suelo y Vegetacion
 
 Script para descargar y hacer una limpieza basica a los datos de Medio ambiente - Uso de Suelo y Vegetacion, desde el Sistema Estatal y Municipal de Bases de Datos (Simbad) del INEGI.
 

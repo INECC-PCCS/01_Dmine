@@ -3,12 +3,11 @@
 Started on Wed Sep 13 15:55:22 2017
 
 @author: carlos.arana
+
+Descripcion: Creación de dataset para el parámetro P0712 "Número de Accidentes"
+
 """
 
-'''
-Descripcion: Creación de dataset para el parámetro P0907 "Aguas Superficiales"
-Informacion disponible para 2015
-'''
 
 import pandas as pd
 import numpy as np
@@ -19,12 +18,54 @@ module_path = r'D:\PCCS\01_Dmine\00_Parametros'
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from SUN.asignar_sun import asignar_sun                     # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
-from SUN_integridad.SUN_integridad import SUN_integridad    # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
-from PCCS_variables.PCCS_variables import variables         # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
-from ParametroEstandar.ParametroEstandar import ParametroEstandar # Disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
+from SUN.asignar_sun import asignar_sun
+from SUN_integridad.SUN_integridad import SUN_integridad
+from PCCS_variables.PCCS_variables import variables
+from ParametroEstandar.ParametroEstandar import ParametroEstandar
 from AsignarDimension.AsignarDimension import AsignarDimension
 from DocumentarParametro.DocumentarParametro import DocumentarParametro
+
+"""
+Las librerias locales utilizadas renglones arriba se encuentran disponibles en las siguientes direcciones:
+SCRIPT:             | DISPONIBLE EN:
+------              | ------
+asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
+SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
+variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
+ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/ParametroEstandar
+AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/AsignarDimension
+DocumentarParametro 1 https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/DocumentarParametro
+
+"""
+
+# Documentacion del Parametro ---------------------------------------------------------------------------------------
+# Descripciones del Parametro
+ClaveParametro = 'P0712'
+DescParam = 'Numero de accidentes en zonas urbanas'
+UnidadesParam = ''
+NombreParametro = ''
+TituloParametro = ''          # Para nombrar la columna del parametro
+
+#Descripciones del proceso de Minería
+DirFuente = r''
+DSBase = '"'
+NomDataset = r''
+DescDataset = r''
+ContenidoHojaDatos = ''   # Contenido de la hoja 'Datos'
+Notas = ''
+DescVarIntegridad = ''
+NomFuente = ''
+UrlFuente = ''
+ActDatos = '1997 a 2015'
+
+# Descripciones generadas desde la clave del parámetro
+ClaveDimension = ClaveParametro[1:3]
+NomDimension = AsignarDimension(ClaveDimension)['nombre']
+DirDimension = ClaveDimension + "_" + AsignarDimension(ClaveDimension)['directorio']
+RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/{}/{}'.format(DirDimension, ClaveParametro)
+DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio'])
+
+# Construccion del Parámetro -----------------------------------------------------------------------------------------
 
 # Descripciones del Parametro
 ClaveParametro = 'P0712'
