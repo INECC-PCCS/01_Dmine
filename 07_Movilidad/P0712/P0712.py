@@ -41,24 +41,28 @@ DocumentarParametro 1 https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Para
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 ClaveParametro = 'P0712'
-DescParam = 'Numero de accidentes en zonas urbanas'
-UnidadesParam = ''
-NombreParametro = ''
-TituloParametro = ''          # Para nombrar la columna del parametro
+DescParam = 'Número de accidentes en zonas urbanas'
+UnidadesParam = 'unidades'
+NombreParametro = 'Numero de accidentes'
+TituloParametro = 'Accidentes'          # Para nombrar la columna del parametro
 
 #Descripciones del proceso de Minería
-DirFuente = r''
-DSBase = '"'
-NomDataset = r''
-DescDataset = r''
-ContenidoHojaDatos = ''   # Contenido de la hoja 'Datos'
-Notas = ''
-DescVarIntegridad = ''
-NomFuente = ''
-UrlFuente = ''
+NomDataset = r'Accidentes de tránsito en zonas urbanas y suburbanas'
+ClaveDataset = 'MV02'
+DescDataset = r'Numero de accidentes de transito de acuerdo al lugar donde sucedieron (Zona urbana o suburbana),' \
+              r'agregados a nivel municipal, de 1997 a 2015'
+ContenidoHojaDatos = 'Accidentes en zonas urbanas, agregados a nivel municipal, de 1997 a 2015'
+Notas = 'S/N'
+DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
+                    '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
+NomFuente = 'INEGI (Microdatos)'
+UrlFuente = 'http://www.beta.inegi.org.mx/proyectos/registros/economicas/accidentes/'
 ActDatos = '1997 a 2015'
 
 # Descripciones generadas desde la clave del parámetro
+DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\{}'.format(ClaveDataset)
+DSBase = '"{}.xlsx", disponible en ' \
+         'https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/{}'.format(ClaveDataset, ClaveDataset)
 ClaveDimension = ClaveParametro[1:3]
 NomDimension = AsignarDimension(ClaveDimension)['nombre']
 DirDimension = ClaveDimension + "_" + AsignarDimension(ClaveDimension)['directorio']
@@ -66,44 +70,19 @@ RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/{}/{}'.format(Dir
 DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio'])
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
-
-# Descripciones del Parametro
-ClaveParametro = 'P0712'
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\MV01'
-NombreParametro = 'Accidentes Viales'
-TituloParametro = 'ACCIDENTES_VIALES'          # Para nombrar la columna del parametro
-ContenidoHojaDatos = 'Datos de Aguas superficiales etiquetados con clave SUN'   # Contenido de la hoja 'Datos'
-Notas = 'Aguas superficiales. Son las aguas continentales que se encuentran en la superficie de la Tierra ' \
-        'formando ríos, lagos, lagunas, pantanos, charcas, humedales, y otros similares'
-DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
-                    '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
-DescParam = 'Aguas Superficiales (Kilometros Cuadrados)'
-DSBase = '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
-NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
-UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
-ActDatos = '2005'
-ClaveDimension = ClaveParametro[1:3]
-NomDimension = AsignarDimension(ClaveDimension)['nombre']
-NomDirectorio = ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio']
-RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/{}/{}'.format(NomDirectorio,ClaveParametro)
-DirDestino = r'D:\PCCS\01_Dmine\{}'.format(NomDirectorio)
-
-
 # Dataset Inicial
-dataset = pd.read_excel(DirFuente + r'\BS02.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
+dataset = pd.read_excel(DirFuente + r'\{}.xlsx'.format(ClaveDataset), sheetname="ACCIDENTES_URBANA", dtype={'CVE_MUN':str})
 dataset.set_index('CVE_MUN', inplace = True)
 
-# Elegir columna de Cuerpos de Agua y reconvertir a dataset
-dataset = dataset['Cuerpos de agua']
+# Elegir dato más actual y convertir a dataset
+dataset = dataset['2015']
 proxy = pd.DataFrame()
 proxy['Cuerpos de agua'] = dataset
 dataset = proxy
 
-# Total de area verde por municipios y Variable de Integridad.
+# Total de accidentes por municipio y Variable de Integridad.
 faltantes = dataset.isnull()
 dataset[TituloParametro] = dataset.sum(axis=1)
-
-# Calculo de Variable de Integridad.
 y = len(list(dataset))-1      # y representa el numero de variables que se utilizan para construir el parámetro
 dataset['FALTANTES'] = faltantes
 dataset['VAR_INTEGRIDAD'] = faltantes.apply(lambda x: (y - x) / y)

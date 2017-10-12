@@ -1,4 +1,4 @@
-# MV02
+# MV02 - Accidentes de tránsito en zonas urbanas y suburbanas
 
 Script para descarga y agregacion a nivel municipal de datos de accidentes vehiculares desde la [plataforma de microdatos](http://www.beta.inegi.org.mx/proyectos/registros/economicas/accidentes/) del INEGI.
 

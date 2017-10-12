@@ -168,3 +168,5 @@ P0311,Superficie Agricola (Kilómetros Cuadrados)
 SF_AGRICOLA,Superficie Agricola (Kilómetros Cuadrados)
 Arboles_Plantados,"Numero de arboles plantados, tomando en cuenta unicamente las unidades del periodo mas reciente"
 P0908,"Numero de arboles plantados, tomando en cuenta unicamente las unidades del periodo mas reciente"
+Accidentes,Numero de accidentes viales en zonas urbanas
+P0712,Numero de accidentes viales en zonas urbanas
