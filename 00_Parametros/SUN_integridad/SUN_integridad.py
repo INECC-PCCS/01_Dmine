@@ -3,18 +3,16 @@
 Started on Fri Aug 11 11:10:05 2017
 
 @author: carlos.arana
-"""
 
-'''
+Descripcion:
 Verifica cuantas ciudades del subsistema Principal del SUN se encuentran en un dataset.
 De las ciudades que se encuentran en el SUN, verifica que existan todos los municipios que componen la ciudad.
-para cada ciudad en el dataset, verifica que existan registros para todos los municipios que componen la ciudad. 
+para cada ciudad en el dataset, verifica que existan registros para todos los municipios que componen la ciudad.
 
 El algoritmo espera las siguientes entradas:
-dataframe_sun:  dataframe con claves sun y claves mun, creado con 
+dataframe_sun:  dataframe con claves sun y claves mun, creado con
                 la funcion "asignar_sun" disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
-
-'''
+"""
 
 import pandas as pd
 
@@ -25,7 +23,7 @@ def SUN_integridad(dataframe_sun):
                       encoding='UTF-8',      # Si mbcs falla entonces utiliza UTF-8
                       )
 
-    # Asegurar longitudesd e caracteres para claves SUN
+    # Asegurar longitudes de caracteres para claves SUN
     sun['CVE_SUN'] = sun['CVE_SUN'].apply('{:0>3}'.format)
     sun['CVE_ENT'] = sun['CVE_ENT'].apply('{:0>2}'.format)
     sun['CVE_MUN'] = sun['CVE_MUN'].apply('{:0>5}'.format)
