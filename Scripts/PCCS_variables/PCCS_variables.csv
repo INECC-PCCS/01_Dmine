@@ -170,3 +170,4 @@ Arboles_Plantados,"Numero de arboles plantados, tomando en cuenta unicamente las
 P0908,"Numero de arboles plantados, tomando en cuenta unicamente las unidades del periodo mas reciente"
 Accidentes,Numero de accidentes viales en zonas urbanas
 P0712,Numero de accidentes viales en zonas urbanas
+Total_Parametro,"Datos que se utilizarán para la construcción del parametro, despues de procesar el dataset de acuerdo con los criterios establecidos en la descripción del parámetro"

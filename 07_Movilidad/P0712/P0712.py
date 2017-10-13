@@ -8,13 +8,12 @@ Descripcion: Creación de dataset para el parámetro P0712 "Número de Accidente
 
 """
 
-
 import pandas as pd
 import numpy as np
 import sys
 
 # Librerias locales utilizadas
-module_path = r'D:\PCCS\01_Dmine\00_Parametros'
+module_path = r'D:\PCCS\01_Dmine\Scripts'
 if module_path not in sys.path:
     sys.path.append(module_path)
 
@@ -28,14 +27,13 @@ from DocumentarParametro.DocumentarParametro import DocumentarParametro
 """
 Las librerias locales utilizadas renglones arriba se encuentran disponibles en las siguientes direcciones:
 SCRIPT:             | DISPONIBLE EN:
-------              | ------
-asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
-SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
-variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
-ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/ParametroEstandar
-AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/AsignarDimension
-DocumentarParametro 1 https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/DocumentarParametro
-
+------              | ------------------------------------------------------------------------------------
+asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/SUN
+SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/SUN_integridad
+variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/PCCS_variables
+ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/ParametroEstandar
+AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/AsignarDimension
+DocumentarParametro 1 https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/DocumentarParametro
 """
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
@@ -44,9 +42,9 @@ ClaveParametro = 'P0712'
 DescParam = 'Número de accidentes en zonas urbanas'
 UnidadesParam = 'unidades'
 NombreParametro = 'Numero de accidentes'
-TituloParametro = 'Accidentes'          # Para nombrar la columna del parametro
+TituloParametro = 'Accidentes'                              # Para nombrar la columna del parametro
 
-#Descripciones del proceso de Minería
+# Descripciones del proceso de Minería
 NomDataset = r'Accidentes de tránsito en zonas urbanas y suburbanas'
 ClaveDataset = 'MV02'
 DescDataset = r'Numero de accidentes de transito de acuerdo al lugar donde sucedieron (Zona urbana o suburbana),' \
@@ -71,13 +69,14 @@ DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(C
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Dataset Inicial
-dataset = pd.read_excel(DirFuente + r'\{}.xlsx'.format(ClaveDataset), sheetname="ACCIDENTES_URBANA", dtype={'CVE_MUN':str})
-dataset.set_index('CVE_MUN', inplace = True)
+dataset = pd.read_excel(DirFuente + r'\{}.xlsx'.format(ClaveDataset),
+                        sheetname="ACCIDENTES_URBANA", dtype={'CVE_MUN': str})
+dataset.set_index('CVE_MUN', inplace=True)
 
 # Elegir dato más actual y convertir a dataset
 dataset = dataset['2015']
 proxy = pd.DataFrame()
-proxy['Cuerpos de agua'] = dataset
+proxy['Total_Parametro'] = dataset
 dataset = proxy
 
 # Total de accidentes por municipio y Variable de Integridad.
@@ -91,8 +90,7 @@ variables_dataset = list(dataset)
 # Consolidar datos por ciudad
 dataset['CVE_MUN'] = dataset.index
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN', 'NOM_ENT']
-
-DatosLimpios = asignar_sun(dataset, vars = variables_SUN)
+DatosLimpios = asignar_sun(dataset, vars=variables_SUN)
 OrdenColumnas = (variables_SUN + variables_dataset)
 DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
 
@@ -105,10 +103,10 @@ info_incomple = 135 - info_completa - info_sin_info                 # Para gener
 # Construccion del Parametro
 param_dataset = DatosLimpios.set_index('CVE_SUN')
 param_dataset['CVE_SUN'] = param_dataset.index
-param = param_dataset.groupby(by='CVE_SUN').agg('sum')[TituloParametro]     # Total de Area Verde por Ciudad
-intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']     # Integridad por ciudad
+param = param_dataset.groupby(by='CVE_SUN').agg('sum')[TituloParametro]         # Total de Area Verde por Ciudad
+intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']    # Integridad por ciudad
 std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
-std_nomsun.drop_duplicates(keep='first', inplace = True)
+std_nomsun.drop_duplicates(keep='first', inplace=True)
 Parametro = pd.DataFrame()
 Parametro['CIUDAD'] = std_nomsun
 Parametro[ClaveParametro] = param
@@ -124,50 +122,61 @@ variables_locales = sorted(list(set(list(DatosLimpios) +
 metavariables = variables(variables_locales)
 
 # Metadatos
+d_parametro = {
+    'DESCRIPCION DEL PARAMETRO': np.nan,
+    'Clave': ClaveParametro,
+    'Nombre del Parametro': NombreParametro,
+    'Descripcion del Parametro': DescParam,
+    'Unidades': UnidadesParam
+}
+
 d_hojas = {
-    'HOJAS INCLUIDAS EN EL LIBRO' : np.nan,
-    'METADATOS' : 'Descripciones y notas relativas al Dataset',
-    'PARAMETRO' : 'Dataset resultado de la minería, agregado por clave del Sistema Urbano Nacional, para utilizarse en la construcción de Indicadores',
-    'DATOS' : ContenidoHojaDatos,
-    'INTEGRIDAD' : 'Revision de integridad de la información POR CLAVE DEL SUN. Promedio de VAR_INTEGRIDAD de los municipios que componen una ciudad. Si no se tiene información para el municipio, VAR_INTEGRIDAD es igual a cero',
-    'EXISTENCIA' : 'Revision de integridad de la información POR MUNICIPIO.'
+    'METADATOS': 'Descripciones y notas relativas al Dataset',
+    'PARAMETRO': 'Dataset resultado de la minería, agregado por clave del Sistema Urbano Nacional, '
+                 'para utilizarse en la construcción de Indicadores',
+    'DATOS': ContenidoHojaDatos,
+    'INTEGRIDAD': 'Revision de integridad de la información POR CLAVE DEL SUN. ' 
+                  'Promedio de VAR_INTEGRIDAD de los municipios que componen una ciudad. '
+                  'Si no se tiene información para el municipio, VAR_INTEGRIDAD es igual a cero',
+    'EXISTENCIA': 'Revision de integridad de la información POR MUNICIPIO.',
+    '     ': np.nan,
+    'DESCRIPCION DE VARIABLES': np.nan
 }
 
 d_mineria = {
     '  ': np.nan,
-    'DESCRIPCION DEL PROCESO DE MINERIA:' : np.nan,
-    'Nombre del Dataset' : NombreParametro,
-    'Descripcion del dataset' : DescParam,
-    'Notas' : Notas,
-    'Fuente'    : NomFuente,
+    'DESCRIPCION DEL PROCESO DE MINERIA:': np.nan,
+    'Nombre del Dataset': NomDataset,
+    'Descripcion del dataset': DescDataset,
+    'Notas': Notas,
+    'Fuente': NomFuente,
     'URL_Fuente': UrlFuente,
-    'Dataset base' : DSBase,
-    'Repositorio de mineria' : RepoMina,
-    'VAR_INTEGRIDAD' : DescVarIntegridad,
-    ' ' : np.nan,
-    'DESCRIPCION DE VARIABLES' : np.nan
+    'Dataset base': DSBase,
+    'Repositorio de mineria': RepoMina,
+    'VAR_INTEGRIDAD': DescVarIntegridad,
+    ' ': np.nan,
+    'HOJAS INCLUIDAS EN EL LIBRO': np.nan
 }
 
-descripcion_hojas = pd.DataFrame.from_dict(d_hojas, orient='index').rename(columns={0:'DESCRIPCION'})
-descripcion_mineria = pd.DataFrame.from_dict(d_mineria, orient='index').rename(columns={0:'DESCRIPCION'})
-
-MetaParametro = descripcion_hojas.append(descripcion_mineria).append(metavariables)
+descripcion_parametro = pd.DataFrame.from_dict(d_parametro, orient='index').rename(columns={0: 'DESCRIPCION'})
+descripcion_mineria = pd.DataFrame.from_dict(d_mineria, orient='index').rename(columns={0: 'DESCRIPCION'})
+descripcion_hojas = pd.DataFrame.from_dict(d_hojas, orient='index').rename(columns={0: 'DESCRIPCION'})
+MetaParametro = descripcion_parametro.append(descripcion_mineria).append(descripcion_hojas).append(metavariables)
 
 # Diccionario de Descripciones
 DescParametro = {
-    'ClaveParametro' : ClaveParametro,
-    'NombreParametro' : NombreParametro,
-    'info_completa' : info_completa,
-    'info_sin_info' : info_sin_info,
-    'info_incomple' : info_incomple,
-    'RutaSalida' : DirDestino,
-    'Clave de Dimension' : ClaveDimension,
-    'Nombre de Dimension' : NomDimension,
-    'Titulo de Columna' : TituloParametro,
-    'Actualizacion de datos' : ActDatos
+    'ClaveParametro': ClaveParametro,
+    'NombreParametro': NombreParametro,
+    'info_completa': info_completa,
+    'info_sin_info': info_sin_info,
+    'info_incomple': info_incomple,
+    'RutaSalida': DirDestino,
+    'Clave de Dimension': ClaveDimension,
+    'Nombre de Dimension': NomDimension,
+    'Titulo de Columna': TituloParametro,
+    'Actualizacion de datos': ActDatos
 }
 
 # Crear archivo de Excel y documentar parametro
 ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, integridad_parametro)
 DocumentarParametro(DescParametro, MetaParametro, Parametro)
-
