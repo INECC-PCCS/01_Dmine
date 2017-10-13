@@ -13,7 +13,7 @@ import numpy as np
 import sys
 
 # Librerias locales utilizadas
-module_path = r'D:\PCCS\01_Dmine\00_Parametros'
+module_path = r'D:\PCCS\01_Dmine\Scripts'
 if module_path not in sys.path:
     sys.path.append(module_path)
 
@@ -28,14 +28,15 @@ from DocumentarParametro.DocumentarParametro import DocumentarParametro
 Las librerias locales utilizadas renglones arriba se encuentran disponibles en las siguientes direcciones:
 SCRIPT:             | DISPONIBLE EN:
 ------              | ------
-asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
-SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
-variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
-ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/ParametroEstandar
-AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/AsignarDimension
-DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/DocumentarParametro
+asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/SUN
+SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/SUN_integridad
+variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/PCCS_variables
+ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/ParametroEstandar
+AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/AsignarDimension
+DocumentarParametro 1 https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/DocumentarParametro
 
 """
+
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 ClaveParametro = 'P0709'
@@ -44,7 +45,7 @@ UnidadesParam = 'unidades'
 NombreParametro = 'Vehiculos de Pasajeros'
 TituloParametro = 'VEHICULOS_PASAJEROS'          # Para nombrar la columna del parametro
 
-#Descripciones del proceso de Minería
+# Descripciones del proceso de Minería
 DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\MV01'
 DSBase = '"MV01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/MV01'
 NomDataset = r'Vehiculos registrados'
@@ -66,8 +67,8 @@ DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(C
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Dataset Inicial
-dataset = pd.read_excel(DirFuente + r'\MV01.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
-dataset.set_index('CVE_MUN', inplace = True)
+dataset = pd.read_excel(DirFuente + r'\MV01.xlsx', sheetname="DATOS", dtype={'CVE_MUN': str})
+dataset.set_index('CVE_MUN', inplace=True)
 
 # Elegir columnas de vehiculos de pasajeros
 Columnas_raw = [x for x in list(dataset) if 'pasaje' in x]
@@ -94,7 +95,7 @@ variables_dataset = list(dataset)
 dataset['CVE_MUN'] = dataset.index
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN', 'NOM_ENT']
 
-DatosLimpios = asignar_sun(dataset, vars = variables_SUN)
+DatosLimpios = asignar_sun(dataset, vars=variables_SUN)
 OrdenColumnas = (variables_SUN + variables_dataset)
 DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
 
@@ -110,7 +111,7 @@ param_dataset['CVE_SUN'] = param_dataset.index
 param = param_dataset.groupby(by='CVE_SUN').agg('sum')[TituloParametro]     # Total de Area Verde por Ciudad
 intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']     # Integridad por ciudad
 std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
-std_nomsun.drop_duplicates(keep='first', inplace = True)
+std_nomsun.drop_duplicates(keep='first', inplace=True)
 Parametro = pd.DataFrame()
 Parametro['CIUDAD'] = std_nomsun
 Parametro[ClaveParametro] = param

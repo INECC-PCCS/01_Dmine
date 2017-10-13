@@ -14,7 +14,7 @@ import pandas as pd
 import numpy as np
 
 # Librerias locales utilizadas
-module_path = r'D:\PCCS\01_Dmine\00_Parametros'
+module_path = r'D:\PCCS\01_Dmine\Scripts'
 if module_path not in sys.path:
     sys.path.append(module_path)
 
@@ -29,12 +29,12 @@ from DocumentarParametro.DocumentarParametro import DocumentarParametro
 Las librerias locales utilizadas renglones arriba se encuentran disponibles en las siguientes direcciones:
 SCRIPT:             | DISPONIBLE EN:
 ------              | ------
-asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
-SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
-variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
-ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/ParametroEstandar
-AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/AsignarDimension
-DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/DocumentarParametro
+asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/SUN
+SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/SUN_integridad
+variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/PCCS_variables
+ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/ParametroEstandar
+AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/AsignarDimension
+DocumentarParametro 1 https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/DocumentarParametro
 
 """
 

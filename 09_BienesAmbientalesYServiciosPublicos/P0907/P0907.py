@@ -3,19 +3,17 @@
 Started on Wed Sep 13 15:55:22 2017
 
 @author: carlos.arana
-"""
-
-'''
 Descripcion: Creación de dataset para el parámetro P0907 "Aguas Superficiales"
 Informacion disponible para 2015
-'''
+
+"""
 
 import pandas as pd
 import numpy as np
 import sys
 
 # Librerias locales utilizadas
-module_path = r'D:\PCCS\01_Dmine\00_Parametros'
+module_path = r'D:\PCCS\01_Dmine\Scripts'
 if module_path not in sys.path:
     sys.path.append(module_path)
 
@@ -30,12 +28,12 @@ from DocumentarParametro.DocumentarParametro import DocumentarParametro
 Las librerias locales utilizadas renglones arriba se encuentran disponibles en las siguientes direcciones:
 SCRIPT:             | DISPONIBLE EN:
 ------              | ------
-asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
-SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
-variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
-ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/ParametroEstandar
-AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/AsignarDimension
-DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/DocumentarParametro
+asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/SUN
+SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/SUN_integridad
+variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/PCCS_variables
+ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/ParametroEstandar
+AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/AsignarDimension
+DocumentarParametro 1 https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/DocumentarParametro
 
 """
 
@@ -47,7 +45,7 @@ UnidadesParam = 'Kilómetros Cuadrados'
 NombreParametro = 'Aguas Superficiales'
 TituloParametro = 'AGUAS_SUPERFICIALES'          # Para nombrar la columna del parametro
 
-#Descripciones del proceso de Minería
+# Descripciones del proceso de Minería
 DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
 DSBase = '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
 NomDataset = r'Uso de Suelo y Vegetacion'
@@ -70,8 +68,8 @@ DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(C
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Dataset Inicial
-dataset = pd.read_excel(DirFuente + r'\BS02.xlsx', sheetname="DATOS", dtype={'CVE_MUN':str})
-dataset.set_index('CVE_MUN', inplace = True)
+dataset = pd.read_excel(DirFuente + r'\BS02.xlsx', sheetname="DATOS", dtype={'CVE_MUN': str})
+dataset.set_index('CVE_MUN', inplace=True)
 
 # Elegir columna de Cuerpos de Agua y reconvertir a dataset
 dataset = dataset['Cuerpos de agua']
@@ -93,7 +91,7 @@ variables_dataset = list(dataset)
 dataset['CVE_MUN'] = dataset.index
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN', 'NOM_ENT']
 
-DatosLimpios = asignar_sun(dataset, vars = variables_SUN)
+DatosLimpios = asignar_sun(dataset, vars=variables_SUN)
 OrdenColumnas = (variables_SUN + variables_dataset)
 DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
 
@@ -109,7 +107,7 @@ param_dataset['CVE_SUN'] = param_dataset.index
 param = param_dataset.groupby(by='CVE_SUN').agg('sum')[TituloParametro]     # Total de Area Verde por Ciudad
 intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']     # Integridad por ciudad
 std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
-std_nomsun.drop_duplicates(keep='first', inplace = True)
+std_nomsun.drop_duplicates(keep='first', inplace=True)
 Parametro = pd.DataFrame()
 Parametro['CIUDAD'] = std_nomsun
 Parametro[ClaveParametro] = param

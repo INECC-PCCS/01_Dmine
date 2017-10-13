@@ -21,7 +21,7 @@ import csv
 import pandas
 
 def variables(lista):
-    archivovariablescsv = r'D:\PCCS\01_Dmine\00_Parametros\PCCS_variables\PCCS_variables.csv'
+    archivovariablescsv = r'D:\PCCS\01_Dmine\Scripts\PCCS_variables\PCCS_variables.csv'
     with open(archivovariablescsv, 'r') as thefile:
         reader = csv.reader(thefile)
         dictvariables = {}
