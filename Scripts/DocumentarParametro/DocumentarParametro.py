@@ -3,16 +3,15 @@
 Started on Wed Sep  6 15:48:51 2017
 
 @author: carlos.arana
-"""
 
-'''
+Descripcion:
 Script para documentar un parámetro. Al final del proceso de minería, el script:
 
 * Crea un archivo README.md para la carpeta del parámetro
+* Crea un archivo .txt para la última actualización del parámetro
 * Guarda el parámetro y su informacion de integridad en la hoja integradora de parámetros
 
-'''
-
+"""
 
 # Librerias utilizadas
 import pandas as pd
@@ -24,7 +23,7 @@ def DocumentarParametro(DescParametro, MetaParametro, Parametro):
     ClaveParam = DescParametro['ClaveParametro']
     NombreParam = DescParametro['NombreParametro']
     DescParam = MetaParametro.loc['Descripcion del dataset'][0]
-    DirDestino = '{}\{}'.format(DescParametro['RutaSalida'],DescParametro['ClaveParametro'])
+    DirDestino = '{}\{}'.format(DescParametro['RutaSalida'], DescParametro['ClaveParametro'])
     NomDimension = DescParametro['Nombre de Dimension']
     TituloParam = DescParametro['Titulo de Columna']
     ActDatos = DescParametro['Actualizacion de datos']
@@ -49,7 +48,7 @@ def DocumentarParametro(DescParametro, MetaParametro, Parametro):
         README.write(Glosa)
 
     # Cargar archivo integrador
-    RutaIntegrador = r'D:\PCCS\01_Dmine\00_Parametros\CatalogoParametros.xlsx'
+    RutaIntegrador = r'D:\PCCS\01_Dmine\00_Generales\CatalogoParametros.xlsx'
     HojaIndice = pd.read_excel(RutaIntegrador, sheetname='INDICE', index_col=0)
     HojaParametros = pd.read_excel(RutaIntegrador, sheetname='PARAMETROS', dtype={'CVE_SUN' : str})
     HojaIntegridad = pd.read_excel(RutaIntegrador, sheetname='INTEGRIDAD', dtype={'CVE_SUN' : str})
@@ -57,13 +56,13 @@ def DocumentarParametro(DescParametro, MetaParametro, Parametro):
     HojaIntegridad.set_index('CVE_SUN', inplace=True)
 
     # Crear nueva entrada en Indice
-    DatosIndice = pd.DataFrame(index = [DescParametro['ClaveParametro']],
-                               data = {
-                                    'NOM_PARAMETRO' : NombreParam,
-                                    'ARCHIVO_LOCAL' : DirDestino+r'\{}.xlsx'.format(ClaveParam),
-                                    'URL_MINERIA' : MetaParametro.loc['Repositorio de mineria'][0]
+    DatosIndice = pd.DataFrame(index=[DescParametro['ClaveParametro']],
+                               data={
+                                    'NOM_PARAMETRO': NombreParam,
+                                    'ARCHIVO_LOCAL': DirDestino+r'\{}.xlsx'.format(ClaveParam),
+                                    'URL_MINERIA': MetaParametro.loc['Repositorio de mineria'][0]
                                 })
-    HojaIndice.loc[DatosIndice.iloc[0].name] = DatosIndice.iloc[0] # Escribe la entrada en el indice
+    HojaIndice.loc[DatosIndice.iloc[0].name] = DatosIndice.iloc[0]   # Escribe la entrada en el indice
 
     # Integrar datos de parámetro e integridad
     HojaParametros[ClaveParam] = Parametro[ClaveParam]
@@ -75,12 +74,10 @@ def DocumentarParametro(DescParametro, MetaParametro, Parametro):
     HojaIntegridad.sort_index(axis=1, inplace=True)
 
     # Escribir archivo .xlsx
-    writer = pd.ExcelWriter(RutaIntegrador) ###############
-    HojaIndice.to_excel(writer, sheet_name ='INDICE')
-    HojaParametros.to_excel(writer, sheet_name ='PARAMETROS')
+    writer = pd.ExcelWriter(RutaIntegrador)
+    HojaIndice.to_excel(writer, sheet_name='INDICE')
+    HojaParametros.to_excel(writer, sheet_name='PARAMETROS')
     HojaIntegridad.to_excel(writer, sheet_name='INTEGRIDAD')
 
     print('Se ha actualizado el Catálogo de Parámetros en {}'.format(RutaIntegrador))
     writer.save()
-
-    

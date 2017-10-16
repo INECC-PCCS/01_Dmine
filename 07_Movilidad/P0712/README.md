@@ -6,11 +6,11 @@ Archivo de mineria de datos. Parametro: P0712 - Numero de accidentes
 
 **FUENTE**: INEGI (Microdatos)
 
-**Dataset Base**: "MV02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/MV02
+**Dataset Base**: "MV02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/MV02
 
-**Ultima revision del parametro**: 2017/10/13 
+**Ultima revision del parametro**: 2017/10/16 
 
-**Ultima Actualizacion de los datos**: 1997 a 2015
+**Ultima Actualizacion de los datos**: 2015
 
 ----------
 

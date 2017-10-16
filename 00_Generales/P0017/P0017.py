@@ -45,17 +45,20 @@ NombreParametro = 'Superficie Continental'
 TituloParametro = 'SF_CONTINENTAL'          # Para nombrar la columna del parametro
 
 # Descripciones del proceso de Minería
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
-DSBase = '"BS02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
+DirFuente = r'D:\PCCS\01_Dmine\Datasets\BS02'
+DSBase = '"BS02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/BS02'
 NomDataset = r'Uso de Suelo y Vegetacion'
 DescDataset = r'Datos por municipio de Superficie continental, vegetal, acuifera y urbana'
 ContenidoHojaDatos = 'Superficie continental de municipios, etiquetados con clave SUN'   # Contenido de la hoja 'Datos'
-Notas = ''
+Notas = 'S/N'
 DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
                     '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
 NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
 UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
 ActDatos = '2005'
+DispTemp = '2005'
+PeriodoAct = 'Anual'
+DesagrMax = 'Municipal'
 
 # Descripciones generadas desde la clave del parámetro
 ClaveDimension = ClaveParametro[1:3]
@@ -143,6 +146,9 @@ d_mineria = {
     'DESCRIPCION DEL PROCESO DE MINERIA:': np.nan,
     'Nombre del Dataset': NomDataset,
     'Descripcion del dataset': DescDataset,
+    'Disponibilidad Temporal': DispTemp,
+    'Periodo de actualizacion': PeriodoAct,
+    'Nivel de Desagregacion': DesagrMax,
     'Notas': Notas,
     'Fuente': NomFuente,
     'URL_Fuente': UrlFuente,

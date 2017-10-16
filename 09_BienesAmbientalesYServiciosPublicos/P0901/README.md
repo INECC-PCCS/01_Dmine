@@ -2,13 +2,13 @@
 
 Archivo de mineria de datos. Parametro: P0901 - Denuncias Recibidas en Materia Ambiental
 
-**Contenido**: datos de Árboles plantados, Superficie reforestada, Volumen de basura recolectada, Denuncias recibidas en materia ambiental y Licencias Ambientales Únicas vigentes
+**Contenido**: Datos de Árboles plantados, Superficie reforestada, Volumen de basura recolectada, Denuncias recibidas en materia ambiental y Licencias Ambientales Únicas vigentes
 
 **FUENTE**: SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)
 
-**Dataset Base**: "BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS01
+**Dataset Base**: "BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/BS01
 
-**Ultima revision del parametro**: 2017/10/10 
+**Ultima revision del parametro**: 2017/10/16 
 
 **Ultima Actualizacion de los datos**: 2014
 

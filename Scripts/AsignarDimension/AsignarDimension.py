@@ -3,15 +3,12 @@
 Created on Thu Sep  7 10:00:29 2017
 
 @author: carlos.arana
-"""
-
-'''
 Descripcion: Diccionario con claves y nombres de dimensiones.
-'''
+"""
 
 def AsignarDimension(ClaveDimension):
     dimension = {
-        '00': {'directorio': 'Parametros', 'nombre': 'Parametros'},
+        '00': {'directorio': 'Generales', 'nombre': 'Generales'},
         '01': {'directorio': 'Agua', 'nombre': 'Agua'},
         '02': {'directorio': 'Aire', 'nombre': 'Aire'},
         '03': {'directorio': 'UsoDeSuelo', 'nombre': 'Uso de Suelo'},
