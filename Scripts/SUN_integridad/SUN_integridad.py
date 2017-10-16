@@ -18,7 +18,7 @@ import pandas as pd
 
 def SUN_integridad(dataframe_sun):
     # Importar dataset SUN
-    sun = pd.read_csv(r'D:\PCCS\01_Dmine\00_Parametros\sun_main.csv',
+    sun = pd.read_csv(r'D:\PCCS\01_Dmine\00_Generales\sun_main.csv',
                       dtype={'CVE_SUN':str, 'CVE_ENT': str, 'CVE_MUN': str, 'CVE_LOC': str},
                       encoding='UTF-8',      # Si mbcs falla entonces utiliza UTF-8
                       )

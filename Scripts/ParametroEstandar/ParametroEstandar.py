@@ -36,6 +36,8 @@ http://www.funcionpublica.gob.mx/manual/Guia_Basica_de_Identidad_Grafica_Institu
 
 # Librerias Utilizadas
 import pandas as pd
+import datetime
+import os
 
 def ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, integridad_parametro):
 
@@ -124,8 +126,8 @@ def ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, int
     metasheet.write_column('A2', list(MetaParametro.index), bold)
     metasheet.merge_range('A2:B2', 'DESCRIPCION DEL PARAMETRO', encabezado)
     metasheet.merge_range('A8:B8', 'DESCRIPCION DEL PROCESO DE MINERIA', encabezado)
-    metasheet.merge_range('A18:B18', 'HOJAS INCLUIDAS EN ESTE LIBRO', encabezado)
-    metasheet.merge_range('A25:B25', 'DESCRIPCION DE LAS VARIABLES INCLUIDAS EN ESTE LIBRO', encabezado)
+    metasheet.merge_range('A21:B21', 'HOJAS INCLUIDAS EN ESTE LIBRO', encabezado)
+    metasheet.merge_range('A28:B28', 'DESCRIPCION DE LAS VARIABLES INCLUIDAS EN ESTE LIBRO', encabezado)
 
     # Crear Titulo y reescribir indice con formato adecuado
     metasheet.set_column('A:A', 22.71)
@@ -134,7 +136,16 @@ def ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, int
     metasheet.set_column('E:E', 13.29)
     paramsheet.set_column('B:B', 13.29)
 
+    # Crear archivo de ultima corrida
+    filepath = RutaSalida + r'\{}\{}.txt'.format(ClaveParametro, ClaveParametro)
+    rundate = datetime.datetime.today().strftime('Último procesado de parametro: %Y/%m/%d \n\n')
+    if not os.path.isfile(filepath):
+        with open(filepath, 'a') as file:
+            file.write(rundate)
+    else:
+        with open(filepath, 'w') as file:
+            file.write(rundate)
+
     # FIN
     print('Hoja Guardada en {}'.format(RutaSalida + r'\{}\{}.xlsx'.format(ClaveParametro, ClaveParametro)))
     writer.save()
-

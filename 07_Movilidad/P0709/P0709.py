@@ -46,8 +46,8 @@ NombreParametro = 'Vehiculos de Pasajeros'
 TituloParametro = 'VEHICULOS_PASAJEROS'          # Para nombrar la columna del parametro
 
 # Descripciones del proceso de Minería
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\MV01'
-DSBase = '"MV01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/MV01'
+DirFuente = r'D:\PCCS\01_Dmine\Datasets\MV01'
+DSBase = '"MV01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/MV01'
 NomDataset = r'Vehiculos registrados'
 DescDataset = r'Numero de vehiculos registrados por municipio entre 1980 y 2016'
 ContenidoHojaDatos = 'Numero de Camiones de pasajeros por municipio de 1980 a 2016'   # Contenido de la hoja 'Datos'
@@ -57,6 +57,9 @@ DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es bi
 NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
 UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
 ActDatos = '2016'
+DispTemp = '1980-2016'
+PeriodoAct = 'Anual'
+DesagrMax = 'Municipal'
 
 # Descripciones generadas desde la clave del parámetro
 ClaveDimension = ClaveParametro[1:3]
@@ -154,6 +157,9 @@ d_mineria = {
     'DESCRIPCION DEL PROCESO DE MINERIA:': np.nan,
     'Nombre del Dataset': NomDataset,
     'Descripcion del dataset': DescDataset,
+    'Disponibilidad Temporal': DispTemp,
+    'Periodo de actualizacion': PeriodoAct,
+    'Nivel de Desagregacion': DesagrMax,
     'Notas': Notas,
     'Fuente': NomFuente,
     'URL_Fuente': UrlFuente,

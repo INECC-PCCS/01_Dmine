@@ -45,8 +45,8 @@ NombreParametro = 'Numero de accidentes'
 TituloParametro = 'Accidentes'                              # Para nombrar la columna del parametro
 
 # Descripciones del proceso de Minería
-NomDataset = r'Accidentes de tránsito en zonas urbanas y suburbanas'
 ClaveDataset = 'MV02'
+NomDataset = r'Accidentes de tránsito en zonas urbanas y suburbanas'
 DescDataset = r'Numero de accidentes de transito de acuerdo al lugar donde sucedieron (Zona urbana o suburbana),' \
               r'agregados a nivel municipal, de 1997 a 2015'
 ContenidoHojaDatos = 'Accidentes en zonas urbanas, agregados a nivel municipal, de 1997 a 2015'
@@ -55,12 +55,15 @@ DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es bi
                     '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
 NomFuente = 'INEGI (Microdatos)'
 UrlFuente = 'http://www.beta.inegi.org.mx/proyectos/registros/economicas/accidentes/'
-ActDatos = '1997 a 2015'
+ActDatos = '2015'
+DispTemp = '1997 a 2015'
+PeriodoAct = 'Anual'
+DesagrMax = 'Municipal'
 
 # Descripciones generadas desde la clave del parámetro
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\{}'.format(ClaveDataset)
+DirFuente = r'D:\PCCS\01_Dmine\Datasets\{}'.format(ClaveDataset)
 DSBase = '"{}.xlsx", disponible en ' \
-         'https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/{}'.format(ClaveDataset, ClaveDataset)
+         'https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/{}'.format(ClaveDataset, ClaveDataset)
 ClaveDimension = ClaveParametro[1:3]
 NomDimension = AsignarDimension(ClaveDimension)['nombre']
 DirDimension = ClaveDimension + "_" + AsignarDimension(ClaveDimension)['directorio']
@@ -148,6 +151,9 @@ d_mineria = {
     'DESCRIPCION DEL PROCESO DE MINERIA:': np.nan,
     'Nombre del Dataset': NomDataset,
     'Descripcion del dataset': DescDataset,
+    'Disponibilidad Temporal': DispTemp,
+    'Periodo de actualizacion': PeriodoAct,
+    'Nivel de Desagregacion': DesagrMax,
     'Notas': Notas,
     'Fuente': NomFuente,
     'URL_Fuente': UrlFuente,

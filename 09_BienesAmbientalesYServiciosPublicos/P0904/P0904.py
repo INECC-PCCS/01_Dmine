@@ -15,7 +15,7 @@ import numpy as np
 import sys
 
 # Librerias locales utilizadas
-module_path = r'D:\PCCS\01_Dmine\00_Parametros'
+module_path = r'D:\PCCS\01_Dmine\Scripts'
 if module_path not in sys.path:
     sys.path.append(module_path)
 
@@ -30,12 +30,12 @@ from DocumentarParametro.DocumentarParametro import DocumentarParametro
 Las librerias locales utilizadas renglones arriba se encuentran disponibles en las siguientes direcciones:
 SCRIPT:             | DISPONIBLE EN:
 ------              | ------
-asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN
-SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/SUN_integridad
-variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/PCCS_variables
-ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/ParametroEstandar
-AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/AsignarDimension
-DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/DocumentarParametro
+asignar_sun         | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/SUN
+SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/SUN_integridad
+variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/PCCS_variables
+ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/ParametroEstandar
+AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/AsignarDimension
+DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/DocumentarParametro
 """
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
@@ -47,11 +47,11 @@ NombreParametro = 'Area Verde'
 TituloParametro = 'AREA_VERDE'          # Para nombrar la columna del parametro
 
 #Descripciones del proceso de Minería
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS02'
-DSBase = '"BS02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS02'
+DirFuente = r'D:\PCCS\01_Dmine\Datasets\BS02'
+DSBase = '"BS02.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/BS02'
 NomDataset = r'Uso de Suelo y Vegetacion'
 DescDataset = r'Datos por municipio de Superficie continental, vegetal, acuifera y urbana'
-ContenidoDatos = 'Superficie de Area verde por clave SUN'   # Contenido de la hoja 'Datos'
+ContenidoHojaDatos = 'Superficie de Area verde por clave SUN'   # Contenido de la hoja 'Datos'
 Notas = 'Las areas verdes de un municipio son todas aquellas que en el dataset original aparecen como Agricultura, ' \
         'Pastizal, Bosque, Selva, Matorral Xerófilo, Otros Tipos de Vegetacion, Vegetación Secundaria'
 DescVarIntegridad = 'La variable de integridad para esta Dataset es el porcentaje variables ' \
@@ -59,6 +59,9 @@ DescVarIntegridad = 'La variable de integridad para esta Dataset es el porcentaj
 NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
 UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
 ActDatos = '2005'
+DispTemp = '2005'
+PeriodoAct = 'Anual'
+DesagrMax = 'Municipal'
 
 # Descripciones generadas desde la clave del parámetro
 ClaveDimension = ClaveParametro[1:3]
@@ -100,15 +103,15 @@ DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
 
 # Revision de integridad
 integridad_parametro = SUN_integridad(DatosLimpios)
-info_completa = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 1) # Para generar grafico de integridad
-info_sin_info = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 0) # Para generar grafico de integridad
-info_incomple = 135 - info_completa - info_sin_info                 # Para generar grafico de integridad
+info_completa = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 1)      # Para generar grafico de integridad
+info_sin_info = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 0)      # Para generar grafico de integridad
+info_incomple = 135 - info_completa - info_sin_info                             # Para generar grafico de integridad
 
 # Construccion del Parametro
 param_dataset = DatosLimpios.set_index('CVE_SUN')
 param_dataset['CVE_SUN'] = param_dataset.index
-param = param_dataset.groupby(by='CVE_SUN').agg('sum')[TituloParametro]     # Total de Area Verde por Ciudad
-intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']     # Integridad por ciudad
+param = param_dataset.groupby(by='CVE_SUN').agg('sum')[TituloParametro]         # Total de Area Verde por Ciudad
+intparam = param_dataset.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']    # Integridad por ciudad
 std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
 std_nomsun.drop_duplicates(keep='first', inplace = True)
 Parametro = pd.DataFrame()
@@ -153,6 +156,9 @@ d_mineria = {
     'DESCRIPCION DEL PROCESO DE MINERIA:': np.nan,
     'Nombre del Dataset': NomDataset,
     'Descripcion del dataset': DescDataset,
+    'Disponibilidad Temporal': DispTemp,
+    'Periodo de actualizacion': PeriodoAct,
+    'Nivel de Desagregacion': DesagrMax,
     'Notas': Notas,
     'Fuente': NomFuente,
     'URL_Fuente': UrlFuente,

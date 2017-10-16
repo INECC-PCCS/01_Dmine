@@ -25,7 +25,7 @@ import pandas as pd
 
 def asignar_sun(dataframe, CVE_MUN = 'CVE_MUN', vars = ['CVE_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN']):
     # Cargar archivo del Subsistema Principal del SUN
-    sun = rcsv(r'D:\PCCS\01_Dmine\00_Parametros\sun_main.csv',
+    sun = rcsv(r'D:\PCCS\01_Dmine\00_Generales\sun_main.csv',
                       dtype={'CVE_SUN': str,
                              'CVE_ENT': str,
                              'CVE_MUN': str,

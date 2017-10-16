@@ -10,6 +10,7 @@ Descripcion: Creación de parámetro P0902 "Arbolado Urbano"
 # Librerias Utilizadas
 import pandas as pd
 import numpy as np
+import sys
 
 # Librerias locales utilizadas
 module_path = r'D:\PCCS\01_Dmine\Scripts'
@@ -45,18 +46,21 @@ NombreParametro = 'Arboles Plantados'
 TituloParametro = 'ARBOLES_PLANTADOS'          # Para nombrar la columna del parametro
 
 # Descripciones del proceso de Minería
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS01'
-DSBase = '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS01'
+DirFuente = r'D:\PCCS\01_Dmine\Datasets\BS01'
+DSBase = '"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/BS01'
 NomDataset = r'Acciones seleccionadas en materia ambiental'
 DescDataset = r'Datos de Árboles plantados, Superficie reforestada, Volumen de basura recolectada, ' \
               r'Denuncias recibidas en materia ambiental y Licencias Ambientales Únicas vigentes'
 ContenidoHojaDatos = 'Numero de arboles plantados, por municipio, de 1994 a 2014'   # Contenido de la hoja 'Datos'
-Notas = 'Sin notas'
+Notas = 's/n'
 DescVarIntegridad = 'La variable de integridad para esta Dataset es el porcentaje de años ' \
                     'que cuentan con informacion, por municipio'
 NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
 UrlFuente = 'http://sc.inegi.org.mx/cobdem/'
 ActDatos = '2014'
+DispTemp = '1994 a 2014'
+PeriodoAct = 'Anual'
+DesagrMax = 'Municipal'
 
 # Descripciones generadas desde la clave del parámetro
 ClaveDimension = ClaveParametro[1:3]
@@ -155,6 +159,9 @@ d_mineria = {
     'DESCRIPCION DEL PROCESO DE MINERIA:': np.nan,
     'Nombre del Dataset': NomDataset,
     'Descripcion del dataset': DescDataset,
+    'Disponibilidad Temporal': DispTemp,
+    'Periodo de actualizacion': PeriodoAct,
+    'Nivel de Desagregacion': DesagrMax,
     'Notas': Notas,
     'Fuente': NomFuente,
     'URL_Fuente': UrlFuente,

@@ -36,6 +36,8 @@ URLS = [
 ]
 
 archivos = {}
+
+# Descarga de archivos
 for i in URLS:
     localfile = i.split('/')[2]
     anio = i.split('/')[1]
@@ -52,9 +54,9 @@ for k, v in archivos.items():
     targetdir = dir_local_base+'\\'+k
     if not os.path.isdir(targetdir):
         os.makedirs(targetdir)
-    #zip_ref = zipfile.ZipFile(v, 'r') #
-    #zip_ref.extractall(targetdir) #
-    #zip_ref.close() #
+    zip_ref = zipfile.ZipFile(v, 'r') #
+    zip_ref.extractall(targetdir) #
+    zip_ref.close() #
     unzipdirs[k] = targetdir
     print('Se descomprimio {}'.format(v))
 

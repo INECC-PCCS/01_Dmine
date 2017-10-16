@@ -11,11 +11,7 @@ Creacion de parametro P0901 "Denuncias recibidas en materia ambiental"
 # Librerias Utilizadas
 import pandas as pd
 import numpy as np
-
-# Librerias locales utilizadas
-module_path = r'D:\PCCS\01_Dmine\00_Parametros'
-if module_path not in sys.path:
-    sys.path.append(module_path)
+import sys
 
 # Librerias locales utilizadas
 module_path = r'D:\PCCS\01_Dmine\Scripts'
@@ -50,18 +46,21 @@ NombreParametro = 'Denuncias Recibidas en Materia Ambiental'
 TituloParametro = 'Denuncias_Ambiental'          # Para nombrar la columna del parametro
 
 # Descripciones del proceso de Minería
-DirFuente = r'D:\PCCS\01_Dmine\00_Parametros\BS01'
-DSBase = r'"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/00_Parametros/BS01'
+DirFuente = r'D:\PCCS\01_Dmine\Datasets\BS01'
+DSBase = r'"BS01.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/BS01'
 NomDataset = r'Acciones seleccionadas en materia ambiental'
 DescDataset = r'Datos de Árboles plantados, Superficie reforestada, Volumen de basura recolectada, ' \
               r'Denuncias recibidas en materia ambiental y Licencias Ambientales Únicas vigentes'
 ContenidoHojaDatos = 'Numero de denuncias recibidas en materia ambiental, por municipio, de 1994 a 2014'
-Notas = ''
+Notas = 'S/N'
 DescVarIntegridad = 'La variable de integridad para esta parametro es el porcentaje de años ' \
                     'que cuentan con informacion, por municipio'
 NomFuente = 'SIMBAD - Sistema Estatal y municipal de Base de Datos (INEGI)'
 UrlFuente = r'http://sc.inegi.org.mx/cobdem/'
 ActDatos = '2014'
+DispTemp = '1994-2014'
+PeriodoAct = 'Anual'
+DesagrMax = 'Municipal'
 
 # Descripciones generadas desde la clave del parámetro
 ClaveDimension = ClaveParametro[1:3]
@@ -155,6 +154,9 @@ d_mineria = {
     'DESCRIPCION DEL PROCESO DE MINERIA:': np.nan,
     'Nombre del Dataset': NomDataset,
     'Descripcion del dataset': DescDataset,
+    'Disponibilidad Temporal': DispTemp,
+    'Periodo de actualizacion': PeriodoAct,
+    'Nivel de Desagregacion': DesagrMax,
     'Notas': Notas,
     'Fuente': NomFuente,
     'URL_Fuente': UrlFuente,
