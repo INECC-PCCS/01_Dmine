@@ -121,7 +121,6 @@ variables_locales = sorted(list(set(list(DatosLimpios) +
                                     list(integridad_parametro['INTEGRIDAD']) +
                                     list(integridad_parametro['EXISTENCIA']) +
                                     list(Parametro))))
-
 metavariables = variables(variables_locales)
 
 # Metadatos
