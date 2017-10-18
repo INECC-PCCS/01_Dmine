@@ -18,7 +18,7 @@ from simpledbf import Dbf5
 
 # Ubicacion y descripcion de la fuente
 fuente = r'http://www.beta.inegi.org.mx/proyectos/registros/economicas/accidentes/'
-describe_fuente = 'Descarga automatizada desde la URL_fuente'
+describe_fuente = 'solicitud'
 fecha_mineria = datetime.datetime.now()
 
 # Descargar bases de datos de accidentes
@@ -44,7 +44,7 @@ for i in URLS:
     destino = dir_local_base+dir_local_sub+'\\'+localfile
     URL = URLBASE+i
     print('Descargando {} ... ... ... ... ... '.format(localfile))
-    # urllib.request.urlretrieve(URL, destino) #
+    urllib.request.urlretrieve(URL, destino) #
     archivos[anio]= destino
     print('se descargó {}'.format(localfile))
 
