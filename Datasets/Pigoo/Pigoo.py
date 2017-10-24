@@ -5,48 +5,32 @@ Started on Tue Oct 17 10:23:02 2017
 @author: carlos.arana
 
 Descripcion;
-Descarga el Dataset de indicadores de Gestion de los organismos Operadores de agua de la Republica Mexicana
+Analisis exploratorio al Dataset de indicadores de Gestion de los organismos Operadores de agua de la Republica Mexicana
 """
+
 
 # Librerias Utilizadas
 import os
 import pandas as pd
 import datetime
-import urllib
 import zipfile
 from simpledbf import Dbf5
 
+# Librerias locales utilizadas
+module_path = r'D:\PCCS\01_Dmine\Scripts'
+if module_path not in sys.path:
+    sys.path.append(module_path)
+from SUN.asignar_sun import asignar_sun
+from SUN_integridad.SUN_integridad import SUN_integridad
+
 # Ubicacion y descripcion de la fuente
-fuente = r'http://www.beta.inegi.org.mx/proyectos/registros/economicas/accidentes/'
-describe_fuente = 'Descarga automatizada desde la URL_fuente'
+fuente = r'D:\PCCS\01_Dmine\Datasets\Pigoo\CiudadesPIGOO_ClaveInegi.xlsx'
+describe_fuente = 'Archivo con claves geoestadísticas asignadas por personal de INEGI'
 fecha_mineria = datetime.datetime.now()
-
-# Descargar bases de datos de accidentes
-dir_local_base = r'D:\PCCS\00_RawData\01_CSV\Accidentes'
-dir_local_sub = r'\zip'
-URLBASE = 'http://www.beta.inegi.org.mx/contenidos/proyectos/registros/economicas/accidentes/microdatos'
-dataset_destino = 'MV02'
-
-URLS = [
-    r'/1997/atus_97_dbf.zip', r'/1998/atus_98_dbf.zip', r'/1999/atus_99_dbf.zip', r'/2000/atus_00_dbf.zip',
-    r'/2001/atus_01_dbf.zip', r'/2002/atus_02_dbf.zip', r'/2003/atus_03_dbf.zip', r'/2004/atus_04_dbf.zip',
-    r'/2005/atus_05_dbf.zip', r'/2006/atus_06_dbf.zip', r'/2007/ATUS_07_dbf.zip', r'/2008/ATUS_08_dbf.zip',
-    r'/2009/ATUS_09_dbf.zip', r'/2010/ATUS_10_dbf.zip', r'/2011/ATUS_11_dbf.zip', r'/2012/atus_12_dbf.zip',
-    r'/2013/atus_13_dbf.zip', r'/2014/atus_14_dbf.zip', r'/2015/atus_15_dbf.zip'
-]
 
 archivos = {}
 
-# Descarga de archivos
-for i in URLS:
-    localfile = i.split('/')[2]
-    anio = i.split('/')[1]
-    destino = dir_local_base+dir_local_sub+'\\'+localfile
-    URL = URLBASE+i
-    print('Descargando {} ... ... ... ... ... '.format(localfile))
-    # urllib.request.urlretrieve(URL, destino) #
-    archivos[anio]= destino
-    print('se descargó {}'.format(localfile))
+
 
 # Descomprimir archivos
 unzipdirs = {}
@@ -115,3 +99,35 @@ Accidentes_Urbana.to_excel(writer, sheet_name = 'ACCIDENTES_URBANA')
 Accidentes_Suburbana.to_excel(writer, sheet_name = 'ACCIDENTES_SUBURBANA')
 metadatos.to_excel(writer, sheet_name = 'Metadatos')
 writer.close()
+
+'''
+Preproceso
+'''
+
+import pandas as pd
+
+# Cargar archivo
+pigoo_inegi = r'D:\PCCS\01_Dmine\Datasets\Pigoo\CiudadesPIGOO_ClaveInegi.xlsx'
+pigoo_inegi_df = pd.read_excel(pigoo_inegi, sheetname='OOAPAS-PIGOO', index_col=0,
+                      dtype={'Clave-Estado-Inegi': str,
+                             'Clave-Municipio-Inegi': str,
+                             'Clave-Localidad-Inegi': str})
+
+# Crear CVE_MUN y CVE_SUN
+pigoo_inegi_df['CVE_MUN'] = pigoo_inegi_df['Clave-Estado-Inegi'].map(str) + pigoo_inegi_df['Clave-Municipio-Inegi']
+variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN', 'NOM_ENT']
+pigoo_sun = asignar_sun(pigoo_inegi_df, vars=variables_SUN)
+pigoo_sun['VAR_INTEGRIDAD'] = 1
+
+# Revisar Integridad
+integridad_pigoo = SUN_integridad(pigoo_sun)
+
+# Exportar a excel
+writer = pd.ExcelWriter(r'D:\PCCS\01_Dmine\Datasets\Pigoo\pigoo_start.xlsx')     # Proxy de libro
+pigoo_sun.to_excel(writer, sheet_name ='datos')
+integridad_pigoo['INTEGRIDAD'].to_excel(writer, sheet_name ='integridad')
+integridad_pigoo['EXISTENCIA'].to_excel(writer, sheet_name ='existencia')
+writer.close()
+
+
+integridad_pigoo.keys()

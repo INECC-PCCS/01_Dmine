@@ -34,7 +34,7 @@ def SUN_integridad(dataframe_sun):
 
     # Calculo de integridad
     sun['CHECK'] = sun['CVE_MUN'].isin(unicos_df)
-    sun = pd.merge(sun, dataframe_sun[['VAR_INTEGRIDAD', 'CVE_MUN']], on='CVE_MUN')
+    sun = sun.merge(dataframe_sun[['VAR_INTEGRIDAD', 'CVE_MUN']], how='left', on='CVE_MUN')
     sun['VAR_INTEGRIDAD'] = sun['VAR_INTEGRIDAD'].fillna(0)
     cantmun = sun.groupby(by='CVE_SUN').agg('count')['CVE_MUN']           # Total en el SUN
     cantdf = sun.groupby(by='CVE_SUN').agg('sum')['VAR_INTEGRIDAD']       # Total en el dataframe
