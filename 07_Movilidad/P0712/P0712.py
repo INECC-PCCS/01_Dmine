@@ -18,6 +18,8 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from SUN.asignar_sun import asignar_sun
+
+from SUN.CargaSunPrincipal import getsun
 from SUN_integridad.SUN_integridad import SUN_integridad
 from PCCS_variables.PCCS_variables import variables
 from ParametroEstandar.ParametroEstandar import ParametroEstandar
@@ -99,9 +101,9 @@ DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
 
 # Revision de integridad
 integridad_parametro = SUN_integridad(DatosLimpios)
-info_completa = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 1) # Para generar grafico de integridad
-info_sin_info = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 0) # Para generar grafico de integridad
-info_incomple = 135 - info_completa - info_sin_info                 # Para generar grafico de integridad
+info_completa = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 1)      # Para generar grafico de integridad
+info_sin_info = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 0)      # Para generar grafico de integridad
+info_incomple = 135 - info_completa - info_sin_info                             # Para generar grafico de integridad
 
 # Construccion del Parametro
 param_dataset = DatosLimpios.set_index('CVE_SUN')

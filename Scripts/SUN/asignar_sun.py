@@ -41,8 +41,8 @@ def asignar_sun(dataframe, CVE_MUN = 'CVE_MUN', vars = ['CVE_MUN', 'CVE_SUN', 'N
 #    print(list(sun))
     if 'CVE_MUN' not in vars: vars.append('CVE_MUN')
 
-    dataframe.rename(columns={CVE_MUN : 'CVE_MUN'}, inplace = True) # Estandariza el nombre de la columna de clave geoestadistica
-    sun.drop_duplicates('CVE_SUNMUN', keep='first', inplace = True) # Quita los municipios que en el dataset aparecen duplicados por estar subdivididos en localidades
+    dataframe.rename(columns={CVE_MUN : 'CVE_MUN'}, inplace = True)   # Estandariza el nombre de la columna de clave geoestadistica
+    sun.drop_duplicates('CVE_SUNMUN', keep='first', inplace = True)   # Quita los municipios que en el dataset aparecen duplicados por estar subdivididos en localidades
     sun = sun[vars]
     dataframe = pd.merge(dataframe, sun, on='CVE_MUN')
 
