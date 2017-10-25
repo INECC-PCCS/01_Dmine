@@ -40,30 +40,31 @@ DocumentarParametro 1 https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
-ClaveParametro = ''
-DescParam = ''
-UnidadesParam = ''
-NombreParametro = ''
-TituloParametro = ''                              # Para nombrar la columna del parametro
+ClaveParametro = 'P0113'
+DescParam = 'Consumo'
+UnidadesParam = 'l/h/d'
+NombreParametro = 'Consumo'
+TituloParametro = 'Consumo'                              # Para nombrar la columna del parametro
 
 # Descripciones del proceso de Minería
 ClaveDataset = 'Pigoo'
-NomDataset = r''
-DescDataset = r''
-ContenidoHojaDatos = 'Accidentes en zonas urbanas, agregados a nivel municipal, de 1997 a 2015'
+NomDataset = r'Programa de Indicadores de Gestión de Organismos Operadores'
+DescDataset = r'Indicadores municipales generados por los Organismos Operadores de agua, recolectados por el ' \
+              r'Instituto Mexicano De Tecnologia del Agua y la Secretaría de Medio Ambiente y Recursos Naturales'
+ContenidoHojaDatos = ''
 Notas = 'S/N'
 DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
                     '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
-NomFuente = 'INEGI (Microdatos)'
-UrlFuente = 'http://www.beta.inegi.org.mx/proyectos/registros/economicas/accidentes/'
+NomFuente = 'Programa de Indicadores de Gestión de Organismos Operadores'
+UrlFuente = 'http://www.pigoo.gob.mx/index.php?option=com_content&view=article&id=674&Itemid=1677'
 ActDatos = '2015'
-DispTemp = '1997 a 2015'
+DispTemp = '2002 a 2015'
 PeriodoAct = 'Anual'
 DesagrMax = 'Municipal'
 
 # Descripciones generadas desde la clave del parámetro
 DirFuente = r'D:\PCCS\01_Dmine\Datasets\{}'.format(ClaveDataset)
-DSBase = '"{}.xlsx", disponible en ' \
+DSBase = '"{}.csv", disponible en ' \
          'https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/{}'.format(ClaveDataset, ClaveDataset)
 ClaveDimension = ClaveParametro[1:3]
 NomDimension = AsignarDimension(ClaveDimension)['nombre']
@@ -73,9 +74,16 @@ DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(C
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Dataset Inicial
-dataset = pd.read_excel(DirFuente + r'\{}.xlsx'.format(ClaveDataset),
-                        sheetname="ACCIDENTES_URBANA", dtype={'CVE_MUN': str})
+dataset = pd.read_csv(DirFuente + r'\{}.csv'.format(ClaveDataset),
+                        header = 3,
+                        dtype={'CVE_MUN': str})
+dataset = dataset[dataset['indicador'] == 'Consumo (l/h/d)']
+
 dataset.set_index('CVE_MUN', inplace=True)
+
+pigoo_geo = pd.read_excel(r'D:\PCCS\01_Dmine\Datasets\Pigoo\pigoo_start.xlsx',
+                          sheetname="datos")
+d2 = pd.merge(dataset, pigoo_geo[['Nombre- PIGOO', 'CVE_MUN']], how='left', left_on='ciudad', right_on='Nombre- PIGOO')
 
 # Elegir dato más actual y convertir a dataset
 dataset = dataset['2015']

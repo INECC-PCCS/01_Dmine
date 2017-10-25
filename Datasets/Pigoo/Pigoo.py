@@ -30,8 +30,6 @@ fecha_mineria = datetime.datetime.now()
 
 archivos = {}
 
-
-
 # Descomprimir archivos
 unzipdirs = {}
 for k, v in archivos.items():
@@ -128,6 +126,5 @@ pigoo_sun.to_excel(writer, sheet_name ='datos')
 integridad_pigoo['INTEGRIDAD'].to_excel(writer, sheet_name ='integridad')
 integridad_pigoo['EXISTENCIA'].to_excel(writer, sheet_name ='existencia')
 writer.close()
-
 
 integridad_pigoo.keys()
