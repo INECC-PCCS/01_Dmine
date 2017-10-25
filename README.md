@@ -7,7 +7,7 @@
 ----------
 
 
-###Introduccion
+### Introduccion
 
 *"…Una ciudad sustentable permite a todos sus ciudadanos satisfacer sus propias necesidades y mejorar su bienestar sin dañar el entorno natural ni poner en peligro las condiciones de vida de otras personas, en el presente o en el futuro… "* (Girardet, 2001)
 
@@ -26,7 +26,7 @@ La Plataforma de Conocimiento sobre Ciudades Sustentables (PCCS) es un proyecto 
 
 Estas 10 dimensiones, a su vez, se conforman con indicadores de sustentabilidad cuyos parámetros son la información cuantitativa y cualitativa de cada ciudad. Los parámetros son obtenidos desde múltiples fuentes, en todos los casos oficiales y disponibles al público para su consulta. Los datos obtenidos de estas fuentes se transforman con el objetivo de tenerlos disponibles para la PCCS con el nivel de agregación del SUN y en formatos estándar que permitan su análisis de manera ágil y en su caso, sistematizada.
 
-Este directorio contiene la memoria de construcción de indicadores para la PCCS. A pesar de que la transformación de la información podría realizarse manualmente utilizando software de hoja de cálculo, el manejo de la información se ha realizado desde scripts de python, a manera de que se cuente con una memoria del trabajo de transformación de datos, que la investigación sea reproducible, y que sea posible rastrear las fuentes de información, dar seguimiento a las transformaciones y soportar los resultados presentados a manera de dimensiones e indicadores en la PCCS. 
+Este directorio contiene la memoria de construcción de indicadores para la PCCS. A pesar de que la transformación de la información podría realizarse manualmente utilizando software de hoja de cálculo, el manejo de la información se ha realizado desde scripts de python, a manera de que se cuente con una memoria del trabajo de transformación de datos, de que la investigación sea reproducible, que sea posible rastrear las fuentes de información, dar seguimiento a las transformaciones de datos y soportar los resultados presentados a manera de dimensiones e indicadores en la PCCS. 
 
 ### Descripcion del Contenido
 **Tipos de Archivos**
