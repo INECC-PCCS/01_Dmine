@@ -1,446 +1,446 @@
-ÔªøCVE_SUN,CVE_ENT,CVE_MUN,CVE_SUNMUN,NOM_ENT,NOM_MUN,NOM_SUN,TIPO_SUN
-001,01,01001,00101001,Aguascalientes,Aguascalientes,Aguascalientes,1
-001,01,01005,00101005,Aguascalientes,Jes√∫s Mar√≠a,Aguascalientes,1
-001,01,01011,00101011,Aguascalientes,San Francisco de los Romo,Aguascalientes,1
-002,02,02003,00202003,Baja California,Tecate,Tijuana,1
-002,02,02004,00202004,Baja California,Tijuana,Tijuana,1
-002,02,02005,00202005,Baja California,Playas de Rosarito,Tijuana,1
-003,02,02002,00302002,Baja California,Mexicali,Mexicali,1
-004,05,05017,00405017,Coahuila de Zaragoza,Matamoros,La Laguna,1
-004,05,05035,00405035,Coahuila de Zaragoza,Torre√≥n,La Laguna,1
-004,10,10007,00410007,Durango,G√≥mez Palacio,La Laguna,1
-004,10,10012,00410012,Durango,Lerdo,La Laguna,1
-005,05,05004,00505004,Coahuila de Zaragoza,Arteaga,Saltillo,1
-005,05,05027,00505027,Coahuila de Zaragoza,Ramos Arizpe,Saltillo,1
-005,05,05030,00505030,Coahuila de Zaragoza,Saltillo,Saltillo,1
-006,05,05006,00605006,Coahuila de Zaragoza,Casta√±os,Monclova-Frontera,1
-006,05,05010,00605010,Coahuila de Zaragoza,Frontera,Monclova-Frontera,1
-006,05,05018,00605018,Coahuila de Zaragoza,Monclova,Monclova-Frontera,1
-007,05,05022,00705022,Coahuila de Zaragoza,Nava,Piedras Negras,1
-007,05,05025,00705025,Coahuila de Zaragoza,Piedras Negras,Piedras Negras,1
-008,06,06002,00806002,Colima,Colima,Colima-Villa de √Ålvarez,1
-008,06,06003,00806003,Colima,Comala,Colima-Villa de √Ålvarez,1
-008,06,06004,00806004,Colima,Coquimatl√°n,Colima-Villa de √Ålvarez,1
-008,06,06005,00806005,Colima,Cuauht√©moc,Colima-Villa de √Ålvarez,1
-008,06,06010,00806010,Colima,Villa de √Ålvarez,Colima-Villa de √Ålvarez,1
-009,06,06001,00906001,Colima,Armer√≠a,Tecom√°n,1
-009,06,06009,00906009,Colima,Tecom√°n,Tecom√°n,1
-010,07,07012,01007012,Chiapas,Berrioz√°bal,Tuxtla Guti√©rrez,1
-010,07,07027,01007027,Chiapas,Chiapa de Corzo,Tuxtla Guti√©rrez,1
-010,07,07101,01007101,Chiapas,Tuxtla Guti√©rrez,Tuxtla Guti√©rrez,1
-011,08,08037,01108037,Chihuahua,Ju√°rez,Ju√°rez,1
-012,08,08002,01208002,Chihuahua,Aldama,Chihuahua,1
-012,08,08004,01208004,Chihuahua,Aquiles Serd√°n,Chihuahua,1
-012,08,08019,01208019,Chihuahua,Chihuahua,Chihuahua,1
-013,09,09002,01309002,Ciudad de M√©xico,Azcapotzalco,Valle de M√©xico,1
-013,09,09003,01309003,Ciudad de M√©xico,Coyoac√°n,Valle de M√©xico,1
-013,09,09004,01309004,Ciudad de M√©xico,Cuajimalpa de Morelos,Valle de M√©xico,1
-013,09,09005,01309005,Ciudad de M√©xico,Gustavo A. Madero,Valle de M√©xico,1
-013,09,09006,01309006,Ciudad de M√©xico,Iztacalco,Valle de M√©xico,1
-013,09,09007,01309007,Ciudad de M√©xico,Iztapalapa,Valle de M√©xico,1
-013,09,09008,01309008,Ciudad de M√©xico,La Magdalena Contreras,Valle de M√©xico,1
-013,09,09009,01309009,Ciudad de M√©xico,Milpa Alta,Valle de M√©xico,1
-013,09,09010,01309010,Ciudad de M√©xico,√Ålvaro Obreg√≥n,Valle de M√©xico,1
-013,09,09011,01309011,Ciudad de M√©xico,Tl√°huac,Valle de M√©xico,1
-013,09,09012,01309012,Ciudad de M√©xico,Tlalpan,Valle de M√©xico,1
-013,09,09013,01309013,Ciudad de M√©xico,Xochimilco,Valle de M√©xico,1
-013,09,09014,01309014,Ciudad de M√©xico,Benito Ju√°rez,Valle de M√©xico,1
-013,09,09015,01309015,Ciudad de M√©xico,Cuauht√©moc,Valle de M√©xico,1
-013,09,09016,01309016,Ciudad de M√©xico,Miguel Hidalgo,Valle de M√©xico,1
-013,09,09017,01309017,Ciudad de M√©xico,Venustiano Carranza,Valle de M√©xico,1
-013,13,13069,01313069,Hidalgo,Tizayuca,Valle de M√©xico,1
-013,15,15002,01315002,M√©xico,Acolman,Valle de M√©xico,1
-013,15,15009,01315009,M√©xico,Amecameca,Valle de M√©xico,1
-013,15,15010,01315010,M√©xico,Apaxco,Valle de M√©xico,1
-013,15,15011,01315011,M√©xico,Atenco,Valle de M√©xico,1
-013,15,15013,01315013,M√©xico,Atizap√°n de Zaragoza,Valle de M√©xico,1
-013,15,15015,01315015,M√©xico,Atlautla,Valle de M√©xico,1
-013,15,15016,01315016,M√©xico,Axapusco,Valle de M√©xico,1
-013,15,15017,01315017,M√©xico,Ayapango,Valle de M√©xico,1
-013,15,15020,01315020,M√©xico,Coacalco de Berrioz√°bal,Valle de M√©xico,1
-013,15,15022,01315022,M√©xico,Cocotitl√°n,Valle de M√©xico,1
-013,15,15023,01315023,M√©xico,Coyotepec,Valle de M√©xico,1
-013,15,15024,01315024,M√©xico,Cuautitl√°n,Valle de M√©xico,1
-013,15,15025,01315025,M√©xico,Chalco,Valle de M√©xico,1
-013,15,15028,01315028,M√©xico,Chiautla,Valle de M√©xico,1
-013,15,15029,01315029,M√©xico,Chicoloapan,Valle de M√©xico,1
-013,15,15030,01315030,M√©xico,Chiconcuac,Valle de M√©xico,1
-013,15,15031,01315031,M√©xico,Chimalhuac√°n,Valle de M√©xico,1
-013,15,15033,01315033,M√©xico,Ecatepec de Morelos,Valle de M√©xico,1
-013,15,15034,01315034,M√©xico,Ecatzingo,Valle de M√©xico,1
-013,15,15035,01315035,M√©xico,Huehuetoca,Valle de M√©xico,1
-013,15,15036,01315036,M√©xico,Hueypoxtla,Valle de M√©xico,1
-013,15,15037,01315037,M√©xico,Huixquilucan,Valle de M√©xico,1
-013,15,15038,01315038,M√©xico,Isidro Fabela,Valle de M√©xico,1
-013,15,15039,01315039,M√©xico,Ixtapaluca,Valle de M√©xico,1
-013,15,15044,01315044,M√©xico,Jaltenco,Valle de M√©xico,1
-013,15,15046,01315046,M√©xico,Jilotzingo,Valle de M√©xico,1
-013,15,15050,01315050,M√©xico,Juchitepec,Valle de M√©xico,1
-013,15,15053,01315053,M√©xico,Melchor Ocampo,Valle de M√©xico,1
-013,15,15057,01315057,M√©xico,Naucalpan de Ju√°rez,Valle de M√©xico,1
-013,15,15058,01315058,M√©xico,Nezahualc√≥yotl,Valle de M√©xico,1
-013,15,15059,01315059,M√©xico,Nextlalpan,Valle de M√©xico,1
-013,15,15060,01315060,M√©xico,Nicol√°s Romero,Valle de M√©xico,1
-013,15,15061,01315061,M√©xico,Nopaltepec,Valle de M√©xico,1
-013,15,15065,01315065,M√©xico,Otumba,Valle de M√©xico,1
-013,15,15068,01315068,M√©xico,Ozumba,Valle de M√©xico,1
-013,15,15069,01315069,M√©xico,Papalotla,Valle de M√©xico,1
-013,15,15070,01315070,M√©xico,La Paz,Valle de M√©xico,1
-013,15,15075,01315075,M√©xico,San Mart√≠n de las Pir√°mides,Valle de M√©xico,1
-013,15,15081,01315081,M√©xico,Tec√°mac,Valle de M√©xico,1
-013,15,15083,01315083,M√©xico,Temamatla,Valle de M√©xico,1
-013,15,15084,01315084,M√©xico,Temascalapa,Valle de M√©xico,1
-013,15,15089,01315089,M√©xico,Tenango del Aire,Valle de M√©xico,1
-013,15,15091,01315091,M√©xico,Teoloyucan,Valle de M√©xico,1
-013,15,15092,01315092,M√©xico,Teotihuac√°n,Valle de M√©xico,1
-013,15,15093,01315093,M√©xico,Tepetlaoxtoc,Valle de M√©xico,1
-013,15,15094,01315094,M√©xico,Tepetlixpa,Valle de M√©xico,1
-013,15,15095,01315095,M√©xico,Tepotzotl√°n,Valle de M√©xico,1
-013,15,15096,01315096,M√©xico,Tequixquiac,Valle de M√©xico,1
-013,15,15099,01315099,M√©xico,Texcoco,Valle de M√©xico,1
-013,15,15100,01315100,M√©xico,Tezoyuca,Valle de M√©xico,1
-013,15,15103,01315103,M√©xico,Tlalmanalco,Valle de M√©xico,1
-013,15,15104,01315104,M√©xico,Tlalnepantla de Baz,Valle de M√©xico,1
-013,15,15108,01315108,M√©xico,Tultepec,Valle de M√©xico,1
-013,15,15109,01315109,M√©xico,Tultitl√°n,Valle de M√©xico,1
-013,15,15112,01315112,M√©xico,Villa del Carb√≥n,Valle de M√©xico,1
-013,15,15120,01315120,M√©xico,Zumpango,Valle de M√©xico,1
-013,15,15121,01315121,M√©xico,Cuautitl√°n Izcalli,Valle de M√©xico,1
-013,15,15122,01315122,M√©xico,Valle de Chalco Solidaridad,Valle de M√©xico,1
-013,15,15125,01315125,M√©xico,Tonanitla,Valle de M√©xico,1
-014,11,11020,01411020,Guanajuato,Le√≥n,Le√≥n,1
-014,11,11037,01411037,Guanajuato,Silao de la Victoria,Le√≥n,1
-015,11,11025,01511025,Guanajuato,Pur√≠sima del Rinc√≥n,San Francisco del Rinc√≥n,1
-015,11,11031,01511031,Guanajuato,San Francisco del Rinc√≥n,San Francisco del Rinc√≥n,1
-016,11,11021,01611021,Guanajuato,Morole√≥n,Morole√≥n-Uriangato,1
-016,11,11041,01611041,Guanajuato,Uriangato,Morole√≥n-Uriangato,1
-017,12,12001,01712001,Guerrero,Acapulco de Ju√°rez,Acapulco,1
-017,12,12021,01712021,Guerrero,Coyuca de Ben√≠tez,Acapulco,1
-018,13,13022,01813022,Hidalgo,Epazoyucan,Pachuca,1
-018,13,13039,01813039,Hidalgo,Mineral del Monte,Pachuca,1
-018,13,13048,01813048,Hidalgo,Pachuca de Soto,Pachuca,1
-018,13,13051,01813051,Hidalgo,Mineral de la Reforma,Pachuca,1
-018,13,13052,01813052,Hidalgo,San Agust√≠n Tlaxiaca,Pachuca,1
-018,13,13082,01813082,Hidalgo,Zapotl√°n de Ju√°rez,Pachuca,1
-018,13,13083,01813083,Hidalgo,Zempoala,Pachuca,1
-019,13,13016,01913016,Hidalgo,Cuautepec de Hinojosa,Tulancingo,1
-019,13,13056,01913056,Hidalgo,Santiago Tulantepec de Lugo Guerrero,Tulancingo,1
-019,13,13077,01913077,Hidalgo,Tulancingo de Bravo,Tulancingo,1
-020,13,13010,02013010,Hidalgo,Atitalaquia,Tula,1
-020,13,13013,02013013,Hidalgo,Atotonilco de Tula,Tula,1
-020,13,13070,02013070,Hidalgo,Tlahuelilpan,Tula,1
-020,13,13074,02013074,Hidalgo,Tlaxcoapan,Tula,1
-020,13,13076,02013076,Hidalgo,Tula de Allende,Tula,1
-021,14,14039,02114039,Jalisco,Guadalajara,Guadalajara,1
-021,14,14044,02114044,Jalisco,Ixtlahuac√°n de los Membrillos,Guadalajara,1
-021,14,14051,02114051,Jalisco,Juanacatl√°n,Guadalajara,1
-021,14,14070,02114070,Jalisco,El Salto,Guadalajara,1
-021,14,14097,02114097,Jalisco,Tlajomulco de Z√∫√±iga,Guadalajara,1
-021,14,14098,02114098,Jalisco,San Pedro Tlaquepaque,Guadalajara,1
-021,14,14101,02114101,Jalisco,Tonal√°,Guadalajara,1
-021,14,14120,02114120,Jalisco,Zapopan,Guadalajara,1
-022,14,14067,02214067,Jalisco,Puerto Vallarta,Puerto Vallarta,1
-022,18,18020,02218020,Nayarit,Bah√≠a de Banderas,Puerto Vallarta,1
-023,14,14063,02314063,Jalisco,Ocotl√°n,Ocotl√°n,1
-023,14,14066,02314066,Jalisco,Poncitl√°n,Ocotl√°n,1
-024,15,15005,02415005,M√©xico,Almoloya de Ju√°rez,Toluca,1
-024,15,15018,02415018,M√©xico,Calimaya,Toluca,1
-024,15,15027,02415027,M√©xico,Chapultepec,Toluca,1
-024,15,15051,02415051,M√©xico,Lerma,Toluca,1
-024,15,15054,02415054,M√©xico,Metepec,Toluca,1
-024,15,15055,02415055,M√©xico,Mexicaltzingo,Toluca,1
-024,15,15062,02415062,M√©xico,Ocoyoacac,Toluca,1
-024,15,15067,02415067,M√©xico,Otzolotepec,Toluca,1
-024,15,15072,02415072,M√©xico,Ray√≥n,Toluca,1
-024,15,15073,02415073,M√©xico,San Antonio la Isla,Toluca,1
-024,15,15076,02415076,M√©xico,San Mateo Atenco,Toluca,1
-024,15,15087,02415087,M√©xico,Temoaya,Toluca,1
-024,15,15106,02415106,M√©xico,Toluca,Toluca,1
-024,15,15115,02415115,M√©xico,Xonacatl√°n,Toluca,1
-024,15,15118,02415118,M√©xico,Zinacantepec,Toluca,1
-025,16,16022,02516022,Michoac√°n de Ocampo,Charo,Morelia,1
-025,16,16053,02516053,Michoac√°n de Ocampo,Morelia,Morelia,1
-025,16,16088,02516088,Michoac√°n de Ocampo,Tar√≠mbaro,Morelia,1
-026,16,16043,02616043,Michoac√°n de Ocampo,Jacona,Zamora-Jacona,1
-026,16,16108,02616108,Michoac√°n de Ocampo,Zamora,Zamora-Jacona,1
-027,11,11023,02711023,Guanajuato,P√©njamo,La Piedad-P√©njamo,1
-027,16,16069,02716069,Michoac√°n de Ocampo,La Piedad,La Piedad-P√©njamo,1
-028,17,17007,02817007,Morelos,Cuernavaca,Cuernavaca,1
-028,17,17008,02817008,Morelos,Emiliano Zapata,Cuernavaca,1
-028,17,17009,02817009,Morelos,Huitzilac,Cuernavaca,1
-028,17,17011,02817011,Morelos,Jiutepec,Cuernavaca,1
-028,17,17018,02817018,Morelos,Temixco,Cuernavaca,1
-028,17,17020,02817020,Morelos,Tepoztl√°n,Cuernavaca,1
-028,17,17024,02817024,Morelos,Tlaltizap√°n de Zapata,Cuernavaca,1
-028,17,17028,02817028,Morelos,Xochitepec,Cuernavaca,1
-029,17,17002,02917002,Morelos,Atlatlahucan,Cuautla,1
-029,17,17004,02917004,Morelos,Ayala,Cuautla,1
-029,17,17006,02917006,Morelos,Cuautla,Cuautla,1
-029,17,17026,02917026,Morelos,Tlayacapan,Cuautla,1
-029,17,17029,02917029,Morelos,Yautepec,Cuautla,1
-029,17,17030,02917030,Morelos,Yecapixtla,Cuautla,1
-030,18,18008,03018008,Nayarit,Xalisco,Tepic,1
-030,18,18017,03018017,Nayarit,Tepic,Tepic,1
-031,19,19006,03119006,Nuevo Le√≥n,Apodaca,Monterrey,1
-031,19,19009,03119009,Nuevo Le√≥n,Cadereyta Jim√©nez,Monterrey,1
-031,19,19010,03119010,Nuevo Le√≥n,El Carmen,Monterrey,1
-031,19,19018,03119018,Nuevo Le√≥n,Garc√≠a,Monterrey,1
-031,19,19019,03119019,Nuevo Le√≥n,San Pedro Garza Garc√≠a,Monterrey,1
-031,19,19021,03119021,Nuevo Le√≥n,General Escobedo,Monterrey,1
-031,19,19026,03119026,Nuevo Le√≥n,Guadalupe,Monterrey,1
-031,19,19031,03119031,Nuevo Le√≥n,Ju√°rez,Monterrey,1
-031,19,19039,03119039,Nuevo Le√≥n,Monterrey,Monterrey,1
-031,19,19045,03119045,Nuevo Le√≥n,Salinas Victoria,Monterrey,1
-031,19,19046,03119046,Nuevo Le√≥n,San Nicol√°s de los Garza,Monterrey,1
-031,19,19048,03119048,Nuevo Le√≥n,Santa Catarina,Monterrey,1
-031,19,19049,03119049,Nuevo Le√≥n,Santiago,Monterrey,1
-032,20,20067,03220067,Oaxaca,Oaxaca de Ju√°rez,Oaxaca,1
-032,20,20083,03220083,Oaxaca,San Agust√≠n de las Juntas,Oaxaca,1
-032,20,20087,03220087,Oaxaca,San Agust√≠n Yatareni,Oaxaca,1
-032,20,20091,03220091,Oaxaca,San Andr√©s Huay√°pam,Oaxaca,1
-032,20,20107,03220107,Oaxaca,San Antonio de la Cal,Oaxaca,1
-032,20,20115,03220115,Oaxaca,San Bartolo Coyotepec,Oaxaca,1
-032,20,20157,03220157,Oaxaca,San Jacinto Amilpas,Oaxaca,1
-032,20,20174,03220174,Oaxaca,√Ånimas Trujano,Oaxaca,1
-032,20,20227,03220227,Oaxaca,San Lorenzo Cacaotepec,Oaxaca,1
-032,20,20293,03220293,Oaxaca,San Pablo Etla,Oaxaca,1
-032,20,20338,03220338,Oaxaca,Villa de Etla,Oaxaca,1
-032,20,20350,03220350,Oaxaca,San Sebasti√°n Tutla,Oaxaca,1
-032,20,20375,03220375,Oaxaca,Santa Cruz Amilpas,Oaxaca,1
-032,20,20385,03220385,Oaxaca,Santa Cruz Xoxocotl√°n,Oaxaca,1
-032,20,20390,03220390,Oaxaca,Santa Luc√≠a del Camino,Oaxaca,1
-032,20,20399,03220399,Oaxaca,Santa Mar√≠a Atzompa,Oaxaca,1
-032,20,20403,03220403,Oaxaca,Santa Mar√≠a Coyotepec,Oaxaca,1
-032,20,20409,03220409,Oaxaca,Santa Mar√≠a del Tule,Oaxaca,1
-032,20,20519,03220519,Oaxaca,Santo Domingo Tomaltepec,Oaxaca,1
-032,20,20539,03220539,Oaxaca,Soledad Etla,Oaxaca,1
-032,20,20553,03220553,Oaxaca,Tlalixtac de Cabrera,Oaxaca,1
-032,20,20565,03220565,Oaxaca,Villa de Zaachila,Oaxaca,1
-033,20,20079,03320079,Oaxaca,Salina Cruz,Tehuantepec,1
-033,20,20124,03320124,Oaxaca,San Blas Atempa,Tehuantepec,1
-033,20,20515,03320515,Oaxaca,Santo Domingo Tehuantepec,Tehuantepec,1
-034,21,21001,03421001,Puebla,Acajete,Puebla-Tlaxcala,1
-034,21,21015,03421015,Puebla,Amozoc,Puebla-Tlaxcala,1
-034,21,21034,03421034,Puebla,Coronango,Puebla-Tlaxcala,1
-034,21,21041,03421041,Puebla,Cuautlancingo,Puebla-Tlaxcala,1
-034,21,21048,03421048,Puebla,Chiautzingo,Puebla-Tlaxcala,1
-034,21,21060,03421060,Puebla,Domingo Arenas,Puebla-Tlaxcala,1
-034,21,21074,03421074,Puebla,Huejotzingo,Puebla-Tlaxcala,1
-034,21,21090,03421090,Puebla,Juan C. Bonilla,Puebla-Tlaxcala,1
-034,21,21106,03421106,Puebla,Ocoyucan,Puebla-Tlaxcala,1
-034,21,21114,03421114,Puebla,Puebla,Puebla-Tlaxcala,1
-034,21,21119,03421119,Puebla,San Andr√©s Cholula,Puebla-Tlaxcala,1
-034,21,21122,03421122,Puebla,San Felipe Teotlalcingo,Puebla-Tlaxcala,1
-034,21,21125,03421125,Puebla,San Gregorio Atzompa,Puebla-Tlaxcala,1
-034,21,21132,03421132,Puebla,San Mart√≠n Texmelucan,Puebla-Tlaxcala,1
-034,21,21136,03421136,Puebla,San Miguel Xoxtla,Puebla-Tlaxcala,1
-034,21,21140,03421140,Puebla,San Pedro Cholula,Puebla-Tlaxcala,1
-034,21,21143,03421143,Puebla,San Salvador el Verde,Puebla-Tlaxcala,1
-034,21,21163,03421163,Puebla,Tepatlaxco de Hidalgo,Puebla-Tlaxcala,1
-034,21,21181,03421181,Puebla,Tlaltenango,Puebla-Tlaxcala,1
-034,29,29015,03429015,Tlaxcala,Ixtacuixtla de Mariano Matamoros,Puebla-Tlaxcala,1
-034,29,29017,03429017,Tlaxcala,Mazatecochco de Jos√© Mar√≠a Morelos,Puebla-Tlaxcala,1
-034,29,29019,03429019,Tlaxcala,Tepetitla de Lardiz√°bal,Puebla-Tlaxcala,1
-034,29,29022,03429022,Tlaxcala,Acuamanala de Miguel Hidalgo,Puebla-Tlaxcala,1
-034,29,29023,03429023,Tlaxcala,Nat√≠vitas,Puebla-Tlaxcala,1
-034,29,29025,03429025,Tlaxcala,San Pablo del Monte,Puebla-Tlaxcala,1
-034,29,29027,03429027,Tlaxcala,Tenancingo,Puebla-Tlaxcala,1
-034,29,29028,03429028,Tlaxcala,Teolocholco,Puebla-Tlaxcala,1
-034,29,29029,03429029,Tlaxcala,Tepeyanco,Puebla-Tlaxcala,1
-034,29,29032,03429032,Tlaxcala,Tetlatlahuca,Puebla-Tlaxcala,1
-034,29,29041,03429041,Tlaxcala,Papalotla de Xicoht√©ncatl,Puebla-Tlaxcala,1
-034,29,29042,03429042,Tlaxcala,Xicohtzinco,Puebla-Tlaxcala,1
-034,29,29044,03429044,Tlaxcala,Zacatelco,Puebla-Tlaxcala,1
-034,29,29051,03429051,Tlaxcala,San Jer√≥nimo Zacualpan,Puebla-Tlaxcala,1
-034,29,29053,03429053,Tlaxcala,San Juan Huactzinco,Puebla-Tlaxcala,1
-034,29,29054,03429054,Tlaxcala,San Lorenzo Axocomanitla,Puebla-Tlaxcala,1
-034,29,29056,03429056,Tlaxcala,Santa Ana Nopalucan,Puebla-Tlaxcala,1
-034,29,29057,03429057,Tlaxcala,Santa Apolonia Teacalco,Puebla-Tlaxcala,1
-034,29,29058,03429058,Tlaxcala,Santa Catarina Ayometla,Puebla-Tlaxcala,1
-034,29,29059,03429059,Tlaxcala,Santa Cruz Quilehtla,Puebla-Tlaxcala,1
-035,21,21149,03521149,Puebla,Santiago Miahuatl√°n,Tehuac√°n,1
-035,21,21156,03521156,Puebla,Tehuac√°n,Tehuac√°n,1
-036,22,22006,03622006,Quer√©taro,Corregidora,Quer√©taro,1
-036,22,22008,03622008,Quer√©taro,Huimilpan,Quer√©taro,1
-036,22,22011,03622011,Quer√©taro,El Marqu√©s,Quer√©taro,1
-036,22,22014,03622014,Quer√©taro,Quer√©taro,Quer√©taro,1
-037,23,23003,03723003,Quintana Roo,Isla Mujeres,Canc√∫n,1
-037,23,23005,03723005,Quintana Roo,Benito Ju√°rez,Canc√∫n,1
-038,24,24028,03824028,San Luis Potos√≠,San Luis Potos√≠,San Luis Potos√≠-Soledad de Graciano S√°nchez,1
-038,24,24035,03824035,San Luis Potos√≠,Soledad de Graciano S√°nchez,San Luis Potos√≠-Soledad de Graciano S√°nchez,1
-039,24,24011,03924011,San Luis Potos√≠,Ciudad Fern√°ndez,R√≠o Verde-Cd. Fern√°ndez,1
-039,24,24024,03924024,San Luis Potos√≠,Rioverde,R√≠o Verde-Cd. Fern√°ndez,1
-040,26,26025,04026025,Sonora,Empalme,Guaymas,1
-040,26,26029,04026029,Sonora,Guaymas,Guaymas,1
-041,27,27004,04127004,Tabasco,Centro,Villahermosa,1
-041,27,27013,04127013,Tabasco,Nacajuca,Villahermosa,1
-042,28,28003,04228003,Tamaulipas,Altamira,Tampico,1
-042,28,28009,04228009,Tamaulipas,Ciudad Madero,Tampico,1
-042,28,28038,04228038,Tamaulipas,Tampico,Tampico,1
-042,30,30123,04230123,Veracruz de Ignacio de la Llave,P√°nuco,Tampico,1
-042,30,30133,04230133,Veracruz de Ignacio de la Llave,Pueblo Viejo,Tampico,1
-043,28,28032,04328032,Tamaulipas,Reynosa,Reynosa-R√≠o Bravo,1
-043,28,28033,04328033,Tamaulipas,R√≠o Bravo,Reynosa-R√≠o Bravo,1
-044,28,28022,04428022,Tamaulipas,Matamoros,Matamoros,1
-045,28,28027,04528027,Tamaulipas,Nuevo Laredo,Nuevo Laredo,1
-046,29,29001,04629001,Tlaxcala,Amaxac de Guerrero,Tlaxcala-Apizaco,1
-046,29,29002,04629002,Tlaxcala,Apetatitl√°n de Antonio Carvajal,Tlaxcala-Apizaco,1
-046,29,29005,04629005,Tlaxcala,Apizaco,Tlaxcala-Apizaco,1
-046,29,29009,04629009,Tlaxcala,Cuaxomulco,Tlaxcala-Apizaco,1
-046,29,29010,04629010,Tlaxcala,Chiautempan,Tlaxcala-Apizaco,1
-046,29,29018,04629018,Tlaxcala,Contla de Juan Cuamatzi,Tlaxcala-Apizaco,1
-046,29,29024,04629024,Tlaxcala,Panotla,Tlaxcala-Apizaco,1
-046,29,29026,04629026,Tlaxcala,Santa Cruz Tlaxcala,Tlaxcala-Apizaco,1
-046,29,29031,04629031,Tlaxcala,Tetla de la Solidaridad,Tlaxcala-Apizaco,1
-046,29,29033,04629033,Tlaxcala,Tlaxcala,Tlaxcala-Apizaco,1
-046,29,29035,04629035,Tlaxcala,Tocatl√°n,Tlaxcala-Apizaco,1
-046,29,29036,04629036,Tlaxcala,Totolac,Tlaxcala-Apizaco,1
-046,29,29038,04629038,Tlaxcala,Tzompantepec,Tlaxcala-Apizaco,1
-046,29,29039,04629039,Tlaxcala,Xaloztoc,Tlaxcala-Apizaco,1
-046,29,29043,04629043,Tlaxcala,Yauhquemehcan,Tlaxcala-Apizaco,1
-046,29,29048,04629048,Tlaxcala,La Magdalena Tlaltelulco,Tlaxcala-Apizaco,1
-046,29,29049,04629049,Tlaxcala,San Dami√°n Tex√≥loc,Tlaxcala-Apizaco,1
-046,29,29050,04629050,Tlaxcala,San Francisco Tetlanohcan,Tlaxcala-Apizaco,1
-046,29,29060,04629060,Tlaxcala,Santa Isabel Xiloxoxtla,Tlaxcala-Apizaco,1
-047,30,30011,04730011,Veracruz de Ignacio de la Llave,Alvarado,Veracruz,1
-047,30,30028,04730028,Veracruz de Ignacio de la Llave,Boca del R√≠o,Veracruz,1
-047,30,30090,04730090,Veracruz de Ignacio de la Llave,Jamapa,Veracruz,1
-047,30,30105,04730105,Veracruz de Ignacio de la Llave,Medell√≠n de Bravo,Veracruz,1
-047,30,30193,04730193,Veracruz de Ignacio de la Llave,Veracruz,Veracruz,1
-048,30,30026,04830026,Veracruz de Ignacio de la Llave,Banderilla,Xalapa,1
-048,30,30038,04830038,Veracruz de Ignacio de la Llave,Coatepec,Xalapa,1
-048,30,30065,04830065,Veracruz de Ignacio de la Llave,Emiliano Zapata,Xalapa,1
-048,30,30087,04830087,Veracruz de Ignacio de la Llave,Xalapa,Xalapa,1
-048,30,30093,04830093,Veracruz de Ignacio de la Llave,Jilotepec,Xalapa,1
-048,30,30136,04830136,Veracruz de Ignacio de la Llave,Rafael Lucio,Xalapa,1
-048,30,30182,04830182,Veracruz de Ignacio de la Llave,Tlalnelhuayocan,Xalapa,1
-049,30,30033,04930033,Veracruz de Ignacio de la Llave,Cazones de Herrera,Poza Rica,1
-049,30,30040,04930040,Veracruz de Ignacio de la Llave,Coatzintla,Poza Rica,1
-049,30,30124,04930124,Veracruz de Ignacio de la Llave,Papantla,Poza Rica,1
-049,30,30131,04930131,Veracruz de Ignacio de la Llave,Poza Rica de Hidalgo,Poza Rica,1
-049,30,30175,04930175,Veracruz de Ignacio de la Llave,Tihuatl√°n,Poza Rica,1
-050,30,30022,05030022,Veracruz de Ignacio de la Llave,Atzacan,Orizaba,1
-050,30,30030,05030030,Veracruz de Ignacio de la Llave,Camerino Z. Mendoza,Orizaba,1
-050,30,30074,05030074,Veracruz de Ignacio de la Llave,Huiloapan de Cuauht√©moc,Orizaba,1
-050,30,30081,05030081,Veracruz de Ignacio de la Llave,Ixhuatlancillo,Orizaba,1
-050,30,30085,05030085,Veracruz de Ignacio de la Llave,Ixtaczoquitl√°n,Orizaba,1
-050,30,30099,05030099,Veracruz de Ignacio de la Llave,Maltrata,Orizaba,1
-050,30,30101,05030101,Veracruz de Ignacio de la Llave,Mariano Escobedo,Orizaba,1
-050,30,30115,05030115,Veracruz de Ignacio de la Llave,Nogales,Orizaba,1
-050,30,30118,05030118,Veracruz de Ignacio de la Llave,Orizaba,Orizaba,1
-050,30,30135,05030135,Veracruz de Ignacio de la Llave,Rafael Delgado,Orizaba,1
-050,30,30138,05030138,Veracruz de Ignacio de la Llave,R√≠o Blanco,Orizaba,1
-050,30,30185,05030185,Veracruz de Ignacio de la Llave,Tlilapan,Orizaba,1
-051,30,30048,05130048,Veracruz de Ignacio de la Llave,Cosoleacaque,Minatitl√°n,1
-051,30,30059,05130059,Veracruz de Ignacio de la Llave,Chinameca,Minatitl√°n,1
-051,30,30089,05130089,Veracruz de Ignacio de la Llave,J√°ltipan,Minatitl√°n,1
-051,30,30108,05130108,Veracruz de Ignacio de la Llave,Minatitl√°n,Minatitl√°n,1
-051,30,30120,05130120,Veracruz de Ignacio de la Llave,Oteapan,Minatitl√°n,1
-051,30,30199,05130199,Veracruz de Ignacio de la Llave,Zaragoza,Minatitl√°n,1
-052,30,30039,05230039,Veracruz de Ignacio de la Llave,Coatzacoalcos,Coatzacoalcos,1
-052,30,30082,05230082,Veracruz de Ignacio de la Llave,Ixhuatl√°n del Sureste,Coatzacoalcos,1
-052,30,30206,05230206,Veracruz de Ignacio de la Llave,Nanchital de L√°zaro C√°rdenas del R√≠o,Coatzacoalcos,1
-053,30,30014,05330014,Veracruz de Ignacio de la Llave,Amatl√°n de los Reyes,C√≥rdoba,1
-053,30,30044,05330044,Veracruz de Ignacio de la Llave,C√≥rdoba,C√≥rdoba,1
-053,30,30068,05330068,Veracruz de Ignacio de la Llave,Fort√≠n,C√≥rdoba,1
-053,30,30196,05330196,Veracruz de Ignacio de la Llave,Yanga,C√≥rdoba,1
-054,30,30003,05430003,Veracruz de Ignacio de la Llave,Acayucan,Acayucan,1
-054,30,30116,05430116,Veracruz de Ignacio de la Llave,Oluta,Acayucan,1
-054,30,30145,05430145,Veracruz de Ignacio de la Llave,Soconusco,Acayucan,1
-055,31,31013,05531013,Yucat√°n,Conkal,M√©rida,1
-055,31,31041,05531041,Yucat√°n,Kanas√≠n,M√©rida,1
-055,31,31050,05531050,Yucat√°n,M√©rida,M√©rida,1
-055,31,31100,05531100,Yucat√°n,Uc√∫,M√©rida,1
-055,31,31101,05531101,Yucat√°n,Um√°n,M√©rida,1
-056,32,32017,05632017,Zacatecas,Guadalupe,Zacatecas-Guadalupe,1
-056,32,32032,05632032,Zacatecas,Morelos,Zacatecas-Guadalupe,1
-056,32,32056,05632056,Zacatecas,Zacatecas,Zacatecas-Guadalupe,1
-057,11,11007,05711007,Guanajuato,Celaya,Celaya,1
-057,11,11009,05711009,Guanajuato,Comonfort,Celaya,1
-057,11,11044,05711044,Guanajuato,Villagr√°n,Celaya,1
-058,15,15006,05815006,M√©xico,Almoloya del R√≠o,Tianguistenco,1
-058,15,15012,05815012,M√©xico,Atizap√°n,Tianguistenco,1
-058,15,15019,05815019,M√©xico,Capulhuac,Tianguistenco,1
-058,15,15043,05815043,M√©xico,Xalatlaco,Tianguistenco,1
-058,15,15098,05815098,M√©xico,Texcalyacac,Tianguistenco,1
-058,15,15101,05815101,M√©xico,Tianguistenco,Tianguistenco,1
-059,21,21054,05921054,Puebla,Chignautla,Teziutl√°n,1
-059,21,21174,05921174,Puebla,Teziutl√°n,Teziutl√°n,1
-060,02,02001,06002001,Baja California,Ensenada,Ensenada,2
-062,03,03008,06203008,Baja California Sur,Los Cabos,Cabo San Lucas,2
-063,04,04002,06304002,Campeche,Campeche,Campeche,2
-065,06,06007,06506007,Colima,Manzanillo,Manzanillo,2
-066,07,07089,06607089,Chiapas,Tapachula,Tapachula de Cordova y Ordo√±ez,2
-068,11,11015,06811015,Guanajuato,Guanajuato,Guanajuato,2
-069,11,11017,06911017,Guanajuato,Irapuato,Irapuato,2
-071,11,11033,07111033,Guanajuato,San Luis de la Paz,San Luis de la Paz,2
-073,12,12029,07312029,Guerrero,Chilpancingo de los Bravo,Chilpancingo de los Bravo,2
-094,16,16052,09416052,Michoac√°n de Ocampo,L√°zaro C√°rdenas,Ciudad L√°zaro C√°rdenas,2
-095,16,16102,09516102,Michoac√°n de Ocampo,Uruapan,Uruapan,2
-098,16,16112,09816112,Michoac√°n de Ocampo,Zit√°cuaro,Zit√°cuaro,2
-104,20,20184,10420184,Oaxaca,San Juan Bautista Tuxtepec,San Juan Bautista Tuxtepec,2
-106,21,21004,10621004,Puebla,Acatzingo,Acatzingo de Hidalgo,2
-106,21,21038,10621038,Puebla,Cuapiaxtla de Madero,Acatzingo de Hidalgo,2
-106,21,21118,10621118,Puebla,Los Reyes de Ju√°rez,Acatzingo de Hidalgo,2
-111,21,21071,11121071,Puebla,Huauchinango,Huauchinango,2
-119,23,23004,11923004,Quintana Roo,Oth√≥n P. Blanco,Chetumal,2
-121,26,26018,12126018,Sonora,Cajeme,Ciudad Obreg√≥n,2
-123,27,27002,12327002,Tabasco,C√°rdenas,C√°rdenas,2
-127,29,29013,12729013,Tlaxcala,Huamantla,Huamantla,2
-132,30,30023,13230023,Veracruz de Ignacio de la Llave,Atzalan,Mart√≠nez de la Torre,2
-132,30,30102,13230102,Veracruz de Ignacio de la Llave,Mart√≠nez de la Torre,Mart√≠nez de la Torre,2
-134,30,30189,13430189,Veracruz de Ignacio de la Llave,Tuxpan,T√∫xpam de Rodr√≠guez Cano,2
-137,32,32010,13732010,Zacatecas,Fresnillo,Fresnillo,2
-144,03,03003,14403003,Baja California Sur,La Paz,La Paz,3
-145,04,04003,14504003,Campeche,Carmen,Ciudad del Carmen,3
-148,05,05002,14805002,Coahuila de Zaragoza,Acu√±a,Ciudad Acu√±a,3
-154,05,05028,15405028,Coahuila de Zaragoza,Sabinas,Sabinas,3
-160,07,07019,16007019,Chiapas,Comit√°n de Dom√≠nguez,Comit√°n de Dom√≠nguez,3
-172,07,07078,17207078,Chiapas,San Crist√≥bal de las Casas,San Crist√≥bal de las Casas,3
-180,08,08017,18008017,Chihuahua,Cuauht√©moc,Cuauht√©moc,3
-181,08,08021,18108021,Chihuahua,Delicias,Delicias,3
-182,08,08032,18208032,Chihuahua,Hidalgo del Parral,Hidalgo del Parral,3
-186,08,08050,18608050,Chihuahua,Nuevo Casas Grandes,Nuevo Casas Grandes,3
-188,10,10005,18810005,Durango,Durango,Victoria de Durango,3
-194,11,11002,19411002,Guanajuato,Ac√°mbaro,Ac√°mbaro,3
-195,11,11003,19511003,Guanajuato,San Miguel de Allende,San Miguel de Allende,3
-197,11,11011,19711011,Guanajuato,Cortazar,Cortazar,3
-198,11,11014,19811014,Guanajuato,Dolores Hidalgo Cuna de la Independencia Nacional,Dolores Hidalgo Cuna de la Independencia,3
-201,11,11027,20111027,Guanajuato,Salamanca,Salamanca,3
-205,11,11042,20511042,Guanajuato,Valle de Santiago,Valle de Santiago,3
-211,12,12035,21112035,Guerrero,Iguala de la Independencia,Iguala de la Independencia,3
-212,12,12038,21212038,Guerrero,Zihuatanejo de Azueta,Zihuatanejo,3
-215,12,12055,21512055,Guerrero,Taxco de Alarc√≥n,Taxco de Alarc√≥n,3
-224,14,14008,22414008,Jalisco,Arandas,Arandas,3
-228,14,14023,22814023,Jalisco,Zapotl√°n el Grande,Ciudad Guzm√°n,3
-234,14,14053,23414053,Jalisco,Lagos de Moreno,Lagos de Moreno,3
-242,14,14093,24214093,Jalisco,Tepatitl√°n de Morelos,Tepatitl√°n de Morelos,3
-252,16,16006,25216006,Michoac√°n de Ocampo,Apatzing√°n,Apatzing√°n de la Constituci√≥n,3
-254,16,16034,25416034,Michoac√°n de Ocampo,Hidalgo,Ciudad Hidalgo,3
-260,16,16066,26016066,Michoac√°n de Ocampo,P√°tzcuaro,P√°tzcuaro,3
-264,16,16076,26416076,Michoac√°n de Ocampo,Sahuayo,Sahuayo de Morelos,3
-268,16,16107,26816107,Michoac√°n de Ocampo,Zacapu,Zacapu,3
-281,19,19033,28119033,Nuevo Le√≥n,Linares,Linares,3
-286,20,20039,28620039,Oaxaca,Heroica Ciudad de Huajuapan de Le√≥n,Heroica Ciudad de Huajuapan de Le√≥n,3
-287,20,20043,28720043,Oaxaca,Heroica Ciudad de Juchit√°n de Zaragoza,Heroica Ciudad de Juchit√°n de Zaragoza,3
-294,21,21019,29421019,Puebla,Atlixco,Atlixco,3
-301,22,22016,30122016,Quer√©taro,San Juan del R√≠o,San Juan del R√≠o,3
-303,23,23001,30323001,Quintana Roo,Cozumel,Cozumel,3
-305,23,23008,30523008,Quintana Roo,Solidaridad,Playa del Carmen,3
-308,24,24013,30824013,San Luis Potos√≠,Ciudad Valles,Ciudad Valles,3
-310,24,24020,31024020,San Luis Potos√≠,Matehuala,Matehuala,3
-314,25,25001,31425001,Sinaloa,Ahome,Los Mochis,3
-315,25,25006,31525006,Sinaloa,Culiac√°n,Culiac√°n Rosales,3
-319,25,25011,31925011,Sinaloa,Guasave,Guasave,3
-321,25,25012,32125012,Sinaloa,Mazatl√°n,Mazatl√°n,3
-323,25,25015,32325015,Sinaloa,Salvador Alvarado,Guam√∫chil,3
-326,26,26002,32626002,Sonora,Agua Prieta,Agua Prieta,3
-327,26,26017,32726017,Sonora,Caborca,Heroica Caborca,3
-329,26,26030,32926030,Sonora,Hermosillo,Hermosillo,3
-333,26,26042,33326042,Sonora,Navojoa,Navojoa,3
-334,26,26043,33426043,Sonora,Nogales,Heroica Nogales,3
-335,26,26048,33526048,Sonora,Puerto Pe√±asco,Puerto Pe√±asco,3
-336,26,26055,33626055,Sonora,San Luis R√≠o Colorado,San Luis R√≠o Colorado,3
-344,28,28021,34428021,Tamaulipas,El Mante,Ciudad Mante,3
-348,28,28041,34828041,Tamaulipas,Victoria,Ciudad Victoria,3
-361,30,30141,36130141,Veracruz de Ignacio de la Llave,San Andr√©s Tuxtla,San Andr√©s Tuxtla,3
+CVE_SUN	CVE_ENT	CVE_MUN	CVE_SUNMUN	NOM_ENT	NOM_MUN	NOM_SUN	TIPO_SUN
+1	1	1001	101001	Aguascalientes	Aguascalientes	Aguascalientes	1
+1	1	1005	101005	Aguascalientes	Jes˙s MarÌa	Aguascalientes	1
+1	1	1011	101011	Aguascalientes	San Francisco de los Romo	Aguascalientes	1
+2	2	2003	202003	Baja California	Tecate	Tijuana	1
+2	2	2004	202004	Baja California	Tijuana	Tijuana	1
+2	2	2005	202005	Baja California	Playas de Rosarito	Tijuana	1
+3	2	2002	302002	Baja California	Mexicali	Mexicali	1
+4	5	5017	405017	Coahuila de Zaragoza	Matamoros	La Laguna	1
+4	5	5035	405035	Coahuila de Zaragoza	TorreÛn	La Laguna	1
+4	10	10007	410007	Durango	GÛmez Palacio	La Laguna	1
+4	10	10012	410012	Durango	Lerdo	La Laguna	1
+5	5	5004	505004	Coahuila de Zaragoza	Arteaga	Saltillo	1
+5	5	5027	505027	Coahuila de Zaragoza	Ramos Arizpe	Saltillo	1
+5	5	5030	505030	Coahuila de Zaragoza	Saltillo	Saltillo	1
+6	5	5006	605006	Coahuila de Zaragoza	CastaÒos	Monclova-Frontera	1
+6	5	5010	605010	Coahuila de Zaragoza	Frontera	Monclova-Frontera	1
+6	5	5018	605018	Coahuila de Zaragoza	Monclova	Monclova-Frontera	1
+7	5	5022	705022	Coahuila de Zaragoza	Nava	Piedras Negras	1
+7	5	5025	705025	Coahuila de Zaragoza	Piedras Negras	Piedras Negras	1
+8	6	6002	806002	Colima	Colima	Colima-Villa de ¡lvarez	1
+8	6	6003	806003	Colima	Comala	Colima-Villa de ¡lvarez	1
+8	6	6004	806004	Colima	Coquimatl·n	Colima-Villa de ¡lvarez	1
+8	6	6005	806005	Colima	CuauhtÈmoc	Colima-Villa de ¡lvarez	1
+8	6	6010	806010	Colima	Villa de ¡lvarez	Colima-Villa de ¡lvarez	1
+9	6	6001	906001	Colima	ArmerÌa	Tecom·n	1
+9	6	6009	906009	Colima	Tecom·n	Tecom·n	1
+10	7	7012	1007012	Chiapas	Berrioz·bal	Tuxtla GutiÈrrez	1
+10	7	7027	1007027	Chiapas	Chiapa de Corzo	Tuxtla GutiÈrrez	1
+10	7	7101	1007101	Chiapas	Tuxtla GutiÈrrez	Tuxtla GutiÈrrez	1
+11	8	8037	1108037	Chihuahua	Ju·rez	Ju·rez	1
+12	8	8002	1208002	Chihuahua	Aldama	Chihuahua	1
+12	8	8004	1208004	Chihuahua	Aquiles Serd·n	Chihuahua	1
+12	8	8019	1208019	Chihuahua	Chihuahua	Chihuahua	1
+13	9	9002	1309002	Ciudad de MÈxico	Azcapotzalco	Valle de MÈxico	1
+13	9	9003	1309003	Ciudad de MÈxico	Coyoac·n	Valle de MÈxico	1
+13	9	9004	1309004	Ciudad de MÈxico	Cuajimalpa de Morelos	Valle de MÈxico	1
+13	9	9005	1309005	Ciudad de MÈxico	Gustavo A. Madero	Valle de MÈxico	1
+13	9	9006	1309006	Ciudad de MÈxico	Iztacalco	Valle de MÈxico	1
+13	9	9007	1309007	Ciudad de MÈxico	Iztapalapa	Valle de MÈxico	1
+13	9	9008	1309008	Ciudad de MÈxico	La Magdalena Contreras	Valle de MÈxico	1
+13	9	9009	1309009	Ciudad de MÈxico	Milpa Alta	Valle de MÈxico	1
+13	9	9010	1309010	Ciudad de MÈxico	¡lvaro ObregÛn	Valle de MÈxico	1
+13	9	9011	1309011	Ciudad de MÈxico	Tl·huac	Valle de MÈxico	1
+13	9	9012	1309012	Ciudad de MÈxico	Tlalpan	Valle de MÈxico	1
+13	9	9013	1309013	Ciudad de MÈxico	Xochimilco	Valle de MÈxico	1
+13	9	9014	1309014	Ciudad de MÈxico	Benito Ju·rez	Valle de MÈxico	1
+13	9	9015	1309015	Ciudad de MÈxico	CuauhtÈmoc	Valle de MÈxico	1
+13	9	9016	1309016	Ciudad de MÈxico	Miguel Hidalgo	Valle de MÈxico	1
+13	9	9017	1309017	Ciudad de MÈxico	Venustiano Carranza	Valle de MÈxico	1
+13	13	13069	1313069	Hidalgo	Tizayuca	Valle de MÈxico	1
+13	15	15002	1315002	MÈxico	Acolman	Valle de MÈxico	1
+13	15	15009	1315009	MÈxico	Amecameca	Valle de MÈxico	1
+13	15	15010	1315010	MÈxico	Apaxco	Valle de MÈxico	1
+13	15	15011	1315011	MÈxico	Atenco	Valle de MÈxico	1
+13	15	15013	1315013	MÈxico	Atizap·n de Zaragoza	Valle de MÈxico	1
+13	15	15015	1315015	MÈxico	Atlautla	Valle de MÈxico	1
+13	15	15016	1315016	MÈxico	Axapusco	Valle de MÈxico	1
+13	15	15017	1315017	MÈxico	Ayapango	Valle de MÈxico	1
+13	15	15020	1315020	MÈxico	Coacalco de Berrioz·bal	Valle de MÈxico	1
+13	15	15022	1315022	MÈxico	Cocotitl·n	Valle de MÈxico	1
+13	15	15023	1315023	MÈxico	Coyotepec	Valle de MÈxico	1
+13	15	15024	1315024	MÈxico	Cuautitl·n	Valle de MÈxico	1
+13	15	15025	1315025	MÈxico	Chalco	Valle de MÈxico	1
+13	15	15028	1315028	MÈxico	Chiautla	Valle de MÈxico	1
+13	15	15029	1315029	MÈxico	Chicoloapan	Valle de MÈxico	1
+13	15	15030	1315030	MÈxico	Chiconcuac	Valle de MÈxico	1
+13	15	15031	1315031	MÈxico	Chimalhuac·n	Valle de MÈxico	1
+13	15	15033	1315033	MÈxico	Ecatepec de Morelos	Valle de MÈxico	1
+13	15	15034	1315034	MÈxico	Ecatzingo	Valle de MÈxico	1
+13	15	15035	1315035	MÈxico	Huehuetoca	Valle de MÈxico	1
+13	15	15036	1315036	MÈxico	Hueypoxtla	Valle de MÈxico	1
+13	15	15037	1315037	MÈxico	Huixquilucan	Valle de MÈxico	1
+13	15	15038	1315038	MÈxico	Isidro Fabela	Valle de MÈxico	1
+13	15	15039	1315039	MÈxico	Ixtapaluca	Valle de MÈxico	1
+13	15	15044	1315044	MÈxico	Jaltenco	Valle de MÈxico	1
+13	15	15046	1315046	MÈxico	Jilotzingo	Valle de MÈxico	1
+13	15	15050	1315050	MÈxico	Juchitepec	Valle de MÈxico	1
+13	15	15053	1315053	MÈxico	Melchor Ocampo	Valle de MÈxico	1
+13	15	15057	1315057	MÈxico	Naucalpan de Ju·rez	Valle de MÈxico	1
+13	15	15058	1315058	MÈxico	NezahualcÛyotl	Valle de MÈxico	1
+13	15	15059	1315059	MÈxico	Nextlalpan	Valle de MÈxico	1
+13	15	15060	1315060	MÈxico	Nicol·s Romero	Valle de MÈxico	1
+13	15	15061	1315061	MÈxico	Nopaltepec	Valle de MÈxico	1
+13	15	15065	1315065	MÈxico	Otumba	Valle de MÈxico	1
+13	15	15068	1315068	MÈxico	Ozumba	Valle de MÈxico	1
+13	15	15069	1315069	MÈxico	Papalotla	Valle de MÈxico	1
+13	15	15070	1315070	MÈxico	La Paz	Valle de MÈxico	1
+13	15	15075	1315075	MÈxico	San MartÌn de las Pir·mides	Valle de MÈxico	1
+13	15	15081	1315081	MÈxico	Tec·mac	Valle de MÈxico	1
+13	15	15083	1315083	MÈxico	Temamatla	Valle de MÈxico	1
+13	15	15084	1315084	MÈxico	Temascalapa	Valle de MÈxico	1
+13	15	15089	1315089	MÈxico	Tenango del Aire	Valle de MÈxico	1
+13	15	15091	1315091	MÈxico	Teoloyucan	Valle de MÈxico	1
+13	15	15092	1315092	MÈxico	Teotihuac·n	Valle de MÈxico	1
+13	15	15093	1315093	MÈxico	Tepetlaoxtoc	Valle de MÈxico	1
+13	15	15094	1315094	MÈxico	Tepetlixpa	Valle de MÈxico	1
+13	15	15095	1315095	MÈxico	Tepotzotl·n	Valle de MÈxico	1
+13	15	15096	1315096	MÈxico	Tequixquiac	Valle de MÈxico	1
+13	15	15099	1315099	MÈxico	Texcoco	Valle de MÈxico	1
+13	15	15100	1315100	MÈxico	Tezoyuca	Valle de MÈxico	1
+13	15	15103	1315103	MÈxico	Tlalmanalco	Valle de MÈxico	1
+13	15	15104	1315104	MÈxico	Tlalnepantla de Baz	Valle de MÈxico	1
+13	15	15108	1315108	MÈxico	Tultepec	Valle de MÈxico	1
+13	15	15109	1315109	MÈxico	Tultitl·n	Valle de MÈxico	1
+13	15	15112	1315112	MÈxico	Villa del CarbÛn	Valle de MÈxico	1
+13	15	15120	1315120	MÈxico	Zumpango	Valle de MÈxico	1
+13	15	15121	1315121	MÈxico	Cuautitl·n Izcalli	Valle de MÈxico	1
+13	15	15122	1315122	MÈxico	Valle de Chalco Solidaridad	Valle de MÈxico	1
+13	15	15125	1315125	MÈxico	Tonanitla	Valle de MÈxico	1
+14	11	11020	1411020	Guanajuato	LeÛn	LeÛn	1
+14	11	11037	1411037	Guanajuato	Silao de la Victoria	LeÛn	1
+15	11	11025	1511025	Guanajuato	PurÌsima del RincÛn	San Francisco del RincÛn	1
+15	11	11031	1511031	Guanajuato	San Francisco del RincÛn	San Francisco del RincÛn	1
+16	11	11021	1611021	Guanajuato	MoroleÛn	MoroleÛn-Uriangato	1
+16	11	11041	1611041	Guanajuato	Uriangato	MoroleÛn-Uriangato	1
+17	12	12001	1712001	Guerrero	Acapulco de Ju·rez	Acapulco	1
+17	12	12021	1712021	Guerrero	Coyuca de BenÌtez	Acapulco	1
+18	13	13022	1813022	Hidalgo	Epazoyucan	Pachuca	1
+18	13	13039	1813039	Hidalgo	Mineral del Monte	Pachuca	1
+18	13	13048	1813048	Hidalgo	Pachuca de Soto	Pachuca	1
+18	13	13051	1813051	Hidalgo	Mineral de la Reforma	Pachuca	1
+18	13	13052	1813052	Hidalgo	San AgustÌn Tlaxiaca	Pachuca	1
+18	13	13082	1813082	Hidalgo	Zapotl·n de Ju·rez	Pachuca	1
+18	13	13083	1813083	Hidalgo	Zempoala	Pachuca	1
+19	13	13016	1913016	Hidalgo	Cuautepec de Hinojosa	Tulancingo	1
+19	13	13056	1913056	Hidalgo	Santiago Tulantepec de Lugo Guerrero	Tulancingo	1
+19	13	13077	1913077	Hidalgo	Tulancingo de Bravo	Tulancingo	1
+20	13	13010	2013010	Hidalgo	Atitalaquia	Tula	1
+20	13	13013	2013013	Hidalgo	Atotonilco de Tula	Tula	1
+20	13	13070	2013070	Hidalgo	Tlahuelilpan	Tula	1
+20	13	13074	2013074	Hidalgo	Tlaxcoapan	Tula	1
+20	13	13076	2013076	Hidalgo	Tula de Allende	Tula	1
+21	14	14039	2114039	Jalisco	Guadalajara	Guadalajara	1
+21	14	14044	2114044	Jalisco	Ixtlahuac·n de los Membrillos	Guadalajara	1
+21	14	14051	2114051	Jalisco	Juanacatl·n	Guadalajara	1
+21	14	14070	2114070	Jalisco	El Salto	Guadalajara	1
+21	14	14097	2114097	Jalisco	Tlajomulco de Z˙Òiga	Guadalajara	1
+21	14	14098	2114098	Jalisco	San Pedro Tlaquepaque	Guadalajara	1
+21	14	14101	2114101	Jalisco	Tonal·	Guadalajara	1
+21	14	14120	2114120	Jalisco	Zapopan	Guadalajara	1
+22	14	14067	2214067	Jalisco	Puerto Vallarta	Puerto Vallarta	1
+22	18	18020	2218020	Nayarit	BahÌa de Banderas	Puerto Vallarta	1
+23	14	14063	2314063	Jalisco	Ocotl·n	Ocotl·n	1
+23	14	14066	2314066	Jalisco	Poncitl·n	Ocotl·n	1
+24	15	15005	2415005	MÈxico	Almoloya de Ju·rez	Toluca	1
+24	15	15018	2415018	MÈxico	Calimaya	Toluca	1
+24	15	15027	2415027	MÈxico	Chapultepec	Toluca	1
+24	15	15051	2415051	MÈxico	Lerma	Toluca	1
+24	15	15054	2415054	MÈxico	Metepec	Toluca	1
+24	15	15055	2415055	MÈxico	Mexicaltzingo	Toluca	1
+24	15	15062	2415062	MÈxico	Ocoyoacac	Toluca	1
+24	15	15067	2415067	MÈxico	Otzolotepec	Toluca	1
+24	15	15072	2415072	MÈxico	RayÛn	Toluca	1
+24	15	15073	2415073	MÈxico	San Antonio la Isla	Toluca	1
+24	15	15076	2415076	MÈxico	San Mateo Atenco	Toluca	1
+24	15	15087	2415087	MÈxico	Temoaya	Toluca	1
+24	15	15106	2415106	MÈxico	Toluca	Toluca	1
+24	15	15115	2415115	MÈxico	Xonacatl·n	Toluca	1
+24	15	15118	2415118	MÈxico	Zinacantepec	Toluca	1
+25	16	16022	2516022	Michoac·n de Ocampo	Charo	Morelia	1
+25	16	16053	2516053	Michoac·n de Ocampo	Morelia	Morelia	1
+25	16	16088	2516088	Michoac·n de Ocampo	TarÌmbaro	Morelia	1
+26	16	16043	2616043	Michoac·n de Ocampo	Jacona	Zamora-Jacona	1
+26	16	16108	2616108	Michoac·n de Ocampo	Zamora	Zamora-Jacona	1
+27	11	11023	2711023	Guanajuato	PÈnjamo	La Piedad-PÈnjamo	1
+27	16	16069	2716069	Michoac·n de Ocampo	La Piedad	La Piedad-PÈnjamo	1
+28	17	17007	2817007	Morelos	Cuernavaca	Cuernavaca	1
+28	17	17008	2817008	Morelos	Emiliano Zapata	Cuernavaca	1
+28	17	17009	2817009	Morelos	Huitzilac	Cuernavaca	1
+28	17	17011	2817011	Morelos	Jiutepec	Cuernavaca	1
+28	17	17018	2817018	Morelos	Temixco	Cuernavaca	1
+28	17	17020	2817020	Morelos	Tepoztl·n	Cuernavaca	1
+28	17	17024	2817024	Morelos	Tlaltizap·n de Zapata	Cuernavaca	1
+28	17	17028	2817028	Morelos	Xochitepec	Cuernavaca	1
+29	17	17002	2917002	Morelos	Atlatlahucan	Cuautla	1
+29	17	17004	2917004	Morelos	Ayala	Cuautla	1
+29	17	17006	2917006	Morelos	Cuautla	Cuautla	1
+29	17	17026	2917026	Morelos	Tlayacapan	Cuautla	1
+29	17	17029	2917029	Morelos	Yautepec	Cuautla	1
+29	17	17030	2917030	Morelos	Yecapixtla	Cuautla	1
+30	18	18008	3018008	Nayarit	Xalisco	Tepic	1
+30	18	18017	3018017	Nayarit	Tepic	Tepic	1
+31	19	19006	3119006	Nuevo LeÛn	Apodaca	Monterrey	1
+31	19	19009	3119009	Nuevo LeÛn	Cadereyta JimÈnez	Monterrey	1
+31	19	19010	3119010	Nuevo LeÛn	El Carmen	Monterrey	1
+31	19	19018	3119018	Nuevo LeÛn	GarcÌa	Monterrey	1
+31	19	19019	3119019	Nuevo LeÛn	San Pedro Garza GarcÌa	Monterrey	1
+31	19	19021	3119021	Nuevo LeÛn	General Escobedo	Monterrey	1
+31	19	19026	3119026	Nuevo LeÛn	Guadalupe	Monterrey	1
+31	19	19031	3119031	Nuevo LeÛn	Ju·rez	Monterrey	1
+31	19	19039	3119039	Nuevo LeÛn	Monterrey	Monterrey	1
+31	19	19045	3119045	Nuevo LeÛn	Salinas Victoria	Monterrey	1
+31	19	19046	3119046	Nuevo LeÛn	San Nicol·s de los Garza	Monterrey	1
+31	19	19048	3119048	Nuevo LeÛn	Santa Catarina	Monterrey	1
+31	19	19049	3119049	Nuevo LeÛn	Santiago	Monterrey	1
+32	20	20067	3220067	Oaxaca	Oaxaca de Ju·rez	Oaxaca	1
+32	20	20083	3220083	Oaxaca	San AgustÌn de las Juntas	Oaxaca	1
+32	20	20087	3220087	Oaxaca	San AgustÌn Yatareni	Oaxaca	1
+32	20	20091	3220091	Oaxaca	San AndrÈs Huay·pam	Oaxaca	1
+32	20	20107	3220107	Oaxaca	San Antonio de la Cal	Oaxaca	1
+32	20	20115	3220115	Oaxaca	San Bartolo Coyotepec	Oaxaca	1
+32	20	20157	3220157	Oaxaca	San Jacinto Amilpas	Oaxaca	1
+32	20	20174	3220174	Oaxaca	¡nimas Trujano	Oaxaca	1
+32	20	20227	3220227	Oaxaca	San Lorenzo Cacaotepec	Oaxaca	1
+32	20	20293	3220293	Oaxaca	San Pablo Etla	Oaxaca	1
+32	20	20338	3220338	Oaxaca	Villa de Etla	Oaxaca	1
+32	20	20350	3220350	Oaxaca	San Sebasti·n Tutla	Oaxaca	1
+32	20	20375	3220375	Oaxaca	Santa Cruz Amilpas	Oaxaca	1
+32	20	20385	3220385	Oaxaca	Santa Cruz Xoxocotl·n	Oaxaca	1
+32	20	20390	3220390	Oaxaca	Santa LucÌa del Camino	Oaxaca	1
+32	20	20399	3220399	Oaxaca	Santa MarÌa Atzompa	Oaxaca	1
+32	20	20403	3220403	Oaxaca	Santa MarÌa Coyotepec	Oaxaca	1
+32	20	20409	3220409	Oaxaca	Santa MarÌa del Tule	Oaxaca	1
+32	20	20519	3220519	Oaxaca	Santo Domingo Tomaltepec	Oaxaca	1
+32	20	20539	3220539	Oaxaca	Soledad Etla	Oaxaca	1
+32	20	20553	3220553	Oaxaca	Tlalixtac de Cabrera	Oaxaca	1
+32	20	20565	3220565	Oaxaca	Villa de Zaachila	Oaxaca	1
+33	20	20079	3320079	Oaxaca	Salina Cruz	Tehuantepec	1
+33	20	20124	3320124	Oaxaca	San Blas Atempa	Tehuantepec	1
+33	20	20515	3320515	Oaxaca	Santo Domingo Tehuantepec	Tehuantepec	1
+34	21	21001	3421001	Puebla	Acajete	Puebla-Tlaxcala	1
+34	21	21015	3421015	Puebla	Amozoc	Puebla-Tlaxcala	1
+34	21	21034	3421034	Puebla	Coronango	Puebla-Tlaxcala	1
+34	21	21041	3421041	Puebla	Cuautlancingo	Puebla-Tlaxcala	1
+34	21	21048	3421048	Puebla	Chiautzingo	Puebla-Tlaxcala	1
+34	21	21060	3421060	Puebla	Domingo Arenas	Puebla-Tlaxcala	1
+34	21	21074	3421074	Puebla	Huejotzingo	Puebla-Tlaxcala	1
+34	21	21090	3421090	Puebla	Juan C. Bonilla	Puebla-Tlaxcala	1
+34	21	21106	3421106	Puebla	Ocoyucan	Puebla-Tlaxcala	1
+34	21	21114	3421114	Puebla	Puebla	Puebla-Tlaxcala	1
+34	21	21119	3421119	Puebla	San AndrÈs Cholula	Puebla-Tlaxcala	1
+34	21	21122	3421122	Puebla	San Felipe Teotlalcingo	Puebla-Tlaxcala	1
+34	21	21125	3421125	Puebla	San Gregorio Atzompa	Puebla-Tlaxcala	1
+34	21	21132	3421132	Puebla	San MartÌn Texmelucan	Puebla-Tlaxcala	1
+34	21	21136	3421136	Puebla	San Miguel Xoxtla	Puebla-Tlaxcala	1
+34	21	21140	3421140	Puebla	San Pedro Cholula	Puebla-Tlaxcala	1
+34	21	21143	3421143	Puebla	San Salvador el Verde	Puebla-Tlaxcala	1
+34	21	21163	3421163	Puebla	Tepatlaxco de Hidalgo	Puebla-Tlaxcala	1
+34	21	21181	3421181	Puebla	Tlaltenango	Puebla-Tlaxcala	1
+34	29	29015	3429015	Tlaxcala	Ixtacuixtla de Mariano Matamoros	Puebla-Tlaxcala	1
+34	29	29017	3429017	Tlaxcala	Mazatecochco de JosÈ MarÌa Morelos	Puebla-Tlaxcala	1
+34	29	29019	3429019	Tlaxcala	Tepetitla de Lardiz·bal	Puebla-Tlaxcala	1
+34	29	29022	3429022	Tlaxcala	Acuamanala de Miguel Hidalgo	Puebla-Tlaxcala	1
+34	29	29023	3429023	Tlaxcala	NatÌvitas	Puebla-Tlaxcala	1
+34	29	29025	3429025	Tlaxcala	San Pablo del Monte	Puebla-Tlaxcala	1
+34	29	29027	3429027	Tlaxcala	Tenancingo	Puebla-Tlaxcala	1
+34	29	29028	3429028	Tlaxcala	Teolocholco	Puebla-Tlaxcala	1
+34	29	29029	3429029	Tlaxcala	Tepeyanco	Puebla-Tlaxcala	1
+34	29	29032	3429032	Tlaxcala	Tetlatlahuca	Puebla-Tlaxcala	1
+34	29	29041	3429041	Tlaxcala	Papalotla de XicohtÈncatl	Puebla-Tlaxcala	1
+34	29	29042	3429042	Tlaxcala	Xicohtzinco	Puebla-Tlaxcala	1
+34	29	29044	3429044	Tlaxcala	Zacatelco	Puebla-Tlaxcala	1
+34	29	29051	3429051	Tlaxcala	San JerÛnimo Zacualpan	Puebla-Tlaxcala	1
+34	29	29053	3429053	Tlaxcala	San Juan Huactzinco	Puebla-Tlaxcala	1
+34	29	29054	3429054	Tlaxcala	San Lorenzo Axocomanitla	Puebla-Tlaxcala	1
+34	29	29056	3429056	Tlaxcala	Santa Ana Nopalucan	Puebla-Tlaxcala	1
+34	29	29057	3429057	Tlaxcala	Santa Apolonia Teacalco	Puebla-Tlaxcala	1
+34	29	29058	3429058	Tlaxcala	Santa Catarina Ayometla	Puebla-Tlaxcala	1
+34	29	29059	3429059	Tlaxcala	Santa Cruz Quilehtla	Puebla-Tlaxcala	1
+35	21	21149	3521149	Puebla	Santiago Miahuatl·n	Tehuac·n	1
+35	21	21156	3521156	Puebla	Tehuac·n	Tehuac·n	1
+36	22	22006	3622006	QuerÈtaro	Corregidora	QuerÈtaro	1
+36	22	22008	3622008	QuerÈtaro	Huimilpan	QuerÈtaro	1
+36	22	22011	3622011	QuerÈtaro	El MarquÈs	QuerÈtaro	1
+36	22	22014	3622014	QuerÈtaro	QuerÈtaro	QuerÈtaro	1
+37	23	23003	3723003	Quintana Roo	Isla Mujeres	Canc˙n	1
+37	23	23005	3723005	Quintana Roo	Benito Ju·rez	Canc˙n	1
+38	24	24028	3824028	San Luis PotosÌ	San Luis PotosÌ	San Luis PotosÌ-Soledad de Graciano S·nchez	1
+38	24	24035	3824035	San Luis PotosÌ	Soledad de Graciano S·nchez	San Luis PotosÌ-Soledad de Graciano S·nchez	1
+39	24	24011	3924011	San Luis PotosÌ	Ciudad Fern·ndez	RÌo Verde-Cd. Fern·ndez	1
+39	24	24024	3924024	San Luis PotosÌ	Rioverde	RÌo Verde-Cd. Fern·ndez	1
+40	26	26025	4026025	Sonora	Empalme	Guaymas	1
+40	26	26029	4026029	Sonora	Guaymas	Guaymas	1
+41	27	27004	4127004	Tabasco	Centro	Villahermosa	1
+41	27	27013	4127013	Tabasco	Nacajuca	Villahermosa	1
+42	28	28003	4228003	Tamaulipas	Altamira	Tampico	1
+42	28	28009	4228009	Tamaulipas	Ciudad Madero	Tampico	1
+42	28	28038	4228038	Tamaulipas	Tampico	Tampico	1
+42	30	30123	4230123	Veracruz de Ignacio de la Llave	P·nuco	Tampico	1
+42	30	30133	4230133	Veracruz de Ignacio de la Llave	Pueblo Viejo	Tampico	1
+43	28	28032	4328032	Tamaulipas	Reynosa	Reynosa-RÌo Bravo	1
+43	28	28033	4328033	Tamaulipas	RÌo Bravo	Reynosa-RÌo Bravo	1
+44	28	28022	4428022	Tamaulipas	Matamoros	Matamoros	1
+45	28	28027	4528027	Tamaulipas	Nuevo Laredo	Nuevo Laredo	1
+46	29	29001	4629001	Tlaxcala	Amaxac de Guerrero	Tlaxcala-Apizaco	1
+46	29	29002	4629002	Tlaxcala	Apetatitl·n de Antonio Carvajal	Tlaxcala-Apizaco	1
+46	29	29005	4629005	Tlaxcala	Apizaco	Tlaxcala-Apizaco	1
+46	29	29009	4629009	Tlaxcala	Cuaxomulco	Tlaxcala-Apizaco	1
+46	29	29010	4629010	Tlaxcala	Chiautempan	Tlaxcala-Apizaco	1
+46	29	29018	4629018	Tlaxcala	Contla de Juan Cuamatzi	Tlaxcala-Apizaco	1
+46	29	29024	4629024	Tlaxcala	Panotla	Tlaxcala-Apizaco	1
+46	29	29026	4629026	Tlaxcala	Santa Cruz Tlaxcala	Tlaxcala-Apizaco	1
+46	29	29031	4629031	Tlaxcala	Tetla de la Solidaridad	Tlaxcala-Apizaco	1
+46	29	29033	4629033	Tlaxcala	Tlaxcala	Tlaxcala-Apizaco	1
+46	29	29035	4629035	Tlaxcala	Tocatl·n	Tlaxcala-Apizaco	1
+46	29	29036	4629036	Tlaxcala	Totolac	Tlaxcala-Apizaco	1
+46	29	29038	4629038	Tlaxcala	Tzompantepec	Tlaxcala-Apizaco	1
+46	29	29039	4629039	Tlaxcala	Xaloztoc	Tlaxcala-Apizaco	1
+46	29	29043	4629043	Tlaxcala	Yauhquemehcan	Tlaxcala-Apizaco	1
+46	29	29048	4629048	Tlaxcala	La Magdalena Tlaltelulco	Tlaxcala-Apizaco	1
+46	29	29049	4629049	Tlaxcala	San Dami·n TexÛloc	Tlaxcala-Apizaco	1
+46	29	29050	4629050	Tlaxcala	San Francisco Tetlanohcan	Tlaxcala-Apizaco	1
+46	29	29060	4629060	Tlaxcala	Santa Isabel Xiloxoxtla	Tlaxcala-Apizaco	1
+47	30	30011	4730011	Veracruz de Ignacio de la Llave	Alvarado	Veracruz	1
+47	30	30028	4730028	Veracruz de Ignacio de la Llave	Boca del RÌo	Veracruz	1
+47	30	30090	4730090	Veracruz de Ignacio de la Llave	Jamapa	Veracruz	1
+47	30	30105	4730105	Veracruz de Ignacio de la Llave	MedellÌn de Bravo	Veracruz	1
+47	30	30193	4730193	Veracruz de Ignacio de la Llave	Veracruz	Veracruz	1
+48	30	30026	4830026	Veracruz de Ignacio de la Llave	Banderilla	Xalapa	1
+48	30	30038	4830038	Veracruz de Ignacio de la Llave	Coatepec	Xalapa	1
+48	30	30065	4830065	Veracruz de Ignacio de la Llave	Emiliano Zapata	Xalapa	1
+48	30	30087	4830087	Veracruz de Ignacio de la Llave	Xalapa	Xalapa	1
+48	30	30093	4830093	Veracruz de Ignacio de la Llave	Jilotepec	Xalapa	1
+48	30	30136	4830136	Veracruz de Ignacio de la Llave	Rafael Lucio	Xalapa	1
+48	30	30182	4830182	Veracruz de Ignacio de la Llave	Tlalnelhuayocan	Xalapa	1
+49	30	30033	4930033	Veracruz de Ignacio de la Llave	Cazones de Herrera	Poza Rica	1
+49	30	30040	4930040	Veracruz de Ignacio de la Llave	Coatzintla	Poza Rica	1
+49	30	30124	4930124	Veracruz de Ignacio de la Llave	Papantla	Poza Rica	1
+49	30	30131	4930131	Veracruz de Ignacio de la Llave	Poza Rica de Hidalgo	Poza Rica	1
+49	30	30175	4930175	Veracruz de Ignacio de la Llave	Tihuatl·n	Poza Rica	1
+50	30	30022	5030022	Veracruz de Ignacio de la Llave	Atzacan	Orizaba	1
+50	30	30030	5030030	Veracruz de Ignacio de la Llave	Camerino Z. Mendoza	Orizaba	1
+50	30	30074	5030074	Veracruz de Ignacio de la Llave	Huiloapan de CuauhtÈmoc	Orizaba	1
+50	30	30081	5030081	Veracruz de Ignacio de la Llave	Ixhuatlancillo	Orizaba	1
+50	30	30085	5030085	Veracruz de Ignacio de la Llave	Ixtaczoquitl·n	Orizaba	1
+50	30	30099	5030099	Veracruz de Ignacio de la Llave	Maltrata	Orizaba	1
+50	30	30101	5030101	Veracruz de Ignacio de la Llave	Mariano Escobedo	Orizaba	1
+50	30	30115	5030115	Veracruz de Ignacio de la Llave	Nogales	Orizaba	1
+50	30	30118	5030118	Veracruz de Ignacio de la Llave	Orizaba	Orizaba	1
+50	30	30135	5030135	Veracruz de Ignacio de la Llave	Rafael Delgado	Orizaba	1
+50	30	30138	5030138	Veracruz de Ignacio de la Llave	RÌo Blanco	Orizaba	1
+50	30	30185	5030185	Veracruz de Ignacio de la Llave	Tlilapan	Orizaba	1
+51	30	30048	5130048	Veracruz de Ignacio de la Llave	Cosoleacaque	Minatitl·n	1
+51	30	30059	5130059	Veracruz de Ignacio de la Llave	Chinameca	Minatitl·n	1
+51	30	30089	5130089	Veracruz de Ignacio de la Llave	J·ltipan	Minatitl·n	1
+51	30	30108	5130108	Veracruz de Ignacio de la Llave	Minatitl·n	Minatitl·n	1
+51	30	30120	5130120	Veracruz de Ignacio de la Llave	Oteapan	Minatitl·n	1
+51	30	30199	5130199	Veracruz de Ignacio de la Llave	Zaragoza	Minatitl·n	1
+52	30	30039	5230039	Veracruz de Ignacio de la Llave	Coatzacoalcos	Coatzacoalcos	1
+52	30	30082	5230082	Veracruz de Ignacio de la Llave	Ixhuatl·n del Sureste	Coatzacoalcos	1
+52	30	30206	5230206	Veracruz de Ignacio de la Llave	Nanchital de L·zaro C·rdenas del RÌo	Coatzacoalcos	1
+53	30	30014	5330014	Veracruz de Ignacio de la Llave	Amatl·n de los Reyes	CÛrdoba	1
+53	30	30044	5330044	Veracruz de Ignacio de la Llave	CÛrdoba	CÛrdoba	1
+53	30	30068	5330068	Veracruz de Ignacio de la Llave	FortÌn	CÛrdoba	1
+53	30	30196	5330196	Veracruz de Ignacio de la Llave	Yanga	CÛrdoba	1
+54	30	30003	5430003	Veracruz de Ignacio de la Llave	Acayucan	Acayucan	1
+54	30	30116	5430116	Veracruz de Ignacio de la Llave	Oluta	Acayucan	1
+54	30	30145	5430145	Veracruz de Ignacio de la Llave	Soconusco	Acayucan	1
+55	31	31013	5531013	Yucat·n	Conkal	MÈrida	1
+55	31	31041	5531041	Yucat·n	KanasÌn	MÈrida	1
+55	31	31050	5531050	Yucat·n	MÈrida	MÈrida	1
+55	31	31100	5531100	Yucat·n	Uc˙	MÈrida	1
+55	31	31101	5531101	Yucat·n	Um·n	MÈrida	1
+56	32	32017	5632017	Zacatecas	Guadalupe	Zacatecas-Guadalupe	1
+56	32	32032	5632032	Zacatecas	Morelos	Zacatecas-Guadalupe	1
+56	32	32056	5632056	Zacatecas	Zacatecas	Zacatecas-Guadalupe	1
+57	11	11007	5711007	Guanajuato	Celaya	Celaya	1
+57	11	11009	5711009	Guanajuato	Comonfort	Celaya	1
+57	11	11044	5711044	Guanajuato	Villagr·n	Celaya	1
+58	15	15006	5815006	MÈxico	Almoloya del RÌo	Tianguistenco	1
+58	15	15012	5815012	MÈxico	Atizap·n	Tianguistenco	1
+58	15	15019	5815019	MÈxico	Capulhuac	Tianguistenco	1
+58	15	15043	5815043	MÈxico	Xalatlaco	Tianguistenco	1
+58	15	15098	5815098	MÈxico	Texcalyacac	Tianguistenco	1
+58	15	15101	5815101	MÈxico	Tianguistenco	Tianguistenco	1
+59	21	21054	5921054	Puebla	Chignautla	Teziutl·n	1
+59	21	21174	5921174	Puebla	Teziutl·n	Teziutl·n	1
+60	2	2001	6002001	Baja California	Ensenada	Ensenada	2
+62	3	3008	6203008	Baja California Sur	Los Cabos	Cabo San Lucas	2
+63	4	4002	6304002	Campeche	Campeche	Campeche	2
+65	6	6007	6506007	Colima	Manzanillo	Manzanillo	2
+66	7	7089	6607089	Chiapas	Tapachula	Tapachula de Cordova y OrdoÒez	2
+68	11	11015	6811015	Guanajuato	Guanajuato	Guanajuato	2
+69	11	11017	6911017	Guanajuato	Irapuato	Irapuato	2
+71	11	11033	7111033	Guanajuato	San Luis de la Paz	San Luis de la Paz	2
+73	12	12029	7312029	Guerrero	Chilpancingo de los Bravo	Chilpancingo de los Bravo	2
+94	16	16052	9416052	Michoac·n de Ocampo	L·zaro C·rdenas	Ciudad L·zaro C·rdenas	2
+95	16	16102	9516102	Michoac·n de Ocampo	Uruapan	Uruapan	2
+98	16	16112	9816112	Michoac·n de Ocampo	Zit·cuaro	Zit·cuaro	2
+104	20	20184	10420184	Oaxaca	San Juan Bautista Tuxtepec	San Juan Bautista Tuxtepec	2
+106	21	21004	10621004	Puebla	Acatzingo	Acatzingo de Hidalgo	2
+106	21	21038	10621038	Puebla	Cuapiaxtla de Madero	Acatzingo de Hidalgo	2
+106	21	21118	10621118	Puebla	Los Reyes de Ju·rez	Acatzingo de Hidalgo	2
+111	21	21071	11121071	Puebla	Huauchinango	Huauchinango	2
+119	23	23004	11923004	Quintana Roo	OthÛn P. Blanco	Chetumal	2
+121	26	26018	12126018	Sonora	Cajeme	Ciudad ObregÛn	2
+123	27	27002	12327002	Tabasco	C·rdenas	C·rdenas	2
+127	29	29013	12729013	Tlaxcala	Huamantla	Huamantla	2
+132	30	30023	13230023	Veracruz de Ignacio de la Llave	Atzalan	MartÌnez de la Torre	2
+132	30	30102	13230102	Veracruz de Ignacio de la Llave	MartÌnez de la Torre	MartÌnez de la Torre	2
+134	30	30189	13430189	Veracruz de Ignacio de la Llave	Tuxpan	T˙xpam de RodrÌguez Cano	2
+137	32	32010	13732010	Zacatecas	Fresnillo	Fresnillo	2
+144	3	3003	14403003	Baja California Sur	La Paz	La Paz	3
+145	4	4003	14504003	Campeche	Carmen	Ciudad del Carmen	3
+148	5	5002	14805002	Coahuila de Zaragoza	AcuÒa	Ciudad AcuÒa	3
+154	5	5028	15405028	Coahuila de Zaragoza	Sabinas	Sabinas	3
+160	7	7019	16007019	Chiapas	Comit·n de DomÌnguez	Comit·n de DomÌnguez	3
+172	7	7078	17207078	Chiapas	San CristÛbal de las Casas	San CristÛbal de las Casas	3
+180	8	8017	18008017	Chihuahua	CuauhtÈmoc	CuauhtÈmoc	3
+181	8	8021	18108021	Chihuahua	Delicias	Delicias	3
+182	8	8032	18208032	Chihuahua	Hidalgo del Parral	Hidalgo del Parral	3
+186	8	8050	18608050	Chihuahua	Nuevo Casas Grandes	Nuevo Casas Grandes	3
+188	10	10005	18810005	Durango	Durango	Victoria de Durango	3
+194	11	11002	19411002	Guanajuato	Ac·mbaro	Ac·mbaro	3
+195	11	11003	19511003	Guanajuato	San Miguel de Allende	San Miguel de Allende	3
+197	11	11011	19711011	Guanajuato	Cortazar	Cortazar	3
+198	11	11014	19811014	Guanajuato	Dolores Hidalgo Cuna de la Independencia Nacional	Dolores Hidalgo Cuna de la Independencia	3
+201	11	11027	20111027	Guanajuato	Salamanca	Salamanca	3
+205	11	11042	20511042	Guanajuato	Valle de Santiago	Valle de Santiago	3
+211	12	12035	21112035	Guerrero	Iguala de la Independencia	Iguala de la Independencia	3
+212	12	12038	21212038	Guerrero	Zihuatanejo de Azueta	Zihuatanejo	3
+215	12	12055	21512055	Guerrero	Taxco de AlarcÛn	Taxco de AlarcÛn	3
+224	14	14008	22414008	Jalisco	Arandas	Arandas	3
+228	14	14023	22814023	Jalisco	Zapotl·n el Grande	Ciudad Guzm·n	3
+234	14	14053	23414053	Jalisco	Lagos de Moreno	Lagos de Moreno	3
+242	14	14093	24214093	Jalisco	Tepatitl·n de Morelos	Tepatitl·n de Morelos	3
+252	16	16006	25216006	Michoac·n de Ocampo	Apatzing·n	Apatzing·n de la ConstituciÛn	3
+254	16	16034	25416034	Michoac·n de Ocampo	Hidalgo	Ciudad Hidalgo	3
+260	16	16066	26016066	Michoac·n de Ocampo	P·tzcuaro	P·tzcuaro	3
+264	16	16076	26416076	Michoac·n de Ocampo	Sahuayo	Sahuayo de Morelos	3
+268	16	16107	26816107	Michoac·n de Ocampo	Zacapu	Zacapu	3
+281	19	19033	28119033	Nuevo LeÛn	Linares	Linares	3
+286	20	20039	28620039	Oaxaca	Heroica Ciudad de Huajuapan de LeÛn	Heroica Ciudad de Huajuapan de LeÛn	3
+287	20	20043	28720043	Oaxaca	Heroica Ciudad de Juchit·n de Zaragoza	Heroica Ciudad de Juchit·n de Zaragoza	3
+294	21	21019	29421019	Puebla	Atlixco	Atlixco	3
+301	22	22016	30122016	QuerÈtaro	San Juan del RÌo	San Juan del RÌo	3
+303	23	23001	30323001	Quintana Roo	Cozumel	Cozumel	3
+305	23	23008	30523008	Quintana Roo	Solidaridad	Playa del Carmen	3
+308	24	24013	30824013	San Luis PotosÌ	Ciudad Valles	Ciudad Valles	3
+310	24	24020	31024020	San Luis PotosÌ	Matehuala	Matehuala	3
+314	25	25001	31425001	Sinaloa	Ahome	Los Mochis	3
+315	25	25006	31525006	Sinaloa	Culiac·n	Culiac·n Rosales	3
+319	25	25011	31925011	Sinaloa	Guasave	Guasave	3
+321	25	25012	32125012	Sinaloa	Mazatl·n	Mazatl·n	3
+323	25	25015	32325015	Sinaloa	Salvador Alvarado	Guam˙chil	3
+326	26	26002	32626002	Sonora	Agua Prieta	Agua Prieta	3
+327	26	26017	32726017	Sonora	Caborca	Heroica Caborca	3
+329	26	26030	32926030	Sonora	Hermosillo	Hermosillo	3
+333	26	26042	33326042	Sonora	Navojoa	Navojoa	3
+334	26	26043	33426043	Sonora	Nogales	Heroica Nogales	3
+335	26	26048	33526048	Sonora	Puerto PeÒasco	Puerto PeÒasco	3
+336	26	26055	33626055	Sonora	San Luis RÌo Colorado	San Luis RÌo Colorado	3
+344	28	28021	34428021	Tamaulipas	El Mante	Ciudad Mante	3
+348	28	28041	34828041	Tamaulipas	Victoria	Ciudad Victoria	3
+361	30	30141	36130141	Veracruz de Ignacio de la Llave	San AndrÈs Tuxtla	San AndrÈs Tuxtla	3
