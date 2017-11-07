@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Started on Wed Sep 13 15:55:22 2017
+Started on wed, oct 25th, 2017
 
 @author: carlos.arana
 
-Descripcion: Creación de dataset para el parámetro P0712 "Número de Accidentes"
+Descripcion:
 
 """
 
@@ -18,12 +18,12 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from SUN.asignar_sun import asignar_sun
+from VarInt.VarInt import VarInt
 from SUN_integridad.SUN_integridad import SUN_integridad
 from PCCS_variables.PCCS_variables import variables
 from ParametroEstandar.ParametroEstandar import ParametroEstandar
 from AsignarDimension.AsignarDimension import AsignarDimension
 from DocumentarParametro.DocumentarParametro import DocumentarParametro
-from VarInt.VarInt import VarInt
 
 """
 Las librerias locales utilizadas renglones arriba se encuentran disponibles en las siguientes direcciones:
@@ -34,32 +34,35 @@ SUN_integridad      | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 variables           | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/PCCS_variables
 ParametroEstandar   | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/ParametroEstandar
 AsignarDimension    | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/AsignarDimension
-DocumentarParametro 1 https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/DocumentarParametro
+DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/DocumentarParametro
+VarInt              | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts/VarInt
 """
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
-ClaveParametro = 'P0712'
-DescParam = 'Número de accidentes en zonas urbanas'
-UnidadesParam = 'unidades'
+ClaveParametro = 'P0119'
+DescParam = 'Porcentaje de Cobertura de alcantarillado reportada. Porcentaje de la población que cuenta con servicio ' \
+            'de alcantarillado. Calculado por el PIGOO como el cociente resultante de dividir el número total de ' \
+            'tomas con servicio de alcantarillado entre el número total de tomas registradas. Para la agregación a ' \
+            'nivel Clave del SUN se calculó el promedio de cobertura para los municipios que componen la ciudad.'
+UnidadesParam = 'Porcentaje'
+NombreParametro = 'Cobertura de alcantarillado'
+TituloParametro = 'COBERTURA_ALC'                              # Para nombrar la columna del parametro
 PeriodoParam = '2015'
-NombreParametro = 'Numero de accidentes'
-TituloParametro = 'Accidentes'                              # Para nombrar la columna del parametro
 
 # Descripciones del proceso de Minería
-ClaveDataset = 'MV02'
-NomDataset = r'Accidentes de tránsito en zonas urbanas y suburbanas'
-DescDataset = r'Numero de accidentes de transito de acuerdo al lugar donde sucedieron (Zona urbana o suburbana),' \
-              r'agregados a nivel municipal, de 1997 a 2015'
-ContenidoHojaDatos = 'Accidentes en zonas urbanas, de 1997 a 2015, agregados a nivel municipal para municipios ' \
-                     'que forman parte del subsistema principal del SUN'
+ContenidoHojaDatos = ''
+ClaveDataset = 'Pigoo'
+NomDataset = r'Programa de Indicadores de Gestión de Organismos Operadores'
+DescDataset = r'Indicadores municipales generados por los Organismos Operadores de agua, recolectados por el ' \
+              r'Instituto Mexicano De Tecnologia del Agua y la Secretaría de Medio Ambiente y Recursos Naturales'
 Notas = 'S/N'
 DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
                     '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
-NomFuente = 'INEGI (Microdatos)'
-UrlFuente = 'http://www.beta.inegi.org.mx/proyectos/registros/economicas/accidentes/'
+NomFuente = 'Programa de Indicadores de Gestión de Organismos Operadores'
+UrlFuente = 'http://www.pigoo.gob.mx/index.php?option=com_content&view=article&id=674&Itemid=1677'
 ActDatos = '2015'
-DispTemp = '1997 a 2015'
+DispTemp = '2002 a 2015'
 PeriodoAct = 'Anual'
 DesagrMax = 'Municipal'
 
@@ -76,10 +79,12 @@ DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(C
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Dataset Inicial
 dataset = pd.read_excel(DirFuente + r'\{}.xlsx'.format(ClaveDataset),
-                        sheetname="ACCIDENTES_URBANA", dtype={'CVE_MUN': str})
+                        sheetname="Alcantarillado", dtype={'CVE_MUN': str})
 dataset.set_index('CVE_MUN', inplace=True)
 
 # Generar dataset para parámetro y Variable de Integridad
+del dataset['indicador']   # Quitar Columnas que no se utilizarán más
+del dataset['ciudad']      # Quitar Columnas que no se utilizarán más
 par_dataset = dataset['2015'].rename('Total_Parametro').to_frame()
 par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo = 1)
 
@@ -121,6 +126,7 @@ Parametro = Parametro.sort_index()
 
 # Lista de Variables
 variables_locales = sorted(list(set(list(DatosLimpios) +
+                                    list(dataset) +
                                     list(integridad_parametro['INTEGRIDAD']) +
                                     list(integridad_parametro['EXISTENCIA']) +
                                     list(Parametro))))

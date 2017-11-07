@@ -39,7 +39,7 @@ import pandas as pd
 import datetime
 import os
 
-def ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, integridad_parametro):
+def ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, integridad_parametro, hoja_datos):
 
     # Desempacar datos simples ----------------------------------------------------------------------------------------
     ClaveParametro = DescParametro['ClaveParametro']
@@ -53,14 +53,16 @@ def ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, int
     writer = pd.ExcelWriter(RutaSalida + r'\{}\{}.xlsx'.format(ClaveParametro, ClaveParametro))     # Proxy de libro
     MetaParametro.to_excel(writer, sheet_name ='METADATOS')
     Parametro.to_excel(writer, sheet_name ='PARAMETRO')
-    DatosLimpios.to_excel(writer, sheet_name ='DATOS')
+    hoja_datos.to_excel(writer, sheet_name ='DATOS')
     integridad_parametro['INTEGRIDAD'].to_excel(writer, sheet_name ='INTEGRIDAD')
     integridad_parametro['EXISTENCIA'].to_excel(writer, sheet_name ='EXISTENCIA')
 
-    # Definir formatos para hoja de metadatos -------------------------------------------------------------------------
-    workbook = writer.book                      # Declaro el libro para anunciarle los formatos
-    metasheet = writer.sheets['METADATOS']      # Declaro la hoja METADATOS para darle formatos
-    paramsheet = writer.sheets['PARAMETRO']     # Declaro la hoja PARAMETRO para darle formatos
+    # Declarar hojas para darles formato -------------------------------------------------------------------------
+    workbook = writer.book
+    metasheet = writer.sheets['METADATOS']
+    paramsheet = writer.sheets['PARAMETRO']
+    intsheet = writer.sheets['INTEGRIDAD']
+    exisheet = writer.sheets['EXISTENCIA']
 
     # Definicion de colores
     verde = '#007A33'                           # Verde para ciudades con informacion completa
@@ -125,16 +127,33 @@ def ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, int
     metasheet.merge_range('A1:B1', 'PARÁMETRO: {}'.format(NombreParametro.upper()), titulo)
     metasheet.write_column('A2', list(MetaParametro.index), bold)
     metasheet.merge_range('A2:B2', 'DESCRIPCION DEL PARAMETRO', encabezado)
-    metasheet.merge_range('A8:B8', 'DESCRIPCION DEL PROCESO DE MINERIA', encabezado)
-    metasheet.merge_range('A21:B21', 'HOJAS INCLUIDAS EN ESTE LIBRO', encabezado)
-    metasheet.merge_range('A28:B28', 'DESCRIPCION DE LAS VARIABLES INCLUIDAS EN ESTE LIBRO', encabezado)
+    metasheet.merge_range('A9:B9', 'DESCRIPCION DEL PROCESO DE MINERIA', encabezado)
+    metasheet.merge_range('A22:B22', 'HOJAS INCLUIDAS EN ESTE LIBRO', encabezado)
+    metasheet.merge_range('A29:B29', 'DESCRIPCION DE LAS VARIABLES INCLUIDAS EN ESTE LIBRO', encabezado)
 
-    # Crear Titulo y reescribir indice con formato adecuado
+    # Formatear Columnas de hoja Metadatos
+    c = 9.86        # Tamaño estándar de columna
     metasheet.set_column('A:A', 22.71)
     metasheet.set_column('B:B', 82.57, texwrap)
     metasheet.set_column('D:D', 17.57)
     metasheet.set_column('E:E', 13.29)
-    paramsheet.set_column('B:B', 13.29)
+
+    # Formatear Columnas de hoja Parametro
+    paramsheet.set_column('B:B', 45.14)
+    paramsheet.set_column('C:C', c)
+    paramsheet.set_column('D:D', c)
+
+    # Formatear Columnas de hojas Integridad y existencia
+    intsheet.set_column('B:B', 40.43)
+    intsheet.set_column('C:C', c)
+    intsheet.set_column('D:D', c)
+    intsheet.set_column('E:E', c)
+
+    exisheet.set_column('A:A', c)
+    exisheet.set_column('B:B', c)
+    exisheet.set_column('C:C', c)
+    exisheet.set_column('D:D', 47)
+    exisheet.set_column('E:E', c)
 
     # Crear archivo de ultima corrida
     filepath = RutaSalida + r'\{}\{}.txt'.format(ClaveParametro, ClaveParametro)

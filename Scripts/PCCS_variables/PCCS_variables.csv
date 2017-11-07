@@ -171,3 +171,124 @@ P0908,"Numero de arboles plantados, tomando en cuenta unicamente las unidades de
 Accidentes,Numero de accidentes viales en zonas urbanas
 P0712,Numero de accidentes viales en zonas urbanas
 Total_Parametro,"Datos que se utilizarán para la construcción del parametro, despues de procesar el dataset de acuerdo con los criterios establecidos en la descripción del parámetro"
+EXISTE,"Verificacion de integridad de la información, utilizada con propósitos de sistematización. TRUE si los datos para el municipio existen, FALSE si no existen."
+P0112,"Consumo (Litros/ Hora/ día) - Estimación del consumo de agua sin tomar en cuenta las pérdidas por fugas en la red y tomas domiciliarias. Estimado como Volumen de agua consumido (m3/año). Estimado por el PIGOO como el cociente del Volumen de agua consumido al año multiplicado por 1000, dividido entre 365 multiplicado por el numero de habitantes"
+P0112_2002,
+P0112_2003,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2003"
+P0112_2004,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2004"
+P0112_2005,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2005"
+P0112_2006,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2006"
+P0112_2007,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2007"
+P0112_2008,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2008"
+P0112_2009,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2009"
+P0112_2010,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2010"
+P0112_2011,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2011"
+P0112_2012,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2012"
+P0112_2013,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2013"
+P0112_2014,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2014"
+P0112_2015,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2015"
+P0113,Dotación (Litros / Hora / Día: Estimación de la cantidad de agua asignada de acuerdo con la extracción total. Estimado por el PIGOO como el cociente resultante de dividir el Volumen Anual de Agua producido multiplicado por 1000 entre el número de habitantes multiplicado por 365
+P0113_2002,"Dotacion (l/h/d), estimada para 2002"
+P0113_2003,"Dotacion (l/h/d), estimada para 2003"
+P0113_2004,"Dotacion (l/h/d), estimada para 2004"
+P0113_2005,"Dotacion (l/h/d), estimada para 2005"
+P0113_2006,"Dotacion (l/h/d), estimada para 2006"
+P0113_2007,"Dotacion (l/h/d), estimada para 2007"
+P0113_2008,"Dotacion (l/h/d), estimada para 2008"
+P0113_2009,"Dotacion (l/h/d), estimada para 2009"
+P0113_2010,"Dotacion (l/h/d), estimada para 2010"
+P0113_2011,"Dotacion (l/h/d), estimada para 2011"
+P0113_2012,"Dotacion (l/h/d), estimada para 2012"
+P0113_2013,"Dotacion (l/h/d), estimada para 2013"
+P0113_2014,"Dotacion (l/h/d), estimada para 2014"
+P0113_2015,"Dotacion (l/h/d), estimada para 2015"
+P0114,"Macromedicion (%) Conocimiento real de agua entregada, calculado como cociente de el número de macromedidores funcionando en captaciones dividido entre el número de captaciones, multiplicado por cien"
+P0114_2002,"Macromedicion (), datos disponibles para 2002"
+P0114_2003,"Macromedicion (%), datos disponibles para 2003"
+P0114_2004,"Macromedicion (%), datos disponibles para 2004"
+P0114_2005,"Macromedicion (%), datos disponibles para 2005"
+P0114_2006,"Macromedicion (%), datos disponibles para 2006"
+P0114_2007,"Macromedicion (%), datos disponibles para 2007"
+P0114_2008,"Macromedicion (%), datos disponibles para 2008"
+P0114_2009,"Macromedicion (%), datos disponibles para 2009"
+P0114_2010,"Macromedicion (%), datos disponibles para 2010"
+P0114_2011,"Macromedicion (%), datos disponibles para 2011"
+P0114_2012,"Macromedicion (%), datos disponibles para 2012"
+P0114_2013,"Macromedicion (%), datos disponibles para 2013"
+P0114_2014,"Macromedicion (%), datos disponibles para 2014"
+P0114_2015,"Macromedicion (%), datos disponibles para 2015"
+P0115,"Pérdidas por longitud de red (m³/km), calculado como el cociente resultante de dividir la diferencia del 'Volumen Anual Producido menos el volumen Volumen Anual Consumido entre la Longitud de la 'Red de Distribución. Para la agregación a nivel Clave del SUN se calculó el promedio de pérdidas para 'los municipios que componen la ciudad."
+P0115_2002," Prdidas por longitud de red, datos para 2002"
+P0115_2003,"Pérdidas por longitud de red, datos para 2003"
+P0115_2004,"Pérdidas por longitud de red, datos para 2004"
+P0115_2005,"Pérdidas por longitud de red, datos para 2005"
+P0115_2006,"Pérdidas por longitud de red, datos para 2006"
+P0115_2007,"Pérdidas por longitud de red, datos para 2007"
+P0115_2008,"Pérdidas por longitud de red, datos para 2008"
+P0115_2009,"Pérdidas por longitud de red, datos para 2009"
+P0115_2010,"Pérdidas por longitud de red, datos para 2010"
+P0115_2011,"Pérdidas por longitud de red, datos para 2011"
+P0115_2012,"Pérdidas por longitud de red, datos para 2012"
+P0115_2013,"Pérdidas por longitud de red, datos para 2013"
+P0115_2014,"Pérdidas por longitud de red, datos para 2014"
+P0115_2015,"Pérdidas por longitud de red, datos para 2015"
+P0116,"Rehabilitación de Tubería (%). Capacidad del Organismo Operador para mantener actualizada la red de agua, calculado por el PIGOO como el cociente resultante de dividir la Longitud de la tubería rehabilitada entre la longitud total de la tubería de distribución. Para la agregación a nivel Clave del SUN se calculó el promedio de pérdidas para los municipios que componen la ciudad."
+P0116_2002,"Rehabilitacion de Tubería, datos para 2002"
+P0116_2003,"Rehabilitacion de Tubería, datos para 2003"
+P0116_2004,"Rehabilitacion de Tubería, datos para 2004"
+P0116_2005,"Rehabilitacion de Tubería, datos para 2005"
+P0116_2006,"Rehabilitacion de Tubería, datos para 2006"
+P0116_2007,"Rehabilitacion de Tubería, datos para 2007"
+P0116_2008,"Rehabilitacion de Tubería, datos para 2008"
+P0116_2009,"Rehabilitacion de Tubería, datos para 2009"
+P0116_2010,"Rehabilitacion de Tubería, datos para 2010"
+P0116_2011,"Rehabilitacion de Tubería, datos para 2011"
+P0116_2012,"Rehabilitacion de Tubería, datos para 2012"
+P0116_2013,"Rehabilitacion de Tubería, datos para 2013"
+P0116_2014,"Rehabilitacion de Tubería, datos para 2014"
+P0116_2015,"Rehabilitacion de Tubería, datos para 2015"
+P0117,"Rehabilitación de Tomas Domiciliarias: Porcentaje de actualización de la infraestructura de tomas domiciliarias, calculado como el cociente resultante de dividir el número de tomas rehabilitadas entre el número total de tomas registradas por municipio. Para la agregación a nivel Clave del SUN se calculó el promedio de rehabilitación para los municipios que componen la ciudad.'"
+P0117_2002,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2002"
+P0117_2003,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2003"
+P0117_2004,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2004"
+P0117_2005,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2005"
+P0117_2006,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2006"
+P0117_2007,"Rehabilitacion de tomas domiciliarias, datos disponibles para 207"
+P0117_2008,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2008"
+P0117_2009,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2009"
+P0117_2010,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2010"
+P0117_2011,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2011"
+P0117_2012,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2012"
+P0117_2013,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2013"
+P0117_2014,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2014"
+P0117_2015,"Rehabilitacion de tomas domiciliarias, datos disponibles para 2015"
+P0118,"Porcentaje de Cobertura de Agua Potable Reportada: Porcentaje de la población que cuenta con servicio de agua potable, calculado por PIGOO como el cociente resultante de dividir el producto del número de total tomas registradas multiplicado por el numero de habitantes por casa, dividido entre el número de habitantes. Para la agregación a nivel Clave del SUN se calculó el promedio de cobertura para los municipios que componen la ciudad."
+P0118_2002,Cobertura de Agua Potable. Datos disponibles para 2002
+P0118_2003,Cobertura de Agua Potable. Datos disponibles para 2003
+P0118_2004,Cobertura de Agua Potable. Datos disponibles para 2004
+P0118_2005,Cobertura de Agua Potable. Datos disponibles para 2005
+P0118_2006,Cobertura de Agua Potable. Datos disponibles para 2006
+P0118_2007,Cobertura de Agua Potable. Datos disponibles para 2007
+P0118_2008,Cobertura de Agua Potable. Datos disponibles para 2008
+P0118_2009,Cobertura de Agua Potable. Datos disponibles para 2009
+P0118_2010,Cobertura de Agua Potable. Datos disponibles para 2010
+P0118_2011,Cobertura de Agua Potable. Datos disponibles para 2011
+P0118_2012,Cobertura de Agua Potable. Datos disponibles para 2012
+P0118_2013,Cobertura de Agua Potable. Datos disponibles para 2013
+P0118_2014,Cobertura de Agua Potable. Datos disponibles para 2014
+P0118_2015,Cobertura de Agua Potable. Datos disponibles para 2015
+P0119,Porcentaje de Cobertura de alcantarillado reportada. Porcentaje de la población que cuenta con servicio de alcantarillado. Calculado por el PIGOO como el cociente resultante de dividir el número total de tomas con servicio de alcantarillado entre el número total de tomas registradas. Para la agregación a nivel Clave del SUN se calculó el promedio de cobertura para los municipios que componen la ciudad. los municipios que componen la ciudad.
+P0119_2002,Cobertura de alcantarillado reportada para 2002
+P0119_2003,Cobertura de alcantarillado reportada para 2003
+P0119_2004,Cobertura de alcantarillado reportada para 2004
+P0119_2005,Cobertura de alcantarillado reportada para 2005
+P0119_2006,Cobertura de alcantarillado reportada para 2006
+P0119_2007,Cobertura de alcantarillado reportada para 2007
+P0119_2008,Cobertura de alcantarillado reportada para 2008
+P0119_2009,Cobertura de alcantarillado reportada para 2009
+P0119_2010,Cobertura de alcantarillado reportada para 2010
+P0119_2011,Cobertura de alcantarillado reportada para 2011
+P0119_2012,Cobertura de alcantarillado reportada para 2012
+P0119_2013,Cobertura de alcantarillado reportada para 2013
+P0119_2014,Cobertura de alcantarillado reportada para 2014
+P0119_2015,Cobertura de alcantarillado reportada para 2015

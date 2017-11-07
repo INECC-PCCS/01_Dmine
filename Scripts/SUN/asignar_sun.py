@@ -1,23 +1,22 @@
 # -*- coding: utf-8 -*-
 """
+@author: carlos.arana
+
 DESCRIPCION: Script para asignar claves y nombres de ciudades de acuerdo con el Sistema Urbano Nacional
 Fuente de la información: Catálogo del Sistema Urbano Nacional
 Started on Fri Aug  4 12:54:13 2017
 
-@author: carlos.arana
-"""
-'''
 Espera los siguientes parametros:
-dataframe: pandas dataframe al que se desean asignar claves geoestadisticas
-CVE_MUN: str, Nombre de la columna en dataframe que contiene la clave geoestadística a nivel municipal (5 DIGITOS)
-vars = [list] columnas del catalogo geoestadístico que se unirán.
+    dataframe: pandas dataframe al que se desean asignar claves geoestadisticas
+    CVE_MUN: str, Nombre de la columna en dataframe que contiene la clave geoestadística a nivel municipal (5 DIGITOS)
+    vars = [list] columnas del catalogo geoestadístico que se unirán.
 
 Crea las siguientes columnas:
-CVE_SUN: Clave de 3 digitos del SUN
-NOM_MUN: Nombre de la ciudad a la que pertenece el municipio, de acuerdo con el SUN
-TIPO_SUN: Tipo de ciudad, de acuerdo con la clasificacion definida en el SUN
+    CVE_SUN: Clave de 3 digitos del SUN
+    NOM_MUN: Nombre de la ciudad a la que pertenece el municipio, de acuerdo con el SUN
+    TIPO_SUN: Tipo de ciudad, de acuerdo con la clasificacion definida en el SUN
 
-'''
+"""
 
 
 from pandas import read_csv as rcsv
