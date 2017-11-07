@@ -33,7 +33,7 @@ def SUN_integridad(dataframe_sun):
     unicos_df = dataframe_sun['CVE_MUN'].unique()
 
     # Calculo de integridad
-    sun['CHECK'] = sun['CVE_MUN'].isin(unicos_df)
+    sun['EXISTE'] = sun['CVE_MUN'].isin(unicos_df)
     sun = sun.merge(dataframe_sun[['VAR_INTEGRIDAD', 'CVE_MUN']], how='left', on='CVE_MUN')
     sun['VAR_INTEGRIDAD'] = sun['VAR_INTEGRIDAD'].fillna(0)
     cantmun = sun.groupby(by='CVE_SUN').agg('count')['CVE_MUN']           # Total en el SUN
@@ -43,25 +43,18 @@ def SUN_integridad(dataframe_sun):
     # Armar dataframe de integridad
     sun_index = sun.set_index('CVE_SUN')
     sun_nom = sun_index['NOM_SUN'].drop_duplicates()
-    sun_subsis = sun_index['SUBSIS_PPAL']
-    sun_subsis = sun_subsis[~sun_subsis.index.duplicated(keep='first')]
     integridad = pd.DataFrame()
     integridad['NOM_SUN'] = sun_nom
-    integridad['SUBSISTEMA'] = sun_subsis
     integridad['CANTMUN'] = cantmun.astype(float)
     integridad['CANTDF'] = cantdf
     integridad['INTEGRIDAD'] = varint
 
     # Datasets de integridad
-    existencia = ['CVE_SUN', 'CVE_ENT', 'CVE_MUN', 'NOM_MUN', 'SUBSIS_PPAL', 'VAR_INTEGRIDAD']
+    existencia = ['CVE_SUN', 'CVE_ENT', 'CVE_MUN', 'NOM_MUN', 'TIPO_SUN', 'EXISTE', 'VAR_INTEGRIDAD']
     existencia = sun[existencia]
     existencia = existencia.set_index(['CVE_SUN'])
     rev_integridad = {'INTEGRIDAD': integridad,
                       'EXISTENCIA': existencia}
 
     return rev_integridad
-
-'''
-SUN_integridad(DatosLimpios)
-'''
 
