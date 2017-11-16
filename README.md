@@ -13,7 +13,11 @@
 
 La Plataforma de Conocimiento sobre Ciudades Sustentables (PCCS) es un proyecto que comenzó formalmente en agosto de 2016, como una iniciativa para dar respuesta al impacto ambiental de las ciudades mexicanas. El objetivo del proyecto es diseñar y desarrollar una plataforma para suministrar servicios de información, asesoría y vinculación a tomadores de decisiones y a la sociedad en general. Dado que no existe una definición formal para el concepto de ciudad en la Ley General de Asentamientos Humanos, Ordenamiento Territorial y Desarrollo Humano, el INECC ha adoptado las definiciones del Sistema Urbano Nacional (SUN). La determinación del grado de sustentabilidad de las ciudades mexicanas se realiza con base en 10 dimensiones, que a su vez, se conforman con indicadores de sustentabilidad cuyos parámetros son la información cuantitativa y cualitativa de cada ciudad. Los parámetros son obtenidos desde múltiples fuentes, en todos los casos oficiales y disponibles al público para su consulta. Los datos obtenidos de estas fuentes se transforman con el objetivo de tenerlos disponibles para la PCCS con el nivel de agregación del SUN y en formatos estándar que permitan su análisis de manera ágil y en su caso, sistematizada.
 
-Este directorio contiene la memoria de construcción de indicadores para la PCCS. A pesar de que la transformación de la información podría realizarse manualmente utilizando software de hoja de cálculo, el manejo de la información se ha realizado desde scripts de python, a manera de que se cuente con una memoria del trabajo de transformación de datos, de que la investigación sea reproducible, que sea posible rastrear las fuentes de información, dar seguimiento a las transformaciones de datos y soportar los resultados presentados a manera de dimensiones e indicadores en la PCCS. 
+Este directorio contiene la memoria de construcción de parámetros para la PCCS. A pesar de que la transformación de la información podría realizarse manualmente utilizando software de hoja de cálculo, el manejo de la información se ha realizado desde scripts de python, con los objetivos de: 
+
+1. Generar una memoria del trabajo de transformación de datos, 
+2. Que la investigación sea reproducible, 
+3. Que sea posible rastrear las fuentes de información, dar seguimiento a las transformaciones de datos y soportar los resultados presentados a manera de dimensiones e indicadores en la PCCS. 
 
 ### Descripcion del Contenido
 **Tipos de Archivos**
