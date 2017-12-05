@@ -128,8 +128,8 @@ def ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, int
     metasheet.write_column('A2', list(MetaParametro.index), bold)
     metasheet.merge_range('A2:B2', 'DESCRIPCION DEL PARAMETRO', encabezado)
     metasheet.merge_range('A9:B9', 'DESCRIPCION DEL PROCESO DE MINERIA', encabezado)
-    metasheet.merge_range('A22:B22', 'HOJAS INCLUIDAS EN ESTE LIBRO', encabezado)
-    metasheet.merge_range('A29:B29', 'DESCRIPCION DE LAS VARIABLES INCLUIDAS EN ESTE LIBRO', encabezado)
+    metasheet.merge_range('A23:B23', 'HOJAS INCLUIDAS EN ESTE LIBRO', encabezado)
+    metasheet.merge_range('A30:B30', 'DESCRIPCION DE LAS VARIABLES INCLUIDAS EN ESTE LIBRO', encabezado)
 
     # Formatear Columnas de hoja Metadatos
     c = 9.86        # Tamaño estándar de columna

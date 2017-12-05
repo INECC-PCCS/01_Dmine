@@ -33,7 +33,6 @@ Archivo|Descripción
 -------|-----------
 **EI2015.ipynb**|Detalle de procesos y consideraciones particulares tomadas para estandarizar el dataset 'Encuesta Intercensal 2015'
 **README.md**|Este archivo
-**standard-pigoo\_ooapas\_geo.xlsx**|Lista de emparejamiento entre datasets  "CiudadesPIGOO_ClaveInegi.xlsx", "Dataset Pigoo" y "CVE\_MUN" de la PCCS
 **02.xlsx**|Estimadores de las viviendas particulares habitadas y su distribución porcentual según material en pisos por municipio
 **08.xlsx**|Estimadores de las viviendas particulares habitadas y su distribución porcentual según combustible utilizado para cocinar por municipio
 **09.xlsx**|Estimadores de las viviendas particulares habitadas en las que sus ocupantes utilizan leña o carbón para cocinar y su distribución porcentual según disponibilidad de estufa o fogón con chimenea por municipio

@@ -7,7 +7,7 @@ Started on wed, oct 25th, 2017
 Descripcion:
 
 """
-
+# Librerias utilizadas
 import pandas as pd
 import numpy as np
 import sys
@@ -40,56 +40,78 @@ DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
-ClaveParametro = 'P0119'
-DescParam = 'Porcentaje de Cobertura de alcantarillado reportada. Porcentaje de la población que cuenta con servicio ' \
-            'de alcantarillado. Calculado por el PIGOO como el cociente resultante de dividir el número total de ' \
-            'tomas con servicio de alcantarillado entre el número total de tomas registradas. Para la agregación a ' \
-            'nivel Clave del SUN se calculó el promedio de cobertura para los municipios que componen la ciudad.'
+ClaveParametro = 'P0403'
+NombreParametro = 'Viviendas con drenaje'
+DescParam = 'Porcentaje de viviendas particulares habitadas que disponen de drenaje por ciudad'
 UnidadesParam = 'Porcentaje'
-NombreParametro = 'Cobertura de alcantarillado'
-TituloParametro = 'COBERTURA_ALC'                              # Para nombrar la columna del parametro
+TituloParametro = 'VIV_DRENAJE'                              # Para nombrar la columna del parametro
 PeriodoParam = '2015'
+DescVarIntegridad = 'Para calcular la variable de integridad de este dataset, se verifica la existencia de ' \
+                    'datos en cada una de las variables que se utilizaron para construir el parámetro. El valor' \
+                    'de la variable de integridad indica el porcentaje de variables del dataset que tienen datos' \
+                    'para la construcción del parámetro, donde 1 = 100%'
 
 # Descripciones del proceso de Minería
-ContenidoHojaDatos = 'Datos cobertura de alcantarillado disponibles de 2002 a 2015'
-ClaveDataset = 'Pigoo'
-NomDataset = r'Programa de Indicadores de Gestión de Organismos Operadores'
-DescDataset = r'Indicadores municipales generados por los Organismos Operadores de agua, recolectados por el ' \
-              r'Instituto Mexicano De Tecnologia del Agua y la Secretaría de Medio Ambiente y Recursos Naturales'
-Notas = 'S/N'
-DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
-                    '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
-NomFuente = 'Programa de Indicadores de Gestión de Organismos Operadores'
-UrlFuente = 'http://www.pigoo.gob.mx/index.php?option=com_content&view=article&id=674&Itemid=1677'
+nomarchivodataset = '26'
+ArchivoDataset = nomarchivodataset + '.xlsx'
+ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
+ClaveDataset = 'EI2015'
 ActDatos = '2015'
-DispTemp = '2002 a 2015'
-PeriodoAct = 'Anual'
-DesagrMax = 'Municipal'
+Agregacion = 'Promedio del porcentaje de viviendas que desalojan a red pública, fosa septica o tanque septico. En la ' \
+             'agregación de datos municipales a ciudades del SUN se han excluido los Municipos en los que la ' \
+             'muestra de la Encuesta Intercensal fue clasificada como insuficiente.'
 
 # Descripciones generadas desde la clave del parámetro
 DirFuente = r'D:\PCCS\01_Dmine\Datasets\{}'.format(ClaveDataset)
-DSBase = '"{}.xlsx", disponible en ' \
-         'https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/{}'.format(ClaveDataset, ClaveDataset)
+DSBase = '"{}", disponible en ' \
+         'https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/{}'.format(ArchivoDataset, ClaveDataset)
 ClaveDimension = ClaveParametro[1:3]
 NomDimension = AsignarDimension(ClaveDimension)['nombre']
 DirDimension = ClaveDimension + "_" + AsignarDimension(ClaveDimension)['directorio']
 RepoMina = 'https://github.com/INECC-PCCS/01_Dmine/tree/master/{}/{}'.format(DirDimension, ClaveParametro)
 DirDestino = r'D:\PCCS\01_Dmine\{}'.format(ClaveDimension+"_"+AsignarDimension(ClaveDimension)['directorio'])
 
+# Cargar metadatos del dataset
+metadataset = pd.read_excel(DirFuente + '\\' + ArchivoDataset,
+                        sheetname="METADATOS")
+metadataset.set_index('Metadato', inplace=True)
+metadataset = metadataset['Descripcion']
+
+# Descripciones generadas desde los metadatos del dataset.
+NomDataset = metadataset['Nombre del Dataset']
+DescDataset = metadataset['Descripcion del dataset']
+DispTemp = metadataset['Disponibilidad Temporal']
+PeriodoAct = metadataset['Periodo de actualizacion']
+DesagrMax = metadataset['Nivel de Desagregacion']
+Notas = 'Para la obtención del parámetro se suma el "Porcentaje de viviendas cuyo drenaje desaloja a Red pública" ' \
+        'con el "Porcentaje de viviendas cuyo drenaje desaloja a Fosa séptica o Tanque séptico". El resultado de ' \
+        'la suma se multiplica por el "Porcentaje de Viviendas que cuentan con Drenaje" y el producto de esta ' \
+        'multiplicación se divide entre 100 para obtener el porcentaje de viviendas que desalojan a red pública, ' \
+        'fosa septica o tanque septico. De esta manera, se excluyen del parámetro las viviendas cuyo drenaje ' \
+        'desaloja a Río, Lago o mar.'
+NomFuente = metadataset['Fuente']
+UrlFuente = metadataset['URL_Fuente']
+
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
-# Dataset Inicial
-dataset = pd.read_excel(DirFuente + r'\{}.xlsx'.format(ClaveDataset),
-                        sheetname="Alcantarillado", dtype={'CVE_MUN': str})
+# Cargar dataset inicial
+dataset = pd.read_excel(DirFuente + '\\' + ArchivoDataset,
+                        sheetname=nomarchivodataset, dtype={'CVE_MUN': str})
 dataset.set_index('CVE_MUN', inplace=True)
 
 # Generar dataset para parámetro y Variable de Integridad
-del dataset['indicador']   # Quitar Columnas que no se utilizarán más
-del dataset['ciudad']      # Quitar Columnas que no se utilizarán más
-par_dataset = dataset['2015'].rename('Total_Parametro').to_frame()
-par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo = 1)
+dataset = dataset[~dataset['Municipio'].str.contains('\*\*')]   # Excluir municipios con ** muestra insuficiente
+colummas = ['Viviendas particulares habitadas',                 # Culumnas que se utilizan para construi el parámetro
+            'Drenaje_Total',
+            'Drenaje_desaloja_a_Red_publica',
+            'Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico']
+dataset = dataset[colummas]
+par_dataset = dataset['Drenaje_Total'] * (                      # Construccion del Parámetro
+              dataset['Drenaje_desaloja_a_Red_publica'] + dataset['Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico']
+              ) / 100
+par_dataset = par_dataset.to_frame(name = ClaveParametro)
+par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo = 2)
 
-# Consolidar datos por ciudad para parametro
-# par_dataset['CVE_MUN'] = par_dataset.index
+# Agregar datos por ciudad para parametro
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'NOM_ENT']
 DatosLimpios = asignar_sun(par_dataset, vars=variables_SUN)
 OrdenColumnas = (variables_SUN + variables_dataset)
@@ -111,7 +133,7 @@ info_incomple = 135 - info_completa - info_sin_info                             
 # Construccion del Parametro
 param_dataset = DatosLimpios.set_index('CVE_SUN')
 param_dataset['CVE_SUN'] = param_dataset.index
-param = param_dataset.groupby(level=0).agg('sum')['Total_Parametro']       # Agregacion por ciudad
+param = param_dataset.groupby(level=0).agg('mean')[ClaveParametro]         # Agregacion por ciudad
 intparam = param_dataset.groupby(level=0).agg('mean')['VAR_INTEGRIDAD']    # Integridad por ciudad
 Tipo_Sun = integridad_parametro['EXISTENCIA']['TIPO_SUN']
 Tipo_Sun = Tipo_Sun.groupby(Tipo_Sun.index).first()
@@ -168,6 +190,7 @@ d_mineria = {
     'URL_Fuente': UrlFuente,
     'Dataset base': DSBase,
     'Repositorio de mineria': RepoMina,
+    'Método de Agregación': Agregacion,
     'VAR_INTEGRIDAD': DescVarIntegridad,
     ' ': np.nan,
     'HOJAS INCLUIDAS EN EL LIBRO': np.nan
@@ -195,4 +218,3 @@ DescParametro = {
 # Crear archivo de Excel y documentar parametro
 ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, integridad_parametro, hoja_datos)
 DocumentarParametro(DescParametro, MetaParametro, Parametro)
-
