@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0119 - Cobertura de alcantarillado
 
 **Dataset Base**: "Pigoo.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/Pigoo
 
-**Ultima revision del parametro**: 2017/11/06 
+**Ultima revision del parametro**: 2017/11/21 
 
 **Ultima Actualizacion de los datos**: 2015
 

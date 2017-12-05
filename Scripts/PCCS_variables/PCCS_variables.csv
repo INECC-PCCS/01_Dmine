@@ -292,3 +292,10 @@ P0119_2012,Cobertura de alcantarillado reportada para 2012
 P0119_2013,Cobertura de alcantarillado reportada para 2013
 P0119_2014,Cobertura de alcantarillado reportada para 2014
 P0119_2015,Cobertura de alcantarillado reportada para 2015
+NUM_REGISTROS,Numero de variables de cada municipio que se utilizan para la construcción del parámetro (Utilizado para el cálculo de integridad).
+P0403,Viviendas con drenaje
+P0403_Drenaje_Total,"Porcentaje de viviendas particulares habitadas que disponen de drenaje por ciudad, sin importar lugar de descarga."
+P0403_Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico,"Porcentaje de viviendas particulares habitadas que disponen de drenaje, cuya descarga es a fosa séptica o tanque séptico."
+P0403_Drenaje_desaloja_a_Red_publica,"Porcentaje de viviendas particulares habitadas que disponen de drenaje, cuya descarga es a red pública de drenaje."
+P0403_Viviendas particulares habitadas,"Numero de Viviendas particulares habitadas, de acuerdo con la Encuesta Intercensal 2015."
+REGISTROS_EXISTEN,Numero de variables de cada municipio que cuentan con datos para la construcción del parámetro (Utilizado para el cálculo de integridad).
