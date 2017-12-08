@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0603 - Viviendas con calentador de agua
 
 **Dataset Base**: "23.xlsx.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/EI2015
 
-**Ultima revision del parametro**: 2017/12/06 
+**Ultima revision del parametro**: 2017/12/08 
 
 **Ultima Actualizacion de los datos**: 2015
 

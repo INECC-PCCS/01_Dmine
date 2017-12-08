@@ -309,3 +309,9 @@ P0404,Viviendas con piso de tierra
 P0404_Pisos_Tierra,Porcentaje de viviendas cuyo piso es de tierra
 P0603,Viviendas con calentador de agua (boiler)
 P0603_Dispone_de_Equipamiento,Porcentaje de viviendas que disponen de calentador de agua (boiler)
+P0611,Viviendas que utilizan leña o carbón para cocinar
+P0611_Cocina_con_Lena o carbon,Porcentaje de viviendas particulares habitadas que que utilizan leña o carbón para cocinar
+P0612," Viviendas que utilizan leña o carbón para cocinar, que disponen de estufa o fogón con chimenea"
+P0612_Dispone_de_estufa_o_fogon_con_chimenea," Porcentaje de viviendas que utilizan leña o o carbón para cocinar, que disponen de estufa o fogón con chimenea"
+P0613,Viviendas que utilizan gas para cocinar
+P0613_Cocina_con_Gas,Porcentaje de viviendas particulares habitadas que utilizan gas para cocinar

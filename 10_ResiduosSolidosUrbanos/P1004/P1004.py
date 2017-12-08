@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Started on fri, dec 1st, 2017
+Started on fri, dec 8th, 2017
 
 @author: carlos.arana
 
@@ -38,16 +38,16 @@ DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
-ClaveParametro = ''
-NombreParametro = ''
+ClaveParametro = 'P1004'
+NombreParametro = 'Viviendas que entregan sus residuos a servicio público de recolección'
 DescParam = ''
-UnidadesParam = ''
-TituloParametro = ''                              # Para nombrar la columna del parametro
+UnidadesParam = 'Porcentaje'
+TituloParametro = 'RSU_A_SPR'                              # Para nombrar la columna del parametro
 PeriodoParam = '2015'
 DescVarIntegridad = ''
 
 # Descripciones del proceso de Minería
-nomarchivodataset = ''
+nomarchivodataset = '19'
 ArchivoDataset = nomarchivodataset + '.xlsx'
 ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
 ClaveDataset = 'EI2015'
@@ -88,10 +88,8 @@ dataset.set_index('CVE_MUN', inplace=True)
 
 # Generar dataset para parámetro y Variable de Integridad
 dataset = dataset[~dataset['Municipio'].str.contains('\*\*')]   # Excluir municipios con ** muestra insuficiente
-colummas = ['Viviendas particulares habitadas',                 # Culumnas que se utilizan para construi el parámetro
-            'Drenaje_Total',
-            'Drenaje_desaloja_a_Red_publica',
-            'Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico']
+colummas = ['Entregan_residuos_a_servicio_publico_de_recoleccion',                 # Culumnas que se utilizan para construi el parámetro
+            'Queman_residuos']
 dataset = dataset[colummas]
 par_dataset = dataset['Drenaje_Total'] * (                      # Construccion del Parámetro
               dataset['Drenaje_desaloja_a_Red_publica'] + dataset['Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico']

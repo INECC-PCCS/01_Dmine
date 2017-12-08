@@ -52,9 +52,10 @@ ArchivoDataset = nomarchivodataset + '.xlsx'
 ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
 ClaveDataset = 'EI2015'
 ActDatos = '2015'
-Agregacion = 'Promedio del porcentaje de viviendas viviendas que disponen de calentador de agua (Boiler)' \
-             'una Ciudad del SUN. En la agregación de datos municipales a ciudades del SUN se han excluido los ' \
-             'Municipos en los que la muestra de la Encuesta Intercensal fue clasificada como insuficiente.'
+Agregacion = 'Promedio del porcentaje de viviendas viviendas que disponen de calentador de agua (Boiler) en los ' \
+             'municipios que componen una Ciudad del SUN. En la agregación de datos municipales a ciudades del SUN ' \
+             'se han excluido los Municipos en los que la muestra de la Encuesta Intercensal fue clasificada ' \
+             'como insuficiente.'
 
 # Descripciones generadas desde la clave del parámetro
 DirFuente = r'D:\PCCS\01_Dmine\Datasets\{}'.format(ClaveDataset)

@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Started on fri, dec 1st, 2017
+Started on fri, dec 8th, 2017
 
 @author: carlos.arana
-
 """
 # Librerias utilizadas
 import pandas as pd
@@ -38,21 +37,25 @@ DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
-ClaveParametro = ''
-NombreParametro = ''
-DescParam = ''
-UnidadesParam = ''
-TituloParametro = ''                              # Para nombrar la columna del parametro
+ClaveParametro = 'P0611'
+NombreParametro = 'Viviendas que utilizan leña o carbón para cocinar'
+DescParam = 'Porcentaje de viviendas particulares habitadas que que utilizan leña o carbón para cocinar'
+UnidadesParam = 'Porcentaje'
+TituloParametro = 'VIV_CARBON'                              # Para nombrar la columna del parametro
 PeriodoParam = '2015'
-DescVarIntegridad = ''
+DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
+                    '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
 
 # Descripciones del proceso de Minería
-nomarchivodataset = ''
+nomarchivodataset = '08'
 ArchivoDataset = nomarchivodataset + '.xlsx'
 ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
 ClaveDataset = 'EI2015'
 ActDatos = '2015'
-Agregacion = ''
+Agregacion = 'Promedio del porcentaje de viviendas particulares habitadas que que utilizan leña o carbón para ' \
+             'cocinar en los municipios que componen una Ciudad del SUN. En la agregación de datos municipales a ' \
+             'ciudades del SUN se han excluido los Municipos en los que la muestra de la Encuesta Intercensal fue ' \
+             'clasificada como insuficiente.'
 
 # Descripciones generadas desde la clave del parámetro
 DirFuente = r'D:\PCCS\01_Dmine\Datasets\{}'.format(ClaveDataset)
@@ -88,16 +91,11 @@ dataset.set_index('CVE_MUN', inplace=True)
 
 # Generar dataset para parámetro y Variable de Integridad
 dataset = dataset[~dataset['Municipio'].str.contains('\*\*')]   # Excluir municipios con ** muestra insuficiente
-colummas = ['Viviendas particulares habitadas',                 # Culumnas que se utilizan para construi el parámetro
-            'Drenaje_Total',
-            'Drenaje_desaloja_a_Red_publica',
-            'Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico']
+colummas = ['Cocina_con_Lena o carbon']
 dataset = dataset[colummas]
-par_dataset = dataset['Drenaje_Total'] * (                      # Construccion del Parámetro
-              dataset['Drenaje_desaloja_a_Red_publica'] + dataset['Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico']
-              ) / 100
+par_dataset = dataset['Cocina_con_Lena o carbon']                       # Construccion del Parámetro
 par_dataset = par_dataset.to_frame(name = ClaveParametro)
-par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo = 2)
+par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo = 1)
 
 # Agregar datos por ciudad para parametro
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'NOM_ENT']

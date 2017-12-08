@@ -41,7 +41,7 @@ DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 ClaveParametro = 'P0404'
 NombreParametro = 'Viviendas con piso de tierra'
 DescParam = 'Porcentaje de viviendas cuyo piso es de tierra'
-UnidadesParam = 'POrcentaje'
+UnidadesParam = 'Porcentaje'
 TituloParametro = 'VIV_PTIERRA'                              # Para nombrar la columna del parametro
 PeriodoParam = '2015'
 DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
