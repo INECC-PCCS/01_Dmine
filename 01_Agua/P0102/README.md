@@ -1,5 +1,22 @@
-# [PROXY] P0102 - Porcentaje de viviendas que cuentan con descarga a una red de alcantarillado.
+# Parametro P0102 - Viviendas con drenaje
 
-(Mineria de datos de parametro pendiente)
+Archivo de mineria de datos. Parametro: P0102 - Viviendas con drenaje
 
-Proxy creado con fines de coordinacion
+**Contenido**: Estimadores de las viviendas particulares habitadas y su distribución porcentual según disponibilidad de drenaje y lugar de desalojo por municipio
+
+**FUENTE**: INEGI (Microdatos)
+
+**Dataset Base**: "26.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/EI2015
+
+**Ultima revision del parametro**: 2017/12/06 
+
+**Ultima Actualizacion de los datos**: 2015
+
+----------
+
+**Instituto Nacional de Ecología y Cambio Climático**
+
+**Programa de las Naciones Unidas para el Desarrollo**
+
+**Plataforma de Conocimiento de Ciudades Sustentables**
+

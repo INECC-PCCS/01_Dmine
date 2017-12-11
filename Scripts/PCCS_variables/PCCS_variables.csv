@@ -299,3 +299,19 @@ P0403_Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico,"Porcentaje de viviendas 
 P0403_Drenaje_desaloja_a_Red_publica,"Porcentaje de viviendas particulares habitadas que disponen de drenaje, cuya descarga es a red pública de drenaje."
 P0403_Viviendas particulares habitadas,"Numero de Viviendas particulares habitadas, de acuerdo con la Encuesta Intercensal 2015."
 REGISTROS_EXISTEN,Numero de variables de cada municipio que cuentan con datos para la construcción del parámetro (Utilizado para el cálculo de integridad).
+P0101,Porcentaje de viviendas con agua entubada
+P0101_Entubada_Total,Porcentaje de viviendas particulares que disponen de agua entubada dentro del predio o vivienda
+P0102,Porcentaje de viviendas que cuentan con descarga a una red de alcantarillado
+P0102_Drenaje_Total,Porcentaje de viviendas que cuentan con drenaje sin importar el lugar de descarga
+P0102_Drenaje_desaloja_a_Red_publica,Porcentaje de viviendas que cuentan con descarga a una red de alcantarillado pública
+P0102_Viviendas particulares habitadas,Viviendas particulares habitadas
+P0404,Viviendas con piso de tierra
+P0404_Pisos_Tierra,Porcentaje de viviendas cuyo piso es de tierra
+P0603,Viviendas con calentador de agua (boiler)
+P0603_Dispone_de_Equipamiento,Porcentaje de viviendas que disponen de calentador de agua (boiler)
+P0611,Viviendas que utilizan leña o carbón para cocinar
+P0611_Cocina_con_Lena o carbon,Porcentaje de viviendas particulares habitadas que que utilizan leña o carbón para cocinar
+P0612," Viviendas que utilizan leña o carbón para cocinar, que disponen de estufa o fogón con chimenea"
+P0612_Dispone_de_estufa_o_fogon_con_chimenea," Porcentaje de viviendas que utilizan leña o o carbón para cocinar, que disponen de estufa o fogón con chimenea"
+P0613,Viviendas que utilizan gas para cocinar
+P0613_Cocina_con_Gas,Porcentaje de viviendas particulares habitadas que utilizan gas para cocinar

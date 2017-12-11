@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Started on fri, dec 1st, 2017
-
+Started on Wed Dec  6 10:41:36 2017
 @author: carlos.arana
-
 """
+
 # Librerias utilizadas
 import pandas as pd
 import numpy as np
@@ -38,14 +37,16 @@ DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
-ClaveParametro = 'P0403'
+ClaveParametro = 'P0102'
 NombreParametro = 'Viviendas con drenaje'
-DescParam = 'Porcentaje de viviendas particulares habitadas que disponen de drenaje por ciudad'
+DescParam = 'Porcentaje de viviendas que cuentan con descarga a una red de alcantarillado.'
 UnidadesParam = 'Porcentaje'
-TituloParametro = 'VIV_DRENAJE'                              # Para nombrar la columna del parametro
+TituloParametro = 'VIV_DRENAJE_RED'                              # Para nombrar la columna del parametro
 PeriodoParam = '2015'
-DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
-                    '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
+DescVarIntegridad = 'Para calcular la variable de integridad de este dataset, se verifica la existencia de ' \
+                    'datos en cada una de las variables que se utilizaron para construir el parámetro. El valor' \
+                    'de la variable de integridad indica el porcentaje de variables del dataset que tienen datos' \
+                    'para la construcción del parámetro, donde 1 = 100%'
 
 # Descripciones del proceso de Minería
 nomarchivodataset = '26'
@@ -53,11 +54,13 @@ ArchivoDataset = nomarchivodataset + '.xlsx'
 ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
 ClaveDataset = 'EI2015'
 ActDatos = '2015'
-Agregacion = 'Promedio de porcentaje de viviendas que desalojan a red pública, fosa septica o tanque septico'
+Agregacion = 'Promedio del porcentaje de viviendas que desalojan a red pública, fosa septica o tanque septico. En la ' \
+             'agregación de datos municipales a ciudades del SUN se han excluido los Municipos en los que la ' \
+             'muestra de la Encuesta Intercensal fue clasificada como insuficiente.'
 
 # Descripciones generadas desde la clave del parámetro
 DirFuente = r'D:\PCCS\01_Dmine\Datasets\{}'.format(ClaveDataset)
-DSBase = '"{}.xlsx", disponible en ' \
+DSBase = '"{}", disponible en ' \
          'https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/{}'.format(ArchivoDataset, ClaveDataset)
 ClaveDimension = ClaveParametro[1:3]
 NomDimension = AsignarDimension(ClaveDimension)['nombre']
@@ -77,12 +80,10 @@ DescDataset = metadataset['Descripcion del dataset']
 DispTemp = metadataset['Disponibilidad Temporal']
 PeriodoAct = metadataset['Periodo de actualizacion']
 DesagrMax = metadataset['Nivel de Desagregacion']
-Notas = 'Para la obtención del parámetro se suma la el porcentaje de viviendas cuyo drenaje desaloja a Red pública ' \
-        'con el porcentaje de viviendas cuyo. drenaje desaloja a Fosa séptica o Tanque séptico. El resultado de esta' \
-        'suma se multiplica por el porcentaje de Viviendas que cuentan con Drenaje y el parámetro es el ' \
-        'producto de esta multiplicación. De esta manera, se excluyen del parámetro las viviendas cuyo drenaje ' \
-        'desaloja a Río, Lago o mar. En la agregación de datos municipales a ciudades del SUN se han excluido los' \
-        'Municipos en los que la muestra de la Encuesta Intercensal fue insuficiente'
+Notas = 'Para la obtención del parámetro multiplica el "Porcentaje de viviendas cuyo drenaje desaloja a Red pública" ' \
+        'por el "Porcentaje de Viviendas que cuentan con Drenaje" y el producto de esta multiplicación se divide ' \
+        'entre 100 para obtener el porcentaje de viviendas que desalojan a red pública, fosa septica o tanque ' \
+        'septico. De esta manera, se excluyen del parámetro las viviendas cuyo drenaje desaloja a Río, Lago o mar.'
 NomFuente = metadataset['Fuente']
 UrlFuente = metadataset['URL_Fuente']
 
@@ -96,12 +97,9 @@ dataset.set_index('CVE_MUN', inplace=True)
 dataset = dataset[~dataset['Municipio'].str.contains('\*\*')]   # Excluir municipios con ** muestra insuficiente
 colummas = ['Viviendas particulares habitadas',                 # Culumnas que se utilizan para construi el parámetro
             'Drenaje_Total',
-            'Drenaje_desaloja_a_Red_publica',
-            'Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico']
+            'Drenaje_desaloja_a_Red_publica']
 dataset = dataset[colummas]
-par_dataset = dataset['Drenaje_Total'] * (                      # Construccion del Parámetro
-              dataset['Drenaje_desaloja_a_Red_publica'] + dataset['Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico']
-              ) / 100
+par_dataset = dataset['Drenaje_Total'] * (dataset['Drenaje_desaloja_a_Red_publica']) / 100   # Construccion del Parám.
 par_dataset = par_dataset.to_frame(name = ClaveParametro)
 par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo = 2)
 
