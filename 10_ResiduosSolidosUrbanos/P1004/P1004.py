@@ -40,11 +40,15 @@ DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Descripciones del Parametro
 ClaveParametro = 'P1004'
 NombreParametro = 'Viviendas que entregan sus residuos a servicio público de recolección'
-DescParam = ''
+DescParam = 'Porcentaje de viviendas que entregan sus residuos a servicio público de recolección, sin importar si' \
+            'separan residuos orgánicos'
 UnidadesParam = 'Porcentaje'
 TituloParametro = 'RSU_A_SPR'                              # Para nombrar la columna del parametro
 PeriodoParam = '2015'
-DescVarIntegridad = ''
+DescVarIntegridad = 'Para calcular la variable de integridad de este dataset, se verifica la existencia de ' \
+                    'datos en cada una de las variables que se utilizaron para construir el parámetro. El valor' \
+                    'de la variable de integridad indica el porcentaje de variables del dataset que tienen datos' \
+                    'para la construcción del parámetro, donde 1 = 100%'
 
 # Descripciones del proceso de Minería
 nomarchivodataset = '19'
@@ -52,7 +56,10 @@ ArchivoDataset = nomarchivodataset + '.xlsx'
 ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
 ClaveDataset = 'EI2015'
 ActDatos = '2015'
-Agregacion = ''
+Agregacion = 'Promedio del porcentaje de viviendas particulares habitadas que entregan sus residuos al Servicio ' \
+             'público de Recolección en los municipios que componen una Ciudad del SUN. En la agregación de datos ' \
+             'municipales a ciudades del SUN se han excluido los Municipos en los que la muestra de la Encuesta ' \
+             'Intercensal fue clasificada como insuficiente.'
 
 # Descripciones generadas desde la clave del parámetro
 DirFuente = r'D:\PCCS\01_Dmine\Datasets\{}'.format(ClaveDataset)
@@ -76,7 +83,8 @@ DescDataset = metadataset['Descripcion del dataset']
 DispTemp = metadataset['Disponibilidad Temporal']
 PeriodoAct = metadataset['Periodo de actualizacion']
 DesagrMax = metadataset['Nivel de Desagregacion']
-Notas = ''
+Notas = 'Este parámetro considera tanto las viviendas que entregan sus residuos al servicio público de recolección ' \
+        'como las viviendas que depositan sus residuos en contenedor o depósito'
 NomFuente = metadataset['Fuente']
 UrlFuente = metadataset['URL_Fuente']
 
@@ -88,12 +96,9 @@ dataset.set_index('CVE_MUN', inplace=True)
 
 # Generar dataset para parámetro y Variable de Integridad
 dataset = dataset[~dataset['Municipio'].str.contains('\*\*')]   # Excluir municipios con ** muestra insuficiente
-colummas = ['Entregan_residuos_a_servicio_publico_de_recoleccion',                 # Culumnas que se utilizan para construi el parámetro
-            'Queman_residuos']
-dataset = dataset[colummas]
-par_dataset = dataset['Drenaje_Total'] * (                      # Construccion del Parámetro
-              dataset['Drenaje_desaloja_a_Red_publica'] + dataset['Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico']
-              ) / 100
+columnas = list(dataset)[2:4]
+dataset = dataset[columnas]
+par_dataset = dataset.sum(axis=1)               # Construccion del Parámetro
 par_dataset = par_dataset.to_frame(name = ClaveParametro)
 par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo = 2)
 

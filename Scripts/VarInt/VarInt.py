@@ -17,13 +17,13 @@ Input:
 import pandas as pd
 
 def VarInt(par_dataset, dataset, tipo = 1):
-    print('tipo de integridad: [1] para Binaria, [2] para Serie')
+    # 'tipo de integridad: [1] para Binaria, [2] para Serie
     if tipo == 1:
-        par_dataset['EXISTE'] = ~par_dataset.isnull()   #el simbolo ~ es para invertir los valores de true / false
+        par_dataset['EXISTE'] = ~par_dataset.isnull()   # el simbolo ~ es para invertir los valores de true / false
         par_dataset['VAR_INTEGRIDAD'] = par_dataset['EXISTE'].astype(int)
     if tipo == 2:
-        par_dataset['NUM_REGISTROS'] = len(list(dataset))         # ¿Cuantos registros debería tener cada caso?
-        par_dataset['REGISTROS_EXISTEN'] = dataset.notnull().sum(axis=1)   # ¿Cuantas registros tienen informacion?
+        par_dataset['NUM_REGISTROS'] = len(list(dataset))  # ¿Cuantos registros debería tener cada caso?
+        par_dataset['REGISTROS_EXISTEN'] = dataset.notnull().sum(axis=1)  # ¿Cuantas registros tienen informacion?
         par_dataset['VAR_INTEGRIDAD'] = par_dataset['REGISTROS_EXISTEN'] / par_dataset['NUM_REGISTROS']
 
     variables_par_dataset = list(par_dataset)

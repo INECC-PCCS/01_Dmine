@@ -38,13 +38,13 @@ DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
-ClaveParametro = 'P1010'
-NombreParametro = 'Viviendas que reutilizan sus residuos'
-DescParam = 'Porcentaje de viviendas que reutilizan sus residuos como abono para plantas, alimento de animales o venta'
+ClaveParametro = ''
+NombreParametro = ''
 UnidadesParam = 'Porcentaje'
-TituloParametro = 'RSU_OI'                              # Para nombrar la columna del parametro
+TituloParametro = ''                              # Para nombrar la columna del parametro
 PeriodoParam = '2015'
-TipoInt = 2
+TipoInt = 1
+
 if TipoInt == 1:
     DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
                         '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
@@ -55,14 +55,15 @@ if TipoInt == 2:
                         'para la construcción del parámetro, donde 1 = 100%'
 
 # Descripciones del proceso de Minería
-nomarchivodataset = '21'
+nomarchivodataset = ''
 ArchivoDataset = nomarchivodataset + '.xlsx'
 ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
 ClaveDataset = 'EI2015'
 ActDatos = '2015'
-Agregacion = 'Promedio de viviendas que reutilizan sus residuos en los municipios que componen una Ciudad del SUN. ' \
-             'En la agregación de datos municipales a ciudades del SUN se han excluido los Municipos en los que la ' \
-             'muestra de la Encuesta Intercensal fue clasificada como insuficiente.'
+Agregacion = 'Este parametro considera las variables "Viviendas que entierran o queman sus residuos " Promedio del porcentaje de viviendas particulares habitadas que entregan sus residuos al Servicio ' \
+             'público de Recolección en los municipios que componen una Ciudad del SUN. En la agregación de datos ' \
+             'municipales a ciudades del SUN se han excluido los Municipos en los que la muestra de la Encuesta ' \
+             'Intercensal fue clasificada como insuficiente.'
 
 # Descripciones generadas desde la clave del parámetro
 DirFuente = r'D:\PCCS\01_Dmine\Datasets\{}'.format(ClaveDataset)
@@ -86,12 +87,8 @@ DescDataset = metadataset['Descripcion del dataset']
 DispTemp = metadataset['Disponibilidad Temporal']
 PeriodoAct = metadataset['Periodo de actualizacion']
 DesagrMax = metadataset['Nivel de Desagregacion']
-Notas = 'La Encuesta Intercensal consideró 3 posibilidades de reutilización de residuos: Como alimento para animales,' \
-        'como fertilizante para plantas o separación de residuos reciclables (vidrio, cartón, aluminio) para vender. ' \
-        'Debido a que durante la encuesta, el encuestado podía seleccionar cualquiera de estas 3 opciones como un ' \
-        'método para reutilizar los residuos, para integrar el parámetro se utilizó el mayor de los 3 valores. De ' \
-        'este modo, se evita contar en múltiples ocasiones a las viviendas que reutilizan sus residuos de más de una' \
-        'manera.'
+Notas = 'Este parámetro considera tanto las viviendas que entregan sus residuos al servicio público de recolección ' \
+        'como las viviendas que depositan sus residuos en contenedor o depósito'
 NomFuente = metadataset['Fuente']
 UrlFuente = metadataset['URL_Fuente']
 
@@ -103,9 +100,11 @@ dataset.set_index('CVE_MUN', inplace=True)
 
 # Generar dataset para parámetro y Variable de Integridad
 dataset = dataset[~dataset['Municipio'].str.contains('\*\*')]   # Excluir municipios con ** muestra insuficiente
-par_dataset = dataset['Reutilizan_residuos'].groupby(level=0).agg('max')               # Construccion del Parámetro
+unicol = 'Entregan_residuos_a_servicio_publico_de_recoleccion'  # El parámetro se construye desde 1 unica columna
+colummas = [unicol]
+dataset = dataset[colummas]
+par_dataset = dataset[unicol]                       # Construccion del Parámetro
 par_dataset = par_dataset.to_frame(name = ClaveParametro)
-dataset = dataset.pivot(columns='Forma de reutilizacion de residuos', values='Reutilizan_residuos')
 par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=TipoInt)
 
 # Agregar datos por ciudad para parametro

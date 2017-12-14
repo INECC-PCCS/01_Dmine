@@ -22,7 +22,6 @@ def cargahoja(entidad, ruta, colnames):
     raw_data.set_index('CVE_MUN', inplace=True)
     return raw_data
 
-
 dictionario = {
     '01' : {'01':'A', '02':'B'},
     '02' : {'03':'C', '04':'D'},
