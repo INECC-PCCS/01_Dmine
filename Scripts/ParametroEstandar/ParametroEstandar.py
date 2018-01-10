@@ -17,7 +17,8 @@ DescParametro : [dict] Diccionario con definiciones basicas del parametro, que i
 MetaParametro : [DataSet] Metadatos del Parámetro
 Parametro : [DataSet] El parametro mismo resultante de la minería, por clave del SUN
 DatosLimpios : [DataSet] Los datos base para generar el parámetro
-IntegridadParametro : [dict] diccionario con los dos datasets de integridad generados con el script SUN_Integridad
+IntegridadParametro : [dict] diccionario con los dos dataframe de integridad generados con el script SUN_Integridad
+hacerjson : [True/False] Indicar si se va a generar un archivo json
 
 ---
 El formato de la hoja imita lo mejor posible los colores estándar de identidad gráfica institucional del Gobierno
@@ -38,8 +39,15 @@ http://www.funcionpublica.gob.mx/manual/Guia_Basica_de_Identidad_Grafica_Institu
 import pandas as pd
 import datetime
 import os
+import json
 
-def ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, integridad_parametro, hoja_datos):
+def ParametroEstandar(DescParametro,
+                      MetaParametro,
+                      Parametro,
+                      DatosLimpios,
+                      integridad_parametro,
+                      hoja_datos,
+                      hacerjson = False):
 
     # Desempacar datos simples ----------------------------------------------------------------------------------------
     ClaveParametro = DescParametro['ClaveParametro']
@@ -154,6 +162,15 @@ def ParametroEstandar(DescParametro, MetaParametro, Parametro, DatosLimpios, int
     exisheet.set_column('C:C', c)
     exisheet.set_column('D:D', 47)
     exisheet.set_column('E:E', c)
+
+    # Crear JSON
+    if hacerjson == True:
+        jsonfile = {}
+        jsonfile['METADATOS'] = MetaParametro.today
+        jsonfile['PARAMETRO'] = Parametro
+        jsonfile['DATOS'] = hoja_datos
+        jsonfile['INTEGRIDAD'] = integridad_parametro['INTEGRIDAD']
+        jsonfile['EXISTENCIA'] = integridad_parametro['EXISTENCIA']
 
     # Crear archivo de ultima corrida
     filepath = RutaSalida + r'\{}\{}.txt'.format(ClaveParametro, ClaveParametro)

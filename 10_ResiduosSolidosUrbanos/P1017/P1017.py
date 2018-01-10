@@ -22,6 +22,7 @@ from PCCS_variables.PCCS_variables import variables
 from ParametroEstandar.ParametroEstandar import ParametroEstandar
 from AsignarDimension.AsignarDimension import AsignarDimension
 from DocumentarParametro.DocumentarParametro import DocumentarParametro
+from classes.Meta import Meta
 
 """
 Las librerias locales utilizadas renglones arriba se encuentran disponibles en las siguientes direcciones:
@@ -38,30 +39,23 @@ DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
-ClaveParametro = 'P1017'
-NombreParametro = 'Viviendas que no entregan sus residuos al Servicio Publico de Recolección'
-DescParam = 'Porcentaje de viviendas que no entregan sus residuos al Servcio Publico de Recoleccion, disponiendo de ' \
+M = Meta
+M.ClaveParametro = 'P1017'
+M.NombreParametro = 'Viviendas que no entregan sus residuos al Servicio Publico de Recolección'
+M.DescParam = 'Porcentaje de viviendas que no entregan sus residuos al Servcio Publico de Recoleccion, disponiendo de ' \
             'estos de manera inadecuada'
-UnidadesParam = 'Porcentaje'
-TituloParametro = 'RSU_NO_SPR'                              # Para nombrar la columna del parametro
-PeriodoParam = '2015'
-TipoInt = 2
-if TipoInt == 1:
-    DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
-                        '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
-if TipoInt == 2:
-    DescVarIntegridad = 'Para calcular la variable de integridad de este dataset, se verifica la existencia de ' \
-                        'datos en cada una de las variables que se utilizaron para construir el parámetro. El valor' \
-                        'de la variable de integridad indica el porcentaje de variables del dataset que tienen datos' \
-                        'para la construcción del parámetro, donde 1 = 100%'
+M.UnidadesParam = 'Porcentaje'
+M.TituloParametro = 'RSU_NO_SPR'                              # Para nombrar la columna del parametro
+M.PeriodoParam = '2015'
+M.TipoInt = 2
 
 # Descripciones del proceso de Minería
-nomarchivodataset = '19'
-ArchivoDataset = nomarchivodataset + '.xlsx'
-ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
-ClaveDataset = 'EI2015'
-ActDatos = '2015'
-Agregacion = 'Este parámetro utiliza las variables "Queman_residuos" y "Entierran_residuos_o_tiran_en_otro_lugar". ' \
+M.nomarchivodataset = '19'
+M.extarchivodataset = 'xlsx'
+M.ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
+M.ClaveDataset = 'EI2015'
+M.ActDatos = '2015'
+M.Agregacion = 'Este parámetro utiliza las variables "Queman_residuos" y "Entierran_residuos_o_tiran_en_otro_lugar". ' \
              'Para agregar la información y construir el parámetro, se suman ambas variables y se promedian los ' \
              'valores para los municipios que componen una Ciudad del SUN. En la agregación de datos ' \
              'municipales a ciudades del SUN se han excluido los Municipos en los que la muestra de la Encuesta ' \

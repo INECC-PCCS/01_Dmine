@@ -6,7 +6,10 @@ Created on Mon Oct 30 17:21:27 2017
 
 Descripcion:
 Procesa los datos del parámetro para regresar la variable de integridad.
-Si la variable  de integridad es del tipo binario (Tipo 1), la funcion busca renglones vacíos
+Si la variable  de integridad es del tipo 1 (Binaria), la funcion busca celdas vacías en una sola columna y regresa 0
+si la celda esta vacía o 1 si la celda tiene datos.
+Si la Variable de Integridad es del tipo 2, la funcion busca celdas vacías en varias columnas y calcula un porcentaje
+de integridad en el rango entre 0 y 1, en donde cero es igual a ningun dato (0%) y uno es igual a todos los datos (100%)
 
 Input:
     par_dataset: [pandas dataframe] indexado por CVE_MUN, una sola columna con los datos para construir el parámetro

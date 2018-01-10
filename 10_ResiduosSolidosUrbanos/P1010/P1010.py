@@ -50,8 +50,8 @@ if TipoInt == 1:
                         '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
 if TipoInt == 2:
     DescVarIntegridad = 'Para calcular la variable de integridad de este dataset, se verifica la existencia de ' \
-                        'datos en cada una de las variables que se utilizaron para construir el parámetro. El valor' \
-                        'de la variable de integridad indica el porcentaje de variables del dataset que tienen datos' \
+                        'datos en cada una de las variables que se utilizaron para construir el parámetro. El valor ' \
+                        'de la variable de integridad indica el porcentaje de variables del dataset que tienen datos ' \
                         'para la construcción del parámetro, donde 1 = 100%'
 
 # Descripciones del proceso de Minería
