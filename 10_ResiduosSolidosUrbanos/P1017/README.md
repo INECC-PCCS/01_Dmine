@@ -1,6 +1,6 @@
-# Parametro P1004 - Viviendas que entregan sus residuos a servicio público de recolección
+# Parametro P1017 - Viviendas que no entregan sus residuos al Servicio Publico de Recolección
 
-Archivo de mineria de datos. Parametro: P1004 - Viviendas que entregan sus residuos a servicio público de recolección
+Archivo de mineria de datos. Parametro: P1017 - Viviendas que no entregan sus residuos al Servicio Publico de Recolección
 
 **Contenido**: Estimadores de las viviendas particulares habitadas y su distribución porcentual según la forma de eliminación de residuos por municipio
 

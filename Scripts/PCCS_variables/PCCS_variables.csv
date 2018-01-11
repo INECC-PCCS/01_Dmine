@@ -315,3 +315,15 @@ P0612," Viviendas que utilizan leña o carbón para cocinar, que disponen de estuf
 P0612_Dispone_de_estufa_o_fogon_con_chimenea," Porcentaje de viviendas que utilizan leña o o carbón para cocinar, que disponen de estufa o fogón con chimenea"
 P0613,Viviendas que utilizan gas para cocinar
 P0613_Cocina_con_Gas,Porcentaje de viviendas particulares habitadas que utilizan gas para cocinar
+P1004,Viviendas que entregan sus residuos a servicio público de recolección
+P1004_Entregan_residuos_a_servicio_publico_de_recoleccion,"Porcentaje de viviendas que entregan sus residuos a servicio público de recolección, sin importar si separan residuos orgánicos"
+P1004_Tiran_residuos_en_basurero_publico_colocan_en_contenedor_o_deposito,Porcentaje de viviendas que tiran sus residuos en basurero publico o los colocan en contenedor o depósito.
+P1017,Viviendas que no entregan sus residuos al Servicio Publico de Recolección
+P1017_Entierran_residuos_o_tiran_en_otro_lugar,"Porcentaje de viviendas que entierran sus residuos o los tiran en lugares sin servicio de recoleccion (como calles, baldíos o ríos)"
+P1017_Queman_residuos,Porcentaje de viviendas que queman sus residuos
+P1010,Viviendas que reutilizan sus residuos
+P1010_Reutilizan residuos para alimentar animales,Porcentaje de viviendas que reutilizan sus residuos para alimentar animales
+P1010_Reutilizan residuos para las plantas,Porcentaje de viviendas que reutilizan sus residuos como abono para plantas
+P1010_Reutilizan residuos para vender o regalar,"Porcentaje de viviendas que reutilizan sus residuos para vender o regalar (latas, cartón, plástico, etc.)"
+P1011,Viviendas que separan sus residuos
+P1011_Separan_organicos_inorganicos,Porcentaje de viviendas que separan sus residuos en orgánicos e inorgánicos

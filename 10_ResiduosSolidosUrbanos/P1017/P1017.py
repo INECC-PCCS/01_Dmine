@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Started on fri, dec 8th, 2017
+Started on thu, dec 12nd, 2017
 
 @author: carlos.arana
 
@@ -22,6 +22,7 @@ from PCCS_variables.PCCS_variables import variables
 from ParametroEstandar.ParametroEstandar import ParametroEstandar
 from AsignarDimension.AsignarDimension import AsignarDimension
 from DocumentarParametro.DocumentarParametro import DocumentarParametro
+from classes.Meta import Meta
 
 """
 Las librerias locales utilizadas renglones arriba se encuentran disponibles en las siguientes direcciones:
@@ -38,26 +39,25 @@ DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
-ClaveParametro = 'P1004'
-NombreParametro = 'Viviendas que entregan sus residuos a servicio público de recolección'
-DescParam = 'Porcentaje de viviendas que entregan sus residuos a servicio público de recolección, sin importar si' \
-            'separan residuos orgánicos'
-UnidadesParam = 'Porcentaje'
-TituloParametro = 'RSU_A_SPR'                              # Para nombrar la columna del parametro
-PeriodoParam = '2015'
-DescVarIntegridad = 'Para calcular la variable de integridad de este dataset, se verifica la existencia de ' \
-                    'datos en cada una de las variables que se utilizaron para construir el parámetro. El valor' \
-                    'de la variable de integridad indica el porcentaje de variables del dataset que tienen datos' \
-                    'para la construcción del parámetro, donde 1 = 100%'
+M = Meta
+M.ClaveParametro = 'P1017'
+M.NombreParametro = 'Viviendas que no entregan sus residuos al Servicio Publico de Recolección'
+M.DescParam = 'Porcentaje de viviendas que no entregan sus residuos al Servcio Publico de Recoleccion, disponiendo de ' \
+            'estos de manera inadecuada'
+M.UnidadesParam = 'Porcentaje'
+M.TituloParametro = 'RSU_NO_SPR'                              # Para nombrar la columna del parametro
+M.PeriodoParam = '2015'
+M.TipoInt = 2
 
 # Descripciones del proceso de Minería
-nomarchivodataset = '19'
-ArchivoDataset = nomarchivodataset + '.xlsx'
-ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
-ClaveDataset = 'EI2015'
-ActDatos = '2015'
-Agregacion = 'Promedio del porcentaje de viviendas particulares habitadas que entregan sus residuos al Servicio ' \
-             'público de Recolección en los municipios que componen una Ciudad del SUN. En la agregación de datos ' \
+M.nomarchivodataset = '19'
+M.extarchivodataset = 'xlsx'
+M.ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
+M.ClaveDataset = 'EI2015'
+M.ActDatos = '2015'
+M.Agregacion = 'Este parámetro utiliza las variables "Queman_residuos" y "Entierran_residuos_o_tiran_en_otro_lugar". ' \
+             'Para agregar la información y construir el parámetro, se suman ambas variables y se promedian los ' \
+             'valores para los municipios que componen una Ciudad del SUN. En la agregación de datos ' \
              'municipales a ciudades del SUN se han excluido los Municipos en los que la muestra de la Encuesta ' \
              'Intercensal fue clasificada como insuficiente.'
 
@@ -83,8 +83,9 @@ DescDataset = metadataset['Descripcion del dataset']
 DispTemp = metadataset['Disponibilidad Temporal']
 PeriodoAct = metadataset['Periodo de actualizacion']
 DesagrMax = metadataset['Nivel de Desagregacion']
-Notas = 'Este parámetro considera tanto las viviendas que entregan sus residuos al servicio público de recolección ' \
-        'como las viviendas que depositan sus residuos en contenedor o depósito'
+Notas = 'Este parámetro considera las viviendas que no entregan sus residuos a un servicio público de ' \
+        'recolección, y que disponen de estos quemándolos o tirándolos en lugares inadecuados (Como puede ser en ' \
+        'la calle, baldío o río)'
 NomFuente = metadataset['Fuente']
 UrlFuente = metadataset['URL_Fuente']
 
@@ -96,11 +97,11 @@ dataset.set_index('CVE_MUN', inplace=True)
 
 # Generar dataset para parámetro y Variable de Integridad
 dataset = dataset[~dataset['Municipio'].str.contains('\*\*')]   # Excluir municipios con ** muestra insuficiente
-columnas = list(dataset)[2:4]
+columnas = list(dataset)[4:6]
 dataset = dataset[columnas]
 par_dataset = dataset.sum(axis=1)               # Construccion del Parámetro
 par_dataset = par_dataset.to_frame(name = ClaveParametro)
-par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo = 2)
+par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=TipoInt)
 
 # Agregar datos por ciudad para parametro
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'NOM_ENT']

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Started on fri, dec 8th, 2017
+Started on thu, dec 12nd, 2017
 
 @author: carlos.arana
 
@@ -38,25 +38,29 @@ DocumentarParametro | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
-ClaveParametro = 'P1004'
-NombreParametro = 'Viviendas que entregan sus residuos a servicio público de recolección'
-DescParam = 'Porcentaje de viviendas que entregan sus residuos a servicio público de recolección, sin importar si' \
-            'separan residuos orgánicos'
+ClaveParametro = ''
+NombreParametro = ''
 UnidadesParam = 'Porcentaje'
-TituloParametro = 'RSU_A_SPR'                              # Para nombrar la columna del parametro
+TituloParametro = ''                              # Para nombrar la columna del parametro
 PeriodoParam = '2015'
-DescVarIntegridad = 'Para calcular la variable de integridad de este dataset, se verifica la existencia de ' \
-                    'datos en cada una de las variables que se utilizaron para construir el parámetro. El valor' \
-                    'de la variable de integridad indica el porcentaje de variables del dataset que tienen datos' \
-                    'para la construcción del parámetro, donde 1 = 100%'
+TipoInt = 1
+
+if TipoInt == 1:
+    DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
+                        '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
+if TipoInt == 2:
+    DescVarIntegridad = 'Para calcular la variable de integridad de este dataset, se verifica la existencia de ' \
+                        'datos en cada una de las variables que se utilizaron para construir el parámetro. El valor' \
+                        'de la variable de integridad indica el porcentaje de variables del dataset que tienen datos' \
+                        'para la construcción del parámetro, donde 1 = 100%'
 
 # Descripciones del proceso de Minería
-nomarchivodataset = '19'
+nomarchivodataset = ''
 ArchivoDataset = nomarchivodataset + '.xlsx'
 ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
 ClaveDataset = 'EI2015'
 ActDatos = '2015'
-Agregacion = 'Promedio del porcentaje de viviendas particulares habitadas que entregan sus residuos al Servicio ' \
+Agregacion = 'Este parametro considera las variables "Viviendas que entierran o queman sus residuos " Promedio del porcentaje de viviendas particulares habitadas que entregan sus residuos al Servicio ' \
              'público de Recolección en los municipios que componen una Ciudad del SUN. En la agregación de datos ' \
              'municipales a ciudades del SUN se han excluido los Municipos en los que la muestra de la Encuesta ' \
              'Intercensal fue clasificada como insuficiente.'
@@ -96,11 +100,12 @@ dataset.set_index('CVE_MUN', inplace=True)
 
 # Generar dataset para parámetro y Variable de Integridad
 dataset = dataset[~dataset['Municipio'].str.contains('\*\*')]   # Excluir municipios con ** muestra insuficiente
-columnas = list(dataset)[2:4]
-dataset = dataset[columnas]
-par_dataset = dataset.sum(axis=1)               # Construccion del Parámetro
+unicol = 'Entregan_residuos_a_servicio_publico_de_recoleccion'  # El parámetro se construye desde 1 unica columna
+colummas = [unicol]
+dataset = dataset[colummas]
+par_dataset = dataset[unicol]                       # Construccion del Parámetro
 par_dataset = par_dataset.to_frame(name = ClaveParametro)
-par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo = 2)
+par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=TipoInt)
 
 # Agregar datos por ciudad para parametro
 variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'NOM_ENT']
