@@ -37,3 +37,8 @@ ElMetadato.__subclasshook__
 ElMetadato.__weakref__
 ElMetadato.fillmeta
 ElMetadato.metafromds
+
+import json
+
+thejson = open(r'D:\testjson.json')
+thejson = json.load(thejson)

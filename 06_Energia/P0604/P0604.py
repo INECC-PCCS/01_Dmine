@@ -28,12 +28,11 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 M = Meta
-M.ClaveParametro = 'P1017'
-M.NombreParametro = 'Viviendas que no entregan sus residuos al Servicio Publico de Recolección'
-M.DescParam = 'Porcentaje de viviendas que no entregan sus residuos al Servcio Publico de Recoleccion, disponiendo de ' \
-            'estos de manera inadecuada'
+M.ClaveParametro = 'P0604'
+M.NombreParametro = 'Viviendas con calentador solar'
+M.DescParam = 'Porcentaje de viviendas particulares habitadas que cuentan con calentador solar'
 M.UnidadesParam = 'Porcentaje'
-M.TituloParametro = 'RSU_NO_SPR'                              # Para nombrar la columna del parametro
+M.TituloParametro = 'VIV_CS'                              # Para nombrar la columna del parametro
 M.PeriodoParam = '2015'
 M.TipoInt = 2
 
@@ -44,13 +43,13 @@ M.array = []
 M.TipoAgr = 'mean'
 
 # Descripciones del proceso de Minería
-M.nomarchivodataset = '19'
+M.nomarchivodataset = '23'
 M.extarchivodataset = 'xlsx'
 M.ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
 M.ClaveDataset = 'EI2015'
 M.ActDatos = '2015'
-M.Agregacion = 'Este parámetro utiliza las variables "Queman_residuos" y "Entierran_residuos_o_tiran_en_otro_lugar". ' \
-             'Para agregar la información y construir el parámetro, se suman ambas variables y se promedian los ' \
+M.Agregacion = 'Promedio del porcentaje de viviendas viviendas que disponen de calentador solar de agua ' \
+             'Para agregar la información y construir el parámetro, se promedian los ' \
              'valores para los municipios que componen una Ciudad del SUN. En la agregación de datos ' \
              'municipales a ciudades del SUN se han excluido los Municipos en los que la muestra de la Encuesta ' \
              'Intercensal fue clasificada como insuficiente.'
@@ -59,9 +58,7 @@ M.getmetafromds = 1
 # Descripciones generadas desde la clave del parámetro
 Meta.fillmeta(M)
 
-M.Notas = 'Este parámetro considera las viviendas que no entregan sus residuos a un servicio público de ' \
-        'recolección, y que disponen de estos quemándolos o tirándolos en lugares inadecuados (Como puede ser en ' \
-        'la calle, baldío o río)'
+M.Notas = ''
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Cargar dataset inicial
@@ -71,11 +68,13 @@ dataset.set_index('CVE_MUN', inplace=True)
 
 # Generar dataset para parámetro y Variable de Integridad
 dataset = dataset[~dataset['Municipio'].str.contains('\*\*')]   # Excluir municipios con ** muestra insuficiente
-columnas = list(dataset)[4:6]
-dataset = dataset[columnas]
-par_dataset = dataset.sum(axis=1)               # Construccion del Parámetro
-par_dataset = par_dataset.to_frame(name = M.ClaveParametro)
-par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
+dataset = dataset[dataset['Tipo de equipamiento'].str.contains('Calentador solar de agua')]
+
+colummas = ['Dispone_de_Equipamiento']                 # Columnas que se utilizan para construir el parámetro
+dataset = dataset[colummas]
+par_dataset = dataset
+par_dataset = par_dataset.rename(columns = {'Dispone_de_Equipamiento' : M.ClaveParametro})
+par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo = 1)
 
 # Compilacion
 compilar(M, dataset, par_dataset, variables_dataset)

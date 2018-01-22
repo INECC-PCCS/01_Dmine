@@ -327,3 +327,13 @@ P1010_Reutilizan residuos para las plantas,Porcentaje de viviendas que reutiliza
 P1010_Reutilizan residuos para vender o regalar,"Porcentaje de viviendas que reutilizan sus residuos para vender o regalar (latas, cartón, plástico, etc.)"
 P1011,Viviendas que separan sus residuos
 P1011_Separan_organicos_inorganicos,Porcentaje de viviendas que separan sus residuos en orgánicos e inorgánicos
+I1017,Integridad para el parametro P01017
+I0601,Integridad del parametro I0601
+P0601,Viviendas particulares habitadas que disponen de electricidad
+P0601_Disponen_de_electricidad,Viviendas particulares habitadas que disponen de electricidad
+I0604,Integridad del parametro P0604
+P0604,Viviendas con calentador solar
+P0604_Dispone_de_Equipamiento,Porcentaje municipal de viviendas particulares habitadas que cuentan con calentador solar
+I0605,Integridad del Parámetro P0605
+P0605,Viviendas con panel solar
+P0605_Dispone_de_Equipamiento,Porcentaje de viviendas particulares habitadas que cuentan con panel solar
