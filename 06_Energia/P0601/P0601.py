@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Started on thu, dec 12nd, 2017
+Started on wed, jan 17th, 2018
 
 @author: carlos.arana
 
@@ -28,29 +28,28 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 M = Meta
-M.ClaveParametro = 'P1017'
-M.NombreParametro = 'Viviendas que no entregan sus residuos al Servicio Publico de Recolección'
-M.DescParam = 'Porcentaje de viviendas que no entregan sus residuos al Servcio Publico de Recoleccion, disponiendo de ' \
-            'estos de manera inadecuada'
+M.ClaveParametro = 'P0601'
+M.NombreParametro = 'Viviendas particulares habitadas que disponen de electricidad'
+M.DescParam = 'Porcentaje de viviendas que cuentan con el servicio de energía eléctrica'
 M.UnidadesParam = 'Porcentaje'
-M.TituloParametro = 'RSU_NO_SPR'                              # Para nombrar la columna del parametro
+M.TituloParametro = 'VIV_ELEC'                              # Para nombrar la columna del parametro
 M.PeriodoParam = '2015'
-M.TipoInt = 2
+M.TipoInt = 1
 
 # Handlings
 M.ParDtype = 'float'
-M.TipoVar = 'C'     # (Tipos de Variable: [C]ontinua, [D]iscreta [O]rdinal, [B]inaria o [N]ominal)
+M.TipoVar = 'C'
 M.array = []
 M.TipoAgr = 'mean'
 
 # Descripciones del proceso de Minería
-M.nomarchivodataset = '19'
+M.nomarchivodataset = '16'
 M.extarchivodataset = 'xlsx'
 M.ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
 M.ClaveDataset = 'EI2015'
 M.ActDatos = '2015'
-M.Agregacion = 'Este parámetro utiliza las variables "Queman_residuos" y "Entierran_residuos_o_tiran_en_otro_lugar". ' \
-             'Para agregar la información y construir el parámetro, se suman ambas variables y se promedian los ' \
+M.Agregacion = 'Este parámetro utiliza la variable "Disponen de Electricidad". ' \
+             'Para agregar la información y construir el parámetro, se promedian los ' \
              'valores para los municipios que componen una Ciudad del SUN. En la agregación de datos ' \
              'municipales a ciudades del SUN se han excluido los Municipos en los que la muestra de la Encuesta ' \
              'Intercensal fue clasificada como insuficiente.'
@@ -59,9 +58,7 @@ M.getmetafromds = 1
 # Descripciones generadas desde la clave del parámetro
 Meta.fillmeta(M)
 
-M.Notas = 'Este parámetro considera las viviendas que no entregan sus residuos a un servicio público de ' \
-        'recolección, y que disponen de estos quemándolos o tirándolos en lugares inadecuados (Como puede ser en ' \
-        'la calle, baldío o río)'
+M.Notas = ''
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Cargar dataset inicial
@@ -71,10 +68,12 @@ dataset.set_index('CVE_MUN', inplace=True)
 
 # Generar dataset para parámetro y Variable de Integridad
 dataset = dataset[~dataset['Municipio'].str.contains('\*\*')]   # Excluir municipios con ** muestra insuficiente
-columnas = list(dataset)[4:6]
+columnas = 'Disponen_de_electricidad'
 dataset = dataset[columnas]
-par_dataset = dataset.sum(axis=1)               # Construccion del Parámetro
+par_dataset = dataset               # Construccion del Parámetro ()
 par_dataset = par_dataset.to_frame(name = M.ClaveParametro)
+dataset = dataset.to_frame()        # Dataset debe ser tipo DataFrame
+# Dataset y par_dataset deben ser tipo DataFrame
 par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
 
 # Compilacion

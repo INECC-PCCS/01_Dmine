@@ -66,7 +66,7 @@ def DocumentarParametro(DescParametro, MetaParametro, Parametro):
 
     # Integrar datos de parámetro e integridad
     HojaParametros[ClaveParam] = Parametro[ClaveParam]
-    HojaIntegridad['INT_{}'.format(ClaveParam)] = Parametro['INTEGRIDAD']
+    HojaIntegridad[DescParametro['ClaveIntegridad']] = Parametro[DescParametro['ClaveIntegridad']]
 
     # Ordenar la informacion
     HojaIndice.sort_index(axis=0, inplace=True)

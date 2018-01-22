@@ -6,9 +6,9 @@ Archivo de mineria de datos. Parametro: P1017 - Viviendas que no entregan sus re
 
 **FUENTE**: INEGI (Microdatos)
 
-**Dataset Base**: "19.xlsx.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/EI2015
+**Dataset Base**: "19.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/EI2015
 
-**Ultima revision del parametro**: 2017/12/12 
+**Ultima revision del parametro**: 2018/01/19 
 
 **Ultima Actualizacion de los datos**: 2015
 

@@ -18,17 +18,16 @@ MetaParametro : [DataSet] Metadatos del Parámetro
 Parametro : [DataSet] El parametro mismo resultante de la minería, por clave del SUN
 DatosLimpios : [DataSet] Los datos base para generar el parámetro
 IntegridadParametro : [dict] diccionario con los dos dataframe de integridad generados con el script SUN_Integridad
-hacerjson : [True/False] Indicar si se va a generar un archivo json
 
 ---
 El formato de la hoja imita lo mejor posible los colores estándar de identidad gráfica institucional del Gobierno
 de la República, periodo 2012 - 2018. Cuando ha sido necesario, se han utilizado tonalidades más claras o más oscuras
 de los colores estándar para lograr distinciones en la información presentada.
 
-[Rojo]          = Pantone 200 C             = Hex #BA0C2F
-[Verde]         = Pantone 356 C             = Hex #007A33
-[Gris Oscuro]   = Pantone Cool Gray 10 C    = Hex #63666A
-[Gris claro ()] = Pantone 877 C (Plata)     = Hex #8A8D8F
+[Rojo]          = Pantone 200 C             = Hex #BA0C2F = rgb(186,12,47)
+[Verde]         = Pantone 356 C             = Hex #007A33 = rgb(0,122,51)
+[Gris Oscuro]   = Pantone Cool Gray 10 C    = Hex #63666A = rgb(99,102,106)
+[Gris claro ()] = Pantone 877 C (Plata)     = Hex #8A8D8F = rgb(138,141,143)
 
 El manual de identidad se encuentra disponible en
 http://www.funcionpublica.gob.mx/manual/Guia_Basica_de_Identidad_Grafica_Institucional.pdf
@@ -46,8 +45,7 @@ def ParametroEstandar(DescParametro,
                       Parametro,
                       DatosLimpios,
                       integridad_parametro,
-                      hoja_datos,
-                      hacerjson = False):
+                      hoja_datos):
 
     # Desempacar datos simples ----------------------------------------------------------------------------------------
     ClaveParametro = DescParametro['ClaveParametro']
@@ -162,15 +160,6 @@ def ParametroEstandar(DescParametro,
     exisheet.set_column('C:C', c)
     exisheet.set_column('D:D', 47)
     exisheet.set_column('E:E', c)
-
-    # Crear JSON
-    if hacerjson == True:
-        jsonfile = {}
-        jsonfile['METADATOS'] = MetaParametro.today
-        jsonfile['PARAMETRO'] = Parametro
-        jsonfile['DATOS'] = hoja_datos
-        jsonfile['INTEGRIDAD'] = integridad_parametro['INTEGRIDAD']
-        jsonfile['EXISTENCIA'] = integridad_parametro['EXISTENCIA']
 
     # Crear archivo de ultima corrida
     filepath = RutaSalida + r'\{}\{}.txt'.format(ClaveParametro, ClaveParametro)
