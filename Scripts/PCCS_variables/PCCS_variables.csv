@@ -337,3 +337,4 @@ P0604_Dispone_de_Equipamiento,Porcentaje municipal de viviendas particulares hab
 I0605,Integridad del Parámetro P0605
 P0605,Viviendas con panel solar
 P0605_Dispone_de_Equipamiento,Porcentaje de viviendas particulares habitadas que cuentan con panel solar
+P1017_prog_mod,Clasificación de los municipios de acuerdo con el programa de modernización catastral con el que cuenta.\n1: Cuenta con PMC\n2: No Cuenta con PMC\n3: No se sabe si cuenta con PMC
