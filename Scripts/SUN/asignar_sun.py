@@ -9,7 +9,7 @@ Started on Fri Aug  4 12:54:13 2017
 Espera los siguientes parametros:
     dataframe: pandas dataframe al que se desean asignar claves geoestadisticas
     CVE_MUN: str, Nombre de la columna en dataframe que contiene la clave geoestadística a nivel municipal (5 DIGITOS)
-    vars = [list] columnas del catalogo geoestadístico que se unirán.
+    variables = [list] columnas del catalogo geoestadístico que se unirán.
 
 Crea las siguientes columnas:
     CVE_SUN: Clave de 3 digitos del SUN
@@ -22,7 +22,7 @@ Crea las siguientes columnas:
 from pandas import read_csv as rcsv
 import pandas as pd
 
-def asignar_sun(dataframe, CVE_MUN = 'CVE_MUN', vars = ['CVE_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN']):
+def asignar_sun(dataframe, CVE_MUN = 'CVE_MUN', variables = ['CVE_MUN', 'CVE_SUN', 'NOM_SUN', 'TIPO_SUN']):
     # Cargar archivo del Subsistema Principal del SUN
     sun = rcsv(r'D:\PCCS\01_Dmine\00_Generales\sun_main.csv',
                       dtype={'CVE_SUN': str,
@@ -38,11 +38,11 @@ def asignar_sun(dataframe, CVE_MUN = 'CVE_MUN', vars = ['CVE_MUN', 'CVE_SUN', 'N
 
 #    print('Catalogo de variables. Default vars = {}'.format(vars))
 #    print(list(sun))
-    if 'CVE_MUN' not in vars: vars.append('CVE_MUN')
+    if 'CVE_MUN' not in variables: variables.append('CVE_MUN')
 
     dataframe.rename(columns={CVE_MUN : 'CVE_MUN'}, inplace = True)   # Estandariza el nombre de la columna de clave geoestadistica
     sun.drop_duplicates('CVE_SUNMUN', keep='first', inplace = True)   # Quita los municipios que en el dataset aparecen duplicados por estar subdivididos en localidades
-    sun = sun[vars]
+    sun = sun[variables]
     dataframe = pd.merge(dataframe, sun, on='CVE_MUN')
 
     # Eliminar registros que no formen parte del Subsistema Principal

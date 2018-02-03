@@ -48,31 +48,33 @@ M.extarchivodataset = 'xlsx'
 M.ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
 M.ClaveDataset = 'CNGMD'
 M.ActDatos = '2015'
-M.Agregacion = 'Este parámetro utiliza la variable "prog_mod" indica si un municipio cuenta con Programa ' \
-               'de Modernizacion Catastral. ' \
-             'Para agregar la información y construir el parámetro, se suman ambas variables y se promedian los ' \
-             'valores para los municipios que componen una Ciudad del SUN. En la agregación de datos ' \
-             'municipales a ciudades del SUN se han excluido los Municipos en los que la muestra de la Encuesta ' \
-             'Intercensal fue clasificada como insuficiente.'
+M.Agregacion = 'Este parámetro utiliza la variable "prog_mod", que indica si un municipio cuenta con Programa ' \
+               'de Modernizacion Catastral. Para agregar la información y construir el parámetro, se verifica cuáles ' \
+               'de los municipios que integran una ciudad cuentan con programa de modernizacion catastral. El valor ' \
+               'del parámetro indica el porcentaje de municipios de una ciudad que cuentan con Programa de ' \
+               'Modernizacion Catastral'
+
 M.getmetafromds = 1
 
 # Descripciones generadas desde la clave del parámetro
 Meta.fillmeta(M)
 
-M.Notas = ''
+M.Notas = 's/n'
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Cargar dataset inicial
 dataset = pd.read_excel(M.DirFuente + '\\' + M.ArchivoDataset,
-                        sheetname=M.nomarchivodataset, dtype={'CVE_MUN': str})
-dataset.set_index('ubic_geo', inplace=True)
+                        sheetname=M.nomarchivodataset, dtype={'CVE_MUN': 'str'})
+dataset.set_index('CVE_MUN', inplace=True)
 dataset = dataset.rename_axis('CVE_MUN')
 
 # Generar dataset para parámetro y Variable de Integridad
-dataset = dataset[dataset['prog_mod'] == 1]   # Excluir municipios con ** muestra insuficiente
 columnas = 'prog_mod'
-dataset = dataset[columnas]
-par_dataset = dataset
-dataset = dataset.to_frame()
-par_dataset = par_dataset.to_frame(name = M.ClaveParametro)
+existepcat = {1:True, 2:False, 99:None}   # Reemplaza los valores de 1 o 2 con valores lógicos fáciles de usar
+dataset[columnas] = dataset[columnas].map(existepcat)
+dataset = dataset[~dataset[columnas].isnull()]   # Elimina los renglones en donde no hay informacion sobre PRC
+par_dataset = dataset[columnas].to_frame(name = M.ClaveParametro)
 par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
+
+# Compilacion
+compilar(M, dataset, par_dataset, variables_dataset)

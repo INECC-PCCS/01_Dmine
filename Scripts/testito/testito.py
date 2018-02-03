@@ -92,5 +92,17 @@ df = pd.DataFrame(data, index = ['Cochice', 'Pima', 'Santa Cruz', 'Maricopa', 'Y
 df.head()
 list(df.year.unique())
 
-df = pd.DataFrame([['text', None, None], [1, 2, 3], [4, None, None], [None, None, 9]])
+df = pd.DataFrame([['de', None, None],
+                   ['de ditos', 2, 3],
+                   [4, None, None],
+                   [None, None, 9],
+                   ['de', 4, 6]])
 
+
+def erasedes(x):
+    if x == 'de':
+        return None
+    else:
+        pass
+
+df[0] = df[0].apply(lambda x: erasedes(x))
