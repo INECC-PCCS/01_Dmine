@@ -44,7 +44,6 @@ M.array = []
 M.TipoAgr = 'mean'
 
 # Descripciones del proceso de Minería
-
 M.nomarchivodataset = '19'
 M.extarchivodataset = 'xlsx'
 M.ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'

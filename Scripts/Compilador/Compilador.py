@@ -45,7 +45,7 @@ def compilar(M, dataset, par_dataset, variables_dataset):
 
     # Agregar datos por ciudad para parametro
     variables_SUN = ['CVE_MUN', 'NOM_MUN', 'CVE_SUN', 'NOM_SUN', 'NOM_ENT']
-    DatosLimpios = asignar_sun(par_dataset, vars=variables_SUN)
+    DatosLimpios = asignar_sun(par_dataset, variables=variables_SUN)
     OrdenColumnas = (variables_SUN + variables_dataset)
     DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
 
