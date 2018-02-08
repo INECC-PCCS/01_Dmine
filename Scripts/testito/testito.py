@@ -106,3 +106,26 @@ def erasedes(x):
         pass
 
 df[0] = df[0].apply(lambda x: erasedes(x))
+
+
+df = pd.DataFrame([['de', None, None],
+                   ['de ditos', 2, 3],
+                   [4, None, None],
+                   [None, None, 9],
+                   ['de', 4, 6]])
+
+sr = pd.Series([[None, 4, 6]])
+
+
+import numpy as np
+import json
+
+file = r'D:\testjson.json'
+x = {'a' : np.int64(1)}
+y = {'a' : np.float64(1)}
+
+with open(file, 'wb') as f:
+    json.dump(x, codecs.getwriter('utf-8')(f), ensure_ascii=False)
+
+with open(file, 'wb') as f:
+    json.dump(y, codecs.getwriter('utf-8')(f), ensure_ascii=False)
