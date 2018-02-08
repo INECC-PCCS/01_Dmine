@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Started on thu, feb 08th, 2018
+Started on tue, feb 06th, 2018
 
 @author: carlos.arana
 
@@ -28,12 +28,12 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 M = Meta
-M.ClaveParametro = 'P0309'
-M.NombreParametro = 'Total de viviendas'
-M.DescParam = 'Total de viviendas'
-M.UnidadesParam = 'Numero de viviendas'
-M.TituloParametro = 'VIVTOT'                              # Para nombrar la columna del parametro
-M.PeriodoParam = '2010'
+M.ClaveParametro = 'P1005'
+M.NombreParametro = 'Número de vehículos utilizados para la recolección de residuos sólidos urbanos'
+M.DescParam = 'Número de vehículos utilizados para la recolección de residuos sólidos urbanos'
+M.UnidadesParam = 'Numero de vehiculos'
+M.TituloParametro = 'VRRSU'                              # Para nombrar la columna del parametro
+M.PeriodoParam = '2015'
 M.TipoInt = 1
 
 # Handlings
@@ -45,16 +45,15 @@ M.TipoAgr = 'sum'
 # Descripciones del proceso de Minería
 M.nomarchivodataset = M.ClaveParametro
 M.extarchivodataset = 'xlsx'
-M.ContenidoHojaDatos = 'Datos disponibles por municipio para 2010, utilizados para la construcción del parametro'
-M.ClaveDataset = 'CPV'
-M.ActDatos = '2010'
-M.Agregacion = 'Este parámetro utiliza la variable "VIVTOT" de la base de datos del Censo Nacional de Poblacion y' \
-               'Vivienda 2010, que indica el Total de Viviendas, incluyendo: Viviendas particulares habitadas, ' \
-               'deshabitadas, de uso temporal y colectivas. Incluye a las viviendas particulares sin información de ' \
-               'sus ocupantes.' \
-               '\nPara agregar la información y construir el parámetro, se suma el valor de VIVTOT de todos los ' \
-               'municipios de los que componen cada ciudad del SUN. De este modo, el valor de P0309 indica el ' \
-               'numero total de viviendas en cada ciudad del SUN.'
+M.ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
+M.ClaveDataset = 'CNGMD'
+M.ActDatos = '2015'
+M.Agregacion = 'Este parámetro utiliza la variable "P6_3_2_1_3" de la base de datos del Censo Nacional de Gobiernos ' \
+               'Municipales y Delegacionales 2015, que indica el numero de vehiculos utilizados para la recoleccion ' \
+               'de sus Residuos Solidos Urbanos (RSU) de cada municipio.' \
+               '\nPara agregar la información y construir el parámetro, se suma el valor de P6_3_2_1_3 de todos los ' \
+               'municipios de los que componen cada ciudad del SUN. De este modo, el valor de P1005 indica el ' \
+               'numero de vehiculos utilizados para la recoleccion de RS en cada ciudad del SUN.'
 
 M.getmetafromds = 1
 
@@ -72,7 +71,7 @@ dataset = dataset.apply(pd.to_numeric).where((pd.notnull(dataset)), None)
 dataset = dataset.rename_axis('CVE_MUN')
 
 # Generar dataset para parámetro y Variable de Integridad
-par_dataset = dataset['VIVTOT'].to_frame(name = M.ClaveParametro)
+par_dataset = dataset['P6_3_2_1_3'].to_frame(name = M.ClaveParametro)
 par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
 
 # Compilacion
