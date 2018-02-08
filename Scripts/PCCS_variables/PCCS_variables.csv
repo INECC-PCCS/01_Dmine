@@ -337,8 +337,62 @@ P0604_Dispone_de_Equipamiento,Porcentaje municipal de viviendas particulares hab
 I0605,Integridad del Parámetro P0605
 P0605,Viviendas con panel solar
 P0605_Dispone_de_Equipamiento,Porcentaje de viviendas particulares habitadas que cuentan con panel solar
-P1017_prog_mod,Clasificación de los municipios de acuerdo con el programa de modernización catastral con el que cuenta.\n1: Cuenta con PMC\n2: No Cuenta con PMC\n3: No se sabe si cuenta con PMC
-P1017_CVE_MUN,"variables_locales = sorted(list(set(list(DatosLimpios) +
-                                 ss  "
-P1017_P1017_Entierran_residuos_o_tiran_en_otro_lugar,ss
-P1017_P1017_Queman_residuos,SS
+I0306,Integridad para el parametro P0306
+P0306,"Municipios que cuentan con un Programa de modernizacion Catastral (1: Cuenta con Programa, 0: No cuenta con Programa)"
+P0306_acc_modr,"Clasificación de los municipios de acuerdo con las acciones del programa de modernización catastral que se han realizado en ellos.
+1: Actualizar el padrón catastral
+2: Generar o actualizar la cartografía catastral
+3: Adquirir un sistema de gestión catastral
+4: Adquirir equipamiento e infraestructura (computadoras, servidores, vehículos, comunicaciones)
+5: Adecuar los espacio físicos
+6: Mejorar los procesos catastrales
+7: Otro
+99: No se sabe"
+P0306_i_coord_ejecuta,Institucion(es) que coordina o ejecuta acciones de modernizacion catastral en el municipio
+P0306_i_otorga_apoyos,Institucion que otorga apoyos de modernizacion catastral en el municipio
+P0306_n_acc_modr,Numero de acciones de modernizacion catastral e el municipio
+P0306_perio_ac,"Clasificación de los municipios de acuerdo con el periodo en el que se realizaron las acciones del programa de modernización catastral.
+1: En el transcurso del presente año
+2: Durante el año 2014
+3: Durante el año 2013
+4: Antes del año 2013
+5: No se han realizado acciones para atender el tema
+99: No se sabe"
+P0306_prog_mod,"Clasificación de los municipios de acuerdo con el programa de modernización catastral con el que cuenta.
+1: Si
+2: No
+99: No se sabe"
+I0307,Integridad de los datos del parámetro P0307
+P0307,"Municipios que cuentan con Disposiciones normativas sustantivas en materia de desarrollo urbano u ordenamiento territorial vigentes en la  Administraciones Públicas Municipales o Delegacionales, al cierre del año 2014"
+P0307_est_ttdi,"Clasificación de los casos en que la información no aplica o no se conoce (NA), o la informacion no se encuentra disponible (ND) o no se cuenta con elementos para responder (NS) para el total de disposiciones normativas."
+P0307_estructu,"Clasificación de los municipios y las delegaciones del Distrito Federal de acuerdo con la cantidad de disposiciones normativas internas por tema que deben ser observadas por las Administraciones Públicas Municipales o Delegacionales para el ejercicio de sus funciones. 290200 = Disposiciones normativas administrativas, según temas."
+P0307_instrum,"Clasificación de los municipios delegaciones de acuerdo con el tipo de disposición normativa interna sustantiva y administrativas con que contaron las Administraciones Públicas Municipales o Delegacionales, al cierre del año 2014.
+0: No aplica
+1: Reglamentos
+2: Acuerdos
+3: Normas
+4: Lineamientos
+5: Manuales
+6: Bases
+7: Oficios circular
+8: Otras
+98: Información no disponible
+99: No especificado"
+P0307_tema_nis,"Disposiciones normativas internas sustantivas vigentes en la  Administraciones Públicas Municipales o Delegacionales, al cierre del año 2014 (El codigo 41 identifica dispociciones en materia de Desarrollo urbano u ordenamiento territorial"
+P0307_tt_dispo,"Cantidad de disposiciones normativas internas, tanto sustantivas como administrativas, con que contaron las Administraciones Públicas Municipales o Delegacionales, al cierre del año 2014"
+I1001,Integridad del parametro P1001
+P1001,Cantidad promedio diaria de residuos sólidos urbanos recolectada por clave SUN
+P1001_p2_2,"Cantidad promedio diaria de residuos sólidos urbanos recolectada en este Municipio o Delegación, en kilogramos"
+I1006,Integridad del parametro P1006
+P1006,Número de municipios que cuentan con algún programa orientado a la gestión integral de residuos sólidos urbanos
+P1006_p13,"Indica si se cuenta con algún programa orientado a la gestión integral de residuos sólidos urbanos. (1: Si, 2:No)"
+I1009,Integridad del parametro P1009
+P1009,Número de municipios que cuentan con algún estudio sobre la generación de residuos sólidos urbanos.
+P1009_p12,"Indica si el municipio cuenta con algún estudio sobre la generación de residuos sólidos urbanos (1: Si, 2:No)."
+I1003,Integridad del parametro P1003
+P1003,Número de municipios que envian al menos una fracción de sus Residuos a plantas de tratamiento
+P1003_p1,"Indica si el municipio o delegacion cuenta con el resvicio de recoleccion de residuos (1: Si, 2:No)"
+P1003_p10,Indica si al menos una fracción de los residuos sólidos urbanos recolectados por el municipio o delegación es enviada a plantas de tratamiento.
+I1005,Integridad del parametro P1005.
+P1005,Número de vehículos utilizados para la recolección de residuos sólidos urbanos.
+P1005_P6_3_2_1_3,Número de vehículos utilizados para la recolección de residuos sólidos urbanos.

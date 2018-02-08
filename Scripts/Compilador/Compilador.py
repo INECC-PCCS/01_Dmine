@@ -22,7 +22,7 @@ Descripcion:
 import pandas as pd
 import json
 import codecs
-
+import numpy as np
 from SUN.asignar_sun import asignar_sun
 from SUN_integridad.SUN_integridad import SUN_integridad
 from PCCS_variables.PCCS_variables import variables
@@ -31,7 +31,7 @@ from DocumentarParametro.DocumentarParametro import DocumentarParametro
 
 
 def compilar(M, dataset, par_dataset, variables_dataset):
-    # Revisa si la variable requiere que se especifique el array
+    # Revisa si la variable requiere que se especifique el array cuando se escriba el JSON
     M.TipoVar = M.TipoVar.lower()
     stdvarset = list('cdobn')   #[c]ontinua, [d]iscreta, [o]rdinal, [b]inaria, [n]ominal
     check1 = M.TipoVar in stdvarset     # Revisa si la variable está mal especificada
@@ -66,7 +66,7 @@ def compilar(M, dataset, par_dataset, variables_dataset):
     param_dataset = DatosLimpios.set_index('CVE_SUN')
     param_dataset['CVE_SUN'] = param_dataset.index
     param = param_dataset.groupby(level=0).agg(M.TipoAgr)[M.ClaveParametro]         # Agregacion por ciudad
-    intparam = param_dataset.groupby(level=0).agg('mean')['VAR_INTEGRIDAD']    # Integridad por ciudad
+    intparam = integridad_parametro['INTEGRIDAD']['INTEGRIDAD']                     # Integridad por ciudad
     Tipo_Sun = integridad_parametro['EXISTENCIA']['TIPO_SUN']
     Tipo_Sun = Tipo_Sun.groupby(Tipo_Sun.index).first()
     std_nomsun = param_dataset['CVE_SUN'].map(str)+' - '+param_dataset['NOM_SUN']   # Nombres estandar CVE_SUN + NOM_SUN
@@ -77,6 +77,10 @@ def compilar(M, dataset, par_dataset, variables_dataset):
     Parametro[M.ClaveParametro] = param
     Parametro[ColIntegridad] = intparam
     Parametro = Parametro.sort_index()
+
+    # Checa el tipo de datos para el JSON, porque acepta float64 pero no int64
+    if Parametro[M.ClaveParametro].dtypes == np.int64:
+        Parametro[M.ClaveParametro] = Parametro[M.ClaveParametro].astype('object')
 
     # Lista de Variables
     variables_locales = sorted(list(set(list(DatosLimpios) +
@@ -153,6 +157,7 @@ def compilar(M, dataset, par_dataset, variables_dataset):
     }
 
     BaseJSON['Parametro'] = Parametro[[M.ClaveParametro, ColIntegridad]].to_dict('index')
+
     jsonfile = M.DirDestino + '\\' + M.ClaveParametro + '\\' + M.ClaveParametro + '.json'
 
     # Diccionario de Descripciones
@@ -177,7 +182,6 @@ def compilar(M, dataset, par_dataset, variables_dataset):
     hoja_datos = hoja_datos.where((pd.notnull(hoja_datos)), None)
 
     # Crear archivo de Excel, JSON y documentar parametro
-    # json.dump(BaseJSON, open(jsonfile, 'w'))
     with open(jsonfile, 'wb') as f:
         json.dump(BaseJSON, codecs.getwriter('utf-8')(f), ensure_ascii=False)
     print('Archivo JSON generado en {}'.format(jsonfile))

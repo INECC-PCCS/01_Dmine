@@ -61,7 +61,8 @@ Meta.fillmeta(M)
 
 M.Notas = 'Este parámetro considera las viviendas que no entregan sus residuos a un servicio público de ' \
         'recolección, y que disponen de estos quemándolos o tirándolos en lugares inadecuados (Como puede ser en ' \
-        'la calle, baldío o río)'
+        'la calle, baldío o río). El valor indica el porcentaje de viviendas en cada ciudad que cumplen esta ' \
+        'condicion (por ejemplo, 0.4619 = 0.4916 % y 50.95 = 50.95 %)'
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Cargar dataset inicial
