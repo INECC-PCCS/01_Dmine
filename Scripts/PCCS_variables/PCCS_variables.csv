@@ -396,3 +396,11 @@ P1003_p10,Indica si al menos una fracción de los residuos sólidos urbanos recole
 I1005,Integridad del parametro P1005.
 P1005,Número de vehículos utilizados para la recolección de residuos sólidos urbanos.
 P1005_P6_3_2_1_3,Número de vehículos utilizados para la recolección de residuos sólidos urbanos.
+I0309,Integridad del parametro P0309
+P0309,Total de viviendas
+P0309_TVIVHAB,Total de viviendas habitadas: Viviendas particulares y colectivas habitadas. Incluye a las viviendas particulares sin información de sus ocupantes.
+P0309_TVIVPAR,"Total de viviendas particulares: Viviendas particulares habitadas, deshabitadas y de uso temporal. Excluye a las viviendas particulares sin información de ocupantes"
+P0309_TVIVPARHAB,"Viviendas particulares habitadas: Viviendas particulares habitadas de cualquier clase: casa independiente, departamento en edificio, vivienda o cuarto en vecindad, vivienda o cuarto de azotea, local no construido para habitación, vivienda móvil, refugios o clase no especificada. Excluye a las viviendas particulares sin información de ocupantes."
+P0309_VIVPAR_DES,Viviendas particulares deshabitadas.
+P0309_VIVPAR_HAB,"Viviendas particulares habitadas: Viviendas particulares habitadas de cualquier clase: casa independiente, departamento en edificio, vivienda o cuarto en vecindad, vivienda o cuarto de azotea, local no construido para habitación, vivienda móvil, refugios o clase no especificada. Excluye a las viviendas particulares sin información de ocupantes"
+P0309_VIVTOT,"Total de viviendas: Viviendas particulares habitadas, deshabitadas, de uso temporal y colectivas. Incluye a las viviendas particulares sin información de sus ocupantes"

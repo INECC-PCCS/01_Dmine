@@ -1,5 +1,22 @@
-# [PROXY] P0309 - Áreas urbanas verdes per cápita
+# Parametro P0309 - Total de viviendas
 
-(Mineria de datos de parametro pendiente)
+Archivo de mineria de datos. Parametro: P0309 - Total de viviendas
 
-Proxy creado con fines de coordinacion
+**Contenido**: None
+
+**FUENTE**: INEGI (Microdatos)
+
+**Dataset Base**: "P0309.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/CPV
+
+**Ultima revision del parametro**: 2018/02/08 
+
+**Ultima Actualizacion de los datos**: 2010
+
+----------
+
+**Instituto Nacional de Ecología y Cambio Climático**
+
+**Programa de las Naciones Unidas para el Desarrollo**
+
+**Plataforma de Conocimiento de Ciudades Sustentables**
+
