@@ -33,7 +33,7 @@ from DocumentarParametro.DocumentarParametro import DocumentarParametro
 def compilar(M, dataset, par_dataset, variables_dataset):
     # Revisa si la variable requiere que se especifique el array cuando se escriba el JSON
     M.TipoVar = M.TipoVar.lower()
-    stdvarset = list('cdobn')   #[c]ontinua, [d]iscreta, [o]rdinal, [b]inaria, [n]ominal
+    stdvarset = list('cdobn')   # [c]ontinua, [d]iscreta, [o]rdinal, [b]inaria, [n]ominal
     check1 = M.TipoVar in stdvarset     # Revisa si la variable está mal especificada
     check2 = not(M.TipoVar == 'c' or M.TipoVar == 'd')   # Revisa si la variable no requiere array
     check3 = M.array == []      # Revisa si el array está vacío
@@ -49,8 +49,19 @@ def compilar(M, dataset, par_dataset, variables_dataset):
     OrdenColumnas = (variables_SUN + variables_dataset)
     DatosLimpios = DatosLimpios[OrdenColumnas]    # Reordenar las columnas
 
+    # Verifica si hay variables que identifican series de años, y renombralas de ser necesario
+    startper = 1960; finper = 2050
+    anios1 = list(range(startper, finper))
+    anios2 = [str(i) for i in anios1]
+    verified_cols = []
+    for col in list(dataset):
+        if col in anios1 or col in anios2:
+            verified_cols.append('{}_{}'.format(M.ClaveParametro, col))
+        else:
+            verified_cols.append(col)
+
     # Consolidar datos por ciudad para hoja_datos
-    dataset.columns = [M.ClaveParametro+"_"+i for i in list(dataset)]
+    dataset.columns = verified_cols
     var_disponibles = list(dataset)
     dataset['CVE_MUN'] = dataset.index
     hoja_datos = asignar_sun(dataset)
@@ -96,7 +107,7 @@ def compilar(M, dataset, par_dataset, variables_dataset):
         'Clave': M.ClaveParametro,
         'Nombre del Parametro': M.NombreParametro,
         'Descripcion del Parametro': M.DescParam,
-        'Periodo' : M.PeriodoParam,
+        'Periodo': M.PeriodoParam,
         'Unidades': M.UnidadesParam
     }
 
