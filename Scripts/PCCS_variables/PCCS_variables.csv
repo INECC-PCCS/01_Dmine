@@ -173,7 +173,7 @@ P0712,Numero de accidentes viales en zonas urbanas
 Total_Parametro,"Datos que se utilizarán para la construcción del parametro, despues de procesar el dataset de acuerdo con los criterios establecidos en la descripción del parámetro"
 EXISTE,"Verificacion de integridad de la información, utilizada con propósitos de sistematización. TRUE si los datos para el municipio existen, FALSE si no existen."
 P0112,"Consumo (Litros/ Hora/ día) - Estimación del consumo de agua sin tomar en cuenta las pérdidas por fugas en la red y tomas domiciliarias. Estimado como Volumen de agua consumido (m3/año). Estimado por el PIGOO como el cociente del Volumen de agua consumido al año multiplicado por 1000, dividido entre 365 multiplicado por el numero de habitantes"
-P0112_2002,
+P0112_2002,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2002"
 P0112_2003,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2003"
 P0112_2004,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2004"
 P0112_2005,"Consumo (Litros/ Hora/ día) sin tomar en cuenta fugas, estimado para 2005"
@@ -294,52 +294,47 @@ P0119_2014,Cobertura de alcantarillado reportada para 2014
 P0119_2015,Cobertura de alcantarillado reportada para 2015
 NUM_REGISTROS,Numero de variables de cada municipio que se utilizan para la construcción del parámetro (Utilizado para el cálculo de integridad).
 P0403,Viviendas con drenaje
-P0403_Drenaje_Total,"Porcentaje de viviendas particulares habitadas que disponen de drenaje por ciudad, sin importar lugar de descarga."
-P0403_Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico,"Porcentaje de viviendas particulares habitadas que disponen de drenaje, cuya descarga es a fosa séptica o tanque séptico."
-P0403_Drenaje_desaloja_a_Red_publica,"Porcentaje de viviendas particulares habitadas que disponen de drenaje, cuya descarga es a red pública de drenaje."
-P0403_Viviendas particulares habitadas,"Numero de Viviendas particulares habitadas, de acuerdo con la Encuesta Intercensal 2015."
+Drenaje_Total,Porcentaje de viviendas que cuentan con drenaje sin importar el lugar de descarga
+Drenaje_desaloja_a_Fosa_Septica_o_Tanque_Septico,"Porcentaje de viviendas particulares habitadas que disponen de drenaje, cuya descarga es a fosa séptica o tanque séptico."
+Drenaje_desaloja_a_Red_publica,Porcentaje de viviendas que cuentan con descarga a una red de alcantarillado pública
+Viviendas particulares habitadas,Viviendas particulares habitadas
 REGISTROS_EXISTEN,Numero de variables de cada municipio que cuentan con datos para la construcción del parámetro (Utilizado para el cálculo de integridad).
 P0101,Porcentaje de viviendas con agua entubada
-P0101_Entubada_Total,Porcentaje de viviendas particulares que disponen de agua entubada dentro del predio o vivienda
+Entubada_Total,Porcentaje de viviendas particulares que disponen de agua entubada dentro del predio o vivienda
 P0102,Porcentaje de viviendas que cuentan con descarga a una red de alcantarillado
-P0102_Drenaje_Total,Porcentaje de viviendas que cuentan con drenaje sin importar el lugar de descarga
-P0102_Drenaje_desaloja_a_Red_publica,Porcentaje de viviendas que cuentan con descarga a una red de alcantarillado pública
-P0102_Viviendas particulares habitadas,Viviendas particulares habitadas
 P0404,Viviendas con piso de tierra
-P0404_Pisos_Tierra,Porcentaje de viviendas cuyo piso es de tierra
+Pisos_Tierra,Porcentaje de viviendas cuyo piso es de tierra
 P0603,Viviendas con calentador de agua (boiler)
-P0603_Dispone_de_Equipamiento,Porcentaje de viviendas que disponen de calentador de agua (boiler)
+Dispone_de_Equipamiento,Porcentaje de viviendas particulares habitadas que cuentan con panel solar
 P0611,Viviendas que utilizan leña o carbón para cocinar
-P0611_Cocina_con_Lena o carbon,Porcentaje de viviendas particulares habitadas que que utilizan leña o carbón para cocinar
+Cocina_con_Lena o carbon,Porcentaje de viviendas particulares habitadas que que utilizan leña o carbón para cocinar
 P0612," Viviendas que utilizan leña o carbón para cocinar, que disponen de estufa o fogón con chimenea"
-P0612_Dispone_de_estufa_o_fogon_con_chimenea," Porcentaje de viviendas que utilizan leña o o carbón para cocinar, que disponen de estufa o fogón con chimenea"
+Dispone_de_estufa_o_fogon_con_chimenea," Porcentaje de viviendas que utilizan leña o o carbón para cocinar, que disponen de estufa o fogón con chimenea"
 P0613,Viviendas que utilizan gas para cocinar
-P0613_Cocina_con_Gas,Porcentaje de viviendas particulares habitadas que utilizan gas para cocinar
+Cocina_con_Gas,Porcentaje de viviendas particulares habitadas que utilizan gas para cocinar
 P1004,Viviendas que entregan sus residuos a servicio público de recolección
-P1004_Entregan_residuos_a_servicio_publico_de_recoleccion,"Porcentaje de viviendas que entregan sus residuos a servicio público de recolección, sin importar si separan residuos orgánicos"
-P1004_Tiran_residuos_en_basurero_publico_colocan_en_contenedor_o_deposito,Porcentaje de viviendas que tiran sus residuos en basurero publico o los colocan en contenedor o depósito.
+Entregan_residuos_a_servicio_publico_de_recoleccion,"Porcentaje de viviendas que entregan sus residuos a servicio público de recolección, sin importar si separan residuos orgánicos"
+Tiran_residuos_en_basurero_publico_colocan_en_contenedor_o_deposito,Porcentaje de viviendas que tiran sus residuos en basurero publico o los colocan en contenedor o depósito.
 P1017,Viviendas que no entregan sus residuos al Servicio Publico de Recolección
-P1017_Entierran_residuos_o_tiran_en_otro_lugar,"Porcentaje de viviendas que entierran sus residuos o los tiran en lugares sin servicio de recoleccion (como calles, baldíos o ríos)"
-P1017_Queman_residuos,Porcentaje de viviendas que queman sus residuos
+Entierran_residuos_o_tiran_en_otro_lugar,"Porcentaje de viviendas que entierran sus residuos o los tiran en lugares sin servicio de recoleccion (como calles, baldíos o ríos)"
+Queman_residuos,Porcentaje de viviendas que queman sus residuos
 P1010,Viviendas que reutilizan sus residuos
-P1010_Reutilizan residuos para alimentar animales,Porcentaje de viviendas que reutilizan sus residuos para alimentar animales
-P1010_Reutilizan residuos para las plantas,Porcentaje de viviendas que reutilizan sus residuos como abono para plantas
-P1010_Reutilizan residuos para vender o regalar,"Porcentaje de viviendas que reutilizan sus residuos para vender o regalar (latas, cartón, plástico, etc.)"
+Reutilizan residuos para alimentar animales,Porcentaje de viviendas que reutilizan sus residuos para alimentar animales
+Reutilizan residuos para las plantas,Porcentaje de viviendas que reutilizan sus residuos como abono para plantas
+Reutilizan residuos para vender o regalar,"Porcentaje de viviendas que reutilizan sus residuos para vender o regalar (latas, cartón, plástico, etc.)"
 P1011,Viviendas que separan sus residuos
-P1011_Separan_organicos_inorganicos,Porcentaje de viviendas que separan sus residuos en orgánicos e inorgánicos
+Separan_organicos_inorganicos,Porcentaje de viviendas que separan sus residuos en orgánicos e inorgánicos
 I1017,Integridad para el parametro P01017
 I0601,Integridad del parametro I0601
 P0601,Viviendas particulares habitadas que disponen de electricidad
-P0601_Disponen_de_electricidad,Viviendas particulares habitadas que disponen de electricidad
+Disponen_de_electricidad,Viviendas particulares habitadas que disponen de electricidad
 I0604,Integridad del parametro P0604
 P0604,Viviendas con calentador solar
-P0604_Dispone_de_Equipamiento,Porcentaje municipal de viviendas particulares habitadas que cuentan con calentador solar
 I0605,Integridad del Parámetro P0605
 P0605,Viviendas con panel solar
-P0605_Dispone_de_Equipamiento,Porcentaje de viviendas particulares habitadas que cuentan con panel solar
 I0306,Integridad para el parametro P0306
 P0306,"Municipios que cuentan con un Programa de modernizacion Catastral (1: Cuenta con Programa, 0: No cuenta con Programa)"
-P0306_acc_modr,"Clasificación de los municipios de acuerdo con las acciones del programa de modernización catastral que se han realizado en ellos.
+acc_modr,"Clasificación de los municipios de acuerdo con las acciones del programa de modernización catastral que se han realizado en ellos.
 1: Actualizar el padrón catastral
 2: Generar o actualizar la cartografía catastral
 3: Adquirir un sistema de gestión catastral
@@ -348,25 +343,25 @@ P0306_acc_modr,"Clasificación de los municipios de acuerdo con las acciones del 
 6: Mejorar los procesos catastrales
 7: Otro
 99: No se sabe"
-P0306_i_coord_ejecuta,Institucion(es) que coordina o ejecuta acciones de modernizacion catastral en el municipio
-P0306_i_otorga_apoyos,Institucion que otorga apoyos de modernizacion catastral en el municipio
-P0306_n_acc_modr,Numero de acciones de modernizacion catastral e el municipio
-P0306_perio_ac,"Clasificación de los municipios de acuerdo con el periodo en el que se realizaron las acciones del programa de modernización catastral.
+i_coord_ejecuta,Institucion(es) que coordina o ejecuta acciones de modernizacion catastral en el municipio
+i_otorga_apoyos,Institucion que otorga apoyos de modernizacion catastral en el municipio
+n_acc_modr,Numero de acciones de modernizacion catastral e el municipio
+perio_ac,"Clasificación de los municipios de acuerdo con el periodo en el que se realizaron las acciones del programa de modernización catastral.
 1: En el transcurso del presente año
 2: Durante el año 2014
 3: Durante el año 2013
 4: Antes del año 2013
 5: No se han realizado acciones para atender el tema
 99: No se sabe"
-P0306_prog_mod,"Clasificación de los municipios de acuerdo con el programa de modernización catastral con el que cuenta.
+prog_mod,"Clasificación de los municipios de acuerdo con el programa de modernización catastral con el que cuenta.
 1: Si
 2: No
 99: No se sabe"
 I0307,Integridad de los datos del parámetro P0307
 P0307,"Municipios que cuentan con Disposiciones normativas sustantivas en materia de desarrollo urbano u ordenamiento territorial vigentes en la  Administraciones Públicas Municipales o Delegacionales, al cierre del año 2014"
-P0307_est_ttdi,"Clasificación de los casos en que la información no aplica o no se conoce (NA), o la informacion no se encuentra disponible (ND) o no se cuenta con elementos para responder (NS) para el total de disposiciones normativas."
-P0307_estructu,"Clasificación de los municipios y las delegaciones del Distrito Federal de acuerdo con la cantidad de disposiciones normativas internas por tema que deben ser observadas por las Administraciones Públicas Municipales o Delegacionales para el ejercicio de sus funciones. 290200 = Disposiciones normativas administrativas, según temas."
-P0307_instrum,"Clasificación de los municipios delegaciones de acuerdo con el tipo de disposición normativa interna sustantiva y administrativas con que contaron las Administraciones Públicas Municipales o Delegacionales, al cierre del año 2014.
+est_ttdi,"Clasificación de los casos en que la información no aplica o no se conoce (NA), o la informacion no se encuentra disponible (ND) o no se cuenta con elementos para responder (NS) para el total de disposiciones normativas."
+estructu,"Clasificación de los municipios y las delegaciones del Distrito Federal de acuerdo con la cantidad de disposiciones normativas internas por tema que deben ser observadas por las Administraciones Públicas Municipales o Delegacionales para el ejercicio de sus funciones. 290200 = Disposiciones normativas administrativas, según temas."
+instrum,"Clasificación de los municipios delegaciones de acuerdo con el tipo de disposición normativa interna sustantiva y administrativas con que contaron las Administraciones Públicas Municipales o Delegacionales, al cierre del año 2014.
 0: No aplica
 1: Reglamentos
 2: Acuerdos
@@ -378,29 +373,31 @@ P0307_instrum,"Clasificación de los municipios delegaciones de acuerdo con el ti
 8: Otras
 98: Información no disponible
 99: No especificado"
-P0307_tema_nis,"Disposiciones normativas internas sustantivas vigentes en la  Administraciones Públicas Municipales o Delegacionales, al cierre del año 2014 (El codigo 41 identifica dispociciones en materia de Desarrollo urbano u ordenamiento territorial"
-P0307_tt_dispo,"Cantidad de disposiciones normativas internas, tanto sustantivas como administrativas, con que contaron las Administraciones Públicas Municipales o Delegacionales, al cierre del año 2014"
+tema_nis,"Disposiciones normativas internas sustantivas vigentes en la  Administraciones Públicas Municipales o Delegacionales, al cierre del año 2014 (El codigo 41 identifica dispociciones en materia de Desarrollo urbano u ordenamiento territorial"
+tt_dispo,"Cantidad de disposiciones normativas internas, tanto sustantivas como administrativas, con que contaron las Administraciones Públicas Municipales o Delegacionales, al cierre del año 2014"
 I1001,Integridad del parametro P1001
 P1001,Cantidad promedio diaria de residuos sólidos urbanos recolectada por clave SUN
-P1001_p2_2,"Cantidad promedio diaria de residuos sólidos urbanos recolectada en este Municipio o Delegación, en kilogramos"
+p2_2,"Cantidad promedio diaria de residuos sólidos urbanos recolectada en este Municipio o Delegación, en kilogramos"
 I1006,Integridad del parametro P1006
 P1006,Número de municipios que cuentan con algún programa orientado a la gestión integral de residuos sólidos urbanos
-P1006_p13,"Indica si se cuenta con algún programa orientado a la gestión integral de residuos sólidos urbanos. (1: Si, 2:No)"
+p13,"Indica si se cuenta con algún programa orientado a la gestión integral de residuos sólidos urbanos. (1: Si, 2:No)"
 I1009,Integridad del parametro P1009
 P1009,Número de municipios que cuentan con algún estudio sobre la generación de residuos sólidos urbanos.
-P1009_p12,"Indica si el municipio cuenta con algún estudio sobre la generación de residuos sólidos urbanos (1: Si, 2:No)."
+p12,"Indica si el municipio cuenta con algún estudio sobre la generación de residuos sólidos urbanos (1: Si, 2:No)."
 I1003,Integridad del parametro P1003
 P1003,Número de municipios que envian al menos una fracción de sus Residuos a plantas de tratamiento
-P1003_p1,"Indica si el municipio o delegacion cuenta con el resvicio de recoleccion de residuos (1: Si, 2:No)"
-P1003_p10,Indica si al menos una fracción de los residuos sólidos urbanos recolectados por el municipio o delegación es enviada a plantas de tratamiento.
+p1,"Indica si el municipio o delegacion cuenta con el resvicio de recoleccion de residuos (1: Si, 2:No)"
+p10,Indica si al menos una fracción de los residuos sólidos urbanos recolectados por el municipio o delegación es enviada a plantas de tratamiento.
 I1005,Integridad del parametro P1005.
 P1005,Número de vehículos utilizados para la recolección de residuos sólidos urbanos.
-P1005_P6_3_2_1_3,Número de vehículos utilizados para la recolección de residuos sólidos urbanos.
+P6_3_2_1_3,Número de vehículos utilizados para la recolección de residuos sólidos urbanos.
 I0309,Integridad del parametro P0309
 P0309,Total de viviendas
-P0309_TVIVHAB,Total de viviendas habitadas: Viviendas particulares y colectivas habitadas. Incluye a las viviendas particulares sin información de sus ocupantes.
-P0309_TVIVPAR,"Total de viviendas particulares: Viviendas particulares habitadas, deshabitadas y de uso temporal. Excluye a las viviendas particulares sin información de ocupantes"
-P0309_TVIVPARHAB,"Viviendas particulares habitadas: Viviendas particulares habitadas de cualquier clase: casa independiente, departamento en edificio, vivienda o cuarto en vecindad, vivienda o cuarto de azotea, local no construido para habitación, vivienda móvil, refugios o clase no especificada. Excluye a las viviendas particulares sin información de ocupantes."
-P0309_VIVPAR_DES,Viviendas particulares deshabitadas.
-P0309_VIVPAR_HAB,"Viviendas particulares habitadas: Viviendas particulares habitadas de cualquier clase: casa independiente, departamento en edificio, vivienda o cuarto en vecindad, vivienda o cuarto de azotea, local no construido para habitación, vivienda móvil, refugios o clase no especificada. Excluye a las viviendas particulares sin información de ocupantes"
-P0309_VIVTOT,"Total de viviendas: Viviendas particulares habitadas, deshabitadas, de uso temporal y colectivas. Incluye a las viviendas particulares sin información de sus ocupantes"
+TVIVHAB,Total de viviendas habitadas: Viviendas particulares y colectivas habitadas. Incluye a las viviendas particulares sin información de sus ocupantes.
+TVIVPAR,"Total de viviendas particulares: Viviendas particulares habitadas, deshabitadas y de uso temporal. Excluye a las viviendas particulares sin información de ocupantes"
+TVIVPARHAB,"Total de viviendas particulares habitadas: Viviendas particulares habitadas de cualquier clase: casa independiente, departamento en edificio, vivienda o cuarto en vecindad, vivienda o cuarto de azotea, local no construido para habitación, vivienda móvil, refugios o clase no especificada Incluye a las viviendas particulares sin información de ocupantes."
+VIVPAR_DES,Viviendas particulares deshabitadas.
+VIVPAR_HAB,"Viviendas particulares habitadas: Viviendas particulares habitadas de cualquier clase: casa independiente, departamento en edificio, vivienda o cuarto en vecindad, vivienda o cuarto de azotea, local no construido para habitación, vivienda móvil, refugios o clase no especificada. Excluye a las viviendas particulares sin información de ocupantes"
+VIVTOT,"Total de viviendas: Viviendas particulares habitadas, deshabitadas, de uso temporal y colectivas. Incluye a las viviendas particulares sin información de sus ocupantes"
+I0312,Integridad para el parametro P0312
+P0312,Total de viviendas particulares habitadas
