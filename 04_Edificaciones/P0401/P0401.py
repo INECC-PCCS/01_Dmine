@@ -28,50 +28,49 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 M = Meta
-M.ClaveParametro = '0401'
+M.ClaveParametro = 'P0401'
 M.NombreParametro = 'Edificios con certificación LEED'
-M.DescParam = ''
-M.UnidadesParam = 'Numero de viviendas'
-M.TituloParametro = 'VIVTOT'                              # Para nombrar la columna del parametro
-M.PeriodoParam = '2010'
-M.TipoInt = 1
+M.DescParam = 'Edificios que han recibido algún nivel de certificación de Liderazgo en Energía y desarrollo Ambiental' \
+              ' (LEED, por sus siglas en ingles) Otorgado por el Consejo de edificios Verdes de Estados Unidos (USGBC' \
+              ' por sus suglas en inglés)'
+M.UnidadesParam = 'Numero de edificios'
+M.TituloParametro = 'LEEDB'                              # Para nombrar la columna del parametro
+M.PeriodoParam = '2018'
+M.TipoInt = 3
 
 # Handlings
 M.ParDtype = 'float'
 M.TipoVar = 'C'     # (Tipos de Variable: [C]ontinua, [D]iscreta [O]rdinal, [B]inaria o [N]ominal)
 M.array = []
-M.TipoAgr = 'sum'
+M.TipoAgr = 'count'
 
 # Descripciones del proceso de Minería
-M.nomarchivodataset = M.ClaveParametro
+M.nomarchivodataset = 'PCCS_leed_projects'
 M.extarchivodataset = 'xlsx'
-M.ContenidoHojaDatos = 'Datos disponibles por municipio para 2010, utilizados para la construcción del parametro'
-M.ClaveDataset = 'CPV'
-M.ActDatos = '2010'
-M.Agregacion = 'Este parámetro utiliza la variable "VIVTOT" de la base de datos del Censo Nacional de Poblacion y' \
-               'Vivienda 2010, que indica el Total de Viviendas, incluyendo: Viviendas particulares habitadas, ' \
-               'deshabitadas, de uso temporal y colectivas. Incluye a las viviendas particulares sin información de ' \
-               'sus ocupantes.' \
-               '\nPara agregar la información y construir el parámetro, se suma el valor de VIVTOT de todos los ' \
-               'municipios de los que componen cada ciudad del SUN. De este modo, el valor de P0309 indica el ' \
-               'numero total de viviendas en cada ciudad del SUN.'
+M.ContenidoHojaDatos = 'Base de datos de edificios LEED recopilada al 14 de febrero de 2018, en base a la cual se' \
+                       'construyó el parámetro'
+M.ClaveDataset = 'LEED'
+M.ActDatos = '2018'
+M.Agregacion = 'Se extrajo la lista de edificios con certificación LEED del sitio web del USGBC. A partir del código ' \
+               'postal se ubicó el municipio en el que se encuentra cada edificio y se etiquetó con la clave ' \
+               'geoestadística de 5 dígitos de INEGI (columna CVE_MUN en la base de datos de la PCCS). Para ' \
+               'construir el parámetro, se clasificó cada edificio por ciudad del SUN con base en su CVE_MUN, y se ' \
+               'contó el número de edificios por ciudad.'
 
 M.getmetafromds = 1
 
 # Descripciones generadas desde la clave del parámetro
 Meta.fillmeta(M)
-M.Notas = 's/n'
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Cargar dataset inicial
 dataset = pd.read_excel(M.DirFuente + '\\' + M.ArchivoDataset,
-                        sheetname=M.nomarchivodataset, dtype={'CVE_MUN': 'str'})
+                        sheetname='DATOS', dtype={'CVE_MUN': 'str', 'CP':'str'})
 dataset.set_index('CVE_MUN', inplace=True)
-dataset = dataset.apply(pd.to_numeric).where((pd.notnull(dataset)), None)
 dataset = dataset.rename_axis('CVE_MUN')
 
 # Generar dataset para parámetro y Variable de Integridad
-par_dataset = dataset['VIVTOT'].to_frame(name = M.ClaveParametro)
+par_dataset = dataset['Building'].to_frame(name = M.ClaveParametro)
 par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
 
 # Compilacion

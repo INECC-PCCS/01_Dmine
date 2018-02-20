@@ -1,5 +1,4 @@
 CVE_SUN,"Clave de 3 digitos de la Ciudad, de acuerdo con el Catálogo Sistema Urbano Nacional 2012"
-,
 CVE_ENT,"Clave geoestadística de 2 digitos a nivel entidad, de acuerdo con el Catálogo Único de Claves de Áreas Geoestadísticas Estatales, Municipales y Localidades de INEGI"
 NOM_ENT,"Nombre de la entidad, de acuerdo con el Catálogo Único de Claves de Áreas Geoestadísticas Estatales, Municipales y Localidades de INEGI"
 CVE_MUN,"Clave geoestadística de 5 digitos a nivel municipal, de acuerdo con el Catálogo Único de Claves de Áreas Geoestadísticas Estatales, Municipales y Localidades de INEGI"
@@ -401,3 +400,13 @@ VIVPAR_HAB,"Viviendas particulares habitadas: Viviendas particulares habitadas d
 VIVTOT,"Total de viviendas: Viviendas particulares habitadas, deshabitadas, de uso temporal y colectivas. Incluye a las viviendas particulares sin información de sus ocupantes"
 I0312,Integridad para el parametro P0312
 P0312,Total de viviendas particulares habitadas
+direccion,Ubicacion (Calle y numero)
+usgbc_fecha_cert,Fecha de certificacion como edificio LEED por el United States Green Building Council
+usgbc_sis_val,Sistema de valoracion aplicado por el United States Green Building Council al edificio
+usgbc_ver_sisv,Version del Sistema de valoracion aplicado por el United States Green Building Council al edificio
+usgbc_nv_cert,Nivel de certificacion como edificio LEED alcanzado por el edificio
+CP,Codigo Postal
+URL,"Uniform Resource Locator, referencia a recurso en línea"
+Building,Nombre del edificio
+I0401,"Integridad del parametro ""P0401"""
+P0401,"Edificios que han recibido algún nivel de certificación de Liderazgo en Energía y desarrollo Ambiental (LEED, por sus siglas en ingles) Otorgado por el Consejo de edificios Verdes de Estados Unidos (USGBC por sus suglas en inglés)"

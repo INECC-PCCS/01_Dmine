@@ -16,7 +16,7 @@ dataframe_sun:  dataframe con claves sun y claves mun, creado con
 
 import pandas as pd
 
-def SUN_integridad(dataframe_sun):
+def SUN_integridad(DatosLimpios):
     # Importar dataset SUN
     sun = pd.read_csv(r'D:\PCCS\01_Dmine\00_Generales\sun_main.csv',
                       dtype={'CVE_SUN':str, 'CVE_ENT': str, 'CVE_MUN': str, 'CVE_LOC': str},
@@ -29,13 +29,14 @@ def SUN_integridad(dataframe_sun):
     sun['CVE_MUN'] = sun['CVE_MUN'].apply('{:0>5}'.format)
 
     # Obtener municipios que se encuentran en el Dataframe (Sin duplicados)
-    dataframe_sun = dataframe_sun.set_index(['CVE_SUN'])
-    unicos_df = dataframe_sun['CVE_MUN'].unique()
+    DatosLimpios = DatosLimpios.set_index(['CVE_SUN'])
+    unicos_df = DatosLimpios['CVE_MUN'].unique()
 
     # Calculo de integridad
     sun['EXISTE'] = sun['CVE_MUN'].isin(unicos_df)
-    sun = sun.merge(dataframe_sun[['VAR_INTEGRIDAD', 'CVE_MUN']], how='left', on='CVE_MUN')
+    sun = sun.merge(DatosLimpios[['VAR_INTEGRIDAD', 'CVE_MUN']], how='left', on='CVE_MUN')
     sun['VAR_INTEGRIDAD'] = sun['VAR_INTEGRIDAD'].fillna(0)
+    sun = sun.drop_duplicates(subset='CVE_SUNMUN')
     cantmun = sun.groupby(by='CVE_SUN').agg('count')['CVE_MUN']           # Total en el SUN
     cantdf = sun.groupby(by='CVE_SUN').agg('sum')['VAR_INTEGRIDAD']       # Total en el dataframe
     varint = sun.groupby(by='CVE_SUN').agg('mean')['VAR_INTEGRIDAD']      # Promedio de la Variable de Integridad

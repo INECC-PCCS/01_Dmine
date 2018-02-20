@@ -91,15 +91,18 @@ class Meta(object):
             self.ClaveDimension + "_" + AsignarDimension(self.ClaveDimension)['directorio'])
         if self.getmetafromds == 1:
             self.metafromds(self)
-        if self.TipoInt == 1:
-            self.DescVarIntegridad = 'La variable de integridad municipal para esta Dataset es binaria: \n' \
-                                     '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información'
-        if self.TipoInt == 2:
-            self.DescVarIntegridad = 'Para calcular la variable de integridad de este dataset, se verifica la ' \
-                                     'existencia de datos en cada una de las variables que se utilizaron para ' \
-                                     'construir el parámetro. El valor de la variable de integridad multiplicado por ' \
-                                     '100 indica el porcentaje de variables del dataset que tienen datos para ' \
-                                     'la construcción del parámetro'
+        DescIntegridad = {
+            1 : 'La variable de integridad municipal para esta Dataset es binaria: \n'
+                '1 =  El municipio cuenta con informacion \n0 = El municipio no cuenta con información',
+            2 : 'Para calcular la variable de integridad de este dataset, se verifica la existencia de datos en '
+                'cada una de las variables que se utilizaron para construir el parámetro. El valor de la variable '
+                'de integridad multiplicado por 100 indica el porcentaje de variables del dataset que tienen '
+                'datos para la construcción del parámetro',
+            3 : 'Los datos para este parametro se agregaron desde los individuos de una poblacion, por lo que se '
+                'considera que los datos están completos y que si un municipio no tiene datos significa que ese '
+                'municipio tiene cero unidades de las que está considerando el parámetro'
+        }
+        self.DescVarIntegridad = DescIntegridad[self.TipoInt]
 
     def checkall(self):
         contents = {
