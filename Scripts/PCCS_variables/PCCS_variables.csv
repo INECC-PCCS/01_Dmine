@@ -410,3 +410,55 @@ URL,"Uniform Resource Locator, referencia a recurso en línea"
 Building,Nombre del edificio
 I0401,"Integridad del parametro ""P0401"""
 P0401,"Edificios que han recibido algún nivel de certificación de Liderazgo en Energía y desarrollo Ambiental (LEED, por sus siglas en ingles) Otorgado por el Consejo de edificios Verdes de Estados Unidos (USGBC por sus suglas en inglés)"
+I0702,Integridad del parametro P0702
+P0702,Numero de manzanas segun restricción del paso a automóviles
+Restricción del paso a automóviles,Numero de manzanas en las que una o más de sus vialidades presentan algún tipo de restricción al paso de automóviles.
+Restricción del paso a automóviles No especificado,Total de manzanas en donde no se especifican las restricciones al paso de automoviles
+Restricción del paso a automóviles en ninguna vialidad,Total de manzanas que no tienen restriccion al paso de automoviles en ninguna de sus vialidades
+Total de manzanas,Total de manzanas
+I0703,Integridad del parametro P0703
+P0703,Numero de manzanas segun restricción del paso a peatones
+RPPeatones Alguna vialidad,Manzanas con restriccion al paso de peatones en alguna vialidad
+RPPeatones Ninguna vialidad,Manzanas con restriccion al paso de peatones en ninguna de sus vialidades
+RPPeatones No especificado,Manzanas sin especificacion de restriccion al paso de peatones
+RPPeatones Todas las vialidades,Manzanas con restriccion al paso de peatones en todas las vialidades
+Empedrado o adoquín,Vialidades que cuentan con recubrimiento de empedrado o adoquín
+I0704,Integridad del parametro P0704
+P0704,"Vialidades con recubrimiento de la calle (Pavimento, concreto, empedrado o adoquin)"
+Pavimento o concreto,Vialidades que cuentan con recubrimiento de pavimento o concreto
+Recubrimiento No especificado,Vialidades con Recubrimiento No especificado
+Sin recubrimiento,Vialidades Sin recubrimiento
+Total de vialidades,Total de Vialidades
+Banqueta en alguna vialidad,Manzanas que cuentan con banqueta en alguna vialidad
+Banqueta en ninguna vialidad,Manzanas que cuentan con banqueta en ninguna vialidad
+Banqueta en todas las vialidades,Manzanas que cuentan con banqueta en todas las vialidades
+I0705,Integridad del parametro P0705
+No especificado,Manzanas en donde no se ha especificado si cuenta o no con banqueta
+P0705,Numero de manzanas segun disponibilidad de banqueta en sus vialidades
+Guarnicion No especificado,Manzanas en donde no se ha especificado si cuenta o no con guarnicion
+Guarnicion en Alguna vialidad,Manzanas con guarnicion en Alguna vialidad
+Guarnicion en Ninguna vialidad,Manzanas con guarnicion en Ninguna vialidad
+Guarnicion en Todas las vialidades,Manzanas con guarnicion en Todas las vialidades
+I0706,Integridad para el parametro P0706
+P0706,Numero de manzanas segun disponibilidad de guarnición en sus vialidades
+CAPACIDAD INSTALABLE (MW),Potencial de Generación de Gigawatts/hora al año
+FUENTE,Fuente de información
+I0607,Integridad del parámetro P0607
+NOMBRE PROYECTO,Nombre del proyecto de produccion de energia
+NOTAS,Notas
+P0607,Potencial de generación de energía a partir de fuentes renovables.
+POTENCIAL (GWh/a),Potencial de Generación de Gigawatts/hora al año
+PROBABILIDAD,Certeza respecto al proyecto de produccion de energía
+TIPO FUENTE ENER,Tipo de fuente de donde se obtiene la energía
+CAPACIDAD INSTALADA (MW),Capacidad Instalada en Megawatts
+GENERACIÓN (GWh/a) ,Generación de energía en Gigawatts/hora al año
+I0608,Integridad del parámetro P0608
+P0608,Potencial de generación de energía a partir de fuentes renovables.
+SECTOR PRODUCCION,Sector al que pertenece el proyecto de produccion de energia
+UNIDADES GEN,Numero de generadores instalados por planta
+I0606,Integridad del Parámetro P0606
+P0606,Generación de energía a partir de fuentes renovables.
+Dispone de calentador solar,Porcentaje de viviendas que disponen de calentador solar
+Dispone de panel solar,Porcentaje de viviendas que disponen de panel solar
+I0402,Integridad del parametro P0402
+P0402,Viviendas que cuentan con calentador solar o panel fotovoltaico (2015)
