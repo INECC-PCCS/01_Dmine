@@ -69,6 +69,8 @@ def compilar(M, dataset, par_dataset, variables_dataset):
 
     # Revision de integridad
     integridad_parametro = SUN_integridad(DatosLimpios)
+    if M.TipoInt == 3:                                              # Si el tipo de integridad es 3, Crea integridad
+        integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] = 1        # completa a todos los registros en el dataset
     info_completa = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 1)      # Para generar grafico de integridad
     info_sin_info = sum(integridad_parametro['INTEGRIDAD']['INTEGRIDAD'] == 0)      # Para generar grafico de integridad
     info_incomple = 135 - info_completa - info_sin_info                             # Para generar grafico de integridad

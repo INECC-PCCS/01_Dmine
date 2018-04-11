@@ -1,5 +1,22 @@
-# [PROXY] P0608 - Capacidad instalada para aprovechar fuentes renovables de energía
+# Parametro P0608 - Capacidad instalada para aprovechar fuentes renovables de energía
 
-(Mineria de datos de parametro pendiente)
+Archivo de mineria de datos. Parametro: P0608 - Capacidad instalada para aprovechar fuentes renovables de energía
 
-Proxy creado con fines de coordinacion
+**Contenido**: Plantas de generación de energía a partir de fuentes renovables en la República Mexicana
+
+**FUENTE**: SENER
+
+**Dataset Base**: "ER_Actual.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/INERE
+
+**Ultima revision del parametro**: 2018/03/12 
+
+**Ultima Actualizacion de los datos**: 2014
+
+----------
+
+**Instituto Nacional de Ecología y Cambio Climático**
+
+**Programa de las Naciones Unidas para el Desarrollo**
+
+**Plataforma de Conocimiento de Ciudades Sustentables**
+

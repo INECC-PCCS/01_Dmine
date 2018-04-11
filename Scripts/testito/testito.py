@@ -173,11 +173,13 @@ elif fin == 'v':
 
 import pandas as pd
 
-df = pd.DataFrame([['00100', 'Alpha', None],
-                   ['00100', 'Beta', None],
-                   ['05300', 'Theta', None],
-                   ['95687', 'Gamma', None],
-                   ['05300', 'Sigma', None]])
+df = pd.DataFrame([['00100', 'Alpha', True, None],
+                   ['00100', 'Beta', None, None],
+                   ['05300', 'Theta', True, None],
+                   ['95687', 'Gamma', False, None],
+                   ['05300', 'Sigma', None, None]])
+
+df = df.set_index(0)
 
 match = {
     '00100' : '09010',
