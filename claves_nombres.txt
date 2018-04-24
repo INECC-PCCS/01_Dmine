@@ -1,0 +1,11 @@
+00	Generales
+01	Agua
+02	Aire
+03	Uso de suelo
+04	Edificaciones
+05	Industria
+06	Energía
+07	Movilidad
+08	Habitabilidad
+09	Bienes Ambientales y Servicios Públicos
+10	Residuos Sólidos Urbanos

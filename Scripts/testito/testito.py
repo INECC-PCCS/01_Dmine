@@ -186,8 +186,13 @@ match = {
     '05300' : '09004'
 }
 
-df = pd.DataFrame([['00100', 'Alpha', '09010'],
-                   ['00100', 'Beta', '09010'],
-                   ['05300', 'Theta', None],
-                   ['95687', 'Gamma', '09004'],
-                   ['05300', 'Sigma', '09004']])
+df = pd.DataFrame([['00100', 'one.xlsx', 'sheet1'],
+                   ['00100', 'two.xlsx', 'sheet2'],
+                   ['05300', 'thr.xlsx', 'sheet3'],
+                   ['95687', 'fou.xlsx', 'sheet4'],
+                   ['05300', 'fiv.xlsx', 'sheet5']],
+                  columns=['id', 'file', 'sheet'])
+
+df = df.rename(columns = {0:'A', 1:'B', 2:'C'})
+
+def

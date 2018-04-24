@@ -1,5 +1,3 @@
-# [PROXY] P0707 - Vehículos de pasajeros
+# P0707 - VehÃ­culos de pasajeros
 
-(Mineria de datos de parametro pendiente)
-
-Proxy creado con fines de coordinacion
+(REPETIDO P0709)
