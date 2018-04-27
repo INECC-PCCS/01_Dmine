@@ -498,3 +498,15 @@ Rampa No especificado,Numero de vialidades en donde no se ha especificado la exi
 Rampa en Alguna vialidad,Numero de manzanas que cuentan con para discapacitados en al menos una de sus vialidades
 Rampa en Ninguna vialidad,Numero de manzanas que no cuentan con rampa para discapacitados en al menos una de sus vialidades
 Rampa en Todas las vialidades,Numero de manzanas que cuentan con rampa para discapacitados en todas sus vialidades
+AEP,"Alimentadoras Estatales, Pavimentada: También conocidas con el nombre de carreteras secundarias, tienen como propósito principal servir de acceso a las carreteras troncales. Comprende caminos de dos, cuatro o más carriles."
+AER,"Alimentadoras Estatales, Revestida: También conocidas con el nombre de carreteras secundarias, tienen como propósito principal servir de acceso a las carreteras troncales."
+AET,"Alimentadoras Estatales, Terraceria: También conocidas con el nombre de carreteras secundarias, tienen como propósito principal servir de acceso a las carreteras troncales. Se refiere a tramos en mejoramiento, ampliación o en construcción."
+BM,Brechas Mejoradas.
+CRP,"Caminos Rurales, Pavimentado."
+CRR,"Caminos Rurales, Revestido."
+CRT,"Caminos Rurales, Terraceria: Se refiere a tramos en mejoramiento, ampliación o en construcción."
+FECHA,Fecha del dato
+I0701,Integridad del Parametro P0701
+P0701,Longitud total de la red de carreteras del municipio (excluyendo las autopistas)
+TFP,"Troncal Federal, Pavimentada: También es conocida como principal o primaria, tiene como objetivo específico servir al tránsito de larga distancia. Comprende caminos de cuota (incluidos los estatales) y libres."
+Total_vialidades,"Longitud total de la red carretera, sin importar el tipo de vialidad"
