@@ -510,3 +510,9 @@ I0701,Integridad del Parametro P0701
 P0701,Longitud total de la red de carreteras del municipio (excluyendo las autopistas)
 TFP,"Troncal Federal, Pavimentada: También es conocida como principal o primaria, tiene como objetivo específico servir al tránsito de larga distancia. Comprende caminos de cuota (incluidos los estatales) y libres."
 Total_vialidades,"Longitud total de la red carretera, sin importar el tipo de vialidad"
+CAPACIDAD INSTALADA L/S,Capacidad instalada de tratamiento de aguas residuales en litros / segundo
+CAUDAL TRATADO L/S,Caudal tratado de aguas residuales en litros / segundo
+I0104,Integridad del parametro P0104
+NOMBRE DE PTAR,Nombre de la Planta de Tratamiento de Aguas Residuales
+P0104,Capacidad de Tratamiento de Aguas Residuales
+TIPO DE PROCESO,Tipo de proceso de tratamiento de aguas residuales
