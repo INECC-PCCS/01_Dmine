@@ -462,3 +462,57 @@ Dispone de calentador solar,Porcentaje de viviendas que disponen de calentador s
 Dispone de panel solar,Porcentaje de viviendas que disponen de panel solar
 I0402,Integridad del parametro P0402
 P0402,Viviendas que cuentan con calentador solar o panel fotovoltaico (2015)
+I0610,Integridad del parámetro P0610
+P0610,Ventas de Electricidad
+Total ventas elec,Total de ventas de energía electrica
+VE Agricola,Ventas de energia en el sector Agricola (Megawatts-Hora)
+VE Bombeo agua potable y negra,Ventas de energia en bombeo de agua potable y negra (Megawatts-Hora)
+VE Domestico,Ventas de energia en el sector domestico (Megawatts-Hora)
+VE Iustrial y servicios,Ventas de energia en el sector industrial y de Servicios (Megawatts-Hora)
+VE alumbrado publico,Ventas de energia en alumbrado publico (Megawatts-Hora)
+I0609,Integridad del parametro P0609
+P0609,Usuarios de energia electrica por ciudad
+P0609_2010,Usuarios de energía electrica en 2010
+P0609_2011,Usuarios de energía electrica en 2011
+P0609_2012,Usuarios de energía electrica en 2012
+P0609_2013,Usuarios de energía electrica en 2013
+P0609_2014,Usuarios de energía electrica en 2014
+P0609_2015,Usuarios de energía electrica en 2015
+P0609_2016,Usuarios de energía electrica en 2016
+P0609_2017,Usuarios de energía electrica en 2017
+Año,Año de los datos
+Desarrollos Certificados,Indica si el desarrollo habitacional cuenta con certificación
+I0405,Integridad del parámetro P0405
+Mes,Mes del dato
+P0405,Numero de viviendas verticales por ciudad
+Segmento,Segmento de mercado del desarrollo habitacional
+Situación de Avance,Avance de construcción del desarrollo habitacional
+Tipo de Vivienda,Tipo de desarrollo habitacional (Vertical / Horizontal)
+Ubicación PCU 2015,Identificador del tipo de Perímetro de Contención Urbana (2015) en la que se encuentran las viviendas.
+Viviendas,Numero de viviendas en el desarrollo.
+I0406,Integridad del parametro P0406
+P0406,"Numero de viviendas dentro de Perimetros de Contención Urbana tipo U1 o U2, por ciudad"
+I0713,Integridad del parametro P0713
+P0713,Numero de Manzanas municipio según disponibilidad de rampa para silla de ruedas en sus vialidades
+Rampa No especificado,Numero de vialidades en donde no se ha especificado la existencia de rampa para discapacitados
+Rampa en Alguna vialidad,Numero de manzanas que cuentan con para discapacitados en al menos una de sus vialidades
+Rampa en Ninguna vialidad,Numero de manzanas que no cuentan con rampa para discapacitados en al menos una de sus vialidades
+Rampa en Todas las vialidades,Numero de manzanas que cuentan con rampa para discapacitados en todas sus vialidades
+AEP,"Alimentadoras Estatales, Pavimentada: También conocidas con el nombre de carreteras secundarias, tienen como propósito principal servir de acceso a las carreteras troncales. Comprende caminos de dos, cuatro o más carriles."
+AER,"Alimentadoras Estatales, Revestida: También conocidas con el nombre de carreteras secundarias, tienen como propósito principal servir de acceso a las carreteras troncales."
+AET,"Alimentadoras Estatales, Terraceria: También conocidas con el nombre de carreteras secundarias, tienen como propósito principal servir de acceso a las carreteras troncales. Se refiere a tramos en mejoramiento, ampliación o en construcción."
+BM,Brechas Mejoradas.
+CRP,"Caminos Rurales, Pavimentado."
+CRR,"Caminos Rurales, Revestido."
+CRT,"Caminos Rurales, Terraceria: Se refiere a tramos en mejoramiento, ampliación o en construcción."
+FECHA,Fecha del dato
+I0701,Integridad del Parametro P0701
+P0701,Longitud total de la red de carreteras del municipio (excluyendo las autopistas)
+TFP,"Troncal Federal, Pavimentada: También es conocida como principal o primaria, tiene como objetivo específico servir al tránsito de larga distancia. Comprende caminos de cuota (incluidos los estatales) y libres."
+Total_vialidades,"Longitud total de la red carretera, sin importar el tipo de vialidad"
+CAPACIDAD INSTALADA L/S,Capacidad instalada de tratamiento de aguas residuales en litros / segundo
+CAUDAL TRATADO L/S,Caudal tratado de aguas residuales en litros / segundo
+I0104,Integridad del parametro P0104
+NOMBRE DE PTAR,Nombre de la Planta de Tratamiento de Aguas Residuales
+P0104,Capacidad de Tratamiento de Aguas Residuales
+TIPO DE PROCESO,Tipo de proceso de tratamiento de aguas residuales
