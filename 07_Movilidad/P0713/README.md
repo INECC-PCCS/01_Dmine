@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0713 - Vialidades con rampa para discap
 
 **Dataset Base**: "P0713.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/CLEU
 
-**Ultima revision del parametro**: 2018/04/23 
+**Ultima revision del parametro**: 2018/05/07 
 
 **Ultima Actualizacion de los datos**: 2014
 

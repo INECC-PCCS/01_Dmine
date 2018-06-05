@@ -516,3 +516,80 @@ I0104,Integridad del parametro P0104
 NOMBRE DE PTAR,Nombre de la Planta de Tratamiento de Aguas Residuales
 P0104,Capacidad de Tratamiento de Aguas Residuales
 TIPO DE PROCESO,Tipo de proceso de tratamiento de aguas residuales
+AG_CONASAMI,"Areas Geograficas para la asignación de Salarios Minimos, definidas por la Comision Nacional de los Salarios Minimos"
+I0714,Integridad del parametro P0714
+P0714,Salarios Minimos Generales publicados por la Comision Nacional de los Salarios Minimos
+SMG_2010,Salarios Minimos Generales para el Periodo 2010
+SMG_2011,Salarios Minimos Generales para el periodo 2011
+SMG_2015,Salarios Minimos Generales para el Periodo 2015
+I0614,Integridad del parametro P0614
+P0614,"Producto Interno Bruto por ciudad, con base a la estimación Municipal realizada por el IMCO"
+PIB-2008,Producto Interno Bruto Municipal 2008 (Estimacion realizada por el IMCO)
+PIB-2009,Producto Interno Bruto Municipal 2009 (Estimacion realizada por el IMCO)
+PIB-2010,Producto Interno Bruto Municipal 2010 (Estimacion realizada por el IMCO)
+PIB-2011,Producto Interno Bruto Municipal 2011 (Estimacion realizada por el IMCO)
+PIB-2012,Producto Interno Bruto Municipal 2012 (Estimacion realizada por el IMCO)
+PIB-2013,Producto Interno Bruto Municipal 2013 (Estimacion realizada por el IMCO)
+PIB-2014,Producto Interno Bruto Municipal 2014 (Estimacion realizada por el IMCO)
+CONJUNTO,Nombre del Conjunto Habitacional
+I0407,Integridad del Parametro P0407
+OFERENTE,Nombre del oferente del Conjunto Habitacional
+P0407,Desarrollos Habitacionales Sustentables
+P0407_2012,Conjunto Habitacional registrado como sustentable en 2012
+P0407_2013,Conjunto Habitacional registrado como sustentable en 2013
+P0407_2014,Conjunto Habitacional registrado como sustentable en 2014
+P0407_2015,Conjunto Habitacional registrado como sustentable en 2015
+P0407_2016,Conjunto Habitacional registrado como sustentable en 2016
+I0108,Integridad del parametro P0108
+P0108,Sólidos Suspendidos Totales
+año,Año del dato
+cuer_agu,Cuerpo de Agua
+id_edo,Clave geoestadística de la Entidad
+id_emca,Identificador unico de la Estación de Monitoreo de Calidad del Agua
+id_rh,Identificador del Recurso Hídrico
+id_rha,Identificador de la Región Hidrológica administrativa
+nom_edo,Nombre de la entidad
+nom_emca,Nombre de la Estación de Monitoreo de Calidad del Agua
+nom_rh,Nombre del Recurso Hídrico
+nom_rha,Nombre de la Región Hidrológica administrativa
+sistema,Tipo de ecosistema
+sst,Sólidos Suspendidos Totales (mg O2/l)
+sst_clas,Calidad del agua de acuerdo con los Sólidos Suspendidos Totales.
+I0107,Integridad del parametro P0107
+P0107,Demanda Química de Oxígeno
+dqo,Demanda Química de Oxígeno (mg O2/l medidos a 5 días)
+dqo_clas,Calidad del agua de acuerdo con la Demanda Quïmica de Oxígeno
+I0121,Integridad del parametro P0121
+P0121,Coliformes Fecales
+calidad_cf,Calidad del agua de acuerdo con la cantidad de Coliformes Fecales
+coli_fec,Coliformes Fecales (NMP/ml)
+cuerpo_agu,Cuerpo de Agua
+cve_sitio,Identificador unico del sitio de Monitoreo
+nom_sitio,Nombre del sitio de Monitoreo
+tipo_eco,Tipo de ecosistema
+I0106,Integridad del Parametro P0106
+P0106,Demanda Bioquimica de Oxigeno
+dbo,Demanda Bioquímica de Oxígeno (mg O2/l medidos a 5 días)
+dbo_clas,Calidad del agua de acuerdo con la Demanda Bioquïmica de Oxígeno
+ecosistema, Tipo de ecosistema
+I0109,Integridad del Parametro P0109
+P0109,Sólidos Disueltos Totales
+clas_sdt,Clasificación de acuerdo con la cantidad de Sólidos Disueltos Totales
+id_acuif,Identificador del acuífero
+nom_acuif,Nombre del acuífero
+valor_sdt,Sólidos Disueltos Totales
+AcAreaintr,Area de un acuifero que intersecta el area de un municipio (ha)
+Area_mun,Area del municipio (ha)
+FID_all,ID unico de los poligonos resultantes de la interseccion de acuiferos con municipios
+I0105,Inetgridad del Parametro P0105
+P0105,Disponibilidad en Acuiferos
+area_acui,Area total del polígono que define un acuífero (ha)
+hm3_2011,Disponibilidad (hm3) por acuifero en 2011
+hm3_2012,Disponibilidad (hm3) por acuifero en 2012
+hm3_2013,Disponibilidad (hm3) por acuifero en 2013
+hm3_2014,Disponibilidad (hm3) por acuifero en 2014
+hm3_2015,Disponibilidad (hm3) por acuifero en 2015
+I0812,Integridad del parámetro P0812
+IGI-2016,Indice General de Impunidad en Mexico para el año 2016
+IGI-2018,Indice General de Impunidad en Mexico para el año 2018
+P0812,Indice Global de impunidad en México

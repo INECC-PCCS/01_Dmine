@@ -30,7 +30,7 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 M = Meta
 M.ClaveParametro = 'P0713'
 M.NombreParametro = 'Vialidades con rampa para discapacitados'
-M.DescParam = 'Numero de Manzanas municipio según disponibilidad de rampa para silla de ruedas en sus vialidades'
+M.DescParam = 'Numero de Manzanas por municipio según disponibilidad de rampa para silla de ruedas en sus vialidades'
 M.UnidadesParam = 'Numero de manzanas'
 M.TituloParametro = 'Mrampa'                              # Para nombrar la columna del parametro
 M.PeriodoParam = '2014'
@@ -45,7 +45,7 @@ M.TipoAgr = 'sum'
 # Descripciones del proceso de Minería
 M.nomarchivodataset = M.ClaveParametro
 M.extarchivodataset = 'xlsx'
-M.ContenidoHojaDatos = 'Manzanas municipio según disponibilidad de rampa para silla de ruedas en sus vialidades'
+M.ContenidoHojaDatos = 'Manzanas por municipio según disponibilidad de rampa para silla de ruedas en sus vialidades'
 M.ClaveDataset = 'CLEU'
 M.ActDatos = '2014'
 M.Agregacion = 'Se clasificó el total de manzanas por municipio segun la disponibilidad de rampa para silla de ruedas' \
