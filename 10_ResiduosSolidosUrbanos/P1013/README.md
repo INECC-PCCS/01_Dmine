@@ -1,5 +1,22 @@
-# [PROXY] P1013 - Número de municipios con rellenos sanitarios
+# Parametro P1013 - Número de rellenos sanitarios
 
-(Mineria de datos de parametro pendiente)
+Archivo de mineria de datos. Parametro: P1013 - Número de rellenos sanitarios
 
-Proxy creado con fines de coordinacion
+**Contenido**: Censo Nacional de Gobiernos Municipales y Delegacionales 2015
+
+**FUENTE**: INEGI
+
+**Dataset Base**: "PUNTOSDISP.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/INEGI
+
+**Ultima revision del parametro**: 2018/06/11 
+
+**Ultima Actualizacion de los datos**: 2018
+
+----------
+
+**Instituto Nacional de Ecología y Cambio Climático**
+
+**Programa de las Naciones Unidas para el Desarrollo**
+
+**Plataforma de Conocimiento de Ciudades Sustentables**
+
