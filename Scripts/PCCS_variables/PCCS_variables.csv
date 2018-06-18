@@ -593,3 +593,45 @@ I0812,Integridad del parámetro P0812
 IGI-2016,Indice General de Impunidad en Mexico para el año 2016
 IGI-2018,Indice General de Impunidad en Mexico para el año 2018
 P0812,Indice Global de impunidad en México
+CLAVE-2011-DISP,Clave del sitio de disposicion de rResiduos Sólidos Urbanos
+I1013,Integridad del parámetro P1013
+LATITUD,Latitud geográfica
+LONGITUD,Longitud Geográfica
+NOMBRE-DISP,Nombre del Sitio de Disposición de Residuos Sólidos Urbanos
+OID,ID original de datos obtenidos desde una capa geográfica
+P1013,Número de rellenos sanitarios
+TIPODISP,Tipo de sitio de disposición de Residuos Sólidos Urbanos
+I1014,Integridad del parámetro P1014
+P1014,Número de tiraderos a cielo abierto
+Administrador E-Transf,Nombre de la dependencia o empresa que administra la Estación de Transferencia de Residuos Sólidos Urbanos
+FOLIO,Folio del dato
+Funciones E-Transf,"Funciones de la Estación de Transferencia de Residuos Sólidos Urbanos:
+1: Almacenamiento Temporal y trasvase
+2: Compactación
+3: Selección, Separación
+4: Otra."
+I1016,Integridad del Parámetro P1016
+Nombre E-Transf,Nombre de la Estación de Transferencia de Residuos Sólidos Urbanos
+Otra funcion  E-Transf,Funciones de la Estación de Transferencia de Residuos Sólidos Urbanos no listadas
+Otro Regimen  E-Transf,Regimen jurídico del operador no listado
+P1016,Número de estaciones de transferencia en la Ciudad
+Regimen  E-Transf,Regimen jurídico del operador de la Estación de Transferencia de Residuos Sólidos Urbanos
+cve_loc,Clave Geoestadística de Localidad a 4 dígitos
+I1002,Integridad del Parametro P1002
+P1002,Porcentaje de recolección selectiva de RSU
+RSU-ESQUEMA,"Esquema de separacion que utiliza el operador.
+1: Se hace la colecta por fracción, es decir, por ejemplo, un día se recoge orgánicos y otro día inorgánicos.
+2: Se recoge el mismo día todas las fracciones, mediante un transporte adaptado con espacio específico para cada tipo de material.
+3: Otra"
+RSU-INORGANICOS-KG,Cantidad tipo de residuo inorgánicos (KG)
+RSU-ORGANICOS-KG,Cantidad tipo de residuo orgánicos (KG)
+RSU-OTRO-ESQUEMA,Otro esquema de separacion no listado
+RSU-SEP,"La basura se recibe separada.
+1: Si
+2: No"
+RSU-SUMSEP-KG,Cantidad total de residuos orgánicos e inorgánicos que son separados (KG)
+RSU-SUMSEP-TON,Cantidad total de residuos orgánicos e inorgánicos que son separados (Ton)
+RSU-TON,Total de Residuos Sólidos Urbanos recolectados (Dato corregido INECC)
+RSU-TOTAL-KG,Total de Residuos Solidos Urbanos recolectados en kilogramos (Dato levantado en el Censo)
+RSU-TOTAL-TON,Total de Residuos Solidos Urbanos recolectados en toneladas (Dato levantado en el Censo)
+SEP-RSU-PORCENTAJE,Porcentaje de residuos que son separados en el municipio.
