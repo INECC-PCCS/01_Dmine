@@ -2,15 +2,15 @@
 
 Archivo de mineria de datos. Parametro: P0714 - Salarios Minimos Generales
 
-**Contenido**: Clasificación de areas geograficas para asignación de salarios mínimos, vigente del 27 de noviembre de 2012 al 30 de septiembre de 2015
+**Contenido**: Clasificación de areas geograficas para asignación de salarios mínimos, vigente antes del 26 de noviembre de 2012
 
 **FUENTE**: CONASAMI
 
-**Dataset Base**: "SMG_2015.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/CONASAMI
+**Dataset Base**: "SMG_2011.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/CONASAMI
 
-**Ultima revision del parametro**: 2018/05/08 
+**Ultima revision del parametro**: 2018/07/12 
 
-**Ultima Actualizacion de los datos**: 2015
+**Ultima Actualizacion de los datos**: 2011
 
 ----------
 

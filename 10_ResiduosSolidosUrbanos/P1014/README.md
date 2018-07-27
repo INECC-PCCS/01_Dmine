@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P1014 - Número de tiraderos a cielo abie
 
 **Dataset Base**: "PUNTOSDISP.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/INEGI
 
-**Ultima revision del parametro**: 2018/06/11 
+**Ultima revision del parametro**: 2018/07/13 
 
 **Ultima Actualizacion de los datos**: 2018
 

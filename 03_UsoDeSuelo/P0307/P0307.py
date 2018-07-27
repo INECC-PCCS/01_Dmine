@@ -42,7 +42,7 @@ M.TipoInt = 1
 M.ParDtype = 'float'
 M.TipoVar = 'C'     # (Tipos de Variable: [C]ontinua, [D]iscreta [O]rdinal, [B]inaria o [N]ominal)
 M.array = []
-M.TipoAgr = 'sum'
+M.TipoAgr = 'count'
 
 # Descripciones del proceso de Minería
 M.nomarchivodataset = M.ClaveParametro
@@ -55,7 +55,7 @@ M.Agregacion = 'Este parámetro utilizan las variables "tema_nis" y "tt_dispo". 
                'Ordenamiento Territorial. tt_dispo indica la cantidad de DS de cada tipo en cada municipio. Para ' \
                'agregar la información y construir el parámetro, se utilizan todos los renglones registrados con ' \
                'la clave 41 en "tema_nis" y se eliminan los renglones marcados como cero (0) o vacíos de ' \
-               '"tt_dispo". Los renglones restantes se suman de acuerdo a la clave SUN a la que pertenecen.'
+               '"tt_dispo". Los renglones restantes se cuentan de acuerdo a la clave SUN a la que pertenecen.'
 
 M.getmetafromds = 1
 

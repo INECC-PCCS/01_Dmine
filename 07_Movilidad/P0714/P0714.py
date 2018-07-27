@@ -33,7 +33,7 @@ M.NombreParametro = 'Salarios Minimos Generales'
 M.DescParam = 'Salarios Minimos Generales publicados por la Comision Nacional de los Salarios Minimos'
 M.UnidadesParam = 'Pesos Mexicanos Diarios'
 M.TituloParametro = 'SMG'                              # Para nombrar la columna del parametro
-M.PeriodoParam = '2015'
+M.PeriodoParam = '2011'
 M.TipoInt = 1       # 1: Binaria; 2: Multivariable, 3: Integral
 
 # Handlings

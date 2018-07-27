@@ -20,6 +20,7 @@ def AsignarDimension(ClaveDimension):
         '09': {'directorio': 'BienesAmbientalesYServiciosPublicos',
                'nombre': 'Bienes Ambientales y Servicios Públicos'},
         '10': {'directorio': 'ResiduosSolidosUrbanos', 'nombre': 'Residuos Sólidos Urbanos'},
+        '99': {'directorio': 'Descentralizacion', 'nombre': 'Descentralizacion'},
     }
     return dimension[ClaveDimension]
 
