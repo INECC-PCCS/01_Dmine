@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Started on mon, mar 05th, 2018
-
+Started on fri, aug 3rd, 2018
 @author: carlos.arana
 
 """
@@ -28,28 +27,28 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 M = Meta
-M.ClaveParametro = 'P0606'
-M.NombreParametro = 'Generación mediante fuentes renovables de energía'
-M.DescParam = 'Generación de energía a partir de fuentes renovables.'
-M.UnidadesParam = 'GWh/a'
-M.TituloParametro = 'GenENR'                              # Para nombrar la columna del parametro
-M.PeriodoParam = '2015'
+M.ClaveParametro = 'P0502'
+M.NombreParametro = 'Número de empresas con certificado de Industria Limpia'
+M.DescParam = 'Numero de empresas que cuentan con una certificación de las emitidas dentro del marco del ' \
+              'Programa Nacional de Auditoría Ambiental, emitidas o actualizadas al mes de julio de 2018'
+M.UnidadesParam = 'Número de empresas'
+M.TituloParametro = 'CIL'                              # Para nombrar la columna del parametro
+M.PeriodoParam = '2018'
 M.TipoInt = 3       # 1: Binaria; 2: Multivariable, 3: Integral
 
 # Handlings
 M.ParDtype = 'float'
 M.TipoVar = 'C'     # (Tipos de Variable: [C]ontinua, [D]iscreta [O]rdinal, [B]inaria o [N]ominal)
 M.array = []
-M.TipoAgr = 'sum'
+M.TipoAgr = 'count'
 
 # Descripciones del proceso de Minería
-M.nomarchivodataset = 'ER_Actual'
+M.nomarchivodataset = M.ClaveParametro.replace('P', 'D')
 M.extarchivodataset = 'xlsx'
-M.ContenidoHojaDatos = 'Plantas de generación de energía a partir de fuentes renovables'
-M.ClaveDataset = 'INERE'
-M.ActDatos = '2014'
-M.Agregacion = 'Se sumó el potencial en Gigawatts hora al año para las plantas de generacion de energía en cada ' \
-               'municipio. Los resultados de esta suma se agregaron por clave del SUN'
+M.ContenidoHojaDatos = 'Listado de empresas certificadas, tipo de certificado y vigencia'
+M.ClaveDataset = 'PROFEPA'
+M.ActDatos = '2018'
+M.Agregacion = 'Se contó el número de empresas certificadas existentes en cada ciudad del SUN'
 
 # Descripciones generadas desde la clave del parámetro
 M.getmetafromds = 1
@@ -65,8 +64,9 @@ dataset.head(2)
 list(dataset)
 
 # Generar dataset para parámetro y Variable de Integridad
-var1 = 'GENERACIÓN (GWh/a) '
+var1 = 'NOMBRE DE LA INSTALACION'
 par_dataset = dataset[var1]
+# par_dataset = dataset[var1].astype('float')
 par_dataset = par_dataset.to_frame(name = M.ClaveParametro)
 par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
 

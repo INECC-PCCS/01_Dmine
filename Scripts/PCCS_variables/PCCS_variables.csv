@@ -719,3 +719,14 @@ P0212,Emisiones de GEI generadas por la ciudad
 PM10,"(Particulate Matter) Particulas Suspendidas, menores a 10 micras, cuyas fuentes de emision son: humana ( motores de combustión, incineradoras, etcetera) y animal (ncendios forestales, las erupciones volcánicas, el aerosol marino, o los vientos que arrastran material desde el suelo, especialmente en zonas desérticas)."
 PM2.5,"(Particulate Matter) Particulas Suspendidas, menores a 2.5 micras, cuyas fuentes de emision corresponden a las de origen humano y animal."
 SO2,"Dioxido de azufre: gas incoloro, de olor picante muy característico, más pesado que el aire, formado por un átomo de azufre y dos de oxígeno. Fuentes de emision: ombustión del carbón y de otros combustibles fósiles como la gasolina."
+I0218,Integridad del Parámetro P0218
+P0218,Emisiones Contaminantes del Aire
+I0036,Integridad del Parámetro P0036
+P0036,Producción Bruta
+PBT 2014,Producción Bruta Total 2014
+I0502, Integridad del parámetro P0502
+NOMBRE DE LA INSTALACION,Nombre de la instalación
+P0502, Númerto de Empresas con certificado de Empresa Limpia
+PNAA_Status, Estado de la certificación emitida dentro del marco del Programa Nacional de Auditoría Ambiental.
+TIPO_PNAA, Tipo de certificacion emitida dentro del marco del Programa Nacional de Auditoría Ambiental.
+VIGENCIA_PNAA, Vigencia de la certificación emitida dentro del marco del Programa Nacional de Auditoría Ambiental.

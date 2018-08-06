@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Started on mon, mar 05th, 2018
-
+Started on fri, jul 27th, 2018
 @author: carlos.arana
 
 """
@@ -28,13 +27,13 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 M = Meta
-M.ClaveParametro = 'P0606'
-M.NombreParametro = 'Generación mediante fuentes renovables de energía'
-M.DescParam = 'Generación de energía a partir de fuentes renovables.'
-M.UnidadesParam = 'GWh/a'
-M.TituloParametro = 'GenENR'                              # Para nombrar la columna del parametro
-M.PeriodoParam = '2015'
-M.TipoInt = 3       # 1: Binaria; 2: Multivariable, 3: Integral
+M.ClaveParametro = 'P0218'
+M.NombreParametro = 'Emisiones Contaminantes del Aire'
+M.DescParam = 'Emisión de Gases de Efecto Invernadero'
+M.UnidadesParam = 'Toneladas'
+M.TituloParametro = 'GEI'                              # Para nombrar la columna del parametro
+M.PeriodoParam = '2008'
+M.TipoInt = 2       # 1: Binaria; 2: Multivariable, 3: Integral
 
 # Handlings
 M.ParDtype = 'float'
@@ -43,13 +42,13 @@ M.array = []
 M.TipoAgr = 'sum'
 
 # Descripciones del proceso de Minería
-M.nomarchivodataset = 'ER_Actual'
+M.nomarchivodataset = M.ClaveParametro
 M.extarchivodataset = 'xlsx'
-M.ContenidoHojaDatos = 'Plantas de generación de energía a partir de fuentes renovables'
-M.ClaveDataset = 'INERE'
-M.ActDatos = '2014'
-M.Agregacion = 'Se sumó el potencial en Gigawatts hora al año para las plantas de generacion de energía en cada ' \
-               'municipio. Los resultados de esta suma se agregaron por clave del SUN'
+M.ContenidoHojaDatos = 'Toneladas de gases de efecto invernadero, clasificadas por gas, para el año 2008'
+M.ClaveDataset = 'SEMARNAT'
+M.ActDatos = '2008'
+M.Agregacion = 'Se sumó la cantidad de Gases de Efecto Invernadero para los municipios que componen ' \
+               'cada ciudad del SUN' \
 
 # Descripciones generadas desde la clave del parámetro
 M.getmetafromds = 1
@@ -65,8 +64,9 @@ dataset.head(2)
 list(dataset)
 
 # Generar dataset para parámetro y Variable de Integridad
-var1 = 'GENERACIÓN (GWh/a) '
+var1 = 'Carbón Negro'
 par_dataset = dataset[var1]
+par_dataset = dataset[var1].astype('float')
 par_dataset = par_dataset.to_frame(name = M.ClaveParametro)
 par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
 

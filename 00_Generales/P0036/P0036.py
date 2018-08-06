@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Started on fri, jul 27th, 2018
+Started on tue, jul 31st, 2018
 @author: carlos.arana
 
 """
@@ -27,13 +27,13 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 M = Meta
-M.ClaveParametro = 'P0212'
-M.NombreParametro = 'Emisiones de GEI generadas por la ciudad'
-M.DescParam = 'Emisión de Gases de Efecto Invernadero'
-M.UnidadesParam = 'Toneladas'
-M.TituloParametro = 'GEI'                              # Para nombrar la columna del parametro
-M.PeriodoParam = '2008'
-M.TipoInt = 2       # 1: Binaria; 2: Multivariable, 3: Integral
+M.ClaveParametro = 'P0036'
+M.NombreParametro = 'Producción Bruta'
+M.DescParam = 'Producción Bruta'
+M.UnidadesParam = 'Millones de Pesos'
+M.TituloParametro = 'PBT'                              # Para nombrar la columna del parametro
+M.PeriodoParam = '2014'
+M.TipoInt = 1       # 1: Binaria; 2: Multivariable, 3: Integral
 
 # Handlings
 M.ParDtype = 'float'
@@ -44,11 +44,10 @@ M.TipoAgr = 'sum'
 # Descripciones del proceso de Minería
 M.nomarchivodataset = M.ClaveParametro
 M.extarchivodataset = 'xlsx'
-M.ContenidoHojaDatos = 'Toneladas de gases de efecto invernadero, clasificadas por gas, para el año 2008'
-M.ClaveDataset = 'SEMARNAT'
-M.ActDatos = '2008'
-M.Agregacion = 'Se promedió la cantidad de Gases de Efecto Invernadero para los municipios que componen ' \
-               'cada ciudad del SUN' \
+M.ContenidoHojaDatos = 'PBT municipal de las ciudades pertenecientes al SUN, hecha con datos del SAIC 2014 (INEGI)'
+M.ClaveDataset = 'INEGI'
+M.ActDatos = '2014'
+M.Agregacion = 'Se sumó la Producción Bruta para los municipios que componen cada ciudad del SUN'
 
 # Descripciones generadas desde la clave del parámetro
 M.getmetafromds = 1
@@ -61,11 +60,10 @@ dataset = pd.read_excel(M.DirFuente + '\\' + M.ArchivoDataset,
 dataset.set_index('CVE_MUN', inplace=True)
 dataset = dataset.rename_axis('CVE_MUN')
 dataset.head(2)
-del(dataset['NOM_MUN'])
 list(dataset)
 
 # Generar dataset para parámetro y Variable de Integridad
-var1 = 'Carbón Negro'
+var1 = 'PBT 2014'
 par_dataset = dataset[var1]
 par_dataset = dataset[var1].astype('float')
 par_dataset = par_dataset.to_frame(name = M.ClaveParametro)

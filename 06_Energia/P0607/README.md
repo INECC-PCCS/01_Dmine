@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0607 - Potencial de fuentes renovables 
 
 **Dataset Base**: "ER_Potencial.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/INERE
 
-**Ultima revision del parametro**: 2018/03/12 
+**Ultima revision del parametro**: 2018/08/06 
 
 **Ultima Actualizacion de los datos**: 2014
 
