@@ -88,3 +88,14 @@ Carpeta		| Ubicación
 Local		| D:\\PCCS\\01\_Dmine\\Datasets\\INEGI\\SEPARACION-RSU.xlsx
 Pública		| https://github.com/INECC-PCCS/01\_Dmine/tree/master/Datasets/INEGI/SEPARACION-RSU.xlsx
 
+## Estudios de Composición de RSU
+
+El módulos 12 de la ENGMD 2015 (Tabla TR_CNGMD15_M6.xlsx) contiene una verificación de los municipios que cuentan con estudios sobre la composición de RSU. La limpieza de la hoja de microdatos de este tema se realizó siguiendo los siguientes pasos:
+
+(1) Crear CVE_MUN de 5 dígitos, Eliminar columnas de datos que no corresponden a este parámetro.
+
+(2) Eliminar columnas utilizadas para CVE_MUN, cambiar encabezados a mnemónicos.
+
+(3) Compilar columnas RSU-TOTAL-TON y RSU-TOTAL-KG en una sola RSU-TON (Para rellenar valores vacíos). Se tomaron las siguientes consideraciones especiales:
+1. Para los municipios que únicamente tenían información en kilogramos, el dato en la columna RSU-TOTAL-KG se dividió entre 1000
+

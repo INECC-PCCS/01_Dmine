@@ -48,8 +48,8 @@ M.extarchivodataset = 'xlsx'
 M.ContenidoHojaDatos = 'Plantas de generación de energía a partir de fuentes renovables'
 M.ClaveDataset = 'INERE'
 M.ActDatos = '2014'
-M.Agregacion = 'Se sumó el potencial en Megawatts hora para las pantas de generacion de energía en cada municipio.' \
-               'Los resultados de esta suma se agregaron por clave del SUN'
+M.Agregacion = 'Se sumó el potencial en Gigawatts hora al año para las plantas de generacion de energía en cada ' \
+               'municipio. Los resultados de esta suma se agregaron por clave del SUN'
 
 # Descripciones generadas desde la clave del parámetro
 M.getmetafromds = 1

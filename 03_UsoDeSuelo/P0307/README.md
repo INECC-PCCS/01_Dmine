@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0307 - Disposiciones normativas sustant
 
 **Dataset Base**: "P0307.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/CNGMD
 
-**Ultima revision del parametro**: 2018/02/06 
+**Ultima revision del parametro**: 2018/07/03 
 
 **Ultima Actualizacion de los datos**: 2015
 

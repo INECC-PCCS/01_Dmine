@@ -635,3 +635,98 @@ RSU-TON,Total de Residuos Sólidos Urbanos recolectados (Dato corregido INECC)
 RSU-TOTAL-KG,Total de Residuos Solidos Urbanos recolectados en kilogramos (Dato levantado en el Censo)
 RSU-TOTAL-TON,Total de Residuos Solidos Urbanos recolectados en toneladas (Dato levantado en el Censo)
 SEP-RSU-PORCENTAJE,Porcentaje de residuos que son separados en el municipio.
+I0038,Integridad del parametro P0038
+P0038,Coeficiente de Gini
+P0038_2008,Coeficiente de Gini para el año 2008
+P0038_2009,Coeficiente de Gini para el año 2009
+P0038_2010,Coeficiente de Gini para el año 2010
+P0038_2011,Coeficiente de Gini para el año 2011
+P0038_2012,Coeficiente de Gini para el año 2012
+P0038_2013,Coeficiente de Gini para el año 2013
+P0038_2014,Coeficiente de Gini para el año 2014
+M2-AV-2008,Metros cuadrados de área verde en el municipio en 2008
+HAB-2008,Habitantes en el municipio en 2008
+AVPC-2008,Areas Verdes Per Capita en 2008
+M2-AV-2009,Metros cuadrados de área verde en el municipio en 2009
+HAB-2009,Habitantes en el municipio en 2009
+AVPC-2009,Areas Verdes Per Capita en 2009
+M2-AV-2010,Metros cuadrados de área verde en el municipio en 2010
+HAB-2010,Habitantes en el municipio en 2010
+AVPC-2010,Areas Verdes Per Capita en 2010
+M2-AV-2011,Metros cuadrados de área verde en el municipio en 2011
+HAB-2011,Habitantes en el municipio en 2011
+AVPC-2011,Areas Verdes Per Capita en 2011
+M2-AV-2012,Metros cuadrados de área verde en el municipio en 2012
+HAB-2012,Habitantes en el municipio en 2012
+AVPC-2012,Areas Verdes Per Capita en 2012
+M2-AV-2013,Metros cuadrados de área verde en el municipio en 2013
+HAB-2013,Habitantes en el municipio en 2013
+AVPC-2013,Areas Verdes Per Capita en 2013
+M2-AV-2014,Metros cuadrados de área verde en el municipio en 2014
+HAB-2014,Habitantes en el municipio en 2014
+AVPC-2014,Areas Verdes Per Capita en 2014
+I0308,Integridad del parámetro P0308
+P0308,Areas verdes per capita
+I1012,Integridad del parametro P1012
+P1012,Aprovechamiento o quema de biogas en rellenos sanitarios
+P1012_2008,"Aprovechamiento o quema de biogas en rellenos sanitarios en 2008 (1: Aprovecha o quema biogas, 0: No aprovecha o quema biogas)"
+P1012_2009,"Aprovechamiento o quema de biogas en rellenos sanitarios en 2009 (1: Aprovecha o quema biogas, 0: No aprovecha o quema biogas)"
+P1012_2010,"Aprovechamiento o quema de biogas en rellenos sanitarios en 2010 (1: Aprovecha o quema biogas, 0: No aprovecha o quema biogas)"
+P1012_2011,"Aprovechamiento o quema de biogas en rellenos sanitarios en 2011 (1: Aprovecha o quema biogas, 0: No aprovecha o quema biogas)"
+P1012_2012,"Aprovechamiento o quema de biogas en rellenos sanitarios en 2012 (1: Aprovecha o quema biogas, 0: No aprovecha o quema biogas)"
+P1012_2013,"Aprovechamiento o quema de biogas en rellenos sanitarios en 2013 (1: Aprovecha o quema biogas, 0: No aprovecha o quema biogas)"
+P1012_2014,"Aprovechamiento o quema de biogas en rellenos sanitarios en 2014 (1: Aprovecha o quema biogas, 0: No aprovecha o quema biogas)"
+I0715,Integridad del Parámetro P0705
+P0715,Gasto en transporte publico
+est_trans,Estimación del gasto mensual en transporte público
+folioviv,"Identificador de la vivienda compuesto por dos dígitos con la clave de la entidad federativa, uno con el ámbito (urbano, código diferente a 6; rural, código 6), cuatro dígitos del número consecutivo de la upm, un dígito de la decena de levantamiento y dos dígitos con un número consecutivo para la vivienda seleccionada."
+I1015,Integridad del Parametro P1015
+P1015,Porcentaje de municipios que envian sus residuos a plantas de tratamiento
+Consultas por médico,Numero de consultas por médico
+Consultas por unidad médica,Numero de consultas por unidad Médica
+I9901,Integridad del Parámetro P9901
+Médicos por unidad médica,Número de médicos por unidad Médica
+P9901,Derechohabientes y Personal Médico
+PM IMSS,Personal Médico contabilizado en el IMSS
+PM IMSS-PROSPERA c/,Personal Médico contabilizado en el IMSS-PROSPERA
+PM ISSSTE,Personal Médico contabilizado en el ISSSTE
+PM Otras,Personal Médico contabilizado en otras instituciones
+"PM PEMEX, SEDENA y/o SEMAR","Personal Médico contabilizado en PEMEX,SEDENA y/o SEMAR"
+PM SSA,Personal Médico contabilizado en SSA
+Población derechohabiente,Población Derechohabiente
+Población usuaria,Población Usuaria
+Total PM instituciones,Total de Personal Médico en todas las instituciones
+Docentes Total,Personal docente en educación básica y media superior de la modalidad escolarizada
+Educación media superior,Personal docente en educación media superior de la modalidad escolarizada
+I9902,Integridad del Parametro P9902
+P9902,Personal Docente
+Preescolar,Personal docente en educación primaria
+Primaria,Personal docente en educación primaria
+Secundaria,Personal docente en educación secundaria
+Has2000,Superficie en hectáreas en el año 2000
+Has2005,Superficie en hectáreas en el año 2005
+Has2010,Superficie en hectáreas en el año 2010
+Has2013,Superficie en hectáreas en el año 2013
+I0305,Integridad del parámetro P0305
+P0305,Superficie de la mancha urbana
+CO,"Monoxido de Carbono: gas incoloro e inodoro, más ligero que el aire, formado por un átomo de carbono y uno de oxígeno, que se produce por la combustión incompleta del carbono en ambientes pobres en oxígeno, tales como un motor de explosión, una habitación cerrada o el centro de una gran ciudad."
+COV,"Compuestos Orgánicos Volátiles, son todos aquellos hidrocarburos que se presentan en estado gaseoso a la temperatura ambiente normal o que son muy volátiles a dicha temperatura. Fuentes de emision: Pinturas y barnices (e industrias donde se usen éstos), Industria siderúrgica, Industria de la madera, Industria cosmética, Industria farmacéutica."
+Carbón Negro,"Clasificado dentro de los contaminantes climáticos de vida corta (CCVC), los cuales tienen un importante potencial de calentamiento global y un tiempo de vida en la atmósfera más corto que el bióxido de carbono. Fuentes de emision: combustión incompleta de combustibles fósiles como el diésel y el combustóleo, así como por la quema de leña, entre otros."
+I0212,Integridad del Parámetro P0212
+NH3,"Amoniaco: gas incoloro, de olor muy penetrante, bastante soluble en agua, y en estado líquido es fácilmente evaporable. Se caracteriza porque es una base fuerte, corrosiva y que reacciona violentamente con ácidos, oxidantes fuertes y halógenos. Fuentes de emision: procesos de fabricación y tratamiento de textiles, plásticos, explosivos, pulpa y papel, alimentos y bebidas, productos de limpieza domésticos, refrigerantes y otros productos."
+NOX,"Oxidos de Nitrogeno: El NOx es un término genérico que hace referencia a un grupo de gases muy reactivos [tales como el óxido nítrico (NO) y el dióxido de nitrógeno (NO2)] que contienen nitrógeno y oxígeno en diversas proporciones.  Fuentes de emision: automóviles, las centrales eléctricas y otras fuentes industriales, comerciales y domésticas que queman combustibles."
+P0212,Emisiones de GEI generadas por la ciudad
+PM10,"(Particulate Matter) Particulas Suspendidas, menores a 10 micras, cuyas fuentes de emision son: humana ( motores de combustión, incineradoras, etcetera) y animal (ncendios forestales, las erupciones volcánicas, el aerosol marino, o los vientos que arrastran material desde el suelo, especialmente en zonas desérticas)."
+PM2.5,"(Particulate Matter) Particulas Suspendidas, menores a 2.5 micras, cuyas fuentes de emision corresponden a las de origen humano y animal."
+SO2,"Dioxido de azufre: gas incoloro, de olor picante muy característico, más pesado que el aire, formado por un átomo de azufre y dos de oxígeno. Fuentes de emision: ombustión del carbón y de otros combustibles fósiles como la gasolina."
+I0218,Integridad del Parámetro P0218
+P0218,Emisiones Contaminantes del Aire
+I0036,Integridad del Parámetro P0036
+P0036,Producción Bruta
+PBT 2014,Producción Bruta Total 2014
+I0502, Integridad del parámetro P0502
+NOMBRE DE LA INSTALACION,Nombre de la instalación
+P0502, Númerto de Empresas con certificado de Empresa Limpia
+PNAA_Status, Estado de la certificación emitida dentro del marco del Programa Nacional de Auditoría Ambiental.
+TIPO_PNAA, Tipo de certificacion emitida dentro del marco del Programa Nacional de Auditoría Ambiental.
+VIGENCIA_PNAA, Vigencia de la certificación emitida dentro del marco del Programa Nacional de Auditoría Ambiental.

@@ -48,16 +48,19 @@ M.extarchivodataset = 'xlsx'
 M.ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
 M.ClaveDataset = 'CNGMD'
 M.ActDatos = '2015'
-M.Agregacion = 'Este parámetro utiliza la variable "p10" de la base de datos del Censo Nacional de Gobiernos ' \
-               'Municipales y Delegacionales 2015, que indica para cada municipio si este envia al menos una parte ' \
-               'de sus Residuos Solidos Urbanos (RSU) hacia una planta de tratamiento. ' \
-               'Se transformaron los valores de la columna de modo que:' \
-               '\n1 = Envía al menos una parte de sus residuos a plantas de tratamiento, ' \
-               '\n0 = No envia residuos a planta de tratamiento, ' \
+M.Agregacion = 'Este parámetro utiliza la variable "P1" y "P10" de la base de datos del Censo Nacional de Gobiernos ' \
+               'Municipales y Delegacionales 2015, que indican respectivamente para cada municipio si cuenta con ' \
+               'servicios de recolección si este envia al menos una parte de sus Residuos Solidos Urbanos (RSU) ' \
+               'hacia una planta de tratamiento. Se transformaron los valores de cada columna de modo que:' \
+               '\n1 = true' \
+               '\n0 = false' \
                '\nNone = Informacion no disponible.' \
-               '\nPara agregar la información y construir el parámetro, se suma el valor de p10 de todos los ' \
-               'municipios de los que componen cada ciudad del SUN. De este modo, el valor de P1003 indica el' \
-               'numero de los municipios que componen la ciudad, que cuentan con estudios de generacion de RSU.'
+               '\nPara agregar la información y construir el parámetro, se verifica que el municipio cuente al ' \
+               'menos con uno de los dos servicios. Si cuenta con alguno servicio, se asigna un valor de 1 (true) al ' \
+               'municipio en la variable DSRSU. Posteriormente se realiza un conteo de todos los municipios de los ' \
+               'que componen cada ciudad del SUN en donde DSRSU es igual a 1. ' \
+               'De este modo, el valor de P1003 indica el numero de los municipios que componen la ciudad, que ' \
+               'cuentan con estudios de generacion de RSU.'
 
 M.getmetafromds = 1
 
@@ -74,11 +77,12 @@ dataset.set_index('CVE_MUN', inplace=True)
 dataset = dataset.apply(pd.to_numeric).where((pd.notnull(dataset)), None)
 dataset = dataset.rename_axis('CVE_MUN')
 
+Utiliza las dos variables del dataset. Corrigelo cuando se necesite.
 # Generar dataset para parámetro y Variable de Integridad
-si_no = {2:0}   # Reemplaza el valor 2 por 0, a manera de que 1 = True y 0 = False
-par_dataset = dataset['p10'].to_frame(name = M.ClaveParametro)
-par_dataset[M.ClaveParametro] = par_dataset[M.ClaveParametro].map(si_no)
-par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
+# si_no = {2:0}   # Reemplaza el valor 2 por 0, a manera de que 1 = True y 0 = False
+# par_dataset = dataset['p10'].to_frame(name = M.ClaveParametro)
+# par_dataset[M.ClaveParametro] = par_dataset[M.ClaveParametro].map(si_no)
+# par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
 
 # Compilacion
 compilar(M, dataset, par_dataset, variables_dataset)

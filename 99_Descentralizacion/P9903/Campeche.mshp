@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <HISTORY saga-version="2.3.2">
+    <MODULE library="shapes_lines" id="3" name="Line-Polygon Intersection">
+      <OPTION type="choice" id="METHOD" name="Output" index="1">keep original line attributes</OPTION>
+      <INPUT type="shapes" id="LINES" name="Lines">
+        <FILE>D:/PCCS/00_RawData/00_Geo/Vialidades/Red_de_Carreteras_04_Camp.shp</FILE>
+      </INPUT>
+      <INPUT type="shapes" id="POLYGONS" name="Polygons">
+        <FILE>D:/PCCS/00_RawData/00_Geo/ROQUE/Manchas Localidad Urbana Final/Ciudades_Sustentables_135_Localidad_2.shp</FILE>
+      </INPUT>
+      <OUTPUT type="shapes" id="INTERSECT" name="Intersection">Red_de_Carreteras_04_Camp [Intersection: Ciudades_Sustentables_135_Localidad_2]</OUTPUT>
+    </MODULE>
+  </HISTORY>
+  <SOURCE>
+    <FILE></FILE>
+    <DATABASE>
+      <FIELDS>
+        <FIELD TYPE="LONGINT">ID</FIELD>
+        <FIELD TYPE="STRING">TIPOVIA</FIELD>
+        <FIELD TYPE="STRING">TIPO</FIELD>
+        <FIELD TYPE="STRING">NUMERO</FIELD>
+        <FIELD TYPE="STRING">DERE_TRAN</FIELD>
+        <FIELD TYPE="STRING">ADMINISTRA</FIELD>
+        <FIELD TYPE="STRING">NUME_CARR</FIELD>
+        <FIELD TYPE="STRING">CONDICION</FIELD>
+        <FIELD TYPE="STRING">ORIGEN</FIELD>
+        <FIELD TYPE="STRING">CALI_REPR</FIELD>
+        <FIELD TYPE="STRING">CVEGEO</FIELD>
+        <FIELD TYPE="STRING">NOMVIAL</FIELD>
+        <FIELD TYPE="STRING">SENTIDO</FIELD>
+        <FIELD TYPE="DOUBLE">LONGITUD</FIELD>
+        <FIELD TYPE="STRING">UNIDAD</FIELD>
+      </FIELDS>
+    </DATABASE>
+    <PROJECTION></PROJECTION>
+  </SOURCE>
+  <DESCRIPTION></DESCRIPTION>
+</SAGA_METADATA>

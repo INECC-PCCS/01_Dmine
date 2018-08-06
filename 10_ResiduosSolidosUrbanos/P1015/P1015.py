@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Started on wed, jun 8th, 2018
+Started on tue, feb 06th, 2018
+
 @author: carlos.arana
 
 """
@@ -28,12 +29,12 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Descripciones del Parametro
 M = Meta
 M.ClaveParametro = 'P1015'
-M.NombreParametro = 'Número de plantas de tratamiento'
-M.DescParam = 'Nomero de plantas de tratamiento dentro de los municipios en los que se ubica una Ciudad'
-M.UnidadesParam = 'Planta de tratamiento'
-M.TituloParametro = 'tca'                              # Para nombrar la columna del parametro
+M.NombreParametro = 'Porcentaje de municipios que envian sus residuos a plantas de tratamiento'
+M.DescParam = 'Porcentaje de municipios que envian al menos una fracción de sus Residuos a plantas de tratamiento'
+M.UnidadesParam = 'Numero de municipios'
+M.TituloParametro = 'MUNGRSU'                              # Para nombrar la columna del parametro
 M.PeriodoParam = '2015'
-M.TipoInt = 3       # 1: Binaria; 2: Multivariable, 3: Integral
+M.TipoInt = 1
 
 # Handlings
 M.ParDtype = 'float'
@@ -42,35 +43,42 @@ M.array = []
 M.TipoAgr = 'count'
 
 # Descripciones del proceso de Minería
-M.nomarchivodataset = 'PUNTOSDISP'
+M.nomarchivodataset = M.ClaveParametro
 M.extarchivodataset = 'xlsx'
-M.ContenidoHojaDatos = 'Nombre y ubicacion de plantas de tratamiento'
-M.ClaveDataset = 'INEGI'
-M.ActDatos = '2018'
-M.Agregacion = 'Se contó el numero de plantas de tratamiento dentro de cada municipio. Luego se sumó el numero ' \
-               'de plantas de tratamiento dentro de los municipios de cada ciudad'
+M.ContenidoHojaDatos = 'Datos disponibles por municipio para 2015, utilizados para la construcción del parametro'
+M.ClaveDataset = 'CNGMD'
+M.ActDatos = '2015'
+M.Agregacion = 'Este parámetro utiliza la variable "p10" de la base de datos del Censo Nacional de Gobiernos ' \
+               'Municipales y Delegacionales 2015, que indica para cada municipio si este envia al menos una parte ' \
+               'de sus Residuos Solidos Urbanos (RSU) hacia una planta de tratamiento. ' \
+               'Se transformaron los valores de la columna de modo que:' \
+               '\n1 = Envía al menos una parte de sus residuos a plantas de tratamiento, ' \
+               '\n0 = No envia residuos a planta de tratamiento, ' \
+               '\nNone = Informacion no disponible.' \
+               '\nPara agregar la información y construir el parámetro, se suma el valor de p10 de todos los ' \
+               'municipios de los que componen cada ciudad del SUN. De este modo, el valor de P1003 indica el' \
+               'numero de los municipios que componen la ciudad, que cuentan con estudios de generacion de RSU.'
+
+M.getmetafromds = 1
 
 # Descripciones generadas desde la clave del parámetro
-M.getmetafromds = 1
 Meta.fillmeta(M)
+
+M.Notas = 's/n'
 
 # Construccion del Parámetro -----------------------------------------------------------------------------------------
 # Cargar dataset inicial
 dataset = pd.read_excel(M.DirFuente + '\\' + M.ArchivoDataset,
-                        sheetname='DATOS', dtype={'CVE_MUN': 'str'})
+                        sheetname=M.nomarchivodataset, dtype={'CVE_MUN': 'str'})
 dataset.set_index('CVE_MUN', inplace=True)
+dataset = dataset.apply(pd.to_numeric).where((pd.notnull(dataset)), None)
 dataset = dataset.rename_axis('CVE_MUN')
 dataset.head(2)
-list(dataset)
 
 # Generar dataset para parámetro y Variable de Integridad
-dataset['TIPODISP'].unique()
-
-var1 = 'TIPODISP'
-val = 'TIRADERO A CIELO ABIERTO'
-dataset = dataset[dataset[var1] == val]
-par_dataset = dataset[var1]
-par_dataset = par_dataset.to_frame(name = M.ClaveParametro)
+si_no = {2:0}   # Reemplaza el valor 2 por 0, a manera de que 1 = True y 0 = False
+par_dataset = dataset['p10'].to_frame(name = M.ClaveParametro)
+par_dataset[M.ClaveParametro] = par_dataset[M.ClaveParametro].map(si_no)
 par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
 
 # Compilacion

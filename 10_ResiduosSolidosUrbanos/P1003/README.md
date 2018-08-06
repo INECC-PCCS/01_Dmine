@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P1003 - Número de municipios con disponi
 
 **Dataset Base**: "P1003.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/CNGMD
 
-**Ultima revision del parametro**: 2018/02/07 
+**Ultima revision del parametro**: 2018/07/13 
 
 **Ultima Actualizacion de los datos**: 2015
 

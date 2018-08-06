@@ -1,6 +1,6 @@
-# Parametro P1001 - Promedio diario de RSU recolectados
+# Parametro P1001 - Total diario de RSU recolectados
 
-Archivo de mineria de datos. Parametro: P1001 - Promedio diario de RSU recolectados
+Archivo de mineria de datos. Parametro: P1001 - Total diario de RSU recolectados
 
 **Contenido**: Censo Nacional de Gobiernos Municipales y Delegacionales 2015
 
@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P1001 - Promedio diario de RSU recolecta
 
 **Dataset Base**: "P1001.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/CNGMD
 
-**Ultima revision del parametro**: 2018/02/06 
+**Ultima revision del parametro**: 2018/07/17 
 
 **Ultima Actualizacion de los datos**: 2015
 

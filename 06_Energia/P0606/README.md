@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0606 - Generación mediante fuentes reno
 
 **Dataset Base**: "ER_Actual.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/INERE
 
-**Ultima revision del parametro**: 2018/04/26 
+**Ultima revision del parametro**: 2018/08/06 
 
 **Ultima Actualizacion de los datos**: 2014
 

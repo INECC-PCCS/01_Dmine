@@ -33,7 +33,7 @@ M.DescParam = 'Número de rellenos sanitarios dentro de los municipios en los qu
 M.UnidadesParam = 'Relleno Sanitario'
 M.TituloParametro = 'RllSan'                              # Para nombrar la columna del parametro
 M.PeriodoParam = '2015'
-M.TipoInt = 3       # 1: Binaria; 2: Multivariable, 3: Integral
+M.TipoInt = 1       # 1: Binaria; 2: Multivariable, 3: Integral
 
 # Handlings
 M.ParDtype = 'float'
@@ -66,12 +66,13 @@ list(dataset)
 # Generar dataset para parámetro y Variable de Integridad
 dataset['TIPODISP'].unique()
 
-var1 = 'TIPODISP'
-val = 'RELLENO SANITARIO'
-dataset = dataset[dataset[var1] == val]
-par_dataset = dataset[var1]
-par_dataset = par_dataset.to_frame(name = M.ClaveParametro)
-par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
+Este parametro hay que corregirlo. La integridad debe ser 1 y el valor del parámetro debe ser el porcentaje de municipios, así está en la tabla
+# var1 = 'TIPODISP'
+# val = 'RELLENO SANITARIO'
+# dataset = dataset[dataset[var1] == val]
+# par_dataset = dataset[var1]
+# par_dataset = par_dataset.to_frame(name = M.ClaveParametro)
+# par_dataset, variables_dataset = VarInt(par_dataset, dataset, tipo=M.TipoInt)
 
 # Compilacion
 compilar(M, dataset, par_dataset, variables_dataset)

@@ -29,8 +29,8 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Descripciones del Parametro
 M = Meta
 M.ClaveParametro = 'P1001'
-M.NombreParametro = 'Promedio diario de RSU recolectados'
-M.DescParam = 'Cantidad promedio diaria de residuos sólidos urbanos recolectada por clave SUN'
+M.NombreParametro = 'Total diario de RSU recolectados'
+M.DescParam = 'Cantidad total de residuos sólidos urbanos recolectada diariamente por clave SUN'
 M.UnidadesParam = 'kg'
 M.TituloParametro = 'KGRSU'                              # Para nombrar la columna del parametro
 M.PeriodoParam = '2015'
@@ -40,7 +40,7 @@ M.TipoInt = 1
 M.ParDtype = 'float'
 M.TipoVar = 'C'     # (Tipos de Variable: [C]ontinua, [D]iscreta [O]rdinal, [B]inaria o [N]ominal)
 M.array = []
-M.TipoAgr = 'mean'
+M.TipoAgr = 'sum'
 
 # Descripciones del proceso de Minería
 M.nomarchivodataset = M.ClaveParametro
@@ -50,7 +50,7 @@ M.ClaveDataset = 'CNGMD'
 M.ActDatos = '2015'
 M.Agregacion = 'Este parámetro utiliza la variable "P2_2" de la base de datos del Censo Nacional de Gobiernos' \
                'Municipales y Delegacionales 2015, que contiene el promedio diario de residuos solidos urbanos ' \
-               'recolectados por municipio. Para agregar la información y construir el parámetro, se promedia la ' \
+               'recolectados por municipio. Para agregar la información y construir el parámetro, se suma la ' \
                'cantidad de Residuos recolectados para cada municipio de los que componen cada ciudad del SUN'
 
 M.getmetafromds = 1

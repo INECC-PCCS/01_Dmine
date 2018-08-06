@@ -57,6 +57,8 @@ class Meta(object):
 
         # Instrucciones incluidas para el compilador
         self.getmetafromds = 0       # Si es 1, el compilador jalará metadatos desde el dataset estándar.
+        self.percent = 0             # Si es 1, el compilador asignará los datos del parámetro como el porcentaje de
+                                     # municipios con datos.
 
         # Genera metadatos automáticos
 
@@ -100,7 +102,7 @@ class Meta(object):
                 'datos para la construcción del parámetro',
             3 : 'Los datos para este parametro se agregaron desde los individuos de una poblacion, por lo que se '
                 'considera que los datos están completos y que si un municipio no tiene datos significa que ese '
-                'municipio tiene cero unidades de las que está considerando el parámetro'
+                'municipio tiene cero unidades de las que está considerando el parámetro',
         }
         self.DescVarIntegridad = DescIntegridad[self.TipoInt]
 

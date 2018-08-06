@@ -11,7 +11,13 @@
 
 *"…Una ciudad sustentable permite a todos sus ciudadanos satisfacer sus propias necesidades y mejorar su bienestar sin dañar el entorno natural ni poner en peligro las condiciones de vida de otras personas, en el presente o en el futuro… "* (Girardet, 2001)
 
-La Plataforma de Conocimiento sobre Ciudades Sustentables (PCCS) es un proyecto que comenzó formalmente en agosto de 2016, como una iniciativa para dar respuesta al impacto ambiental de las ciudades mexicanas. El objetivo del proyecto es diseñar y desarrollar una plataforma para suministrar servicios de información, asesoría y vinculación a tomadores de decisiones y a la sociedad en general. Dado que no existe una definición formal para el concepto de ciudad en la Ley General de Asentamientos Humanos, Ordenamiento Territorial y Desarrollo Humano, el INECC ha adoptado las definiciones del Sistema Urbano Nacional (SUN). La determinación del grado de sustentabilidad de las ciudades mexicanas se realiza con base en 10 dimensiones, que a su vez, se conforman con indicadores de sustentabilidad cuyos parámetros son la información cuantitativa y cualitativa de cada ciudad. Los parámetros son obtenidos desde múltiples fuentes, en todos los casos oficiales y disponibles al público para su consulta. Los datos obtenidos de estas fuentes se transforman con el objetivo de tenerlos disponibles para la PCCS con el nivel de agregación del SUN y en formatos estándar que permitan su análisis de manera ágil y en su caso, sistematizada.
+Aludir al concepto de ciudades sustentables significa, esencialmente, una declaración hacia una planeación urbana comprometida con el medio ambiente y orientada a mejorar la calidad de vida de sus habitantes, tanto a nivel local como en el entorno de los centros urbanos.
+
+Es posible evaluar el nivel de Sustentabilidad de una Ciudad en Diez Dimensiones: Agua, Aire, Uso de Suelo, Edificaciones, Industria, Energía, Movilidad, Habitabilidad, Bienes y Servicios Ambientales y Residuos Sólidos Urbanos; cada dimensión compuesta por métricas construidas desde criterios, parámetros y atributos inherentes a todas las ciudades.
+
+En este sentido, y para ofrecer Información Oportuna, Confiable, Actualizada y Valiosa en materia de evaluación de la sustentabilidad en las ciudades del país, el Instituto Nacional de Ecología y Cambio Climático (INECC) desarrolla el proyecto de  Plataforma de Conocimiento sobre Ciudades Sustentables (PCCS).
+
+La PCCS proporciona servicios de Información, asesoría y vinculación para instituciones públicas, privadas y sociales, gobiernos locales y ciudadanía interesada en materia de combate al cambio climático y desarrollo urbano Sustentable. Los contenidos de la PCCS se proporcionan de manera sistematizada en Diez Dimensiones para las 135 ciudades que conforman el Subsistema Principal del Sistema Urbano Nacional (SUN).
 
 Este directorio contiene la memoria de construcción de parámetros para la PCCS. A pesar de que la transformación de la información podría realizarse manualmente utilizando software de hoja de cálculo, el manejo de la información se ha realizado desde scripts de python, con los objetivos de: 
 
@@ -27,7 +33,7 @@ Para lograr que la investigación de parámetros sea reproducible, esta carpeta 
 - **Archivos readme.md** - Archivos en formato Markdown para ser leídos desde navegador web, que incluyen descripciones y aclaraciones para cada carpeta  dentro del directorio
 - **Archivos \*.py** - Scripts en python 3.6.1, por medio de los cuales se realizan transformaciones, estandarizaciones y presentaciones de la información.
 - **Archivos \*.ipynb** - Scripts en Jupyter Notebook Markdown, análisis realizados directamente sobre datasets y disponibles para su consulta desde navegador web, para casos en los que los manejos de la información requieren consideraciones especiales.
-- __Archivos P****.xlsx__ - Libros de formato "Open XML Spreadsheet" con parámetros procesados, incluyendo metadatos e información de integridad.
+- __Archivos P****.xlsx__ - Fichas de parámetro en formato "Open XML Spreadsheet" con datos procesados, incluyendo metadatos e información de integridad.
 
 **Contenido de las Carpetas**
 
@@ -45,7 +51,43 @@ Para lograr que la investigación de parámetros sea reproducible, esta carpeta 
 - **Datasets** - Incluye los datasets fuente desde los cuales se realizó la desagregación de parámetros, incluyendo memoria de las fuentes y metadatos para cada dataset.
 - **Scripts** - Incluye scripts que se reutilizan durante la construcción de parámetros.
 
+**Descripcion de los archivos PXXX.xlsx**
+Cada parámetro procesado en el proceso de minería y estandarización cuenta con una ficha que contiene:
+
+METADATOS: Descripciones del paquete de datos (Detalladas mas adelante en este documento)
+
+PARAMETRO: Datos que se utilizarán para la PCCS, desagregados a nivel de clave del SUN.
+
+DATOS: Datos fuente que se utilizaron para la construccion del parámetro.
+
+INTEGRIDAD: Análisis de integridad por ciudad, calculado como el promedio de *"VAR\_INTEGRIDAD"* de los municipios que componen cada ciudad del SUN. 
+
+EXISTENCIA: Verificación *"VAR\_INTEGRIDAD"* por municipio. El método de cálculo de integridad por municipio se describe en la hoja de metadatos en el renglón *"VAR\_INTEGRIDAD"*
+
+**Descripciones de las fichas de metadatos**
+
+*DESCRIPCION DEL PARAMETRO*
+
+- **Clave**: Clave única del Parámetro
+- **Nombre del Parametro**: Nombre corto del Parametro
+- **Descripcion del Parametro**: Descripcion a detalle del parámetro
+- **Periodo**: Periodo al que corresponde el parámetro.
+- **Unidades**: Unidades en las que se encuentra el parámetro.
+  
+*DESCRIPCION DEL PROCESO DE MINERIA*
+
+- **Nombre del Dataset**: Nombre del dataset desde donde se obtuvieron los datos
+- **Descripcion del dataset**: Descripcion del dataset fuente desde donde se obtuvieron los datos.
+- **Disponibilidad Temporal**: Periodos disponibles en el dataset desde donde se obtuvieron los datos. 
+- **Periodo de actualizacion**: Periodicidad con la que el autor del dataset fuente actualiza los datos.  
+- **Nivel de Desagregacion**: Nivel de detalle en el que se encuentran disponibles los datos.
+Notas: Notas especificas referentes al procesmiento de datos de cada parámetro. 
+- **Fuente**: Organismo o institución autora de los datos
+- **URL_Fuente**: Sitio desde donde se realizó la descarga de los datos. 
+- **Dataset base**: localización del Dataset fuente después de realizados los procesos de estandarizacion que permiten el uso de los datos 
+- **Repositorio de mineria**: 
+Método de Agregación: 
+- **VAR_INTEGRIDAD**: Calculo de integridad independiente para cada Dataset de la PCCS (Ver metadatos del Dataset).
+
 ----------
-
-Octubre, 2017
-
+Junio, 2018
