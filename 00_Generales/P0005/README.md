@@ -1,5 +1,3 @@
-# [PROXY] P0005 - Precipitaci�n
+# P0005 - Precipitación
 
-(Mineria de datos de parametro pendiente)
-
-Proxy creado con fines de coordinacion
+Precipitación media anual por ciudad (milímetros)

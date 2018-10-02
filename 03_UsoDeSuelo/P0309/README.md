@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0309 - Total de viviendas
 
 **Dataset Base**: "P0309.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/CPV
 
-**Ultima revision del parametro**: 2018/02/08 
+**Ultima revision del parametro**: 2018/09/25 
 
 **Ultima Actualizacion de los datos**: 2010
 

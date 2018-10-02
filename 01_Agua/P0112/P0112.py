@@ -46,7 +46,7 @@ DescParam = 'Consumo (Litros/ Hora/ día) - Estimación del consumo de agua sin 
             'como el cociente del Volumen de agua consumido al año multiplicado por 1000, dividido entre 365 ' \
             'multiplicado por el numero de habitantes'
 UnidadesParam = 'l/h/d'
-NombreParametro = 'Consumo'
+NombreParametro = 'Consumo real de agua'
 TituloParametro = 'CONSUMO'                              # Para nombrar la columna del parametro
 PeriodoParam = '2015'
 

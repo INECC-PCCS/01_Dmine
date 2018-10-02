@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0402 - Viviendas que aprovechan energía
 
 **Dataset Base**: "23.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/EI2015
 
-**Ultima revision del parametro**: 2018/03/13 
+**Ultima revision del parametro**: 2018/09/25 
 
 **Ultima Actualizacion de los datos**: 2014
 

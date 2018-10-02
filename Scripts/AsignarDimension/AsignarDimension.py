@@ -4,6 +4,11 @@ Created on Thu Sep  7 10:00:29 2017
 
 @author: carlos.arana
 Descripcion: Diccionario con claves y nombres de dimensiones.
+Entradas:
+ClaveDimension: str (2 digitos) - clave de 2 d+igitos de la dimensiónm
+dimension[ClaveDimension]: dict (2 keys) - Nombre de directorio y Nombre de dimensión.
+Salidas:
+
 """
 
 def AsignarDimension(ClaveDimension):

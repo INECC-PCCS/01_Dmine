@@ -1,5 +1,3 @@
-# [PROXY] P0004 - Clima
+# P0004 - Clima
 
-(Mineria de datos de parametro pendiente)
-
-Proxy creado con fines de coordinacion
+La información de Climas escala 1:1 000 000, fue obtenida mediante la conversión de información, del formato analógico al digital, con metodología y procesos diseñados por el INEGI, que cumplen con las normas técnicas requeridas para su integración y procesamiento en sistemas de información geográfica, a través de los cuales se amplian las expectativas de aprovechamiento de este tipo de información, ofreciendo así, nuevos horizontes de posibilidades para satisfacer las diversas necesidades y objetivos de los usuarios.

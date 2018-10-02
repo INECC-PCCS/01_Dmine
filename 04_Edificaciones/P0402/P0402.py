@@ -30,8 +30,8 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 M = Meta
 M.ClaveParametro = 'P0402'
 M.NombreParametro = 'Viviendas que aprovechan energía solar'
-M.DescParam = 'Viviendas que aprovechan energía solar, por medio del uso de páneles fotovoltaicos o ' \
-              'calentadores solares)'
+M.DescParam = 'Viviendas que aprovechan energía solar, por medio del uso de paneles fotovoltaicos o ' \
+              'calentadores solares'
 M.UnidadesParam = 'Porcentaje'
 M.TituloParametro = 'VSol'                              # Para nombrar la columna del parametro
 M.PeriodoParam = '2015'

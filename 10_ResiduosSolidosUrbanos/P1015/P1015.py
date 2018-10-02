@@ -29,8 +29,8 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Descripciones del Parametro
 M = Meta
 M.ClaveParametro = 'P1015'
-M.NombreParametro = 'Porcentaje de municipios que envian sus residuos a plantas de tratamiento'
-M.DescParam = 'Porcentaje de municipios que envian al menos una fracción de sus Residuos a plantas de tratamiento'
+M.NombreParametro = 'Porcentaje de municipios de una ciudad que envian sus residuos a plantas de tratamiento'
+M.DescParam = 'Porcentaje de municipios que envían al menos una fracción de sus residuos a plantas de tratamiento'
 M.UnidadesParam = 'Numero de municipios'
 M.TituloParametro = 'MUNGRSU'                              # Para nombrar la columna del parametro
 M.PeriodoParam = '2015'

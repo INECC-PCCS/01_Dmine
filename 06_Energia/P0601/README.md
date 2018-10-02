@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0601 - Viviendas particulares habitadas
 
 **Dataset Base**: "16.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/EI2015
 
-**Ultima revision del parametro**: 2018/01/19 
+**Ultima revision del parametro**: 2018/09/25 
 
 **Ultima Actualizacion de los datos**: 2015
 
