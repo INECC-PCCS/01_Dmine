@@ -28,11 +28,11 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Descripciones del Parametro
 M = Meta
 M.ClaveParametro = 'P0812'
-M.NombreParametro = 'Indice de Impunidad'
-M.DescParam = 'Indice Global de impunidad en México'
+M.NombreParametro = 'Índice de Impunidad'
+M.DescParam = 'Índice Global de impunidad en México'
 M.UnidadesParam = 'puntos'
 M.TituloParametro = 'IGI'                              # Para nombrar la columna del parametro
-M.PeriodoParam = '2018'
+M.PeriodoParam = '2016'
 M.TipoInt = 1       # 1: Binaria; 2: Multivariable, 3: Integral
 
 # Handlings
@@ -44,7 +44,7 @@ M.TipoAgr = 'mean'
 # Descripciones del proceso de Minería
 M.nomarchivodataset = M.ClaveParametro
 M.extarchivodataset = 'xlsx'
-M.ContenidoHojaDatos = 'Indice de impunidad estatal asignado a las 135 ciudades que componen el Subsistema ' \
+M.ContenidoHojaDatos = 'Índice de impunidad estatal asignado a las 135 ciudades que componen el Subsistema ' \
                        'Principal del SUN'
 M.ClaveDataset = 'UDLAP'
 M.ActDatos = '2018'

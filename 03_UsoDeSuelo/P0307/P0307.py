@@ -31,8 +31,8 @@ M = Meta
 M.ClaveParametro = 'P0307'
 M.NombreParametro = 'Disposiciones normativas sustantivas en materia de desarrollo urbano u ordenamiento territorial'
 M.DescParam = 'Municipios que cuentan con Disposiciones normativas sustantivas en materia de desarrollo ' \
-              'urbano u ordenamiento territorial vigentes en la  Administraciones Públicas Municipales o ' \
-              'Delegacionales, al cierre del año 2014'
+              'urbano u ordenamiento territorial vigentes en la administraciones públicas municipales o ' \
+              'delegacionales, al cierre del año 2014'
 M.UnidadesParam = 'cantidad'
 M.TituloParametro = 'DSDSOT'                              # Para nombrar la columna del parametro
 M.PeriodoParam = '2015'

@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P1001 - Total diario de RSU recolectados
 
 **Dataset Base**: "P1001.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/CNGMD
 
-**Ultima revision del parametro**: 2018/07/17 
+**Ultima revision del parametro**: 2018/09/25 
 
 **Ultima Actualizacion de los datos**: 2015
 

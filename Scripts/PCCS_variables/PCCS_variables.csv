@@ -720,7 +720,6 @@ PM10,"(Particulate Matter) Particulas Suspendidas, menores a 10 micras, cuyas fu
 PM2.5,"(Particulate Matter) Particulas Suspendidas, menores a 2.5 micras, cuyas fuentes de emision corresponden a las de origen humano y animal."
 SO2,"Dioxido de azufre: gas incoloro, de olor picante muy característico, más pesado que el aire, formado por un átomo de azufre y dos de oxígeno. Fuentes de emision: ombustión del carbón y de otros combustibles fósiles como la gasolina."
 I0218,Integridad del Parámetro P0218
-P0218,Emisiones Contaminantes del Aire
 I0036,Integridad del Parámetro P0036
 P0036,Producción Bruta
 PBT 2014,Producción Bruta Total 2014
@@ -730,3 +729,52 @@ P0502, Númerto de Empresas con certificado de Empresa Limpia
 PNAA_Status, Estado de la certificación emitida dentro del marco del Programa Nacional de Auditoría Ambiental.
 TIPO_PNAA, Tipo de certificacion emitida dentro del marco del Programa Nacional de Auditoría Ambiental.
 VIGENCIA_PNAA, Vigencia de la certificación emitida dentro del marco del Programa Nacional de Auditoría Ambiental.
+I0219,Integridad del Parámetro P0219
+ANIO_OCUR,Año de ocurrencia.
+ASIST_MEDI,"Condición de atención médica.
+1: Con Asistencia Medica
+2: Sin Asistencia Medica
+9: No especificada"
+CAUSA_DEF,Causa de la defunción (clave).
+CVE_MUN_OCULES,Municipio de ocurrencia de la lesión.
+CVE_MUN_REGIS,Municipio de registro.
+ESCOLARIDA,"Nivel de escolaridad del (la) fallecido (a) (escolaridad).
+1: Sin escolaridad
+2: Preescolar
+3: Primaria incompleta
+4: Primaria completa
+5: Secundaria incompleta
+6: Secundaria completa
+7: Bachillerato o preparatoria incompleto
+8: Bachillerato o preparatoria completo
+9: Profesional
+10: Posgrado
+88: No aplica a menores de 3 años
+99: No especificado"
+I0813,Integridad del Parametro P0813
+NOMBRE_CAUSA_DEF,Causa de la defunción (Descripción)
+P0813,P0813
+PRESUNTO,Tipo de defunción (presunto). 2: Homicidio
+VIO_FAMI,"Condición de violencia familiar.
+1: Hubo violencia familiar
+2: No hubo violencia familiar
+2: No aplica cuando no es homicidio
+9: No especificado"
+SEXO_DEFUN,"Sexo del (la) fallecido (a).
+1: Hombre
+2: Mujer
+9: No especificado"
+P0218,Concentrado de PM10
+P0219,Concentrado de PM25
+I0220,Integridad del parámetro P0220
+P0220,Concentrado de SO2
+I0221,Integridad del parámetro P0221
+P0221,Concentrado de monóxido de carbono
+I0222,Integridad del parámetro P0222
+P0222,Concentrado de NOX
+I0223,Integridad del parámetro P0223
+P0223,Concentrado de compuestos orgánicos volátiles
+I0224,Integridad del parametro P0224
+P0224,Concentrado de amoniaco
+I0225,Integridad del parámetro P0225
+P0225,Carbón Negro

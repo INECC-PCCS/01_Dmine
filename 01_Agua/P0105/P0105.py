@@ -29,7 +29,7 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 M = Meta
 M.ClaveParametro = 'P0105'
 M.NombreParametro = 'Disponibilidad en Acuiferos'
-M.DescParam = 'Volumen disponible en los acuiferos que están disponibles para una ciudad'
+M.DescParam = 'Volumen disponible en los acuiferos a los que geográficamente tiene acceso una ciudad'
 M.UnidadesParam = 'hm3'
 M.TituloParametro = 'ACUI'                              # Para nombrar la columna del parametro
 M.PeriodoParam = '2011-2015'

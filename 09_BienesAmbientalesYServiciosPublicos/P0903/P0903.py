@@ -40,9 +40,9 @@ DocumentarParametro 1 https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Documentacion del Parametro ---------------------------------------------------------------------------------------
 # Descripciones del Parametro
 ClaveParametro = 'P0903'
-DescParam = 'Arboles Plantados de 1994 a 2014'
+DescParam = 'Árboles Plantados de 1994 a 2014'
 UnidadesParam = 'hectáreas'
-NombreParametro = 'Superficie Reforestada'
+NombreParametro = 'Superficie reforestada'
 TituloParametro = 'SF_Reforestada'          # Para nombrar la columna del parametro
 
 # Descripciones del proceso de Minería

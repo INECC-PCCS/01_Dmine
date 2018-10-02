@@ -1,6 +1,6 @@
-# Parametro P0812 - Indice de Impunidad
+# Parametro P0812 - Índice de Impunidad
 
-Archivo de mineria de datos. Parametro: P0812 - Indice de Impunidad
+Archivo de mineria de datos. Parametro: P0812 - Índice de Impunidad
 
 **Contenido**: Indice de impunidad estatal (Asignado a municipios de las 135 ciudades del Subsistema Principal del SUN)
 
@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P0812 - Indice de Impunidad
 
 **Dataset Base**: "P0812.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/UDLAP
 
-**Ultima revision del parametro**: 2018/06/04 
+**Ultima revision del parametro**: 2018/09/25 
 
 **Ultima Actualizacion de los datos**: 2018
 

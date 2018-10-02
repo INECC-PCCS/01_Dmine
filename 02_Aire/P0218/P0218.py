@@ -28,11 +28,11 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 # Descripciones del Parametro
 M = Meta
 M.ClaveParametro = 'P0218'
-M.NombreParametro = 'Emisiones Contaminantes del Aire'
-M.DescParam = 'Emisión de Gases de Efecto Invernadero'
-M.UnidadesParam = 'Toneladas'
+M.NombreParametro = 'Emisiones anuales PM10'
+M.DescParam = 'Partículas suspendidas menores a 10 micras'
+M.UnidadesParam = 'ton'
 M.TituloParametro = 'GEI'                              # Para nombrar la columna del parametro
-M.PeriodoParam = '2008'
+M.PeriodoParam = '2009'
 M.TipoInt = 2       # 1: Binaria; 2: Multivariable, 3: Integral
 
 # Handlings
@@ -47,7 +47,7 @@ M.extarchivodataset = 'xlsx'
 M.ContenidoHojaDatos = 'Toneladas de gases de efecto invernadero, clasificadas por gas, para el año 2008'
 M.ClaveDataset = 'SEMARNAT'
 M.ActDatos = '2008'
-M.Agregacion = 'Se sumó la cantidad de Gases de Efecto Invernadero para los municipios que componen ' \
+M.Agregacion = 'Se sumó la cantidad de emisiones anuales de PM10 para los municipios que componen ' \
                'cada ciudad del SUN' \
 
 # Descripciones generadas desde la clave del parámetro
@@ -64,7 +64,7 @@ dataset.head(2)
 list(dataset)
 
 # Generar dataset para parámetro y Variable de Integridad
-var1 = 'Carbón Negro'
+var1 = 'PM10'
 par_dataset = dataset[var1]
 par_dataset = dataset[var1].astype('float')
 par_dataset = par_dataset.to_frame(name = M.ClaveParametro)

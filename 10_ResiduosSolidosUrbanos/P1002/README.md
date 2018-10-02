@@ -8,7 +8,7 @@ Archivo de mineria de datos. Parametro: P1002 - Porcentaje de recolección select
 
 **Dataset Base**: "P1002.xlsx", disponible en https://github.com/INECC-PCCS/01_Dmine/tree/master/Datasets/INEGI
 
-**Ultima revision del parametro**: 2018/06/14 
+**Ultima revision del parametro**: 2018/09/25 
 
 **Ultima Actualizacion de los datos**: 2015
 

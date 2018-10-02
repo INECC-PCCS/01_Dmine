@@ -29,7 +29,7 @@ Compilador          | https://github.com/INECC-PCCS/01_Dmine/tree/master/Scripts
 M = Meta
 M.ClaveParametro = 'P1002'
 M.NombreParametro = 'Porcentaje de recolección selectiva de RSU'
-M.DescParam = 'Porcentaje de RSU que son separados en Orgánicos e Inorgánicos'
+M.DescParam = 'Porcentaje de RSU que son separados en orgánicos e inorgánicos'
 M.UnidadesParam = 'Porcentaje'
 M.TituloParametro = 'PsepRSU'                              # Para nombrar la columna del parametro
 M.PeriodoParam = '2015'
